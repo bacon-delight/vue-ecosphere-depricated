@@ -1,0 +1,8 @@
+documentation:
+- "**/*.md"
+
+enhancement:
+- "**/*.vue"
+
+tests:
+- "**/*.spec.ts"

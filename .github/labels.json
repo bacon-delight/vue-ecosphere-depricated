@@ -1,0 +1,52 @@
+[
+	{
+		"name": "documentation",
+		"color": "1D76DB",
+		"description": "Improvement or additions to documentation"
+	},
+	{
+		"name": "bug",
+		"color": "FDA976",
+		"description": "Something needs to be fixed"
+	},
+	{
+		"name": "urgent",
+		"color": "D93F0B",
+		"description": "Needs immediate attention"
+	},
+	{
+		"name": "enhancement",
+		"color": "0E8A16",
+		"description": "New feature, request or workflow"
+	},
+	{
+		"name": "duplicate",
+		"color": "C5DEF5",
+		"description": "Similar issue or pull request already exists"
+	},
+	{
+		"name": "wontfix",
+		"color": "C5DEF5",
+		"description": "This issue will not be addressed"
+	},
+	{
+		"name": "invalid",
+		"color": "FBCA04",
+		"description": "Reported issue is invalid"
+	},
+	{
+		"name": "triage",
+		"color": "5319E7",
+		"description": "This issue needs triage"
+	},
+	{
+		"name": "spike",
+		"color": "006B75",
+		"description": "Resolution needs to be addressed through a spike"
+	},
+	{
+		"name": "tests",
+		"color": "006B75",
+		"description": "New or updated test cases"
+	}
+]
