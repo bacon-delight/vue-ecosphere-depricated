@@ -23,8 +23,14 @@ jobs:
             - name: Install Dependencies
               run: npm install
 
-            - name: Build
+            - name: Run Site Build
               run: npm run build
+          
+            - name: Run Documentation Build
+              run: npm run docs:build
+              
+            - name: Run Package Build
+              run: npm run pack
                   
-            - name: Unit Test
+            - name: Run Unit Tests
               run: npm run test:unit
