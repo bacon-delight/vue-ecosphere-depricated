@@ -1,5 +1,8 @@
 documentation:
-	- "*.md"
+- "**/*.md"
 
 enhancement:
-	- "**/*.vue"
+- "**/*.vue"
+
+tests:
+- "**/*.spec.ts"
