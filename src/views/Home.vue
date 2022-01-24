@@ -1,5 +1,6 @@
 <template lang="pug">
-div Homepage
+h1 Ecosphere Design System
+div This site will be available soon
 </template>
 
 <script lang="ts">
