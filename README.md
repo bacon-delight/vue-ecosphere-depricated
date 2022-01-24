@@ -1,6 +1,15 @@
 <h3 align="center">Ecosphere Design System | 生态圈设计系统</h3>
 <p  align="center">Ecosphere is a modern and minimal design system built for better clarity and insights from data. A lot of the inspirations in this system comes from the natural world.</p>
 
+<p align="center">
+<img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability/bacon-delight/vue-ecosphere?label=Maintainability&style=flat-square">
+<img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability-percentage/bacon-delight/vue-ecosphere?label=Maintainability&style=flat-square">
+<img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/bacon-delight/vue-ecosphere?label=Technical%20Debt&style=flat-square">
+<img alt="Code Climate issues" src="https://img.shields.io/codeclimate/issues/bacon-delight/vue-ecosphere?label=Issues&style=flat-square">
+<img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/bacon-delight/vue-ecosphere?label=Vulnerabilities&style=flat-square">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/bacon-delight/vue-ecosphere?label=Languages&style=flat-square">
+</p>
+
 Translations:
 
 -   [中文版](#中文版)
