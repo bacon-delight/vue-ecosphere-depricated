@@ -1,4 +1,4 @@
-name: Running Build & Tests
+name: Running Builds & Tests
 
 on:
     pull_request:
