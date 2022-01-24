@@ -1,4 +1,4 @@
-name: Publish Package to NPM
+name: Publishing Package to NPM
 
 on:
   release:
