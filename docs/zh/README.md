@@ -1,7 +1,7 @@
 ---
 home: true
 heroImage: /logo/general.png
-heroText: Ecosphere Design System
+heroText: 生态圈设计系统
 tagline: The design language for modern data intensive applications
 
 actions:
