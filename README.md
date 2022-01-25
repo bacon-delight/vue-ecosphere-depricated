@@ -1,3 +1,4 @@
+<p align="center"><img src="public/img/logo.png" width="128" /></p>
 <h3 align="center">Ecosphere Design System | 生态圈设计系统</h3>
 <p  align="center">Ecosphere is a modern and minimal design system built for better clarity and insights from data. A lot of the inspirations in this system comes from the natural world.</p>
 
@@ -19,6 +20,8 @@ Translations:
 -   [Homepage](https://ecosphere.dev/)
 -   [Documentation](https://docs.ecosphere.dev/)
 -   [Sandbox](https://codesandbox.io/s/vue-ecosphere-ooudb)
+
+<br/>
 
 ### Usage
 

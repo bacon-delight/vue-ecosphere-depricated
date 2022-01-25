@@ -1,23 +1,24 @@
 ---
 home: true
-heroImage: /logo/general.png
+heroImage: /logo/generic.png
 heroText: 生态圈设计系统
-tagline: The design language for modern data intensive applications
+tagline: 现代数据密集型应用的设计语言
 
 actions:
-    - text: Design System
-      link: /guide/getting-started.html
+    - text: 设计系统
+      link: /zh/guide/installation
       type: secondary
-    - text: API Reference →
-      link: /guide/getting-started.html
+    - text: 开始吧 →
+      link: /zh/guide/installation
       type: primary
 
 features:
-    - title: Minimal & Simplistic
-      details: Beautiful design elements with minimalism at heart, that focusses on simplifying the user experience
-    - title: Nature Inspired
-      details: Designs inspired by nature that are intuitive and satisfying to navigate through
-    - title: Supports Trends
-      details: A framework that constantly adapts to support new and meaningful trends in user experience design
-footer: MIT Licensed | Copyright © 2022-present Dipanjan De
+    - title: 最小化和简单化
+      details: 美丽的设计元素，以简约主义为核心，注重简化用户体验
+    - title: 灵感来自于大自然
+      details: 设计的灵感来自于大自然，浏览起来很直观，很令人满意
+    - title: 适应性强
+      details: 一个能不断适应的框架，以支持用户体验设计中新的和有意义的趋势
+
+footer: MIT 有执照的 | © 2022年 迪潘詹
 ---
