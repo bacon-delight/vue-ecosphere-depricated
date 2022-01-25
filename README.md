@@ -1,3 +1,5 @@
+> **Not Released Yet**: This plugin is under development and is not ready for use yet. Please do not download/install the plugin in your project at the moment. A working release can be expected in Q3 2022
+
 <p align="center"><img src="public/img/logo.png" width="128" /></p>
 <h3 align="center">Ecosphere Design System | 生态圈设计系统</h3>
 <p  align="center">Ecosphere is a modern and minimal design system built for better clarity and insights from data. A lot of the inspirations in this system comes from the natural world.</p>

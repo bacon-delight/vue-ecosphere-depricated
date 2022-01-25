@@ -3,7 +3,7 @@ module.exports = [
 	{
 		appId: process.env.DOCSEARCH_APP_ID,
 		apiKey: process.env.DOCSEARCH_API_KEY,
-		indexName: "vue-ecosphere",
+		indexName: process.env.DOCSEARCH_INDEX,
 		locales: {
 			"/": {
 				placeholder: "Search",
