@@ -2,7 +2,6 @@
 <p  align="center">Ecosphere is a modern and minimal design system built for better clarity and insights from data. A lot of the inspirations in this system comes from the natural world.</p>
 
 <p align="center">
-<img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability/bacon-delight/vue-ecosphere?label=Maintainability&style=flat-square">
 <img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability-percentage/bacon-delight/vue-ecosphere?label=Maintainability&style=flat-square">
 <img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/bacon-delight/vue-ecosphere?label=Technical%20Debt&style=flat-square">
 <img alt="Code Climate issues" src="https://img.shields.io/codeclimate/issues/bacon-delight/vue-ecosphere?label=Issues&style=flat-square">
@@ -73,9 +72,11 @@ npm run build
 npm run pack
 ```
 
-<br/><br/><br/>
+<br/>
 
 # 中文版
+
+> 我在学习中文，但是我的中文还不好。请原谅我的错误。:sweat_smile:
 
 ### 用法
 
