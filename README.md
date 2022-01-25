@@ -1,4 +1,6 @@
-> **Not Released Yet**: This plugin is under development and is not ready for use yet. Please do not download/install the plugin in your project at the moment. A working release can be expected sometime during Q3 2022 and this message will be removed when it's ready for use.
+<h5 align="center">:information_source: Not Released Yet</h5>
+<p align="center">This plugin is under development and is not ready for use yet. Please do not download/install the plugin in your project at the moment. A working release can be expected sometime during Q3 2022 and this message will be removed when it's ready for use.</p>
+
 
 <p align="center"><img src="public/img/logo.png" width="128" /></p>
 <h3 align="center">Ecosphere Design System | 生态圈设计系统</h3>
