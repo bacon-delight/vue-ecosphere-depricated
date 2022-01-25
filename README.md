@@ -20,6 +20,8 @@ Translations:
 -   [Documentation](https://docs.ecosphere.dev/)
 -   [Sandbox](https://codesandbox.io/s/vue-ecosphere-ooudb)
 
+<br/>
+
 ### Usage
 
 Install

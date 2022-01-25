@@ -1,15 +1,15 @@
 ---
 home: true
-heroImage: /logo/general.png
+heroImage: /logo/generic.png
 heroText: Ecosphere Design System
 tagline: The design language for modern data intensive applications
 
 actions:
     - text: Design System
-      link: /guide/getting-started.html
+      link: /guide/installation
       type: secondary
     - text: API Reference →
-      link: /guide/getting-started.html
+      link: /guide/installation
       type: primary
 
 features:
@@ -17,7 +17,8 @@ features:
       details: Beautiful design elements with minimalism at heart, that focusses on simplifying the user experience
     - title: Nature Inspired
       details: Designs inspired by nature that are intuitive and satisfying to navigate through
-    - title: Supports Trends
+    - title: Adaptable
       details: A framework that constantly adapts to support new and meaningful trends in user experience design
-footer: MIT Licensed | Copyright © 2022-present Dipanjan De
+
+footer: MIT Licensed | © 2022 Dipanjan De
 ---

@@ -1,5 +1,11 @@
+const { path } = require("@vuepress/utils");
+const docsearch = require("./theme/docsearch.js");
+const sidebar = require("./theme/sidebar.js");
+const navigation = require("./theme/navigation.js");
+
 module.exports = {
-	head: [["link", { rel: "icon", href: "/logo/general.png" }]],
+	head: [["link", { rel: "icon", href: "/logo/generic.png" }]],
+	theme: path.resolve(__dirname, "./theme"),
 	locales: {
 		"/": {
 			lang: "en-US",
@@ -30,33 +36,9 @@ module.exports = {
 		editLinkText:
 			"Caught a mistake or want to improve the documentation? Edit this page",
 		editLinkPattern: ":repo/edit/:branch/docs/:path",
+		sidebar: sidebar,
+		sidebarDepth: 3,
+		navbar: navigation,
 	},
-	plugins: [
-		[
-			"@vuepress/docsearch",
-			{
-				appId: process.env.DOCSEARCH_APP_ID,
-				apiKey: process.env.DOCSEARCH_API_KEY,
-				indexName: "vue-ecosphere",
-				locales: {
-					"/": {
-						placeholder: "Search",
-						translations: {
-							button: {
-								buttonText: "Search",
-							},
-						},
-					},
-					"/zh/": {
-						placeholder: "搜索文档",
-						translations: {
-							button: {
-								buttonText: "搜索文档",
-							},
-						},
-					},
-				},
-			},
-		],
-	],
+	plugins: [docsearch],
 };
