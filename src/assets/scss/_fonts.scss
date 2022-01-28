@@ -1,0 +1,104 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,500;0,600;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&display=swap");
+
+/* Font Families */
+$font-family-work-sans: "Work Sans", sans-serif;
+$font-family-roboto-mono: "Roboto Mono", monospace;
+$font-family-libre-baskerville: "Libre Baskerville", serif;
+
+/* Font Weights */
+$font-weight-light: 300;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+
+/* Headers */
+@mixin header-1 {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-medium;
+	font-size: $spacer-2-25;
+	line-height: $spacer-2-75;
+	letter-spacing: $spacer-percentile-1;
+}
+@mixin header-2 {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-medium;
+	font-size: $spacer-2;
+	line-height: $spacer-2-5;
+	letter-spacing: $spacer-percentile-1;
+}
+@mixin header-3 {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-medium;
+	font-size: $spacer-1-75;
+	line-height: $spacer-2-25;
+	letter-spacing: $spacer-percentile-1;
+}
+@mixin header-4 {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-medium;
+	font-size: $spacer-1-5;
+	line-height: $spacer-2;
+	letter-spacing: $spacer-percentile-1;
+}
+@mixin header-5 {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-medium;
+	font-size: $spacer-1-25;
+	line-height: $spacer-1-75;
+	letter-spacing: $spacer-percentile-1;
+}
+@mixin header-6 {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-medium;
+	font-size: $spacer-1;
+	line-height: $spacer-1-5;
+	letter-spacing: $spacer-percentile-1;
+}
+
+/* Fonts */
+@mixin font-light {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-light;
+	font-size: $spacer-1;
+	line-height: $spacer-1;
+	letter-spacing: $spacer-percentile-0-5;
+}
+@mixin font-emphasis {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-semi-bold;
+	font-size: $spacer-1;
+	line-height: $spacer-1;
+	letter-spacing: $spacer-percentile-0-5;
+}
+@mixin font-italic {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-light;
+	font-size: $spacer-1;
+	line-height: $spacer-1;
+	letter-spacing: $spacer-percentile-0-5;
+	font-style: italic;
+}
+
+/* Special Fonts */
+@mixin font-sidenote {
+	font-family: $font-family-work-sans;
+	font-weight: $font-weight-light;
+	font-size: $spacer-0-75;
+	line-height: $spacer-0-75;
+	letter-spacing: $spacer-percentile-0-5;
+}
+@mixin font-serif {
+	font-family: $font-family-libre-baskerville;
+	font-size: $spacer-1;
+	line-height: $spacer-1;
+	letter-spacing: $spacer-percentile-0-5;
+	font-style: italic;
+}
+@mixin font-code {
+	font-family: $font-family-roboto-mono;
+	font-weight: $font-weight-light;
+	font-size: $spacer-1;
+	line-height: $spacer-1;
+}

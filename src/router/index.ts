@@ -7,11 +7,18 @@ const routes: Array<RouteRecordRaw> = [
 		name: "Home",
 		component: Home,
 	},
-	// {
-	// 	path: "/about",
-	// 	name: "About",
-	// 	component: () => import("../views/About.vue"),
-	// },
+	{
+		path: "/components",
+		name: "Components",
+		component: () => import("../views/components/Components.vue"),
+		children: [
+			{
+				path: "button",
+				component: () =>
+					import("../views/components/button/Button.vue"),
+			},
+		],
+	},
 ];
 
 const router = createRouter({
