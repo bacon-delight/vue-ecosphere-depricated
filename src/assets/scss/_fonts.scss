@@ -61,21 +61,21 @@ $font-weight-semi-bold: 600;
 @mixin font-light {
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-light;
-	font-size: $spacer-1;
+	font-size: 1rem;
 	line-height: $spacer-1;
 	letter-spacing: $spacer-percentile-0-5;
 }
 @mixin font-emphasis {
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-semi-bold;
-	font-size: $spacer-1;
+	font-size: 1rem;
 	line-height: $spacer-1;
 	letter-spacing: $spacer-percentile-0-5;
 }
 @mixin font-italic {
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-light;
-	font-size: $spacer-1;
+	font-size: 1rem;
 	line-height: $spacer-1;
 	letter-spacing: $spacer-percentile-0-5;
 	font-style: italic;
@@ -85,13 +85,13 @@ $font-weight-semi-bold: 600;
 @mixin font-sidenote {
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-light;
-	font-size: $spacer-0-75;
+	font-size: $spacer-0-5;
 	line-height: $spacer-0-75;
 	letter-spacing: $spacer-percentile-0-5;
 }
 @mixin font-serif {
 	font-family: $font-family-libre-baskerville;
-	font-size: $spacer-1;
+	font-size: $spacer-0-75;
 	line-height: $spacer-1;
 	letter-spacing: $spacer-percentile-0-5;
 	font-style: italic;
@@ -99,6 +99,6 @@ $font-weight-semi-bold: 600;
 @mixin font-code {
 	font-family: $font-family-roboto-mono;
 	font-weight: $font-weight-light;
-	font-size: $spacer-1;
+	font-size: $spacer-0-75;
 	line-height: $spacer-1;
 }

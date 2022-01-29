@@ -9,7 +9,7 @@ app.use(store);
 app.use(router);
 
 // Import as a Plugin
-import VEco from "./plugin";
-app.use(VEco);
+import Ecosphere from "./plugin";
+app.use(Ecosphere);
 
 app.mount("#app");
