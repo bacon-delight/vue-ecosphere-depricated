@@ -22,3 +22,25 @@
 		grid-template-columns: repeat($cells, 1fr);
 	}
 }
+
+/* Action Feedbacks */
+@mixin hover-background {
+	cursor: pointer;
+	transition: all $transition-micro;
+	user-select: none;
+
+	&:hover {
+		background: $color-background-faded;
+		color: $color-helper-link;
+	}
+}
+
+@mixin hover-color {
+	cursor: pointer;
+	transition: all $transition-micro;
+	user-select: none;
+
+	&:hover {
+		color: $color-helper-link;
+	}
+}
