@@ -1,0 +1,24 @@
+/* Component Sizing */
+@mixin occupy-full-viewport {
+	height: 100vh;
+	width: 100vw;
+}
+
+@mixin occupy-full-parent {
+	height: 100%;
+	width: 100%;
+}
+
+/* Create Grid */
+@mixin create-grid($cells: 1, $direction: column, $gutter: 0) {
+	display: grid;
+	column-gap: $gutter;
+	row-gap: $gutter;
+	@if $direction == row {
+		grid-auto-flow: row;
+		grid-template-rows: repeat($cells, 1fr);
+	} @else if $direction == column {
+		grid-auto-flow: column;
+		grid-template-columns: repeat($cells, 1fr);
+	}
+}

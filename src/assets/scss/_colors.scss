@@ -1,0 +1,37 @@
+/* Elementary */
+$color-dark: #1d242b;
+$color-dark-faded: #303841;
+$color-light: #fdfdfd;
+$color-light-faded: #f5f5f5;
+
+/* Helpers */
+$color-helper-link: #5ba5ef;
+$color-helper-error: #f05454;
+$color-helper-grey: #a1a1a1;
+$color-helper-transparent: transparent;
+
+/* Indicators */
+$color-indicator-critical: #ff7878;
+$color-indicator-critical: #8dc6ff;
+$color-indicator-critical: #ffcc1d;
+$color-indicator-critical: #71e2b2;
+$color-indicator-critical: #e8eae6;
+
+:root {
+	--color-background: #fdfdfd;
+	--color-background-faded: #f5f5f5;
+	--color-contrast: #1d242b;
+	--color-contrast-faded: #303841;
+}
+
+body.dark {
+	--color-background: #1d242b;
+	--color-background-faded: #303841;
+	--color-contrast: #fdfdfd;
+	--color-contrast-faded: #f5f5f5;
+}
+
+$color-background: var(--color-background);
+$color-background-faded: var(--color-background-faded);
+$color-contrast: var(--color-contrast);
+$color-contrast-faded: var(--color-contrast-faded);
