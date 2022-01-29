@@ -5,8 +5,8 @@ declare module "*.vue" {
 	export default component;
 }
 
-declare module "@vue/runtime-core" {
-	interface ComponentCustomProperties {
-		ecosphere: any;
-	}
-}
+// declare module "@vue/runtime-core" {
+// 	interface ComponentCustomProperties {
+// 		ecosphere: any;
+// 	}
+// }
