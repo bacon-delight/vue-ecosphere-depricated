@@ -1,6 +1,6 @@
-import { themes, setTheme } from "./types.interface";
+import { themes, setTheme } from "../types.interface";
 
-export function setTheme(option: themes): void {
+export default function setTheme(option: themes): void {
 	// Auto
 	if (option === "auto") {
 		if (

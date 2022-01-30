@@ -7,7 +7,7 @@
 			:navigation="navigation"
 		)
 		.layout__content
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum in eum recusandae saepe illo quam soluta at corrupti aliquam officiis laborum nihil, ipsum, est commodi ipsam adipisci ullam veniam nobis.
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
 </template>
 
 <script lang="ts">

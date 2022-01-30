@@ -1,52 +1,44 @@
-// Common
-import Icon from "./plugin/common/icon/Icon.vue";
+// Modules
+const modulePrefix = "v-eco";
+const modules = [
+	require.context("./plugin/common", true, /[a-z]\w+\.(vue)$/),
+	require.context("./plugin/components", true, /[a-z]\w+\.(vue)$/),
+	require.context("./plugin/layout", true, /[a-z]\w+\.(vue)$/),
+];
 
-// Layout
-import Layout from "./plugin/layout/Layout.vue";
-import Navigation from "./plugin/layout/navigation/Navigation.vue";
-import Sidebar from "./plugin/layout/sidebar/Sidebar.vue";
+// Utilities
+/* eslint-disable-next-line */
+const ecosphere: any = {};
+const utilities = [
+	require.context("./plugin/utils/helpers", true, /[a-z]\w+\.(ts)$/),
+];
+utilities.forEach((module) => {
+	module.keys().forEach((utility: string) => {
+		ecosphere[utility.slice(2, -3)] = module(utility).default;
+	});
+});
 
-// Components
-import Dropdown from "./plugin/components/dropdown/Dropdown.vue";
-
-// Types & Utilities
-import {
-	themes,
-	ecosphere_config,
-	ecosphere_helpers,
-} from "./plugin/utils/types.interface";
-import { setTheme } from "./plugin/utils/setTheme";
-
-// Configurations & Helpers
-const config: ecosphere_config = {
-	theme: "auto" as themes,
-	// theme: "light" as themes,
-};
-const helpers: ecosphere_helpers = {
-	setTheme,
-};
-const ecosphere = { config, helpers };
+// Initialize
 function initialize(): void {
-	setTheme(config.theme);
+	ecosphere.setTheme("auto");
 }
 
-/* eslint-disable */
 export default {
+	/* eslint-disable-next-line */
 	install: (app: any, options: any): void => {
 		initialize();
 
 		// Provider
 		app.provide("ecosphere", ecosphere);
 
-		// Common
-		app.component("v-eco-icon", Icon);
-
-		// Layout
-		app.component("v-eco-layout", Layout);
-		app.component("v-eco-navigation", Navigation);
-		app.component("v-eco-sidebar", Sidebar);
-
-		// Components
-		app.component("v-eco-dropdown", Dropdown);
+		// Import & Register Modules
+		modules.forEach((module) => {
+			module.keys().forEach((component) => {
+				app.component(
+					`${modulePrefix}-${component.slice(2, -4)}`,
+					module(component).default
+				);
+			});
+		});
 	},
 };
