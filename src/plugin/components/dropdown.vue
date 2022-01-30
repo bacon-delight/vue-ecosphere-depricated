@@ -20,7 +20,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { dropdown, dropdown_flow } from "./dropdown.interface";
+import { dropdown, dropdown_flow } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Dropdown",

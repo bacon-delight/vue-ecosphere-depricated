@@ -14,6 +14,7 @@ select:-webkit-autofill:focus {
 	transition: background-color 50000s ease-in-out 0s;
 }
 
+@import "./_breakpoints.scss";
 @import "./_colors.scss";
 @import "./_fonts.scss";
 @import "./_keyframes.scss";

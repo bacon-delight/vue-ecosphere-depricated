@@ -1,7 +1,4 @@
-import {
-	dropdown_flow,
-	dropdown_option,
-} from "@/plugin/components/dropdown/dropdown.interface";
+import { dropdown_flow, dropdown_option } from "./dropdown.interface";
 
 export type navigation_option_type = "dropdown";
 export type navigation_option_category = "locale";
