@@ -12,7 +12,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { navigation } from "./navigation/navigation.interface";
+import { navigation } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Components",

@@ -21,7 +21,7 @@ nav.navigation.navigation--auto
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { navigation } from "./navigation.interface";
+import { navigation } from "@/plugin/utils/types/navigation.interface";
 
 export default defineComponent({
 	name: "Navigation",
