@@ -25,7 +25,6 @@ import { navigation } from "@/plugin/utils/types/navigation.interface";
 
 export default defineComponent({
 	name: "Navigation",
-	inject: ["ecosphere"],
 	props: {
 		navigation: {
 			type: Object as PropType<navigation>,
@@ -40,9 +39,6 @@ export default defineComponent({
 		switchTheme() {
 			console.log("here");
 		},
-	},
-	mounted() {
-		// console.log(this.ecosphere);
 	},
 });
 </script>
