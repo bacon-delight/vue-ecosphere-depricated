@@ -29,7 +29,7 @@ export default {
 		initialize();
 
 		// Provider
-		app.provide("ecosphere", ecosphere);
+		app.config.globalProperties.$ecosphere = ecosphere;
 
 		// Import & Register Modules
 		modules.forEach((module) => {

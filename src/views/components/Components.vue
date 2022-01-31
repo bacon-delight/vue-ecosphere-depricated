@@ -8,9 +8,8 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
 	name: "Components",
-	// inject: ["ecosphere"],
 	mounted() {
-		// console.log(this.$ecosphere);
+		console.log(this.$ecosphere);
 	},
 	data() {
 		return {

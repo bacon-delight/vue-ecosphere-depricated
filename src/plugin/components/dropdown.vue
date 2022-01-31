@@ -8,6 +8,7 @@
 
 	//- Drop Area
 	.dropdown__content(
+		@mouseleave="toggle",
 		:class="[`dropdown__content--flow-${flow}`, contain ? 'dropdown__content--contain' : '']",
 		v-if="open && options.length"
 	)
@@ -76,7 +77,7 @@ export default defineComponent({
 		margin-top: $spacer-0-25;
 		background: $color-background;
 		padding: $spacer-0-25;
-		border-radius: $spacer-0-5;
+		border-radius: $spacer-0-75;
 
 		&--contain {
 			width: 100%;
@@ -92,7 +93,7 @@ export default defineComponent({
 	}
 
 	&__option {
-		padding: $spacer-0-25 $spacer-0-25;
+		padding: $spacer-0-125 $spacer-0-25;
 		border-radius: $spacer-0-5;
 		@include hover-background;
 		width: 100%;
