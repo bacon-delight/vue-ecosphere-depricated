@@ -27,7 +27,7 @@ jobs:
               run: npm run test:unit
               
             - name: Send Reports
-              uses: paambaati/codeclimate-action@v2.2.4
+              uses: paambaati/codeclimate-action@v3.0.0
               env:
                   CC_TEST_REPORTER_ID: ${{secrets.cc_test_reporter_id}}
               with:
