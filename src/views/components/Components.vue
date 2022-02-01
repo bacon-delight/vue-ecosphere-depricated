@@ -38,8 +38,7 @@ export default defineComponent({
 					],
 				},
 				{
-					type: "dropdown",
-					category: "locale",
+					type: "locale",
 					flow: "left",
 					contain: false,
 					centered: true,
@@ -53,6 +52,9 @@ export default defineComponent({
 							value: "",
 						},
 					],
+				},
+				{
+					type: "theme",
 				},
 			],
 		};
