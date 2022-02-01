@@ -3,8 +3,10 @@
 	//- Main Area
 	.dropdown__container(@click="toggle")
 		slot
-			span Dropdown
-			v-eco-icon(:type="open ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'")
+			v-eco-link(
+				:label="label",
+				:icon="open ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'"
+			)
 
 	//- Drop Area
 	.dropdown__content(
@@ -21,7 +23,10 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { dropdown, dropdown_flow } from "@/plugin/utils/types.interface";
+import {
+	dropdown_options,
+	dropdown_flow,
+} from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Dropdown",
@@ -31,7 +36,7 @@ export default defineComponent({
 			default: "",
 		},
 		options: {
-			type: Object as PropType<dropdown>,
+			type: Object as PropType<dropdown_options>,
 			required: true,
 		},
 		flow: {

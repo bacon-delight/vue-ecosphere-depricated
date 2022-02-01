@@ -20,7 +20,7 @@ utilities.forEach((module) => {
 
 // Initialize
 function initialize(): void {
-	ecosphere.setTheme("auto");
+	new ecosphere.theme();
 }
 
 export default {
