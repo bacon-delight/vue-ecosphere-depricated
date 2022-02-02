@@ -1,10 +1,15 @@
-import { themes } from "../types.interface";
+import { themes, color, color_palette, unknown_type } from "../types.interface";
+import {
+	defaultLightPalette,
+	defaultDarkPalette,
+} from "../defaults/colorPalette";
 
 export default class Theme {
 	private static theme: themes;
 
 	constructor(option: themes = "auto") {
 		Theme.setTheme(option);
+		Theme.setColors(defaultLightPalette, defaultDarkPalette);
 	}
 
 	public static setTheme(option: themes): void {
@@ -37,5 +42,28 @@ export default class Theme {
 
 	public static getCurrentTheme(): themes {
 		return this.theme;
+	}
+
+	public static setColors(
+		lightPalette: color_palette,
+		darkPalette: color_palette
+	): void {
+		// Apply Light Variables
+		const light: unknown_type = document.querySelector(":root");
+		lightPalette.forEach((color: color) => {
+			light.style.setProperty(color.variable, color.value);
+		});
+
+		// Apply Dark Variables
+		let darkStyle = "";
+		darkPalette.forEach((color: color) => {
+			darkStyle = darkStyle.concat(
+				`${color.variable}: ${color.value}; \n`
+			);
+		});
+		const style: unknown_type = document.createElement("style");
+		style.type = "text/css";
+		style.innerHTML = `body.dark { ${darkStyle} };`;
+		document.getElementsByTagName("head")[0].appendChild(style);
 	}
 }
