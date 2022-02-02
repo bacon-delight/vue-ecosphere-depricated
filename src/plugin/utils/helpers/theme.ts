@@ -1,4 +1,4 @@
-import { themes, color, color_palette, unknown_type } from "../types.interface";
+import { themes, color_palette, unknown_type } from "../types.interface";
 import {
 	defaultLightPalette,
 	defaultDarkPalette,
@@ -49,18 +49,16 @@ export default class Theme {
 		darkPalette: color_palette
 	): void {
 		// Apply Light Variables
-		const light: unknown_type = document.querySelector(":root");
-		lightPalette.forEach((color: color) => {
-			light.style.setProperty(color.variable, color.value);
-		});
+		const lightSelector: unknown_type = document.querySelector(":root");
+		for (const color in lightPalette) {
+			lightSelector.style.setProperty(color, lightPalette[color]);
+		}
 
 		// Apply Dark Variables
 		let darkStyle = "";
-		darkPalette.forEach((color: color) => {
-			darkStyle = darkStyle.concat(
-				`${color.variable}: ${color.value}; \n`
-			);
-		});
+		for (const color in darkPalette) {
+			darkStyle = darkStyle.concat(`${color}: ${darkPalette[color]}; \n`);
+		}
 		const style: unknown_type = document.createElement("style");
 		style.type = "text/css";
 		style.innerHTML = `body.dark { ${darkStyle} };`;

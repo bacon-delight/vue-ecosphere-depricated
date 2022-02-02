@@ -5,12 +5,11 @@ export * from "./types/navigation.interface";
 
 // Plugin Configuration & Helper Types
 export type themes = "light" | "dark" | "auto";
-export interface color {
-	variable: string;
-	value: string;
+export interface color_palette {
+	[key: string]: string;
 }
-export type color_palette = color[];
 
+// Unknowns
 export interface unknown_nested_type {
 	// eslint-disable-next-line
 	[key: string]: any;
