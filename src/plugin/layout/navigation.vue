@@ -1,5 +1,5 @@
 <template lang="pug">
-nav.navigation.navigation--auto
+nav.navigation
 	//- Logo
 	img.navigation__logo(:src="logo")
 

@@ -5,5 +5,3 @@ export interface dropdown_option {
 	value?: string;
 	action?: () => void;
 }
-
-export type dropdown_options = dropdown_option[];

@@ -4,7 +4,7 @@ a.link
 		v-if="icon && iconDirection === 'left'",
 		:type="icon"
 	)
-	.link__label {{ label }}
+	span.link__label {{ label }}
 	v-eco-icon.link__icon(v-if="icon && iconDirection === 'right'", :type="icon")
 </template>
 
@@ -38,6 +38,7 @@ export default defineComponent({
 	align-items: center;
 	column-gap: $spacer-0-25;
 	text-decoration: none;
+	color: $color-contrast;
 	@include hover-color;
 
 	&__icon {
@@ -46,6 +47,9 @@ export default defineComponent({
 
 	&__label {
 		@include font-light;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
 	}
 }
 </style>

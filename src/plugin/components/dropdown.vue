@@ -17,16 +17,14 @@
 		.dropdown__option(
 			:class="[centered ? 'dropdown__option--centered' : '']",
 			v-for="(option, index) in options",
-			:key="index"
+			:key="index",
+			@click="option.action"
 		) {{ option.label }}
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import {
-	dropdown_options,
-	dropdown_flow,
-} from "@/plugin/utils/types.interface";
+import { dropdown_option, dropdown_flow } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Dropdown",
@@ -36,7 +34,7 @@ export default defineComponent({
 			default: "",
 		},
 		options: {
-			type: Object as PropType<dropdown_options>,
+			type: Object as PropType<dropdown_option[]>,
 			required: true,
 		},
 		flow: {
@@ -69,6 +67,7 @@ export default defineComponent({
 .dropdown {
 	position: relative;
 	@include font-light;
+	color: $color-contrast;
 
 	&__container {
 		display: flex;
@@ -101,7 +100,6 @@ export default defineComponent({
 		padding: $spacer-0-125 $spacer-0-25;
 		border-radius: $spacer-0-5;
 		@include hover-background;
-		width: 100%;
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
