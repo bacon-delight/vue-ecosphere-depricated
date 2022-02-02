@@ -1,5 +1,5 @@
 <template lang="pug">
-a.link
+a.link(:class="[disabled ? 'link--disabled' : '']")
 	v-eco-icon.link__icon(
 		v-if="icon && iconDirection === 'left'",
 		:type="icon"
@@ -27,6 +27,10 @@ export default defineComponent({
 			type: String as PropType<link_icon_direction>,
 			default: "right",
 		},
+		disabled: {
+			type: Boolean as PropType<boolean>,
+			default: false,
+		},
 	},
 });
 </script>
@@ -50,6 +54,12 @@ export default defineComponent({
 		text-overflow: ellipsis;
 		white-space: nowrap;
 		overflow: hidden;
+	}
+
+	&--disabled {
+		color: $color-helper-grey;
+		cursor: default;
+		pointer-events: none;
 	}
 }
 </style>

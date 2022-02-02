@@ -6,6 +6,7 @@
 		v-eco-link(
 			:label="option.label",
 			:icon="option.icon",
+			:disabled="option.route || option.action ? false : true",
 			iconDirection="left"
 		)
 		v-eco-dot.menu__active(
