@@ -1,12 +1,14 @@
 # Dropdown
 
+[[toc]]
+
 ```html:no-line-numbers
 <v-eco-dropdown />
 ```
 
-When there are multiple secondary options to be selected that don't need to be rendered by default, you can use the dropdown component. The list will be rendered when the use clicks on the dropdown.
+#### When to use
 
-[[toc]]
+When there are multiple secondary options to be selected that don't need to be rendered by default, you can use the dropdown component. The list will be rendered when the use clicks on the dropdown.
 
 ## API
 
@@ -17,16 +19,34 @@ type dropdown_flow = "left" | "right";
 
 interface dropdown_option {
 	label: string;
-	value?: string;
+	route?: string;
 	action?: () => void;
 }
 ```
 
+#### Dropdown Option
+
 The `dropdown_option` interface has the following properties:
 
 -   `label` - Label to for the option
--   `value` - Internal value
+-   `route` - Navigate to a route within the application
 -   `action` - Perform a custom action when the option is selected
+
+::: tip
+For navigating to an external URL, use `action` instead of the `route`. The `route` will be pushed through `$router.push` internally and might lead to error. For example,
+
+```js
+const options = [
+	{
+		label: "Remix Icon",
+		action: () => {
+			window.open("https://remixicon.com/", "_blank");
+		},
+	},
+];
+```
+
+:::
 
 ### Props
 
@@ -77,6 +97,10 @@ export default defineComponent({
 					action: () => {
 						window.open("https://remixicon.com/", "_blank");
 					},
+				},
+				{
+					label: "About",
+					route: "/about",
 				},
 			],
 		};

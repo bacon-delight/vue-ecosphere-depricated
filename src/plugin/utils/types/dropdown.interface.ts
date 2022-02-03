@@ -2,6 +2,6 @@ export type dropdown_flow = "left" | "right";
 
 export interface dropdown_option {
 	label: string;
-	value?: string;
+	route?: string;
 	action?: () => void;
 }

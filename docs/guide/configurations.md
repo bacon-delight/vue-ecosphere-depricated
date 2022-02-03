@@ -71,3 +71,11 @@ this.$ecosphere.theme.setColors(customLightPalette, customDarkPalette);
 ```
 
 These CSS variables will be availble globally and can be used across the components. You can also add your own variables to make them available globally.
+
+## Locale
+
+Coming Soon
+
+## Helpers
+
+Coming Soon

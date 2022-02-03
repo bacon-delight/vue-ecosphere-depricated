@@ -8,7 +8,7 @@ Render a navigation bar with custom options.
 
 ### Types
 
-Some types are imported from [Dropdown](/components/dropdown#types)
+Some types are imported from [Dropdown](/components/dropdown.html#types)
 
 ```ts
 type navigation_option_type = "dropdown" | "locale" | "theme";

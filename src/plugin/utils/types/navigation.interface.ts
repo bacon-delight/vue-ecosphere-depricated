@@ -10,5 +10,3 @@ export interface navigation_item {
 	centered?: boolean;
 	options?: dropdown_option[];
 }
-
-export type navigation_items = navigation_item[];

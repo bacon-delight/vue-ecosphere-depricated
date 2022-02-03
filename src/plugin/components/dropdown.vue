@@ -18,7 +18,7 @@
 			:class="[centered ? 'dropdown__option--centered' : '']",
 			v-for="(option, index) in options",
 			:key="index",
-			@click="option.action"
+			@click="handleClick(option)"
 		) {{ option.label }}
 </template>
 
@@ -58,6 +58,14 @@ export default defineComponent({
 	methods: {
 		toggle(): void {
 			this.open = !this.open;
+		},
+		handleClick(item: dropdown_option) {
+			if (item.route) {
+				this.$router.push(item.route);
+			}
+			if (item.action) {
+				item.action();
+			}
 		},
 	},
 });
