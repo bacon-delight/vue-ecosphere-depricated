@@ -9,6 +9,7 @@
 		v-eco-navigation.layout__navigation(
 			:logo="logo",
 			:navigation="navigation",
+			:sidebarToggle="true",
 			@toggleSidebar="toggleSidebar(true)"
 		)
 		.layout__content

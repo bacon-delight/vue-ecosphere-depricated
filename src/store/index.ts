@@ -23,10 +23,6 @@ export default createStore({
 							window.open("https://remixicon.com/", "_blank");
 						},
 					},
-					{
-						label: "Remix Icon",
-						route: "/components/button",
-					},
 				],
 			},
 			{

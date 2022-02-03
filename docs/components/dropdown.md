@@ -1,14 +1,14 @@
 # Dropdown
 
-[[toc]]
-
 ```html:no-line-numbers
 <v-eco-dropdown />
 ```
 
-#### When to use
+[[toc]]
 
-When there are multiple secondary options to be selected that don't need to be rendered by default, you can use the dropdown component. The list will be rendered when the use clicks on the dropdown.
+### When to use
+
+When there are multiple secondary navigation options that don't need to be rendered by default, you can use the dropdown component. The list will be rendered when the use clicks on the dropdown.
 
 ## API
 
