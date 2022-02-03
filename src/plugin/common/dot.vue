@@ -1,5 +1,5 @@
 <template lang="pug">
-.dot(:class="`dot--${type}`")
+.dot(:class="`dot--${hue}`")
 </template>
 
 <script lang="ts">
@@ -8,7 +8,7 @@ import { defineComponent, PropType } from "vue";
 export default defineComponent({
 	name: "Dot",
 	props: {
-		type: {
+		hue: {
 			type: String as PropType<string>,
 			default: "",
 		},

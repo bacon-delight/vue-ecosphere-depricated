@@ -45,6 +45,36 @@ export default createStore({
 				type: "theme",
 			},
 		],
+		sidebar: [
+			{
+				label: "Introduction",
+				children: [
+					{
+						label: "Getting Started",
+						action: () => {
+							console.log("yo");
+						},
+					},
+					{
+						label: "Configurations",
+						route: "/introduction/configurations",
+					},
+				],
+			},
+			{
+				label: "Components",
+				children: [
+					{
+						label: "Button",
+						route: "/components/button",
+					},
+					{
+						label: "Dropdown",
+						route: "/components/dropdown",
+					},
+				],
+			},
+		],
 	},
 	mutations: {},
 	actions: {},
@@ -52,6 +82,9 @@ export default createStore({
 	getters: {
 		navigation: (state) => {
 			return state.navigation;
+		},
+		sidebar: (state) => {
+			return state.sidebar;
 		},
 	},
 });

@@ -17,6 +17,11 @@ const routes: Array<RouteRecordRaw> = [
 				component: () =>
 					import("../views/components/button/Button.vue"),
 			},
+			{
+				path: "dropdown",
+				component: () =>
+					import("../views/components/dropdown/Dropdown.vue"),
+			},
 		],
 	},
 ];

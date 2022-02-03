@@ -1,6 +1,10 @@
 <template lang="pug">
 .layout
-	v-eco-layout(:navigation="navigation", logo="/img/logo.png")
+	v-eco-layout(
+		:navigation="navigation",
+		:sidebar="sidebar",
+		logo="/img/logo.png"
+	)
 </template>
 
 <script lang="ts">
@@ -10,7 +14,7 @@ import { mapGetters } from "vuex";
 export default defineComponent({
 	name: "Components",
 	computed: {
-		...mapGetters(["navigation"]),
+		...mapGetters(["navigation", "sidebar"]),
 	},
 });
 </script>

@@ -1,5 +1,11 @@
 <template lang="pug">
 nav.navigation
+	//- Sidebar Toggle
+	v-eco-link.navigation__toggle(
+		icon="ri-menu-4-line",
+		@click="$emit('toggleSidebar')"
+	)
+
 	//- Logo
 	img.navigation__logo(:src="logo")
 
@@ -75,7 +81,15 @@ export default defineComponent({
 	&__logo {
 		margin-right: auto;
 		max-width: $spacer-5;
-		max-height: $spacer-1-75;
+		max-height: $spacer-1-5;
+	}
+
+	&__toggle {
+		display: none;
+
+		@include respond-below(sm) {
+			display: block;
+		}
 	}
 
 	&--auto {

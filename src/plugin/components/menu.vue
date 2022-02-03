@@ -10,7 +10,7 @@
 			iconDirection="left"
 		)
 		v-eco-dot.menu__active(
-			:type="isCurrentRoute(option.route) ? 'information' : ''"
+			:hue="isCurrentRoute(option.route) ? 'information' : ''"
 		)
 	v-eco-menu(v-if="option.children", :options="option.children")
 </template>
