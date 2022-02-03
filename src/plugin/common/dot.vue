@@ -1,25 +1,30 @@
 <template lang="pug">
-i(:class="[type]")
+.dot(:class="`dot--${hue}`")
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
-	name: "Icon",
+	name: "Dot",
 	props: {
-		type: {
+		hue: {
 			type: String as PropType<string>,
-			required: true,
+			default: "",
 		},
 	},
 });
 </script>
 
 <style lang="scss" scoped>
-@import url("https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css");
+.dot {
+	height: $spacer-0-375;
+	width: $spacer-0-375;
+	border-radius: 50%;
+	background: transparent;
 
-i {
-	font-size: 1rem;
+	&--information {
+		background: $color-indicator-information;
+	}
 }
 </style>
