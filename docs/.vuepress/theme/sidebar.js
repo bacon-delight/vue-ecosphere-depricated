@@ -8,6 +8,20 @@ module.exports = {
 					text: "Installation",
 					link: "/guide/installation",
 				},
+				{
+					text: "Configurations",
+					link: "/guide/configurations",
+				},
+			],
+		},
+		{
+			text: "Layout",
+			link: "/layout/",
+			children: [
+				{
+					text: "Navigation",
+					link: "/layout/navigation",
+				},
 			],
 		},
 		{
