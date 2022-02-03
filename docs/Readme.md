@@ -5,10 +5,10 @@ heroText: Ecosphere Design System
 tagline: The design language for modern data intensive applications
 
 actions:
-    - text: Design System
-      link: /guide/installation
-      type: secondary
-    - text: API Reference →
+    # - text: Design System
+    #   link: /guide/installation
+    #   type: secondary
+    - text: Get Started →
       link: /guide/installation
       type: primary
 

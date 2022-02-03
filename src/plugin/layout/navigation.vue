@@ -32,7 +32,7 @@ nav.navigation
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { navigation_items } from "@/plugin/utils/types/navigation.interface";
+import { navigation_item } from "@/plugin/utils/types/navigation.interface";
 
 export default defineComponent({
 	name: "Navigation",
@@ -43,7 +43,7 @@ export default defineComponent({
 	},
 	props: {
 		navigation: {
-			type: Object as PropType<navigation_items>,
+			type: Object as PropType<navigation_item[]>,
 			required: true,
 		},
 		logo: {
