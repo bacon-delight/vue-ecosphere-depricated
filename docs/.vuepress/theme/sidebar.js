@@ -29,8 +29,8 @@ module.exports = {
 			link: "/components/",
 			children: [
 				{
-					text: "Button",
-					link: "/components/button",
+					text: "Dropdown",
+					link: "/components/dropdown",
 				},
 			],
 		},
