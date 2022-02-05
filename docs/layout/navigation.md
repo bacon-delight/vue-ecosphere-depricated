@@ -6,7 +6,7 @@
 
 [[toc]]
 
-### When to use
+### About
 
 Render a navigation bar with custom options
 
@@ -20,7 +20,7 @@ It's recommended to use the [Layout](/layout) instead, which contains the naviga
 
 Some types are imported from [Dropdown](/components/dropdown.html#types)
 
-```ts
+```ts:no-line-numbers
 type navigation_option_type = "dropdown" | "locale" | "theme";
 
 interface navigation_item {
@@ -48,7 +48,7 @@ The `navigation_item` interface has the following properties:
 ::: tip
 To add a theme toggle to the navigation, pass the type as `theme`. The functionality is taken care by the component.
 
-```js
+```js:no-line-numbers
 const navigationOptions = [
 	{
 		type: "theme",
@@ -77,14 +77,14 @@ const navigationOptions = [
 :::: code-group
 ::: code-group-item HTML
 
-```html
+```html:no-line-numbers
 <v-eco-navigation logo="/img/logo.png" :navigation="navigationOptions" />
 ```
 
 :::
 ::: code-group-item PUG
 
-```pug
+```pug:no-line-numbers
 v-eco-navigation(logo="/img/logo.png", :navigation="navigationOptions")
 ```
 

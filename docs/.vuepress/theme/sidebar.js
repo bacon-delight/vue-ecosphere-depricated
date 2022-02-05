@@ -32,6 +32,10 @@ module.exports = {
 					text: "Dropdown",
 					link: "/components/dropdown",
 				},
+				{
+					text: "Link",
+					link: "/components/link",
+				},
 			],
 		},
 	],

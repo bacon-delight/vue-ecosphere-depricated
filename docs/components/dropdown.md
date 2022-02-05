@@ -6,7 +6,7 @@
 
 [[toc]]
 
-### When to use
+### About
 
 When there are multiple secondary navigation options that don't need to be rendered by default, you can use the dropdown component. The list will be rendered when the use clicks on the dropdown.
 
@@ -14,7 +14,7 @@ When there are multiple secondary navigation options that don't need to be rende
 
 ### Types
 
-```ts
+```ts:no-line-numbers
 type dropdown_flow = "left" | "right";
 
 interface dropdown_option {
@@ -35,7 +35,7 @@ The `dropdown_option` interface has the following properties:
 ::: tip
 For navigating to an external URL, use `action` instead of the `route`. The `route` will be pushed through `$router.push` internally and might lead to error. For example,
 
-```js
+```js:no-line-numbers
 const options = [
 	{
 		label: "Remix Icon",
@@ -63,14 +63,14 @@ const options = [
 :::: code-group
 ::: code-group-item HTML
 
-```html
+```html:no-line-numbers
 <v-eco-dropdown label="Resources" :options="options" flow="left" />
 ```
 
 :::
 ::: code-group-item PUG
 
-```pug
+```pug:no-line-numbers
 v-eco-dropdown(label="Resources", :options="options", flow="left")
 ```
 
