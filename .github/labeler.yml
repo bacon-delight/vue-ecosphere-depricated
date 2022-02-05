@@ -7,5 +7,5 @@ enhancement:
 tests:
 - "**/*.spec.ts"
 
-interface:
+interfaces:
 - "**/*.interface.ts"
