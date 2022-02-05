@@ -36,6 +36,10 @@ module.exports = {
 					text: "Link",
 					link: "/components/link",
 				},
+				{
+					text: "Menu",
+					link: "/components/menu",
+				},
 			],
 		},
 	],

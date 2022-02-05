@@ -76,7 +76,7 @@ v-eco-dropdown(label="Resources", :options="options", flow="left")
 
 :::
 
-::: code-group-item SCRIPT
+::: code-group-item Script
 
 ```js
 import { defineComponent } from "vue";

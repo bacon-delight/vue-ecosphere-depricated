@@ -38,12 +38,14 @@ interface navigation_item {
 The `navigation_item` interface has the following properties:
 
 -   `type` - Type of item to render
-    When `type` is `dropdown`, the following can be used
-    -   `flow` (when `type` is `dropdown`) - Refer to dropdown types
-    -   `contain` (when `type` is `dropdown`) - Refer to dropdown types
-    -   `centered` (when `type` is `dropdown`) - Refer to dropdown types
-    -   `options` (when `type` is `dropdown`) - Refer to dropdown types
 -   `label` - Label for the item
+
+When `type` is `dropdown`, the following can be used:
+
+-   `flow` - Refer to dropdown types
+-   `contain` - Refer to dropdown types
+-   `centered` - Refer to dropdown types
+-   `options` - Refer to dropdown types
 
 ::: tip
 To add a theme toggle to the navigation, pass the type as `theme`. The functionality is taken care by the component.
@@ -90,7 +92,7 @@ v-eco-navigation(logo="/img/logo.png", :navigation="navigationOptions")
 
 :::
 
-::: code-group-item SCRIPT
+::: code-group-item Script
 
 ```js
 import { defineComponent } from "vue";
