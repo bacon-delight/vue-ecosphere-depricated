@@ -2,6 +2,7 @@
 nav.navigation
 	//- Sidebar Toggle
 	v-eco-link.navigation__toggle(
+		v-if="sidebarToggle",
 		icon="ri-menu-4-line",
 		@click="$emit('toggleSidebar')"
 	)
@@ -42,6 +43,10 @@ export default defineComponent({
 		};
 	},
 	props: {
+		sidebarToggle: {
+			type: Boolean as PropType<boolean>,
+			default: false,
+		},
 		navigation: {
 			type: Object as PropType<navigation_item[]>,
 			required: true,

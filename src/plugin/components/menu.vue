@@ -2,8 +2,9 @@
 
 <template lang="pug">
 .menu(v-for="(option, index) in options", :key="index")
-	.menu__item(@click="handleClick(option)")
+	.menu__item
 		v-eco-link(
+			@click="handleClick(option)",
 			:label="option.label",
 			:icon="option.icon",
 			:disabled="option.route || option.action ? false : true",

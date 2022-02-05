@@ -9,6 +9,7 @@
 		v-eco-navigation.layout__navigation(
 			:logo="logo",
 			:navigation="navigation",
+			:sidebarToggle="true",
 			@toggleSidebar="toggleSidebar(true)"
 		)
 		.layout__content
@@ -74,19 +75,17 @@ export default defineComponent({
 	}
 
 	&__sidebar {
-		transition: $transition-micro ease-in-out;
-
 		@include respond-below(sm) {
+			transition: $transition-micro ease-in-out;
 			height: 100%;
 			position: fixed;
 			z-index: 1;
 			top: 0;
 			left: 0;
-			background-color: #111;
 			overflow-x: hidden;
 
 			&--open {
-				width: fit-content;
+				width: $spacer-8;
 				max-width: $spacer-10;
 			}
 

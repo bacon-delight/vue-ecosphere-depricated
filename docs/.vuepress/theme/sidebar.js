@@ -32,29 +32,27 @@ module.exports = {
 					text: "Dropdown",
 					link: "/components/dropdown",
 				},
-			],
-		},
-	],
-	"/zh": [
-		{
-			text: "指南",
-			link: "/zh/guide/",
-			children: [
 				{
-					text: "安装",
-					link: "/zh/guide/installation",
+					text: "Link",
+					link: "/components/link",
 				},
-			],
-		},
-		{
-			text: "组成部分",
-			link: "/zh/components/",
-			children: [
 				{
-					text: "钮扣",
-					link: "/zh/components/button",
+					text: "Menu",
+					link: "/components/menu",
 				},
 			],
 		},
 	],
+	// "/zh": [
+	// 	{
+	// 		text: "指南",
+	// 		link: "/zh/guide/",
+	// 		children: [
+	// 			{
+	// 				text: "安装",
+	// 				link: "/zh/guide/installation",
+	// 			},
+	// 		],
+	// 	},
+	// ],
 };
