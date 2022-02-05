@@ -22,6 +22,10 @@ module.exports = {
 					text: "Navigation",
 					link: "/layout/navigation",
 				},
+				{
+					text: "Sidebar",
+					link: "/layout/sidebar",
+				},
 			],
 		},
 		{

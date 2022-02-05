@@ -5,6 +5,14 @@ export default createStore({
 	state: {
 		navigation: [
 			{
+				type: "link",
+				label: "API Guide",
+				icon: "ri-arrow-right-up-line",
+				action: () => {
+					window.open("https://docs.ecosphere.dev/", "_blank");
+				},
+			},
+			{
 				type: "dropdown",
 				label: "Resources",
 				flow: "left",

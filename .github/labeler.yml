@@ -6,3 +6,6 @@ enhancement:
 
 tests:
 - "**/*.spec.ts"
+
+interfaces:
+- "**/*.interface.ts"

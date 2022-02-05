@@ -48,5 +48,10 @@
 		"name": "tests",
 		"color": "006B75",
 		"description": "New or updated test cases"
+	},
+	{
+		"name": "interfaces",
+		"color": "00d0ff",
+		"description": "New or updated types or interfaces"
 	}
 ]

@@ -4,13 +4,9 @@
 <v-eco-dropdown />
 ```
 
-[[toc]]
-
-### About
-
 When there are multiple secondary navigation options that don't need to be rendered by default, you can use the dropdown component. The list will be rendered when the use clicks on the dropdown.
 
-## API
+[[toc]]
 
 ### Types
 

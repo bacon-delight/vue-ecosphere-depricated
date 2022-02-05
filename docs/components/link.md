@@ -4,13 +4,9 @@
 <v-eco-link />
 ```
 
-[[toc]]
-
-### About
-
 Link can be used anywhere there's a need for linking or redirecting to a different page or external resource.
 
-## API
+[[toc]]
 
 ### Types
 

@@ -29,11 +29,19 @@ nav.navigation
 			:icon="theme === 'dark' ? 'ri-sun-line' : 'ri-moon-line'",
 			@click="switchTheme"
 		)
+
+		//- Links
+		v-eco-link(
+			v-if="item.type === 'link'",
+			:label="item.label",
+			:icon="item.icon",
+			@click="handleClick(item)"
+		)
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { navigation_item } from "@/plugin/utils/types/navigation.interface";
+import { navigation_item, menu_item } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Navigation",
@@ -67,6 +75,14 @@ export default defineComponent({
 				this.$ecosphere.theme.setTheme("dark");
 			}
 			this.getCurrentTheme();
+		},
+		handleClick(item: menu_item) {
+			if (item.route) {
+				this.$router.push(item.route);
+			}
+			if (item.action) {
+				item.action();
+			}
 		},
 	},
 	mounted() {

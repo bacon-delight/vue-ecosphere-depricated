@@ -4,17 +4,13 @@
 <v-eco-menu />
 ```
 
-[[toc]]
-
-### About
-
 Menu can be used for rendering a vertical nested tree style navigation. Sidebar uses this component to generate the nested navigation.
 
 ::: tip
-This component automatically tracks internal page routes and displayes active states accordingly. The current route will be displayed as active if it matches with the `route` option in the `menu_item`.
+This component automatically tracks internal page routes and displayes active states accordingly. The current route will be displayed as active if it matches with the `route` option in the `menu_item` interface.
 :::
 
-## API
+[[toc]]
 
 ### Types
 
