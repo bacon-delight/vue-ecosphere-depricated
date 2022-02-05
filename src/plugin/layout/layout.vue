@@ -2,7 +2,7 @@
 .layout
 	v-eco-sidebar.layout__sidebar(
 		:class="[open ? 'layout__sidebar--open' : 'layout__sidebar--closed']",
-		:sidebar="sidebar",
+		:options="sidebar",
 		@toggleSidebar="toggleSidebar(false)"
 	)
 	.layout__main

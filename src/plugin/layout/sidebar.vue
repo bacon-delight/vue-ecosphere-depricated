@@ -4,7 +4,7 @@
 		icon="ri-menu-4-line",
 		@click="$emit('toggleSidebar')"
 	)
-	v-eco-menu(:options="sidebar")
+	v-eco-menu(:options="options")
 </template>
 
 <script lang="ts">
@@ -14,7 +14,7 @@ import { sidebar_item } from "@/plugin/utils/types.interface";
 export default defineComponent({
 	name: "Sidebar",
 	props: {
-		sidebar: {
+		options: {
 			type: Object as PropType<sidebar_item[]>,
 			required: true,
 		},

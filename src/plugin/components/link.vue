@@ -44,9 +44,6 @@ export default defineComponent({
 	text-decoration: none;
 	color: $color-contrast;
 	@include hover-color;
-	-webkit-tap-highlight-color: transparent;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
 	max-width: 100%;
 
 	&__icon {

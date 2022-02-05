@@ -4,24 +4,20 @@
 <v-eco-navigation />
 ```
 
-[[toc]]
-
-### About
-
 Render a navigation bar with custom options
 
 ::: tip
 It's recommended to use the [Layout](/layout) instead, which contains the navigation and handles a responsive sidebar as well.
 :::
 
-## API
+[[toc]]
 
 ### Types
 
 Some types are imported from [Dropdown](/components/dropdown.html#types)
 
 ```ts:no-line-numbers
-type navigation_option_type = "dropdown" | "locale" | "theme";
+type navigation_option_type = "dropdown" | "locale" | "theme" | "link";
 
 interface navigation_item {
 	type: navigation_option_type;
@@ -30,6 +26,9 @@ interface navigation_item {
 	contain?: boolean;
 	centered?: boolean;
 	options?: dropdown_option[];
+	action?: () => void;
+	route?: string;
+	icon?: string;
 }
 ```
 
@@ -37,18 +36,28 @@ interface navigation_item {
 
 The `navigation_item` interface has the following properties:
 
--   `type` - Type of item to render
--   `label` - Label for the item
+| Name    | Type                     | Required | Description                               |
+| ------- | ------------------------ | -------- | ----------------------------------------- |
+| `type`  | `navigation_option_type` | Yes      | The type of the navigation item           |
+| `label` | `string`                 | No       | Renders the label for the navigation item |
 
 When `type` is `dropdown`, the following can be used:
 
--   `flow` - Refer to dropdown types
--   `contain` - Refer to dropdown types
--   `centered` - Refer to dropdown types
--   `options` - Refer to dropdown types
+-   `flow`
+-   `contain`
+-   `centered`
+-   `options`
+
+Refer to [Dropdown](/components/dropdown.html#types) types for more information on these properties.
+
+When `type` is `link`, the following can be used:
+
+-   `action` - A function that is called when the link is clicked, use this for external links
+-   `route` - The internal route to navigate to when the link is clicked
+-   `icon` - The icon to display in the link
 
 ::: tip
-To add a theme toggle to the navigation, pass the type as `theme`. The functionality is taken care by the component.
+To add a theme toggle to the navigation, pass the type as `theme`. The functionality will be taken care of by the component.
 
 ```js:no-line-numbers
 const navigationOptions = [
@@ -102,6 +111,14 @@ export default defineComponent({
 	data() {
 		return {
 			navigationOptions: [
+				{
+					type: "link",
+					label: "API Guide",
+					icon: "ri-arrow-right-up-line",
+					action: () => {
+						window.open("https://docs.ecosphere.dev/", "_blank");
+					},
+				},
 				{
 					type: "dropdown",
 					label: "Resources",
