@@ -33,8 +33,8 @@ module.exports = {
 				selectLanguageName: "简体中文",
 			},
 		},
-		logo: "/logo/light.png",
-		logoDark: "/logo/dark.png",
+		logo: "/logo/logo.png",
+		// logoDark: "/logo/dark.png",
 		repo: "bacon-delight/vue-ecosphere",
 		editLink: true,
 		editLinkText:
