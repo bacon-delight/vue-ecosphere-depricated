@@ -1,5 +1,8 @@
 import { themes, color_palette, unknown_type } from "../types.interface";
-import { defaultLightPalette, defaultDarkPalette } from "../defaults/palette";
+import {
+	defaultLightPalette,
+	defaultDarkPalette,
+} from "../defaults/colorPalette";
 
 export default class Theme {
 	private static theme: themes;

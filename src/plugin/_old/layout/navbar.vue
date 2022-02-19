@@ -1,17 +1,17 @@
 <template lang="pug">
-nav.navigation
+nav.navbar
 	//- Sidebar Toggle
-	v-eco-link.navigation__toggle(
+	v-eco-link.navbar__toggle(
 		v-if="sidebarToggle",
 		icon="ri-menu-4-line",
 		@click="$emit('toggleSidebar')"
 	)
 
 	//- Logo
-	img.navigation__logo(:src="logo")
+	img.navbar__logo(:src="logo")
 
 	//- Options
-	.navigation__option(v-for="(item, index) in navigation", :key="index")
+	.navbar__option(v-for="(item, index) in navbar", :key="index")
 		//- Dropdown
 		v-eco-dropdown(
 			v-if="item.type === 'dropdown' || item.type === 'locale'",
@@ -41,10 +41,10 @@ nav.navigation
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { navigation_item, menu_item } from "@/plugin/utils/types.interface";
+import { navbar_item, menu_item } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
-	name: "Navigation",
+	name: "Navbar",
 	data() {
 		return {
 			theme: "auto",
@@ -55,8 +55,8 @@ export default defineComponent({
 			type: Boolean as PropType<boolean>,
 			default: false,
 		},
-		navigation: {
-			type: Object as PropType<navigation_item[]>,
+		navbar: {
+			type: Object as PropType<navbar_item[]>,
 			required: true,
 		},
 		logo: {
@@ -92,7 +92,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.navigation {
+.navbar {
 	display: flex;
 	flex-wrap: nowrap;
 	align-items: center;

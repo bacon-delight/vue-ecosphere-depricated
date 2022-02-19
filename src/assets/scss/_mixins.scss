@@ -24,23 +24,26 @@
 }
 
 /* Action Feedbacks */
-@mixin hover-background {
+@mixin hover-background(
+	$background: $color-background-faded,
+	$font: $color-hue
+) {
 	cursor: pointer;
-	transition: all $transition-micro;
+	transition: all $transition-micro ease-in-out;
 	user-select: none;
 
 	&:hover {
-		background: $color-background-faded;
-		color: $color-helper-link;
+		background: $background;
+		color: $font;
 	}
 }
 
-@mixin hover-color {
+@mixin hover-color($font: $color-hue-faded) {
 	cursor: pointer;
-	transition: all $transition-micro;
+	transition: all $transition-micro ease-in-out;
 	user-select: none;
 
 	&:hover {
-		color: $color-helper-link;
+		color: $font;
 	}
 }

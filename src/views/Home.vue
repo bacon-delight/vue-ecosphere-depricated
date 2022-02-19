@@ -1,7 +1,6 @@
 <template lang="pug">
 h1 Ecosphere Design System
 div This site will be available soon
-v-eco-test
 </template>
 
 <script lang="ts">

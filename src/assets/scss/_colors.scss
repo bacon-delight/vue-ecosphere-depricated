@@ -17,21 +17,10 @@ $color-indicator-warning: #ffcc1d;
 $color-indicator-success: #71e2b2;
 $color-indicator-offline: #e8eae6;
 
-// :root {
-// 	--color-background: #fdfdfd;
-// 	--color-background-faded: #f5f5f5;
-// 	--color-contrast: #1d242b;
-// 	--color-contrast-faded: #303841;
-// }
-
-// body.dark {
-// 	--color-background: #1d242b;
-// 	--color-background-faded: #303841;
-// 	--color-contrast: #fdfdfd;
-// 	--color-contrast-faded: #f5f5f5;
-// }
-
+/* Theme Based */
 $color-background: var(--color-background);
 $color-background-faded: var(--color-background-faded);
 $color-contrast: var(--color-contrast);
 $color-contrast-faded: var(--color-contrast-faded);
+$color-hue: var(--color-hue);
+$color-hue-faded: var(--color-hue-faded);

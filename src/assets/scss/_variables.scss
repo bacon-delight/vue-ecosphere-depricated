@@ -1,5 +1,6 @@
 /* base */
 $base: 1.618;
+$base-rem: 1rem;
 
 /* Spacers */
 $spacer-0-125: 0.125rem * $base;
@@ -57,3 +58,9 @@ $percentile-2: 2% * $base;
 
 /* Transitions */
 $transition-micro: 0.3s;
+
+/* Border Radius */
+$border-radius-standard: $spacer-0-5;
+
+/* Z Index */
+$z-index-dropdown: 10;

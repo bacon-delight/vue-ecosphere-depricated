@@ -8,19 +8,17 @@ const routes: Array<RouteRecordRaw> = [
 		component: Home,
 	},
 	{
-		path: "/components",
-		name: "Components",
-		component: () => import("../views/components/Components.vue"),
+		path: "/explore",
+		name: "Explore",
+		component: () => import("../views/Explore.vue"),
 		children: [
+			// {
+			// 	path: "/",
+			// 	component: () => import("../views/layout/Layout.vue"),
+			// },
 			{
-				path: "button",
-				component: () =>
-					import("../views/components/button/Button.vue"),
-			},
-			{
-				path: "dropdown",
-				component: () =>
-					import("../views/components/dropdown/Dropdown.vue"),
+				path: "layout",
+				component: () => import("../views/layout/Layout.vue"),
 			},
 		],
 	},

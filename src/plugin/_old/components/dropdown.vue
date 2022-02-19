@@ -76,6 +76,7 @@ export default defineComponent({
 	position: relative;
 	@include font-light;
 	color: $color-contrast;
+	width: fit-content;
 
 	&__container {
 		display: flex;

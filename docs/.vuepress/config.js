@@ -5,7 +5,7 @@ const navigation = require("./theme/navigation.js");
 
 module.exports = {
 	head: [
-		["link", { rel: "icon", href: "/logo/generic.png" }],
+		["link", { rel: "icon", href: "/logo/logo.png" }],
 		["link", { rel: "stylesheet", href: "'https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800&display=swap'" }],
 		["link", { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" }]
 	],

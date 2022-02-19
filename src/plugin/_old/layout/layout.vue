@@ -6,22 +6,22 @@
 		@toggleSidebar="toggleSidebar(false)"
 	)
 	.layout__main
-		v-eco-navigation.layout__navigation(
-			:logo="logo",
-			:navigation="navigation",
-			:sidebarToggle="true",
-			@toggleSidebar="toggleSidebar(true)"
-		)
+		//- v-eco-navigation.layout__navigation(
+		//- 	:logo="logo",
+		//- 	:navigation="navigation",
+		//- 	:sidebarToggle="true",
+		//- 	@toggleSidebar="toggleSidebar(true)"
+		//- )
 		.layout__content
 			router-view
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { navigation_item, sidebar_item } from "@/plugin/utils/types.interface";
+import { navbar_item, sidebar_item } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
-	name: "Components",
+	name: "Layout",
 	data() {
 		return {
 			open: false,
@@ -33,7 +33,7 @@ export default defineComponent({
 			required: true,
 		},
 		navigation: {
-			type: Object as PropType<navigation_item[]>,
+			type: Object as PropType<navbar_item[]>,
 			required: true,
 		},
 		sidebar: {
