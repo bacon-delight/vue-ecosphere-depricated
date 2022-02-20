@@ -2,9 +2,12 @@
 .menu(v-for="option in options")
 	.menu__item(
 		@click="handleClick(option)",
-		:class="{ 'menu__item--active': isCurrentRoute(option.value) }"
+		:class="{ 'menu__item--disabled': !option.value }"
 	)
-		VEcoLink.menu__item--text(:label="option.label")
+		VEcoLink.menu__item--text(
+			:label="option.label",
+			:class="{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }"
+		)
 		VEcoDot(:type="isCurrentRoute(option.value) ? 'information' : ''")
 
 	.menu__nested
@@ -45,10 +48,15 @@ export default defineComponent({
 		column-gap: $spacer-0-5;
 		@include hover-background;
 		border-radius: $border-radius-standard 0 0 $border-radius-standard;
-		padding: $spacer-0-375 $spacer-0-5;
+		padding: $spacer-0-25 $spacer-0-5;
 
 		&--text {
 			color: $color-contrast;
+		}
+
+		&--disabled {
+			pointer-events: none;
+			color: $color-helper-grey !important;
 		}
 	}
 

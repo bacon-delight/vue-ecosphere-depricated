@@ -8,9 +8,9 @@ const routes: Array<RouteRecordRaw> = [
 		component: Home,
 	},
 	{
-		path: "/explore",
-		name: "Explore",
-		component: () => import("../views/Explore.vue"),
+		path: "/components",
+		name: "Components",
+		component: () => import("../views/Components.vue"),
 		children: [
 			// {
 			// 	path: "/",
@@ -18,7 +18,7 @@ const routes: Array<RouteRecordRaw> = [
 			// },
 			{
 				path: "layout",
-				component: () => import("../views/layout/Layout.vue"),
+				component: () => import("../views/components/Layout.vue"),
 			},
 		],
 	},

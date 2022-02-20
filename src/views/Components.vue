@@ -13,7 +13,7 @@ export default defineComponent({
 	name: "Explore",
 	computed: {
 		...mapGetters({
-			navbarOptions: "navigation",
+			navbarOptions: "navbar",
 			sidebarOptions: "sidebar",
 		}),
 	},
