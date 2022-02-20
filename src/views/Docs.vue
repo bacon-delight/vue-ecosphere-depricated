@@ -7,15 +7,24 @@ v-eco-layout.layout(
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { mapGetters } from "vuex";
+import navbar from "@/assets/navbar";
+import sidebar from "@/assets/sidebar";
 
 export default defineComponent({
 	name: "Explore",
+	data() {
+		return {
+			navbar,
+			sidebar,
+		};
+	},
 	computed: {
-		...mapGetters({
-			navbarOptions: "navigation",
-			sidebarOptions: "sidebar",
-		}),
+		sidebarOptions() {
+			return this.sidebar();
+		},
+		navbarOptions() {
+			return this.navbar();
+		},
 	},
 });
 </script>

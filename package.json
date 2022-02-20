@@ -65,7 +65,10 @@
 		"vue-jest": "^5.0.0-0",
 		"vue-router": "^4.0.0-0",
 		"vuepress": "^2.0.0-beta.35",
-		"vuex": "^4.0.0-0"
+		"vuex": "^4.0.0-0",
+		"raw-loader": "^4.0.2",
+		"vue-i18n": "^9.1.9",
+		"vue3-markdown-it": "^1.0.10"
 	},
 	"main": "./dist/vue-ecosphere.common.js",
 	"files": [

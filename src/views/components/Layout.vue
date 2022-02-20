@@ -7,11 +7,12 @@
 		:options="options",
 		label="Language",
 		placeholder="Select a language",
-		:config="{ flow: 'left' }"
+		:config:is="{ flow: 'left' }"
 	)
 
 	v-eco-select.item(:options="options", label=":ri-translate-2:")
-	div homie yo
+
+	vue3-markdown-it.markdown(:source="content")
 </template>
 
 <script lang="ts">
@@ -36,6 +37,14 @@ export default defineComponent({
 				},
 			],
 		};
+	},
+	computed: {
+		content() {
+			return this.$t("modules.guide.installation");
+		},
+	},
+	mounted() {
+		console.log(this.$i18n.locale);
 	},
 });
 </script>
