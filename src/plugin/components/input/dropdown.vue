@@ -37,7 +37,7 @@
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import { choice_option, dropdown_config } from "@/plugin/utils/types.interface";
-import config from "@/plugin/utils/defaults/components/input/dropdown.config";
+import config from "@/plugin/utils/defaults/components/dropdown.config";
 import VEcoDot from "@/plugin/components/common/dot.vue";
 import VEcoText from "@/plugin/components/common/text.vue";
 import VEcoIcon from "@/plugin/components/common/icon.vue";
@@ -69,7 +69,7 @@ export default defineComponent({
 	},
 	computed: {
 		settings(): dropdown_config {
-			return Object.assign(config, this.config);
+			return Object.assign({ ...config }, this.config);
 		},
 	},
 	data() {
@@ -132,6 +132,7 @@ export default defineComponent({
 		border-radius: $border-radius-standard;
 		padding: $spacer-0-25;
 		z-index: $z-index-dropdown;
+		white-space: nowrap;
 
 		&--contain {
 			width: 100%;

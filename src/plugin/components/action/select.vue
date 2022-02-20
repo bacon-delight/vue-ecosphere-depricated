@@ -11,6 +11,7 @@
 	)
 		VEcoText.select__option(
 			v-for="(option, index) in options",
+			:class="[settings.center ? 'select__option--centered' : '']",
 			@click="handleSelection(index)",
 			:label="option.label"
 		)
@@ -18,8 +19,8 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { choice_option, dropdown_config } from "@/plugin/utils/types.interface";
-import config from "@/plugin/utils/defaults/components/action/select.config";
+import { choice_option, select_config } from "@/plugin/utils/types.interface";
+import config from "@/plugin/utils/defaults/components/select.config";
 import VEcoText from "@/plugin/components/common/text.vue";
 import VEcoLink from "@/plugin/components/action/link.vue";
 
@@ -35,7 +36,7 @@ export default defineComponent({
 			required: true,
 		},
 		config: {
-			type: Object as PropType<dropdown_config>,
+			type: Object as PropType<select_config>,
 			default: () => config,
 		},
 	},
@@ -44,8 +45,8 @@ export default defineComponent({
 		VEcoLink,
 	},
 	computed: {
-		settings(): dropdown_config {
-			return Object.assign(config, this.config);
+		settings(): select_config {
+			return Object.assign({ ...config }, this.config);
 		},
 	},
 	data() {
@@ -76,6 +77,7 @@ export default defineComponent({
 		column-gap: $spacer-0-25;
 		@include hover-color;
 		width: fit-content;
+		color: $color-contrast;
 	}
 
 	&__content {
@@ -85,6 +87,7 @@ export default defineComponent({
 		border-radius: $border-radius-standard;
 		padding: $spacer-0-25;
 		z-index: $z-index-dropdown;
+		white-space: nowrap;
 
 		&--contain {
 			width: 100%;
@@ -109,7 +112,10 @@ export default defineComponent({
 		border-radius: $border-radius-standard;
 		display: flex;
 		align-items: center;
-		column-gap: $spacer-0-5;
+
+		&--centered {
+			justify-content: center;
+		}
 
 		&--active {
 			@include font-emphasis;

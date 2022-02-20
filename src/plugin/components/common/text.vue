@@ -23,7 +23,7 @@ export default defineComponent({
 		this.renderElements();
 	},
 	methods: {
-		renderElements() {
+		renderElements(): void {
 			this.content = "";
 			this.stack = this.label.split(/(:ri-[^:]*:)/g);
 			this.stack.forEach((element: string) => {
@@ -39,7 +39,7 @@ export default defineComponent({
 		},
 	},
 	watch: {
-		label() {
+		label(): void {
 			this.renderElements();
 		},
 	},
@@ -52,6 +52,6 @@ export default defineComponent({
 .text {
 	display: inline-flex;
 	align-items: center;
-	column-gap: $spacer-0-25;
+	column-gap: $spacer-0-125;
 }
 </style>

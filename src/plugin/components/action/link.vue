@@ -12,6 +12,7 @@ export default defineComponent({
 	props: {
 		label: {
 			type: String as PropType<string>,
+			default: "",
 			required: true,
 		},
 	},
