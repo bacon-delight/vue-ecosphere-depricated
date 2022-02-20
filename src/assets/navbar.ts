@@ -33,6 +33,7 @@ export default function (): unknown_nested_type {
 						value: "en",
 						action: (): void => {
 							this.$i18n.locale = "en";
+							localStorage.setItem("locale", "en");
 						},
 					},
 					{
@@ -40,6 +41,7 @@ export default function (): unknown_nested_type {
 						value: "zh",
 						action: (): void => {
 							this.$i18n.locale = "zh";
+							localStorage.setItem("locale", "zh");
 						},
 					},
 				],

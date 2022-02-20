@@ -7,6 +7,19 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
 	name: "App",
+	mounted() {
+		this.setLocale();
+	},
+	methods: {
+		setLocale() {
+			const locale: string | null = localStorage.getItem("locale");
+			if (locale && this.$i18n.availableLocales.includes(locale)) {
+				this.$i18n.locale = locale;
+			} else if (navigator.languages.length) {
+				this.$i18n.locale = navigator.languages[0];
+			}
+		},
+	},
 });
 </script>
 
