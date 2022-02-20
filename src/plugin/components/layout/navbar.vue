@@ -1,5 +1,12 @@
 <template lang="pug">
 nav.navbar
+	//- Sidebar Toggle
+	VEcoLink.navbar__option.navbar__toggle(
+		v-if="toggle",
+		label=":ri-menu-4-line:",
+		@click.stop="$emit('toggle')"
+	)
+
 	//- Logo & Branding
 	img.navbar__logo(v-if="logo", :src="logo", @click="$router.push('/')")
 	VEcoLink.navbar__brand(
@@ -48,6 +55,10 @@ export default defineComponent({
 			type: String as PropType<string>,
 			required: false,
 		},
+		toggle: {
+			type: Boolean as PropType<boolean>,
+			default: false,
+		},
 		options: {
 			type: Object as PropType<navbar_option[]>,
 			required: true,
@@ -95,7 +106,6 @@ export default defineComponent({
 		@include font-light;
 		font-size: $spacer-1;
 		margin-right: auto;
-		// color: $color-contrast;
 	}
 
 	&__option,
@@ -103,6 +113,15 @@ export default defineComponent({
 		color: $color-contrast;
 		> * {
 			color: $color-contrast;
+		}
+	}
+
+	&__toggle {
+		transform: translateY(calc($spacer-0-125/2));
+		display: none;
+
+		@include respond-below(sm) {
+			display: block;
 		}
 	}
 }

@@ -1,5 +1,8 @@
 <template lang="pug">
-v-eco-layout.layout(:navbarOptions="navbarOptions")
+v-eco-layout.layout(
+	:navbarOptions="navbarOptions",
+	:sidebarOptions="sidebarOptions"
+)
 </template>
 
 <script lang="ts">
@@ -11,6 +14,7 @@ export default defineComponent({
 	computed: {
 		...mapGetters({
 			navbarOptions: "navigation",
+			sidebarOptions: "sidebar",
 		}),
 	},
 });

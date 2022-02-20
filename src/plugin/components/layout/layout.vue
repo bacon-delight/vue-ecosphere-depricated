@@ -1,13 +1,18 @@
 <template lang="pug">
 .layout
 	Sidebar.layout__sidebar(
-		:class="[sidebar ? 'layout__sidebar--open' : 'layout__sidebar--closed']"
+		:class="[sidebar ? 'layout__sidebar--open' : 'layout__sidebar--closed']",
+		:options="sidebarOptions",
+		@toggle="sidebar = false",
+		@mouseleave="sidebar = false"
 	)
-	.layout__main
+	.layout__main(@click="sidebar = false")
 		Navbar.layout__navbar(
 			brand="Ecosphere",
 			logo="/img/logo.png",
-			:options="navbarOptions"
+			:options="navbarOptions",
+			toggle,
+			@toggle="sidebar = true"
 		)
 		.layout__content
 			slot
@@ -29,6 +34,10 @@ export default defineComponent({
 	props: {
 		navbarOptions: {
 			type: Object as PropType<navbar_option[]>,
+			required: true,
+		},
+		sidebarOptions: {
+			type: Object,
 			required: true,
 		},
 	},

@@ -6,3 +6,7 @@ export interface select_config {
 	outline: boolean;
 	center: boolean;
 }
+
+// export interface select_option extends choice_option {
+// 	action?: () => void;
+// }

@@ -1,5 +1,6 @@
 // Import Component Types
 export * from "./types/dropdown.interface";
+export * from "./types/menu.interface";
 export * from "./types/navbar.interface";
 export * from "./types/select.interface";
 

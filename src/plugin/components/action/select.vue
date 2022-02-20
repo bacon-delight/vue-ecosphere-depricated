@@ -60,6 +60,7 @@ export default defineComponent({
 		},
 		handleSelection(index: number): void {
 			this.toggle();
+			this.$ecosphere.handlers.navigate(this.options[index].value);
 			this.$emit("change", this.options[index].value);
 		},
 	},
