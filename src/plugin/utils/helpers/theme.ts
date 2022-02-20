@@ -12,20 +12,20 @@ export default class Theme {
 	public static setTheme(option: themes): void {
 		// Auto
 		if (option === "auto") {
-			if (
+			if (localStorage.getItem("theme")) {
+				option = localStorage.getItem("theme") as themes;
+			} else if (
 				window.matchMedia &&
 				window.matchMedia("(prefers-color-scheme: dark)").matches
 			) {
-				this.theme = "dark";
-				document.body.classList.add("dark");
+				option = "dark";
 			} else {
-				this.theme = "light";
-				document.body.classList.remove("dark");
+				option = "light";
 			}
 		}
 
 		// Dark
-		else if (option === "dark") {
+		if (option === "dark") {
 			this.theme = "dark";
 			document.body.classList.add("dark");
 		}
@@ -35,6 +35,9 @@ export default class Theme {
 			this.theme = "light";
 			document.body.classList.remove("dark");
 		}
+
+		// Set Theme in Local Storage
+		localStorage.setItem("theme", option);
 	}
 
 	public static getCurrentTheme(): themes {
