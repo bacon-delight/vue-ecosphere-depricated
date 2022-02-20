@@ -14,91 +14,80 @@ $font-weight-medium: 500;
 $font-weight-semi-bold: 600;
 
 /* Headers */
-@mixin header-1 {
+@mixin header-attributes($element-base) {
+	letter-spacing: $base-rem * 0.03;
+	font-size: $element-base;
+	line-height: $element-base * $base * 1.1;
+	margin: calc($element-base / (2 * $base)) 0
+		calc($element-base / (3 * $base));
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-medium;
-	font-size: $spacer-2-25;
-	line-height: $spacer-2-75;
-	letter-spacing: $percentile-1;
+}
+
+@mixin header-1 {
+	$element-base: $spacer-2;
+	@include header-attributes($element-base);
 }
 @mixin header-2 {
-	font-family: $font-family-work-sans;
-	font-weight: $font-weight-medium;
-	font-size: $spacer-2;
-	line-height: $spacer-2-5;
-	letter-spacing: $percentile-1;
+	$element-base: $spacer-1-75;
+	@include header-attributes($element-base);
 }
 @mixin header-3 {
-	font-family: $font-family-work-sans;
-	font-weight: $font-weight-medium;
-	font-size: $spacer-1-75;
-	line-height: $spacer-2-25;
-	letter-spacing: $percentile-1;
+	$element-base: $spacer-1-5;
+	@include header-attributes($element-base);
 }
 @mixin header-4 {
-	font-family: $font-family-work-sans;
-	font-weight: $font-weight-medium;
-	font-size: $spacer-1-5;
-	line-height: $spacer-2;
-	letter-spacing: $percentile-1;
+	$element-base: $spacer-1-25;
+	@include header-attributes($element-base);
 }
 @mixin header-5 {
-	font-family: $font-family-work-sans;
-	font-weight: $font-weight-medium;
-	font-size: $spacer-1-25;
-	line-height: $spacer-1-75;
-	letter-spacing: $percentile-1;
+	$element-base: $spacer-1;
+	@include header-attributes($element-base);
 }
 @mixin header-6 {
-	font-family: $font-family-work-sans;
-	font-weight: $font-weight-medium;
-	font-size: $spacer-1;
-	line-height: $spacer-1-5;
-	letter-spacing: $percentile-1;
+	$element-base: $spacer-0-75;
+	@include header-attributes($element-base);
 }
 
 /* Fonts */
-@mixin font-light {
+@mixin font-attributes($element-base) {
+	letter-spacing: $base-rem * 0.01;
+	font-size: $element-base;
+	line-height: $element-base * $base * 1.1;
 	font-family: $font-family-work-sans;
+}
+
+@mixin font-light {
+	$element-base: $base-rem;
+	@include font-attributes($element-base);
 	font-weight: $font-weight-light;
-	font-size: $base-rem;
-	line-height: $spacer-1;
-	letter-spacing: $percentile-0-5;
 }
 @mixin font-emphasis {
-	font-family: $font-family-work-sans;
+	$element-base: $base-rem;
+	@include font-attributes($element-base);
 	font-weight: $font-weight-semi-bold;
-	font-size: $base-rem;
-	line-height: $spacer-1;
-	letter-spacing: $percentile-0-5;
 }
 @mixin font-italic {
-	font-family: $font-family-work-sans;
+	$element-base: $base-rem;
+	@include font-attributes($element-base);
 	font-weight: $font-weight-light;
-	font-size: $base-rem;
-	line-height: $spacer-1;
-	letter-spacing: $percentile-0-5;
 	font-style: italic;
 }
 
 /* Special Fonts */
 @mixin font-sidenote {
-	font-family: $font-family-work-sans;
-	font-weight: $font-weight-light;
-	font-size: $spacer-0-5;
-	line-height: $spacer-0-75;
-	letter-spacing: $percentile-0-5;
+	$element-base: $spacer-0-5;
+	@include font-attributes($element-base);
 }
 @mixin font-serif {
+	$element-base: $spacer-0-75;
+	@include font-attributes($element-base);
 	font-family: $font-family-libre-baskerville;
-	font-size: $spacer-0-75;
-	line-height: $spacer-1;
-	letter-spacing: $percentile-0-5;
 	font-style: italic;
 }
 @mixin font-code {
+	$element-base: $base-rem;
+	@include font-attributes($element-base);
 	font-family: $font-family-roboto-mono;
 	font-weight: $font-weight-light;
-	font-size: $spacer-0-75;
-	line-height: $spacer-1;
 }

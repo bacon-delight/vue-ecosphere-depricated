@@ -19,7 +19,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { choice_option, select_config } from "@/plugin/utils/types.interface";
+import { select_option, select_config } from "@/plugin/utils/types.interface";
 import config from "@/plugin/utils/defaults/components/select.config";
 import VEcoText from "@/plugin/components/common/text.vue";
 import VEcoLink from "@/plugin/components/action/link.vue";
@@ -32,7 +32,7 @@ export default defineComponent({
 			default: "",
 		},
 		options: {
-			type: Object as PropType<choice_option[]>,
+			type: Object as PropType<select_option[]>,
 			required: true,
 		},
 		config: {
@@ -61,6 +61,7 @@ export default defineComponent({
 		handleSelection(index: number): void {
 			this.toggle();
 			this.$ecosphere.handlers.navigate(this.options[index].value);
+			this.$ecosphere.handlers.runAction(this.options[index].action);
 			this.$emit("change", this.options[index].value);
 		},
 	},

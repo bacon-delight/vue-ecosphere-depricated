@@ -1,4 +1,4 @@
-import { directions } from "@/plugin/utils/types.interface";
+import { directions, choice_option } from "@/plugin/utils/types.interface";
 
 export interface select_config {
 	contain: boolean;
@@ -7,6 +7,6 @@ export interface select_config {
 	center: boolean;
 }
 
-// export interface select_option extends choice_option {
-// 	action?: () => void;
-// }
+export interface select_option extends choice_option {
+	action?: () => void;
+}

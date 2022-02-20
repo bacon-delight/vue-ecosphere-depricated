@@ -2,12 +2,18 @@ import router from "@/router";
 
 export default class Handlers {
 	public static navigate(link: string): void {
-		if (!link) return;
 		try {
 			new URL(link);
 			window.open(link, "_blank");
 		} catch {
-			router.replace(link);
+			if (link[0] === "/") {
+				router.replace(link);
+			}
 		}
+	}
+
+	public static runAction(action: () => void): void {
+		if (!action) return;
+		action();
 	}
 }
