@@ -12,7 +12,6 @@
 			v-if="selected === null",
 			:label="placeholder"
 		)
-		//- span(v-else) {{options[selected].label}}
 		VEcoText(v-else, :label="options[selected].label")
 		VEcoIcon.dropdown__container--icon(
 			:type="open ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'"

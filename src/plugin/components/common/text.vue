@@ -20,17 +20,28 @@ export default defineComponent({
 		};
 	},
 	mounted() {
-		this.stack = this.label.split(/(:ri-[^:]*:)/g);
-		this.stack.forEach((element: string) => {
-			if (element && element[0] === ":") {
-				this.content = `${this.content}<i class=${element.slice(
-					1,
-					-1
-				)}></i>`;
-			} else if (element) {
-				this.content = `${this.content}<span>${element}</span>`;
-			}
-		});
+		this.renderElements();
+	},
+	methods: {
+		renderElements() {
+			this.content = "";
+			this.stack = this.label.split(/(:ri-[^:]*:)/g);
+			this.stack.forEach((element: string) => {
+				if (element && element[0] === ":") {
+					this.content = `${this.content}<i class=${element.slice(
+						1,
+						-1
+					)}></i>`;
+				} else if (element) {
+					this.content = `${this.content}<span>${element}</span>`;
+				}
+			});
+		},
+	},
+	watch: {
+		label() {
+			this.renderElements();
+		},
 	},
 });
 </script>
