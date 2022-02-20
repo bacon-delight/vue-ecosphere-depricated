@@ -82,6 +82,11 @@ select:-webkit-autofill:focus {
 		padding: $spacer-0-25;
 		background: $color-background;
 		overflow: hidden;
+
+		&:hover {
+			transition: all $transition-micro ease-in-out;
+			border: 1px solid $color-hue-faded;
+		}
 	}
 
 	ol,

@@ -6,8 +6,14 @@ export default function (): unknown_nested_type {
 			label: this.$t("headers.guide"),
 			value: "",
 			children: [
-				{ label: "Installation", value: "/guide/installation" },
-				{ label: "Configuration", value: "/guide/configuration" },
+				{
+					label: this.$t("headers.installation"),
+					value: "/guide/installation",
+				},
+				{
+					label: this.$t("headers.configuration"),
+					value: "/guide/configuration",
+				},
 			],
 		},
 		{
@@ -16,8 +22,12 @@ export default function (): unknown_nested_type {
 			children: [
 				{
 					label: "Layout",
-					value: "/components/layout",
+					value: "",
 					children: [
+						{
+							label: "Layout",
+							value: "/components/layout/layout",
+						},
 						{
 							label: "Navbar",
 							value: "/components/layout/navbar",
