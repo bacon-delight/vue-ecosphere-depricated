@@ -1,6 +1,6 @@
 ---
 home: true
-heroImage: /logo/generic.png
+heroImage: /logo/logo.png
 heroText: Ecosphere Design System
 tagline: The design language for modern data intensive applications
 

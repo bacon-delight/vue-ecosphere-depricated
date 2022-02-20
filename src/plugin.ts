@@ -1,9 +1,10 @@
 // Modules
 const modulePrefix = "v-eco";
 const modules = [
-	require.context("./plugin/common", true, /[a-z]\w+\.(vue)$/),
-	require.context("./plugin/components", true, /[a-z]\w+\.(vue)$/),
-	require.context("./plugin/layout", true, /[a-z]\w+\.(vue)$/),
+	require.context("./plugin/components/action", true, /[a-z]\w+\.(vue)$/),
+	require.context("./plugin/components/common", true, /[a-z]\w+\.(vue)$/),
+	require.context("./plugin/components/input", true, /[a-z]\w+\.(vue)$/),
+	require.context("./plugin/components/layout", true, /[a-z]\w+\.(vue)$/),
 ];
 
 // Utilities

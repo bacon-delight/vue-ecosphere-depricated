@@ -1,7 +1,7 @@
-export type dropdown_flow = "left" | "right";
+import { directions } from "@/plugin/utils/types.interface";
 
-export interface dropdown_option {
-	label: string;
-	route?: string;
-	action?: () => void;
+export interface dropdown_config {
+	contain: boolean;
+	flow: directions;
+	outline: boolean;
 }

@@ -1,10 +1,8 @@
 <template lang="pug">
-.layout
-	v-eco-layout(
-		:navigation="navigation",
-		:sidebar="sidebar",
-		logo="/img/logo.png"
-	)
+v-eco-layout.layout(
+	:navbarOptions="navbarOptions",
+	:sidebarOptions="sidebarOptions"
+)
 </template>
 
 <script lang="ts">
@@ -12,9 +10,12 @@ import { defineComponent } from "vue";
 import { mapGetters } from "vuex";
 
 export default defineComponent({
-	name: "Components",
+	name: "Explore",
 	computed: {
-		...mapGetters(["navigation", "sidebar"]),
+		...mapGetters({
+			navbarOptions: "navigation",
+			sidebarOptions: "sidebar",
+		}),
 	},
 });
 </script>
@@ -23,5 +24,6 @@ export default defineComponent({
 .layout {
 	height: 100vh;
 	width: 100vw;
+	overflow: hidden;
 }
 </style>

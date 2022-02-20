@@ -61,21 +61,21 @@ $font-weight-semi-bold: 600;
 @mixin font-light {
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-light;
-	font-size: 1rem;
+	font-size: $base-rem;
 	line-height: $spacer-1;
 	letter-spacing: $percentile-0-5;
 }
 @mixin font-emphasis {
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-semi-bold;
-	font-size: 1rem;
+	font-size: $base-rem;
 	line-height: $spacer-1;
 	letter-spacing: $percentile-0-5;
 }
 @mixin font-italic {
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-light;
-	font-size: 1rem;
+	font-size: $base-rem;
 	line-height: $spacer-1;
 	letter-spacing: $percentile-0-5;
 	font-style: italic;

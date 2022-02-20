@@ -1,10 +1,5 @@
-import { link_icon_direction } from "@/plugin/utils/types.interface";
+import { choice_option } from "@/plugin/utils/types.interface";
 
-export interface menu_item {
-	label: string;
-	icon?: string;
-	iconDirection?: link_icon_direction;
-	route?: string;
-	action?: () => void;
-	children?: menu_item[];
+export interface menu_option extends choice_option {
+	children?: menu_option[];
 }
