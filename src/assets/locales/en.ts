@@ -4,6 +4,8 @@ import guide_configuration from "@/assets/docs/guide/configuration/en.md";
 export default {
 	headers: {
 		guide: "Guide",
+		installation: "Installation",
+		configuration: "Configuration",
 	},
 	modules: {
 		guide: {

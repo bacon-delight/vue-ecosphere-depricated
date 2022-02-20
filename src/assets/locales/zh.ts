@@ -4,6 +4,8 @@ import guide_configuration from "@/assets/docs/guide/configuration/zh.md";
 export default {
 	headers: {
 		guide: "指导",
+		installation: "安装",
+		configuration: "配置",
 	},
 	modules: {
 		guide: {
