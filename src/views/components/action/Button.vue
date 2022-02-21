@@ -1,5 +1,5 @@
 <template lang="pug">
-.wrapper
+.content
 	v-eco-header(:label="$t('headers.button')", :type="2")
 
 	v-eco-header(:label="$t('keywords.default')", :type="6")
@@ -75,15 +75,24 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import locale from "@/locale";
+import content_en from "@/assets/docs/components/action/button/en.md";
+import content_zh from "@/assets/docs/components/action/button/zh.md";
 
 export default defineComponent({
 	name: "Button",
+	data() {
+		return { locale };
+	},
 	computed: {
 		content() {
-			return this.$t("modules.components.action.button");
+			const locale = this.locale(this.$i18n);
+			if (locale === "zh") {
+				return content_zh;
+			} else {
+				return content_en;
+			}
 		},
 	},
 });
 </script>
-
-<style lang="scss" scoped></style>

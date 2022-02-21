@@ -5,5 +5,9 @@ export default createStore({
 	mutations: {},
 	actions: {},
 	modules: {},
-	getters: {},
+	getters: {
+		getLocale() {
+			console.log(this);
+		},
+	},
 });
