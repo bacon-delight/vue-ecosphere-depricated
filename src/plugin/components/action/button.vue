@@ -63,7 +63,7 @@ export default defineComponent({
 		color: $color-dark;
 
 		&:hover {
-			background: rgba($color-light-faded, 0.2);
+			background: rgba($color-light-faded, 0.8);
 			border: 1px solid $color-hue-faded;
 		}
 	}
@@ -83,7 +83,8 @@ export default defineComponent({
 		color: $color-background;
 
 		&:hover {
-			background: rgba($color-background-faded, 0.2);
+			background: $color-contrast-faded;
+			color: $color-background;
 			border: 1px solid $color-hue-faded;
 		}
 	}
@@ -95,6 +96,33 @@ export default defineComponent({
 		&:hover {
 			background: $color-hue-faded;
 			border: 1px solid $color-hue;
+		}
+	}
+
+	&--theme-critical {
+		background: $color-indicator-critical;
+		color: $color-light;
+
+		&:hover {
+			background: rgba($color-indicator-critical, 0.7);
+		}
+	}
+
+	&--theme-warning {
+		background: $color-indicator-warning;
+		color: $color-dark;
+
+		&:hover {
+			background: rgba($color-indicator-warning, 0.7);
+		}
+	}
+
+	&--theme-success {
+		background: $color-indicator-success;
+		color: $color-dark;
+
+		&:hover {
+			background: rgba($color-indicator-success, 0.7);
 		}
 	}
 }

@@ -18,7 +18,7 @@ $font-weight-semi-bold: 600;
 	letter-spacing: $base-rem * 0.03;
 	font-size: $element-base;
 	line-height: $element-base * $base;
-	margin: calc($element-base / (2 * $base)) 0
+	margin: calc($element-base / ($base / 2)) 0
 		calc($element-base / (3 * $base));
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-medium;

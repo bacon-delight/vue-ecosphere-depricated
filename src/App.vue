@@ -29,7 +29,6 @@ export default defineComponent({
 *:after {
 	box-sizing: border-box;
 	outline: none;
-	font-weight: 300;
 }
 
 html,

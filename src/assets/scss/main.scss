@@ -34,9 +34,7 @@ select:-webkit-autofill:focus {
 
 /* Markdown */
 .markdown {
-	width: 600px;
-	max-width: 94%;
-	margin: 0 auto;
+	overflow: hidden;
 
 	h1 {
 		@include header-1;
@@ -88,12 +86,58 @@ select:-webkit-autofill:focus {
 		}
 	}
 
+	table {
+		width: 600px;
+		overflow-x: scroll;
+	}
+
 	ol,
 	ul {
 		padding-left: $spacer-0-75;
+	}
+
+	th {
+		@include font-emphasis;
+	}
+
+	td {
+		@include font-light;
+	}
+
+	tr {
+		box-shadow: 0 -1px 0 rgba($color-helper-grey, 0.3) inset;
+	}
+
+	th,
+	td {
+		padding: $spacer-0-25 $spacer-0-5;
+		// border-bottom: 1px solid $color-helper-grey;
+
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
 	}
 }
 
 .wrapper {
 	padding: 0 $spacer-0-25;
+	width: 600px;
+	max-width: 94%;
+	margin: 0 auto;
+	overflow: hidden;
+
+	&:first-child h2 {
+		margin-top: $spacer-0-25;
+	}
+}
+
+.showcase {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: $spacer-0-5;
+	row-gap: $spacer-0-25;
 }
