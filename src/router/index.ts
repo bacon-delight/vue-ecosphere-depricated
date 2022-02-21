@@ -22,6 +22,24 @@ const routes: Array<RouteRecordRaw> = [
 			},
 		],
 	},
+	{
+		path: "/components",
+		name: "Components",
+		component: () => import("../views/Docs.vue"),
+		children: [
+			{
+				path: "action",
+				component: () => import("../views/RouteInjection.vue"),
+				children: [
+					{
+						path: "button",
+						component: () =>
+							import("../views/components/action/Button.vue"),
+					},
+				],
+			},
+		],
+	},
 ];
 
 const router = createRouter({

@@ -1,5 +1,6 @@
 import guide_installation from "@/assets/docs/guide/installation/en.md";
 import guide_configuration from "@/assets/docs/guide/configuration/en.md";
+import components_action_button from "@/assets/docs/components/action/button/en.md";
 
 export default {
 	site: {
@@ -13,6 +14,11 @@ export default {
 		guide: "Guide",
 		installation: "Installation",
 		configuration: "Configuration",
+		components: "Components",
+		layout: "Layout",
+		action: "Action",
+		inputs: "Inputs",
+		button: "Button",
 	},
 	actions: {
 		learn: "Design Philosophy",
@@ -23,5 +29,24 @@ export default {
 			installation: guide_installation,
 			configuration: guide_configuration,
 		},
+		components: {
+			action: {
+				button: components_action_button,
+			},
+		},
+	},
+	keywords: {
+		default: "Default",
+		light: "Light",
+		dark: "Dark",
+		inverted: "Inverted",
+		brand: "Brand",
+		themed: "Themed",
+		with_icon: "With Icon :ri-remixicon-line:",
+		critical: "Critical",
+		success: "Success",
+		warning: "Warning",
+		no_outline: "No Outline",
+		examples: "Examples",
 	},
 };

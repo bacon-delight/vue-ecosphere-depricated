@@ -74,11 +74,13 @@ export default defineComponent({
 			&--open {
 				width: $spacer-8;
 				max-width: $spacer-10;
+				border-right: 1px solid rgba($color-helper-grey, 0.4);
 			}
 
 			&--closed {
 				width: 0;
 				padding-right: 0 !important;
+				opacity: 0;
 				overflow: hidden;
 			}
 		}

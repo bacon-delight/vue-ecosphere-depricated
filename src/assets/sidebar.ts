@@ -17,54 +17,58 @@ export default function (): unknown_nested_type {
 			],
 		},
 		{
-			label: "Components",
+			label: this.$t("headers.components"),
 			value: "",
 			children: [
 				{
-					label: "Layout",
+					label: this.$t("headers.layout"),
 					value: "",
 					children: [
-						{
-							label: "Layout",
-							value: "/components/layout/layout",
-						},
-						{
-							label: "Navbar",
-							value: "/components/layout/navbar",
-						},
-						{
-							label: "Sidebar",
-							value: "/components/layout/sidebar",
-						},
+						// {
+						// 	label: "Layout",
+						// 	value: "/components/layout/layout",
+						// },
+						// {
+						// 	label: "Navbar",
+						// 	value: "/components/layout/navbar",
+						// },
+						// {
+						// 	label: "Sidebar",
+						// 	value: "/components/layout/sidebar",
+						// },
 					],
 				},
 				{
-					label: "Action",
+					label: this.$t("headers.action"),
 					value: "",
 					children: [
 						{
-							label: "Link",
-							value: "/components/action/link",
+							label: this.$t("headers.button"),
+							value: "/components/action/button",
 						},
-						{
-							label: "Menu",
-							value: "/components/action/menu",
-						},
-						{
-							label: "Select",
-							value: "/components/action/select",
-						},
+						// {
+						// 	label: "Link",
+						// 	value: "/components/action/link",
+						// },
+						// {
+						// 	label: "Menu",
+						// 	value: "/components/action/menu",
+						// },
+						// {
+						// 	label: "Select",
+						// 	value: "/components/action/select",
+						// },
 					],
 				},
 
 				{
-					label: "Inputs",
+					label: this.$t("headers.inputs"),
 					value: "",
 					children: [
-						{
-							label: "Dropdown",
-							value: "/components/inputs/dropdown",
-						},
+						// {
+						// 	label: "Dropdown",
+						// 	value: "/components/inputs/dropdown",
+						// },
 					],
 				},
 			],
