@@ -1,7 +1,7 @@
 <template lang="pug">
 nav.navbar
 	//- Sidebar Toggle
-	VEcoLink.navbar__option.navbar__toggle(
+	VEcoLink.navbar__toggle(
 		v-if="toggle",
 		label=":ri-menu-4-line:",
 		@click.stop="$emit('toggle')"
@@ -125,6 +125,7 @@ export default defineComponent({
 	}
 
 	&__toggle {
+		color: $color-contrast;
 		transform: translateY(calc($spacer-0-125/2));
 		display: none;
 
