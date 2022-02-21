@@ -97,6 +97,7 @@ export default defineComponent({
 	display: flex;
 	align-items: center;
 	column-gap: $spacer-0-5;
+	background: $color-background-faded;
 
 	&__logo {
 		height: $spacer-1;
@@ -105,7 +106,12 @@ export default defineComponent({
 	&__brand {
 		@include font-light;
 		font-size: $spacer-1;
-		margin-right: auto;
+	}
+
+	&__option {
+		&:first-of-type {
+			margin-left: auto;
+		}
 	}
 
 	&__option,
