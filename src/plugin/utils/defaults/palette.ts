@@ -7,6 +7,7 @@ export const defaultLightPalette: color_palette = {
 	"--color-contrast-faded": "#303841",
 	"--color-hue": "#5ba5ef",
 	"--color-hue-faded": "#8dc6ff",
+	"--color-hue-contrast": "#fdfdfd",
 };
 
 export const defaultDarkPalette: color_palette = {

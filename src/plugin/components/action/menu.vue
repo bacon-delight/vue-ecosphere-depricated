@@ -11,7 +11,11 @@
 		VEcoDot(:type="isCurrentRoute(option.value) ? 'information' : ''")
 
 	.menu__nested
-		Menu(v-if="option.children", :options="option.children")
+		Menu(
+			v-if="option.children",
+			:options="option.children",
+			@select="propagateSelectEvent"
+		)
 </template>
 
 <script lang="ts">
@@ -28,13 +32,18 @@ export default defineComponent({
 			required: true,
 		},
 	},
+	emits: ["select"],
 	components: { VEcoLink, VEcoDot },
 	methods: {
 		handleClick(option: menu_option): void {
 			this.$ecosphere.handlers.navigate(option.value);
+			this.$emit("select", option.value);
 		},
 		isCurrentRoute(route: string) {
 			return this.$route.path === route;
+		},
+		propagateSelectEvent(event: Event) {
+			this.$emit("select", event);
 		},
 	},
 });
@@ -46,6 +55,7 @@ export default defineComponent({
 		display: flex;
 		align-items: center;
 		column-gap: $spacer-0-5;
+		@include font-light;
 		@include hover-background;
 		border-radius: $border-radius-standard 0 0 $border-radius-standard;
 		padding: $spacer-0-25 $spacer-0-5;

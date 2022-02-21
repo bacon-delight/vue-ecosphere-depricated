@@ -17,7 +17,7 @@ $font-weight-semi-bold: 600;
 @mixin header-attributes($element-base) {
 	letter-spacing: $base-rem * 0.03;
 	font-size: $element-base;
-	line-height: $element-base * $base * 1.1;
+	line-height: $element-base * $base;
 	margin: calc($element-base / (2 * $base)) 0
 		calc($element-base / (3 * $base));
 	font-family: $font-family-work-sans;
@@ -55,6 +55,8 @@ $font-weight-semi-bold: 600;
 	font-size: $element-base;
 	line-height: $element-base * $base * 1.1;
 	font-family: $font-family-work-sans;
+	margin: calc($element-base / (2 * $base)) 0
+		calc($element-base / (3 * $base));
 }
 
 @mixin font-light {

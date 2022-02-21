@@ -1,6 +1,6 @@
 <template lang="pug">
 .sidebar
-	VEcoMenu(:options="options")
+	VEcoMenu(:options="options", @select="$emit('toggle')")
 </template>
 
 <script lang="ts">
