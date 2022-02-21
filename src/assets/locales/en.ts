@@ -11,10 +11,12 @@ export default {
 		installation: "Installation",
 		configuration: "Configuration",
 		components: "Components",
+		types: "Types",
 		layout: "Layout",
 		action: "Action",
 		inputs: "Inputs",
 		button: "Button",
+		dropdown: "Dropdown",
 	},
 	actions: {
 		learn: "Design Philosophy",

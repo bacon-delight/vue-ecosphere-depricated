@@ -14,6 +14,10 @@ export default function (): unknown_nested_type {
 					label: this.$t("headers.configuration"),
 					value: "/guide/configuration",
 				},
+				{
+					label: this.$t("headers.types"),
+					value: "/guide/types",
+				},
 			],
 		},
 		{
@@ -65,10 +69,10 @@ export default function (): unknown_nested_type {
 					label: this.$t("headers.inputs"),
 					value: "",
 					children: [
-						// {
-						// 	label: "Dropdown",
-						// 	value: "/components/inputs/dropdown",
-						// },
+						{
+							label: this.$t("headers.dropdown"),
+							value: "/components/inputs/dropdown",
+						},
 					],
 				},
 			],

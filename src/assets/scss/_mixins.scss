@@ -47,3 +47,19 @@
 		color: $font;
 	}
 }
+
+@mixin apply-theme($theme: auto) {
+	@if $theme == auto {
+		background: $color-background;
+		color: $color-contrast;
+	} @else if $theme == light {
+		background: $color-light;
+		color: $color-dark;
+	} @else if $theme == dark {
+		background: $color-dark;
+		color: $color-light;
+	} @else if $theme == invert {
+		background: $color-contrast;
+		color: $color-background;
+	}
+}
