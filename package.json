@@ -1,7 +1,7 @@
 {
 	"name": "vue-ecosphere",
 	"private": false,
-	"version": "0.0.18",
+	"version": "0.0.19",
 	"license": "MIT",
 	"title": "Vue Ecosphere Design System",
 	"description": "A modern and minimal design system built for better clarity and insights from data",
@@ -28,8 +28,6 @@
 		"test:unit": "vue-cli-service test:unit",
 		"test:coverage": "vue-cli-service test:unit --coverage",
 		"lint": "vue-cli-service lint",
-		"docs:dev": "vuepress dev docs",
-		"docs:build": "vuepress build docs",
 		"pack": "vue-cli-service build --target lib --name vue-ecosphere ./src/plugin.ts"
 	},
 	"devDependencies": {
@@ -49,7 +47,6 @@
 		"@vue/eslint-config-prettier": "^6.0.0",
 		"@vue/eslint-config-typescript": "^7.0.0",
 		"@vue/test-utils": "^2.0.0-0",
-		"@vuepress/plugin-docsearch": "^2.0.0-beta.35",
 		"core-js": "^3.6.5",
 		"eslint": "^6.7.2",
 		"eslint-plugin-prettier": "^3.3.1",
@@ -64,7 +61,6 @@
 		"vue": "^3.0.0",
 		"vue-jest": "^5.0.0-0",
 		"vue-router": "^4.0.0-0",
-		"vuepress": "^2.0.0-beta.35",
 		"vuex": "^4.0.0-0",
 		"raw-loader": "^4.0.2",
 		"vue-i18n": "^9.1.9",

@@ -49,11 +49,11 @@ export default defineComponent({
 	props: {
 		logo: {
 			type: String as PropType<string>,
-			required: false,
+			default: "",
 		},
 		brand: {
 			type: String as PropType<string>,
-			required: false,
+			default: "",
 		},
 		toggle: {
 			type: Boolean as PropType<boolean>,
