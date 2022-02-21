@@ -128,7 +128,10 @@ body {
 	th,
 	td {
 		padding: $spacer-0-25 $spacer-0-5;
-		min-width: 150px;
+
+		&:last-child {
+			min-width: 200px;
+		}
 
 		&:first-child {
 			padding-left: 0;

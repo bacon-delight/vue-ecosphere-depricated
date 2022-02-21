@@ -1,3 +1,12 @@
+##### Themeing
+
+```ts
+type themes = "light" | "dark" | "auto";
+interface color_palette {
+  [key: string]: string;
+}
+```
+
 ##### Choices
 
 ```js
