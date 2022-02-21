@@ -8,8 +8,8 @@
 	)
 	.layout__main(@click="sidebar = false")
 		Navbar.layout__navbar(
-			brand="Ecosphere",
-			logo="/img/logo.png",
+			:brand="brand",
+			:logo="logo",
 			:options="navbarOptions",
 			toggle,
 			@toggle="sidebar = true"
@@ -32,6 +32,14 @@ export default defineComponent({
 		Sidebar,
 	},
 	props: {
+		logo: {
+			type: String as PropType<string>,
+			default: "",
+		},
+		brand: {
+			type: String as PropType<string>,
+			default: "",
+		},
 		navbarOptions: {
 			type: Object as PropType<navbar_option[]>,
 			required: true,
