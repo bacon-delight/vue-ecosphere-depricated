@@ -1,7 +1,7 @@
 {
 	"name": "vue-ecosphere",
 	"private": false,
-	"version": "0.0.20",
+	"version": "0.0.21",
 	"license": "MIT",
 	"title": "Vue Ecosphere Design System",
 	"description": "A modern and minimal design system built for better clarity and insights from data",

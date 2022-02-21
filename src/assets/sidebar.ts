@@ -71,7 +71,7 @@ export default function (): unknown_nested_type {
 					children: [
 						{
 							label: this.$t("headers.dropdown"),
-							value: "/components/inputs/dropdown",
+							value: "/components/input/dropdown",
 						},
 					],
 				},

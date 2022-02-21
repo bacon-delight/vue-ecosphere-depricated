@@ -43,7 +43,7 @@ const routes: Array<RouteRecordRaw> = [
 				],
 			},
 			{
-				path: "inputs",
+				path: "input",
 				component: () => import("../views/RouteInjection.vue"),
 				children: [
 					{
