@@ -57,7 +57,6 @@ export default defineComponent({
 	overflow: hidden;
 	background: $color-background-faded;
 	color: $color-contrast;
-	@include font-light;
 
 	@include respond-below(sm) {
 		grid-template-columns: 1fr;

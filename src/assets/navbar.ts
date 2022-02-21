@@ -8,12 +8,20 @@ export default function (): unknown_nested_type {
 				label: "Resources",
 				options: [
 					{
-						label: "API Guide :ri-arrow-right-up-line:",
-						value: "https://docs.ecosphere.dev/",
+						label: ":ri-github-fill: GitHub",
+						value: "https://github.com/bacon-delight/vue-ecosphere",
 					},
 					{
-						label: "Remix Icon :ri-arrow-right-up-line:",
+						label: ":ri-remixicon-line: Remix Icon",
 						value: "https://remixicon.com/",
+					},
+					{
+						label: ":ri-pencil-ruler-2-line: Figma Kit",
+						value: "https://www.figma.com/community/file/1067444265295956708/Ecosphere-Design-System",
+					},
+					{
+						label: ":ri-npmjs-line: NPM Package",
+						value: "https://www.npmjs.com/package/vue-ecosphere",
 					},
 				],
 				config: {

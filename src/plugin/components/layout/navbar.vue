@@ -113,6 +113,8 @@ export default defineComponent({
 		color: $color-contrast;
 		> * {
 			color: $color-contrast;
+			@include font-light;
+			margin: 0;
 		}
 	}
 
