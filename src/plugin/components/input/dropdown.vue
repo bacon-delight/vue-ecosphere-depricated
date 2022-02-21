@@ -6,7 +6,7 @@
 	//- Input Field
 	.dropdown__container(
 		@click="toggle",
-		:class="{ 'dropdown__container--outline': settings.outline, 'dropdown__container--active': open }"
+		:class="[{ 'dropdown__container--outline': settings.outline, 'dropdown__container--active': open }, `dropdown__container--theme-${settings.theme}`]"
 	)
 		VEcoText.dropdown__container--placeholder(
 			v-if="selected === null",
@@ -21,14 +21,15 @@
 	.dropdown__content(
 		v-if="open && options.length",
 		@mouseleave="toggle",
-		:class="[settings.contain ? 'dropdown__content--contain' : '', `dropdown__content--flow-${settings.flow}`, settings.outline ? 'dropdown__content--outline' : '']"
+		:class="[settings.contain ? 'dropdown__content--contain' : '', `dropdown__content--flow-${settings.flow}`, settings.outline ? 'dropdown__content--outline' : '', `dropdown__container--theme-${settings.theme}`]"
 	)
 		.dropdown__option(
 			v-for="(option, index) in options",
-			@click="handleSelection(index)"
+			@click="handleSelection(index)",
+			:class="[`dropdown__option--theme-${settings.theme}`]"
 		)
 			VEcoText.dropdown__option--text(
-				:class="{ 'dropdown__option--active': index === selected }",
+				:class="[{ 'dropdown__option--active': index === selected }]",
 				:label="option.label"
 			)
 			VEcoDot.dropdown__option--dot(type="information", v-if="index === selected")
@@ -61,6 +62,14 @@ export default defineComponent({
 			type: Object as PropType<dropdown_config>,
 			default: () => config,
 		},
+		defaultIndex: {
+			type: Number as PropType<number>,
+			default: null,
+		},
+		defaultValue: {
+			type: [String, Number] as PropType<string | number>,
+			default: null,
+		},
 	},
 	components: {
 		VEcoDot,
@@ -88,6 +97,14 @@ export default defineComponent({
 			this.$emit("change", this.options[index].value);
 		},
 	},
+	mounted() {
+		this.selected = this.defaultIndex;
+		if (this.defaultValue) {
+			this.selected = this.options.findIndex(
+				(option: choice_option) => option.value === this.defaultValue
+			);
+		}
+	},
 });
 </script>
 
@@ -95,13 +112,13 @@ export default defineComponent({
 .dropdown {
 	user-select: none;
 	position: relative;
+	width: 100%;
 
 	&__label {
 		@include font-sidenote;
 	}
 
 	&__container {
-		background: $color-background;
 		padding: $spacer-0-25 $spacer-0-5;
 		border-radius: $border-radius-standard;
 		display: flex;
@@ -110,6 +127,7 @@ export default defineComponent({
 		column-gap: $spacer-0-5;
 		cursor: pointer;
 		border: 1px solid $color-helper-transparent;
+		@include font-light;
 
 		&--placeholder {
 			color: $color-helper-grey;
@@ -123,16 +141,32 @@ export default defineComponent({
 		&--outline {
 			border: 1px solid $color-helper-grey;
 		}
+
+		&--theme-auto {
+			@include apply-theme(auto);
+		}
+
+		&--theme-light {
+			@include apply-theme(light);
+		}
+
+		&--theme-dark {
+			@include apply-theme(dark);
+		}
+
+		&--theme-invert {
+			@include apply-theme(invert);
+		}
 	}
 
 	&__content {
 		position: absolute;
 		margin-top: $spacer-0-25;
-		background: $color-background;
 		border-radius: $border-radius-standard;
 		padding: $spacer-0-25;
 		z-index: $z-index-dropdown;
 		white-space: nowrap;
+		@include font-light;
 
 		&--contain {
 			width: 100%;
@@ -153,14 +187,29 @@ export default defineComponent({
 
 	&__option {
 		padding: $spacer-0-125 $spacer-0-25;
-		@include hover-background;
 		border-radius: $border-radius-standard;
 		display: flex;
 		align-items: center;
 		column-gap: $spacer-0-5;
 
+		&--theme-auto {
+			@include hover-background;
+		}
+
+		&--theme-light {
+			@include hover-background($color-light-faded, $color-dark);
+		}
+
+		&--theme-dark {
+			@include hover-background($color-dark-faded, $color-light);
+		}
+
+		&--theme-invert {
+			@include hover-background($color-contrast-faded, $color-background);
+		}
+
 		&--active {
-			@include font-emphasis;
+			font-weight: $font-weight-medium;
 		}
 	}
 }

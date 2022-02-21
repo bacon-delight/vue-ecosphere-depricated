@@ -76,6 +76,10 @@ body {
 		&:hover {
 			color: $color-hue-faded;
 		}
+
+		> code {
+			color: $color-hue;
+		}
 	}
 	code {
 		@include font-code;
@@ -97,8 +101,11 @@ body {
 	}
 
 	table {
-		width: 600px;
-		overflow-x: scroll;
+		display: block;
+		max-width: -moz-fit-content;
+		max-width: fit-content;
+		margin: 0 auto;
+		overflow-x: auto;
 	}
 
 	ol,
@@ -121,7 +128,7 @@ body {
 	th,
 	td {
 		padding: $spacer-0-25 $spacer-0-5;
-		// border-bottom: 1px solid $color-helper-grey;
+		min-width: 150px;
 
 		&:first-child {
 			padding-left: 0;
@@ -141,6 +148,7 @@ body {
 	padding: 0 $spacer-0-25;
 	width: 600px;
 	max-width: 94%;
+	min-height: fit-content;
 	margin: 0 auto;
 	overflow: hidden;
 
@@ -154,5 +162,9 @@ body {
 	flex-wrap: wrap;
 	column-gap: $spacer-0-5;
 	row-gap: $spacer-0-25;
+
+	&--grid {
+		@include create-grid(2, column, $spacer-0-25);
+	}
 }
 </style>

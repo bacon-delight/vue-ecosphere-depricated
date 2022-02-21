@@ -11,10 +11,12 @@ export default {
 		installation: "安装",
 		configuration: "配置",
 		components: "组成部分",
+		types: "类型",
 		layout: "布局",
 		action: "行动",
 		inputs: "输入",
 		button: "钮扣",
+		dropdown: "下拉",
 	},
 	actions: {
 		learn: "设计理念",

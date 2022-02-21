@@ -20,6 +20,10 @@ const routes: Array<RouteRecordRaw> = [
 				path: "configuration",
 				component: () => import("../views/guide/Configuration.vue"),
 			},
+			{
+				path: "types",
+				component: () => import("../views/guide/Types.vue"),
+			},
 		],
 	},
 	{
@@ -35,6 +39,17 @@ const routes: Array<RouteRecordRaw> = [
 						path: "button",
 						component: () =>
 							import("../views/components/action/Button.vue"),
+					},
+				],
+			},
+			{
+				path: "inputs",
+				component: () => import("../views/RouteInjection.vue"),
+				children: [
+					{
+						path: "dropdown",
+						component: () =>
+							import("../views/components/input/Dropdown.vue"),
 					},
 				],
 			},
