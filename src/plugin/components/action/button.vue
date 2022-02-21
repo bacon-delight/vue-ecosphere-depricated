@@ -78,6 +78,16 @@ export default defineComponent({
 		}
 	}
 
+	&--theme-invert {
+		background: $color-contrast;
+		color: $color-background;
+
+		&:hover {
+			background: rgba($color-background-faded, 0.2);
+			border: 1px solid $color-hue-faded;
+		}
+	}
+
 	&--theme-hue {
 		background: $color-hue;
 		color: $color-hue-contrast;

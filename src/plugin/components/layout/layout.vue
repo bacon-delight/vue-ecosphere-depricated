@@ -15,8 +15,8 @@
 			@toggle="sidebar = true"
 		)
 		.layout__content
-			slot
 			router-view
+			slot
 </template>
 
 <script lang="ts">
