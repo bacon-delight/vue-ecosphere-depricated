@@ -8,6 +8,11 @@ You can also render an icon anywhere inside the button, just wrap the icon name 
 
 ```html
 <v-eco-button label="Start Playing :ri-play-line:" />
+```
+
+You can place the icon anywhere within the `label`, before, after, or even within the label. You can even have multiple icons inside the `label`.
+
+```html
 <v-eco-button label=":ri-arrow-left-line: Return" />
 ```
 

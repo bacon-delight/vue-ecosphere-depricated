@@ -1,7 +1,3 @@
-import guide_installation from "@/assets/docs/guide/installation/en.md";
-import guide_configuration from "@/assets/docs/guide/configuration/en.md";
-import components_action_button from "@/assets/docs/components/action/button/en.md";
-
 export default {
 	site: {
 		title: "Ecosphere Design Language",
@@ -23,17 +19,6 @@ export default {
 	actions: {
 		learn: "Design Philosophy",
 		get_started: "Get Started :ri-arrow-right-line:",
-	},
-	modules: {
-		guide: {
-			installation: guide_installation,
-			configuration: guide_configuration,
-		},
-		components: {
-			action: {
-				button: components_action_button,
-			},
-		},
 	},
 	keywords: {
 		default: "Default",

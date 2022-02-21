@@ -1,7 +1,3 @@
-import guide_installation from "@/assets/docs/guide/installation/zh.md";
-import guide_configuration from "@/assets/docs/guide/configuration/zh.md";
-import components_action_button from "@/assets/docs/components/action/button/zh.md";
-
 export default {
 	site: {
 		title: "Ecosphere 设计语言",
@@ -23,17 +19,6 @@ export default {
 	actions: {
 		learn: "设计理念",
 		get_started: "开始 :ri-arrow-right-line:",
-	},
-	modules: {
-		guide: {
-			installation: guide_installation,
-			configuration: guide_configuration,
-		},
-		components: {
-			action: {
-				button: components_action_button,
-			},
-		},
 	},
 	keywords: {
 		default: "默认",
