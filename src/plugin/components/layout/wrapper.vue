@@ -15,5 +15,8 @@ export default defineComponent({
 .main-wrapper {
 	@include occupy-full-parent;
 	background: $color-background-faded;
+	color: $color-contrast;
+	@include font-light;
+	margin: 0;
 }
 </style>

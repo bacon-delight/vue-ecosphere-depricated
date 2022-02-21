@@ -23,6 +23,10 @@ export default function (): unknown_nested_type {
 						label: ":ri-npmjs-line: NPM Package",
 						value: "https://www.npmjs.com/package/vue-ecosphere",
 					},
+					{
+						label: ":ri-gamepad-line: Sandbox",
+						value: "https://codesandbox.io/s/vue-ecosphere-ooudb?file=/src/App.vue",
+					},
 				],
 				config: {
 					flow: "left",
