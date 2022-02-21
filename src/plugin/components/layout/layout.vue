@@ -15,7 +15,8 @@
 			@toggle="sidebar = true"
 		)
 		.layout__content
-			router-view(v-if="!!$router")
+			div(v-if="!!$router")
+				router-view
 			slot
 </template>
 
