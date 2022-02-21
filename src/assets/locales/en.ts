@@ -6,6 +6,8 @@ export default {
 		title: "Ecosphere Design Language",
 		description:
 			"A modern lightweight design language, built on the principles of minimalism with inspirations from Scandinavian architecture, handcrafted for data intensive applications",
+		footer_mistake: "Caught a mistake or want to improve the content? ",
+		footer_edit: "Edit this page on GitHub :ri-arrow-right-up-line:",
 	},
 	headers: {
 		guide: "Guide",

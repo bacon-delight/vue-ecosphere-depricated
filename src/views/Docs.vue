@@ -3,12 +3,14 @@ v-eco-layout.layout(
 	:navbarOptions="navbarOptions",
 	:sidebarOptions="sidebarOptions"
 )
+	Footer
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import navbar from "@/assets/navbar";
 import sidebar from "@/assets/sidebar";
+import Footer from "@/components/common/Footer.vue";
 
 export default defineComponent({
 	name: "Explore",
@@ -17,6 +19,9 @@ export default defineComponent({
 			navbar,
 			sidebar,
 		};
+	},
+	components: {
+		Footer,
 	},
 	computed: {
 		sidebarOptions() {
