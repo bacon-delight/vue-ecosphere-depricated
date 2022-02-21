@@ -22,11 +22,10 @@
 			@change="theme = $event"
 		)
 		v-eco-dropdown(
-			label="What's your favourite city?",
-			:options="[ { label: 'Chongqing', value: 'chongqing' }, { label: 'Oslo', value: 'oslo' }, ]",
-			placeholder="Select an option",
-			:config="{ flow: 'right', contain: true, outline: true, theme: 'invert' }",
-			@change="theme = $event"
+			label=":ri-building-2-line: What's your favourite city?",
+			:options="[ { label: 'Bangalore', value: 'bangalore' }, { label: 'Beijing', value: 'beijing' }, { label: 'Chongqing', value: 'chongqing' }, { label: 'Harbin', value: 'harbin' }, { label: 'Helsinki', value: 'helsinki' }, { label: 'Oslo', value: 'oslo' }, ]",
+			placeholder=":ri-heart-line: Select an option",
+			:config="{ flow: 'right', contain: true, outline: true, theme: 'invert' }"
 		)
 
 	vue3-markdown-it.markdown(:source="content")

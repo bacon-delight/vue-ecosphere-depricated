@@ -165,6 +165,11 @@ body {
 
 	&--grid {
 		@include create-grid(2, column, $spacer-0-25);
+
+		@include respond-below(sm) {
+			grid-auto-flow: row;
+			grid-template-columns: 1fr;
+		}
 	}
 }
 </style>
