@@ -15,6 +15,10 @@ export default function (): unknown_nested_type {
 					value: "/guide/configuration",
 				},
 				{
+					label: this.$t("headers.theme"),
+					value: "/guide/theme",
+				},
+				{
 					label: this.$t("headers.types"),
 					value: "/guide/types",
 				},

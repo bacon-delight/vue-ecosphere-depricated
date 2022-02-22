@@ -21,6 +21,10 @@ const routes: Array<RouteRecordRaw> = [
 				component: () => import("../views/guide/Configuration.vue"),
 			},
 			{
+				path: "theme",
+				component: () => import("../views/guide/Theme.vue"),
+			},
+			{
 				path: "types",
 				component: () => import("../views/guide/Types.vue"),
 			},

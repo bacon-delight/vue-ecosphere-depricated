@@ -17,6 +17,7 @@ export default {
 		inputs: "输入",
 		button: "钮扣",
 		dropdown: "下拉",
+		theme: "主题化",
 	},
 	actions: {
 		learn: "设计理念",
