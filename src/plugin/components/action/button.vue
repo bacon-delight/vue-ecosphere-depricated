@@ -49,81 +49,48 @@ export default defineComponent({
 	}
 
 	&--theme-auto {
-		background: $color-background;
-		color: $color-contrast;
-
-		&:hover {
-			background: rgba($color-background-faded, 0.2);
-			border: 1px solid $color-hue-faded;
-		}
+		@include apply-theme(auto);
+		@include apply-theme-hover(auto);
 	}
 
 	&--theme-light {
-		background: $color-light;
-		color: $color-dark;
-
-		&:hover {
-			background: rgba($color-light-faded, 0.8);
-			border: 1px solid $color-hue-faded;
-		}
+		@include apply-theme(light);
+		@include apply-theme-hover(light);
 	}
 
 	&--theme-dark {
-		background: $color-dark;
-		color: $color-light;
-
-		&:hover {
-			background: rgba($color-dark-faded, 0.8);
-			border: 1px solid $color-hue-faded;
-		}
+		@include apply-theme(dark);
+		@include apply-theme-hover(dark);
 	}
 
 	&--theme-invert {
-		background: $color-contrast;
-		color: $color-background;
-
-		&:hover {
-			background: $color-contrast-faded;
-			color: $color-background;
-			border: 1px solid $color-hue-faded;
-		}
+		@include apply-theme(invert);
+		@include apply-theme-hover(invert);
 	}
 
 	&--theme-hue {
-		background: $color-hue;
-		color: $color-hue-contrast;
-
-		&:hover {
-			background: $color-hue-faded;
-			border: 1px solid $color-hue;
-		}
+		@include apply-theme(hue);
+		@include apply-theme-hover(hue);
 	}
 
 	&--theme-critical {
-		background: $color-indicator-critical;
-		color: $color-light;
-
-		&:hover {
-			background: rgba($color-indicator-critical, 0.7);
-		}
+		@include apply-theme(critical);
+		@include apply-theme-hover(critical);
 	}
 
 	&--theme-warning {
-		background: $color-indicator-warning;
-		color: $color-dark;
-
-		&:hover {
-			background: rgba($color-indicator-warning, 0.7);
-		}
+		@include apply-theme(warning);
+		@include apply-theme-hover(warning);
 	}
 
 	&--theme-success {
-		background: $color-indicator-success;
-		color: $color-dark;
+		@include apply-theme(success);
+		@include apply-theme-hover(success);
+	}
 
-		&:hover {
-			background: rgba($color-indicator-success, 0.7);
-		}
+	&--theme-transparent {
+		@include apply-theme(transparent);
+		@include apply-theme-hover(transparent);
 	}
 }
 </style>

@@ -7,6 +7,7 @@ export interface button_config {
 		| "hue"
 		| "success"
 		| "warning"
-		| "critical";
+		| "critical"
+		| "transparent";
 	outline: boolean;
 }

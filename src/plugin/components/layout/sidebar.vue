@@ -1,12 +1,12 @@
 <template lang="pug">
 .sidebar
-	VEcoMenu(:options="options", @select="$emit('toggle')")
+	VEcoMenuItem(:options="options", @select="$emit('toggle')")
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import { menu_option } from "@/plugin/utils/types.interface";
-import VEcoMenu from "@/plugin/components/action/menu.vue";
+import VEcoMenuItem from "@/plugin/components/action/_menu-item.vue";
 
 export default defineComponent({
 	name: "Sidebar",
@@ -17,7 +17,7 @@ export default defineComponent({
 		},
 	},
 	components: {
-		VEcoMenu,
+		VEcoMenuItem,
 	},
 });
 </script>

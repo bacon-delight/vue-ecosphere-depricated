@@ -18,6 +18,10 @@
 		)
 		v-eco-button(:label="$t('keywords.warning')", :config="{ theme: 'warning' }")
 		v-eco-button(:label="$t('keywords.success')", :config="{ theme: 'success' }")
+		v-eco-button(
+			:label="$t('keywords.transparent')",
+			:config="{ theme: 'transparent' }"
+		)
 
 	v-eco-header(:label="$t('keywords.no_outline')", :type="6")
 	.showcase
@@ -59,6 +63,10 @@
 		v-eco-button(
 			:label="`${$t('keywords.success')} :ri-check-double-line:`",
 			:config="{ theme: 'success' }"
+		)
+		v-eco-button(
+			:label="`${$t('keywords.transparent')} :ri-eye-2-line:`",
+			:config="{ theme: 'transparent' }"
 		)
 
 	v-eco-header(:label="$t('keywords.examples')", :type="6")
