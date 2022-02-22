@@ -25,9 +25,6 @@ jobs:
 
             - name: Run Site Build
               run: npm run build
-          
-            - name: Run Documentation Build
-              run: npm run docs:build
               
             - name: Run Package Build
               run: npm run pack
