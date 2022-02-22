@@ -18,11 +18,11 @@ You can place the icon anywhere within the `label`, before, after, or even withi
 
 ##### API
 
-| Name             | Type                                                                                        | Default  | Description                                        |
-| :--------------- | :------------------------------------------------------------------------------------------ | :------- | :------------------------------------------------- |
-| `label`          | `string`                                                                                    | Required | The text to display in button, also supports icons |
-| `config.theme`   | `'auto'` , `'light'`, `'dark'`, `'invert'`, `'hue'`, `'success'`, `'warning'`, `'critical'` | `'auto'` | Apply a specific theme to the button               |
-| `config.outline` | `boolean`                                                                                   | `true`   | Apply a border outline to the button               |
+| Name             | Type                                                                                                        | Default  | Description                                        |
+| :--------------- | :---------------------------------------------------------------------------------------------------------- | :------- | :------------------------------------------------- |
+| `label`          | `string`                                                                                                    | Required | The text to display in button, also supports icons |
+| `config.theme`   | `'auto'`, `'light'`, `'dark'`, `'invert'`, `'hue'`, `'success'`, `'warning'`, `'critical'`, `'transparent'` | `'auto'` | Apply a specific theme to the button               |
+| `config.outline` | `boolean`                                                                                                   | `true`   | Apply a border outline to the button               |
 
 ##### Events
 

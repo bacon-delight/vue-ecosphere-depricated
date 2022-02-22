@@ -20,10 +20,12 @@ export default {
 		theme: "Themeing",
 		link: "Link",
 		select: "Select",
+		menu: "Menu",
 	},
 	actions: {
 		learn: "Design Philosophy",
 		get_started: "Get Started :ri-arrow-right-line:",
+		select_option: "Select an option",
 	},
 	keywords: {
 		default: "Default",
@@ -39,5 +41,6 @@ export default {
 		no_outline: "No Outline",
 		examples: "Examples",
 		variants: "Variants",
+		transparent: "Transparent",
 	},
 };

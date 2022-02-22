@@ -20,10 +20,12 @@ export default {
 		theme: "主题化",
 		link: "链接",
 		select: "选择",
+		menu: "菜单",
 	},
 	actions: {
 		learn: "设计理念",
 		get_started: "开始 :ri-arrow-right-line:",
+		select_option: "选择一个选项",
 	},
 	keywords: {
 		default: "默认",
@@ -39,5 +41,6 @@ export default {
 		no_outline: "无边框",
 		examples: "示例",
 		variants: "变体",
+		transparent: "透明",
 	},
 };

@@ -46,6 +46,10 @@ export default function (): unknown_nested_type {
 							value: "/components/action/link",
 						},
 						{
+							label: this.$t("headers.menu"),
+							value: "/components/action/menu",
+						},
+						{
 							label: this.$t("headers.select"),
 							value: "/components/action/select",
 						},

@@ -50,6 +50,11 @@ const routes: Array<RouteRecordRaw> = [
 							import("../views/components/action/Link.vue"),
 					},
 					{
+						path: "menu",
+						component: () =>
+							import("../views/components/action/Menu.vue"),
+					},
+					{
 						path: "select",
 						component: () =>
 							import("../views/components/action/Select.vue"),
@@ -79,6 +84,11 @@ const routes: Array<RouteRecordRaw> = [
 const router = createRouter({
 	history: createWebHistory(process.env.BASE_URL),
 	routes,
+	scrollBehavior: () => {
+		/* eslint-disable-next-line */
+		const content: any = document.querySelector(".layout__content");
+		content ? (content.scrollTop = 0) : null;
+	},
 });
 
 export default router;

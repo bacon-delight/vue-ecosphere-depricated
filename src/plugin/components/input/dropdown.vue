@@ -21,7 +21,7 @@
 	.dropdown__content(
 		v-if="open && options.length",
 		@mouseleave="toggle",
-		:class="[settings.contain ? 'dropdown__content--contain' : '', `dropdown__content--flow-${settings.flow}`, settings.outline ? 'dropdown__content--outline' : '', `dropdown__container--theme-${settings.theme}`]"
+		:class="[settings.contain ? 'dropdown__content--contain' : '', `dropdown__content--flow-${settings.flow}`, settings.outline ? 'dropdown__content--outline' : '', `dropdown__content--theme-${settings.theme}`]"
 	)
 		.dropdown__option(
 			v-for="(option, index) in options",
@@ -128,6 +128,7 @@ export default defineComponent({
 		cursor: pointer;
 		border: 1px solid $color-helper-transparent;
 		@include font-light;
+		@include hover-outline;
 
 		&--placeholder {
 			color: $color-helper-grey;
@@ -151,6 +152,10 @@ export default defineComponent({
 			@include apply-theme(auto);
 		}
 
+		&--theme-invert {
+			@include apply-theme(invert);
+		}
+
 		&--theme-light {
 			@include apply-theme(light);
 		}
@@ -159,8 +164,8 @@ export default defineComponent({
 			@include apply-theme(dark);
 		}
 
-		&--theme-invert {
-			@include apply-theme(invert);
+		&--theme-transparent {
+			@include apply-theme(transparent);
 		}
 	}
 
@@ -188,6 +193,26 @@ export default defineComponent({
 		&--outline {
 			border: 1px solid $color-helper-grey;
 		}
+
+		&--theme-auto {
+			@include apply-theme(auto);
+		}
+
+		&--theme-invert {
+			@include apply-theme(invert);
+		}
+
+		&--theme-light {
+			@include apply-theme(light);
+		}
+
+		&--theme-dark {
+			@include apply-theme(dark);
+		}
+
+		&--theme-transparent {
+			@include apply-theme(auto);
+		}
 	}
 
 	&__option {
@@ -197,7 +222,8 @@ export default defineComponent({
 		align-items: center;
 		column-gap: $spacer-0-5;
 
-		&--theme-auto {
+		&--theme-auto,
+		&--theme-transparent {
 			@include hover-background;
 		}
 
