@@ -1,7 +1,7 @@
 ##### Usage
 
 ```html
-<v-eco-button
+<v-eco-dropdown
   label="Select language"
   :options="[{ label: 'English', value: 'en' }, { label: 'Español', value: 'es' }]"
   placeholder="Select an option"

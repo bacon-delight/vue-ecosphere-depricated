@@ -17,6 +17,7 @@ export default {
 		inputs: "Inputs",
 		button: "Button",
 		dropdown: "Dropdown",
+		theme: "Themeing",
 	},
 	actions: {
 		learn: "Design Philosophy",
