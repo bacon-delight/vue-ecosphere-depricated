@@ -36,6 +36,22 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import("../views/Docs.vue"),
 		children: [
 			{
+				path: "layout",
+				component: () => import("../views/RouteInjection.vue"),
+				children: [
+					{
+						path: "navbar",
+						component: () =>
+							import("../views/components/layout/Navbar.vue"),
+					},
+					{
+						path: "sidebar",
+						component: () =>
+							import("../views/components/layout/Sidebar.vue"),
+					},
+				],
+			},
+			{
 				path: "action",
 				component: () => import("../views/RouteInjection.vue"),
 				children: [
@@ -58,6 +74,22 @@ const routes: Array<RouteRecordRaw> = [
 						path: "select",
 						component: () =>
 							import("../views/components/action/Select.vue"),
+					},
+				],
+			},
+			{
+				path: "common",
+				component: () => import("../views/RouteInjection.vue"),
+				children: [
+					{
+						path: "header",
+						component: () =>
+							import("../views/components/common/Header.vue"),
+					},
+					{
+						path: "icon",
+						component: () =>
+							import("../views/components/common/Icon.vue"),
 					},
 				],
 			},

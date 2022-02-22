@@ -22,7 +22,7 @@ export default defineComponent({
 	props: {
 		label: {
 			type: String as PropType<string>,
-			default: "",
+			required: true,
 		},
 		type: {
 			type: Number as PropType<number>,

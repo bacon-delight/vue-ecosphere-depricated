@@ -21,6 +21,11 @@ export default {
 		link: "链接",
 		select: "选择",
 		menu: "菜单",
+		icon: "图标",
+		common: "共同",
+		header: "标题",
+		navbar: "导航栏",
+		sidebar: "侧边栏",
 	},
 	actions: {
 		learn: "设计理念",

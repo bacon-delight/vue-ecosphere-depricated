@@ -21,6 +21,11 @@ export default {
 		link: "Link",
 		select: "Select",
 		menu: "Menu",
+		icon: "Icon",
+		common: "Common",
+		header: "Header",
+		navbar: "Navbar",
+		sidebar: "Sidebar",
 	},
 	actions: {
 		learn: "Design Philosophy",

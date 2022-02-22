@@ -31,7 +31,16 @@ export default function (): unknown_nested_type {
 				{
 					label: this.$t("headers.layout"),
 					value: "",
-					children: [],
+					children: [
+						{
+							label: this.$t("headers.navbar"),
+							value: "/components/layout/navbar",
+						},
+						{
+							label: this.$t("headers.sidebar"),
+							value: "/components/layout/sidebar",
+						},
+					],
 				},
 				{
 					label: this.$t("headers.action"),
@@ -55,7 +64,20 @@ export default function (): unknown_nested_type {
 						},
 					],
 				},
-
+				{
+					label: this.$t("headers.common"),
+					value: "",
+					children: [
+						{
+							label: this.$t("headers.header"),
+							value: "/components/common/header",
+						},
+						{
+							label: this.$t("headers.icon"),
+							value: "/components/common/icon",
+						},
+					],
+				},
 				{
 					label: this.$t("headers.inputs"),
 					value: "",

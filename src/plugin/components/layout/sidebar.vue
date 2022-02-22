@@ -26,5 +26,6 @@ export default defineComponent({
 .sidebar {
 	background: $color-background;
 	width: $spacer-8;
+	overflow-y: auto;
 }
 </style>
