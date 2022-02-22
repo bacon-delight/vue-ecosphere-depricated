@@ -5,6 +5,8 @@ export interface select_config {
 	flow: directions;
 	outline: boolean;
 	center: boolean;
+	hue: boolean;
+	theme: "auto" | "light" | "dark" | "invert";
 }
 
 export interface select_option extends choice_option {

@@ -18,6 +18,8 @@ export default {
 		button: "钮扣",
 		dropdown: "下拉",
 		theme: "主题化",
+		link: "链接",
+		select: "选择",
 	},
 	actions: {
 		learn: "设计理念",
@@ -36,5 +38,6 @@ export default {
 		warning: "警告",
 		no_outline: "无边框",
 		examples: "示例",
+		variants: "变体",
 	},
 };

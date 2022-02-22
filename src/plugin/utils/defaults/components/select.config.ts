@@ -5,4 +5,6 @@ export default {
 	flow: "right",
 	outline: true,
 	center: false,
+	hue: true,
+	theme: "auto",
 } as select_config;

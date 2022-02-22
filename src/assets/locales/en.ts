@@ -1,8 +1,8 @@
 export default {
 	site: {
-		title: "Ecosphere Design Language",
+		title: "Ecosphere Design System",
 		description:
-			"A modern lightweight design language, built on the principles of minimalism with inspirations from Scandinavian architecture, handcrafted for data intensive applications",
+			"A modern lightweight design system, built on the principles of minimalism with inspirations from Scandinavian architecture, handcrafted for data intensive applications",
 		footer_mistake: "Caught a mistake or want to improve the content? ",
 		footer_edit: "Edit this page on GitHub :ri-arrow-right-up-line:",
 	},
@@ -18,6 +18,8 @@ export default {
 		button: "Button",
 		dropdown: "Dropdown",
 		theme: "Themeing",
+		link: "Link",
+		select: "Select",
 	},
 	actions: {
 		learn: "Design Philosophy",
@@ -36,5 +38,6 @@ export default {
 		warning: "Warning",
 		no_outline: "No Outline",
 		examples: "Examples",
+		variants: "Variants",
 	},
 };

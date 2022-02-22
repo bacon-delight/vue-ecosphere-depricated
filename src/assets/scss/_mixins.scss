@@ -15,10 +15,10 @@
 	column-gap: $gutter;
 	row-gap: $gutter;
 	@if $direction == row {
-		grid-auto-flow: row;
+		// grid-auto-flow: row;
 		grid-template-rows: repeat($cells, 1fr);
 	} @else if $direction == column {
-		grid-auto-flow: column;
+		// grid-auto-flow: column;
 		grid-template-columns: repeat($cells, 1fr);
 	}
 }

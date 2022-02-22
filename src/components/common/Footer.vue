@@ -15,6 +15,10 @@
 			:label="'Dipanjan De'",
 			@click="$ecosphere.handlers.navigate('https://dipanjande.com')"
 		)
+	img.footer__logo(
+		src="/img/logo.png",
+		@click="$ecosphere.handlers.navigate('/')"
+	)
 </template>
 
 <script lang="ts">
@@ -52,6 +56,11 @@ export default defineComponent({
 	&__contrib {
 		max-height: $spacer-1-5;
 		cursor: pointer;
+	}
+
+	&__logo {
+		margin-top: $spacer-1;
+		max-height: $spacer-5;
 	}
 }
 </style>
