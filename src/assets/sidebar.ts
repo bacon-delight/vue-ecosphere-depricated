@@ -31,20 +31,7 @@ export default function (): unknown_nested_type {
 				{
 					label: this.$t("headers.layout"),
 					value: "",
-					children: [
-						// {
-						// 	label: "Layout",
-						// 	value: "/components/layout/layout",
-						// },
-						// {
-						// 	label: "Navbar",
-						// 	value: "/components/layout/navbar",
-						// },
-						// {
-						// 	label: "Sidebar",
-						// 	value: "/components/layout/sidebar",
-						// },
-					],
+					children: [],
 				},
 				{
 					label: this.$t("headers.action"),
@@ -54,18 +41,14 @@ export default function (): unknown_nested_type {
 							label: this.$t("headers.button"),
 							value: "/components/action/button",
 						},
-						// {
-						// 	label: "Link",
-						// 	value: "/components/action/link",
-						// },
-						// {
-						// 	label: "Menu",
-						// 	value: "/components/action/menu",
-						// },
-						// {
-						// 	label: "Select",
-						// 	value: "/components/action/select",
-						// },
+						{
+							label: this.$t("headers.link"),
+							value: "/components/action/link",
+						},
+						{
+							label: this.$t("headers.select"),
+							value: "/components/action/select",
+						},
 					],
 				},
 

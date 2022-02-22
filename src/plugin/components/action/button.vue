@@ -41,7 +41,7 @@ export default defineComponent({
 	border: 1px solid $color-helper-transparent;
 	transition: all $transition-micro ease-in-out;
 	cursor: pointer;
-	@include font-light;
+	@include font-regular;
 	user-select: none;
 
 	&--outline {

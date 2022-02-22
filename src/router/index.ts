@@ -44,6 +44,16 @@ const routes: Array<RouteRecordRaw> = [
 						component: () =>
 							import("../views/components/action/Button.vue"),
 					},
+					{
+						path: "link",
+						component: () =>
+							import("../views/components/action/Link.vue"),
+					},
+					{
+						path: "select",
+						component: () =>
+							import("../views/components/action/Select.vue"),
+					},
 				],
 			},
 			{

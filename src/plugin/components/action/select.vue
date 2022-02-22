@@ -1,13 +1,17 @@
 <template lang="pug">
 .select
 	//- Label
-	VEcoLink.select__label(@click="toggle", :label="label")
+	VEcoLink.select__label(
+		@click="toggle",
+		:label="label",
+		:class="{ 'select__label--hue': settings.hue }"
+	)
 
 	//- Drop Area
 	.select__content(
 		v-if="open && options.length",
 		@mouseleave="toggle",
-		:class="[settings.contain ? 'select__content--contain' : '', `select__content--flow-${settings.flow}`, settings.outline ? 'select__content--outline' : '']"
+		:class="[settings.contain ? 'select__content--contain' : '', `select__content--flow-${settings.flow}`, settings.outline ? 'select__content--outline' : '', `select__content--theme-${settings.theme}`]"
 	)
 		VEcoText.select__option(
 			v-for="(option, index) in options",
@@ -80,12 +84,16 @@ export default defineComponent({
 		@include hover-color;
 		width: fit-content;
 		color: $color-contrast;
+
+		&--hue {
+			color: $color-hue;
+		}
 	}
 
 	&__content {
 		position: absolute;
 		margin-top: $spacer-0-25;
-		background: $color-background;
+		// background: $color-background;
 		border-radius: $border-radius-standard;
 		padding: $spacer-0-25;
 		z-index: $z-index-dropdown;
@@ -93,6 +101,7 @@ export default defineComponent({
 
 		&--contain {
 			width: 100%;
+			overflow: hidden;
 		}
 
 		&--flow-right {
@@ -106,9 +115,27 @@ export default defineComponent({
 		&--outline {
 			border: 1px solid $color-helper-grey;
 		}
+
+		&--theme-auto {
+			@include apply-theme(auto);
+		}
+
+		&--theme-light {
+			@include apply-theme(light);
+		}
+
+		&--theme-dark {
+			@include apply-theme(dark);
+		}
+
+		&--theme-invert {
+			@include apply-theme(invert);
+		}
 	}
 
 	&__option {
+		@include font-light;
+		margin: 0;
 		padding: $spacer-0-125 $spacer-0-25;
 		@include hover-background;
 		border-radius: $border-radius-standard;
@@ -117,10 +144,6 @@ export default defineComponent({
 
 		&--centered {
 			justify-content: center;
-		}
-
-		&--active {
-			@include font-emphasis;
 		}
 	}
 }

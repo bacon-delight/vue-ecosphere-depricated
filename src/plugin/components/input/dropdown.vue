@@ -12,7 +12,7 @@
 			v-if="selected === null",
 			:label="placeholder"
 		)
-		VEcoText(v-else, :label="options[selected].label")
+		VEcoText.dropdown__container--text(v-else, :label="options[selected].label")
 		VEcoIcon.dropdown__container--icon(
 			:type="open ? 'ri-arrow-up-s-line' : 'ri-arrow-down-s-line'"
 		)
@@ -131,6 +131,11 @@ export default defineComponent({
 
 		&--placeholder {
 			color: $color-helper-grey;
+		}
+
+		&--text {
+			@include font-regular;
+			margin: 0;
 		}
 
 		&--active {
