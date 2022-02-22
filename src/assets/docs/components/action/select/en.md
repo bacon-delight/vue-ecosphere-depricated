@@ -12,7 +12,7 @@
 
 | Name             | Type                                       | Default   | Description                                         |
 | :--------------- | :----------------------------------------- | :-------- | :-------------------------------------------------- |
-| `label`          | `string`                                   | ""        | The label of the to display                         |
+| `label`          | `string`                                   | `''`      | The label of the to display                         |
 | `options`        | [`choice_option[]`](/guide/types)          | Required  | The options to render in the array                  |
 | `config.theme`   | `'auto'` , `'light'`, `'dark'`, `'invert'` | `'auto'`  | Apply a specific theme to the dropdown              |
 | `config.outline` | `boolean`                                  | `true`    | Apply a border outline to the dropdown              |

@@ -19,7 +19,9 @@ nav.navbar
 	.navbar__option(v-for="option in options")
 		VEcoLink(
 			v-if="option.type === navbar_item_types.link",
-			:label="option.attributes.label"
+			:label="option.attributes.label",
+			:config="option.attributes.config",
+			@click="$ecosphere.handlers.navigate(option.attributes.value)"
 		)
 		VEcoLink(
 			v-if="option.type === navbar_item_types.theme",
