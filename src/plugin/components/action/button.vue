@@ -1,6 +1,6 @@
 <template lang="pug">
 button.button(
-	:class="[settings.outline ? 'button--outline' : '', `button--theme-${settings.theme}`]"
+	:class="[{ 'button--outline': settings.outline, 'button--compact': settings.compact }, `button--theme-${settings.theme}`]"
 )
 	VEcoText(:label="label")
 </template>
@@ -37,12 +37,23 @@ export default defineComponent({
 <style lang="scss" scoped>
 .button {
 	padding: $spacer-0-25 $spacer-1;
+
 	border-radius: $border-radius-standard;
 	border: 1px solid $color-helper-transparent;
 	transition: all $transition-micro ease-in-out;
 	cursor: pointer;
 	@include font-regular;
 	user-select: none;
+
+	&--compact {
+		padding: $spacer-0-25 $spacer-0-5;
+		font-size: $spacer-1;
+		line-height: 0;
+
+		.text {
+			transform: translateY(2px);
+		}
+	}
 
 	&--outline {
 		border: 1px solid $color-helper-grey;

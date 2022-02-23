@@ -61,6 +61,13 @@ export default defineComponent({
 	&__logo {
 		margin-top: $spacer-1;
 		max-height: $spacer-5;
+		cursor: pointer;
+		transition: all $transition-medium ease-in-out;
+
+		&:hover {
+			opacity: 0.5;
+			filter: grayscale(100%);
+		}
 	}
 }
 </style>

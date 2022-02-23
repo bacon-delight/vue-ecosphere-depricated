@@ -9,6 +9,7 @@ $spacer-0-375: 0.375rem * $base;
 $spacer-0-5: 0.5rem * $base;
 $spacer-0-75: 0.75rem * $base;
 $spacer-1: 1rem * $base;
+$spacer-1-125: 1.125rem * $base;
 $spacer-1-25: 1.25rem * $base;
 $spacer-1-5: 1.5rem * $base;
 $spacer-1-75: 1.75rem * $base;
@@ -48,6 +49,9 @@ $spacer-10: 10rem * $base;
 
 /* Transitions */
 $transition-micro: 0.3s;
+$transition-short: 0.5s;
+$transition-medium: 0.8s;
+$transition-long: 1.2s;
 
 /* Border Radius */
 $border-radius-standard: $spacer-0-5;

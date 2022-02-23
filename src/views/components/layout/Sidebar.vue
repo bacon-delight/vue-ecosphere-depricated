@@ -2,6 +2,23 @@
 .content
 	v-eco-header(:label="$t('headers.sidebar')", :type="2")
 
+	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-sidebar(
+		:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
+		:config="{ theme: 'auto' }"
+	)
+
+	v-eco-header(:label="$t('keywords.themed')", :type="6")
+	.showcase--grid
+		v-eco-sidebar(
+			:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
+			:config="{ theme: 'invert' }"
+		)
+		v-eco-sidebar(
+			:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
+			:config="{ theme: 'dark' }"
+		)
+
 	vue3-markdown-it.markdown(:source="content")
 </template>
 

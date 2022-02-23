@@ -77,6 +77,8 @@
 		)
 		v-eco-button(label="Start Playing :ri-play-line:")
 		v-eco-button(label=":ri-arrow-left-line: Return")
+		v-eco-button(label=":ri-play-line:", :config="{ compact: true }")
+		v-eco-button(label=":ri-service-line:", :config="{ compact: true }")
 
 	vue3-markdown-it.markdown(:source="content")
 </template>

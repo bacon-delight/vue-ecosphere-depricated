@@ -18,8 +18,4 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import url("https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css");
-
-i {
-	font-size: $base-rem;
-}
 </style>

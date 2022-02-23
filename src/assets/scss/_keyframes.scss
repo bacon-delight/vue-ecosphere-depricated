@@ -9,3 +9,15 @@
 		top: 100%;
 	}
 }
+
+@keyframes expand-vertically {
+	from {
+		transform: scaleY(0);
+	}
+}
+/* Needs the following to work properly */
+/*
+transform-origin: 50% 0%;
+-webkit-transform-origin: 50% 0%;
+-moz-transform-origin: 50% 0%;
+*/
