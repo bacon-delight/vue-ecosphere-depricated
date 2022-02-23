@@ -111,6 +111,7 @@ body {
 	ol,
 	ul {
 		padding-left: $spacer-0-75;
+		@include font-light;
 	}
 
 	th {
