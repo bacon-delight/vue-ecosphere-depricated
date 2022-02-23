@@ -10,4 +10,5 @@ export interface button_config {
 		| "critical"
 		| "transparent";
 	outline: boolean;
+	compact: boolean;
 }
