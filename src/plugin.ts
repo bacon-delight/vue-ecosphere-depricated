@@ -24,15 +24,20 @@ function initialize(): void {
 	new ecosphere.theme();
 }
 
+// Initialize and Pass Provider
 export default {
 	/* eslint-disable-next-line */
 	install: (app: any, options: any): void => {
 		initialize();
-
-		// Provider
 		app.config.globalProperties.$ecosphere = ecosphere;
+	},
+};
 
-		// Import & Register Modules
+// Import & Register Modules
+/* eslint-disable-next-line */
+export const EcoComponents = {
+	/* eslint-disable-next-line */
+	install: (app: any, options: any): void => {
 		modules.forEach((module) => {
 			module.keys().forEach((component) => {
 				app.component(
@@ -43,3 +48,20 @@ export default {
 		});
 	},
 };
+
+// Tree Shakable Components
+/* eslint-disable-next-line */
+// const components: any = {};
+// modules.forEach((module) => {
+// 	module.keys().forEach((component) => {
+// 		components[
+// 			String(`${modulePrefix}-${component.slice(2, -4)}`)
+// 				.replace(/[^a-z][a-z]/gi, (word) =>
+// 					word.toUpperCase().replace(/[^a-z]/gi, "")
+// 				)
+// 				.replace(/(^\w|\s\w)/g, (m) => m.toUpperCase())
+// 		] = module(component).default;
+// 	});
+// });
+
+// export { components };

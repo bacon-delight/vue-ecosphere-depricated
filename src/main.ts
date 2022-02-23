@@ -9,8 +9,9 @@ app.use(store);
 app.use(router);
 
 // Import as a Plugin
-import Ecosphere from "./plugin";
+import Ecosphere, { EcoComponents } from "./plugin";
 app.use(Ecosphere);
+app.use(EcoComponents);
 
 // Markdown
 import Markdown from "vue3-markdown-it";
