@@ -13,8 +13,9 @@ import { createApp } from "vue";
 const app = createApp(App);
 
 // Ecosphere
-import Ecosphere from "vue-ecosphere";
+import Ecosphere, { EcoComponents } from "./plugin";
 app.use(Ecosphere);
+app.use(EcoComponents);
 
 app.mount("#app");
 ```
