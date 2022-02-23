@@ -62,8 +62,8 @@ export default defineComponent({
 			default: false,
 		},
 		options: {
-			type: Object as PropType<navbar_option[]>,
-			required: true,
+			type: Array as PropType<navbar_option[]>,
+			default: () => [],
 		},
 	},
 	data() {

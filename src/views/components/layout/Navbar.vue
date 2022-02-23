@@ -11,7 +11,8 @@
 	v-eco-navbar(
 		logo="/img/logo.png",
 		brand="Ecosphere",
-		:options="[{ type: 'select', attributes: { label: 'Select', config: { flow: 'left' }, options: [{ label: 'Option 1', value: '1' }] } }]"
+		:toggle="true",
+		:options="[{ type: 'select', attributes: { label: 'Select', config: { flow: 'left', hue: false }, options: [{ label: 'Option 1', value: '1' }] } }]"
 	)
 
 	vue3-markdown-it.markdown(:source="content")
