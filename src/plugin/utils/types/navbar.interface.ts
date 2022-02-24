@@ -5,7 +5,8 @@ export type navbar_item_type =
 	| "dropdown"
 	| "select"
 	| "text"
-	| "theme";
+	| "theme"
+	| "accessibility";
 
 export enum navbar_item_types {
 	"link" = "link",
@@ -13,6 +14,7 @@ export enum navbar_item_types {
 	"select" = "select",
 	"text" = "text",
 	"theme" = "theme",
+	"accessibility" = "accessibility",
 }
 
 export interface navbar_option {

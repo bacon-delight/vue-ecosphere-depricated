@@ -1,6 +1,6 @@
 <template lang="pug">
 button.button(
-	:class="[{ 'button--outline': settings.outline, 'button--compact': settings.compact }, `button--theme-${settings.theme}`]"
+	:class="[{ 'button--outline': settings.outline && !disabled, 'button--compact': settings.compact }, disabled ? 'button--disabled' : `button--theme-${settings.theme}`]"
 )
 	VEcoText(:label="label")
 </template>
@@ -22,6 +22,10 @@ export default defineComponent({
 			type: Object as PropType<button_config>,
 			default: () => config,
 		},
+		disabled: {
+			type: Boolean as PropType<boolean>,
+			default: false,
+		},
 	},
 	components: {
 		VEcoText,
@@ -37,7 +41,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 .button {
 	padding: $spacer-0-25 $spacer-1;
-
 	border-radius: $border-radius-standard;
 	border: 1px solid $color-helper-transparent;
 	transition: all $transition-micro ease-in-out;
@@ -45,10 +48,16 @@ export default defineComponent({
 	@include font-regular;
 	user-select: none;
 
+	&--disabled {
+		background: $color-indicator-offline;
+		color: $color-helper-grey;
+		pointer-events: none;
+	}
+
 	&--compact {
-		padding: $spacer-0-25 $spacer-0-5;
+		padding: $spacer-0-75 $spacer-0-5;
 		font-size: $spacer-1;
-		line-height: 0;
+		line-height: 0 !important;
 
 		.text {
 			transform: translateY(2px);

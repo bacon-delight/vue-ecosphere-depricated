@@ -26,11 +26,13 @@ export default {
 		header: "Header",
 		navbar: "Navbar",
 		sidebar: "Sidebar",
+		accessibility: "Accessibility",
 	},
 	actions: {
 		learn: "Design Philosophy",
 		get_started: "Get Started :ri-arrow-right-line:",
 		select_option: "Select an option",
+		reset: "Reset",
 	},
 	keywords: {
 		default: "Default",
@@ -47,5 +49,6 @@ export default {
 		examples: "Examples",
 		variants: "Variants",
 		transparent: "Transparent",
+		disabled: "Disabled",
 	},
 };

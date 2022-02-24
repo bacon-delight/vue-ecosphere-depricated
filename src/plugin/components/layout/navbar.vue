@@ -19,9 +19,9 @@ nav.navbar
 	.navbar__option(v-for="option in options")
 		VEcoLink(
 			v-if="option.type === navbar_item_types.link",
-			:label="option.attributes.label",
-			:config="option.attributes.config",
-			@click="$ecosphere.handlers.navigate(option.attributes.value)"
+			:label="option.attributes?.label",
+			:config="option.attributes?.config || {}",
+			@click="$ecosphere.handlers.navigate(option.attributes?.value)"
 		)
 		VEcoLink(
 			v-if="option.type === navbar_item_types.theme",
@@ -30,9 +30,13 @@ nav.navbar
 		)
 		VEcoSelect(
 			v-if="option.type === navbar_item_types.select",
-			:label="option.attributes.label",
-			:options="option.attributes.options",
-			:config="option.attributes.config"
+			:label="option.attributes?.label",
+			:options="option.attributes?.options || []",
+			:config="option.attributes?.config || {}"
+		)
+		VEcoAccessibility(
+			v-if="option.type === navbar_item_types.accessibility",
+			:config="option.config"
 		)
 </template>
 
@@ -40,6 +44,7 @@ nav.navbar
 import { defineComponent, PropType } from "vue";
 import VEcoLink from "@/plugin/components/action/link.vue";
 import VEcoSelect from "@/plugin/components/action/select.vue";
+import VEcoAccessibility from "@/plugin/components/action/accessibility.vue";
 import {
 	navbar_item_types,
 	navbar_option,
@@ -72,7 +77,7 @@ export default defineComponent({
 			theme: "auto" as themes,
 		};
 	},
-	components: { VEcoLink, VEcoSelect },
+	components: { VEcoLink, VEcoSelect, VEcoAccessibility },
 	methods: {
 		getCurrentTheme(): void {
 			this.theme = this.$ecosphere.theme.getCurrentTheme();

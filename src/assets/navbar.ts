@@ -37,6 +37,13 @@ export default function (): unknown_nested_type {
 			},
 		},
 		{
+			type: "accessibility",
+			config: {
+				flow: "left",
+				outline: false,
+			},
+		},
+		{
 			type: "select",
 			attributes: {
 				label: ":ri-translate:",
@@ -66,6 +73,7 @@ export default function (): unknown_nested_type {
 				},
 			},
 		},
+
 		{
 			type: "theme",
 		},
