@@ -51,7 +51,7 @@ export const EcoComponents = {
 
 // Tree Shakable Components
 /* eslint-disable-next-line */
-// const components: any = {};
+// export const components: any = {};
 // modules.forEach((module) => {
 // 	module.keys().forEach((component) => {
 // 		components[
@@ -63,5 +63,3 @@ export const EcoComponents = {
 // 		] = module(component).default;
 // 	});
 // });
-
-// export { components };

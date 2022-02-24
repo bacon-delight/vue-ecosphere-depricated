@@ -93,7 +93,6 @@ export default defineComponent({
 	&__content {
 		position: absolute;
 		margin-top: $spacer-0-25;
-		// background: $color-background;
 		border-radius: $border-radius-standard;
 		padding: $spacer-0-25;
 		z-index: $z-index-dropdown;

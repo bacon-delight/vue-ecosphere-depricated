@@ -26,11 +26,13 @@ export default {
 		header: "标题",
 		navbar: "导航栏",
 		sidebar: "侧边栏",
+		accessibility: "辅助功能",
 	},
 	actions: {
 		learn: "设计理念",
 		get_started: "开始 :ri-arrow-right-line:",
 		select_option: "选择一个选项",
+		reset: "重置",
 	},
 	keywords: {
 		default: "默认",
@@ -47,5 +49,6 @@ export default {
 		examples: "示例",
 		variants: "变体",
 		transparent: "透明",
+		disabled: "禁用",
 	},
 };

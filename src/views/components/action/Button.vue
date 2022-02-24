@@ -5,6 +5,7 @@
 	v-eco-header(:label="$t('keywords.default')", :type="6")
 	.showcase
 		v-eco-button(:label="$t('keywords.default')")
+		v-eco-button(:label="$t('keywords.disabled')", :disabled="true")
 
 	v-eco-header(:label="$t('keywords.themed')", :type="6")
 	.showcase
