@@ -24,8 +24,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .link {
-	@include font-light;
-	margin: 0;
 	color: $color-hue;
 	@include hover-color;
 }
