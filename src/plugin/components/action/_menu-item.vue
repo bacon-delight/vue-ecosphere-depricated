@@ -87,7 +87,7 @@ export default defineComponent({
 		align-items: center;
 		column-gap: $spacer-0-5;
 		@include font-light;
-		margin: 0;
+		margin: 0 !important;
 		border-radius: $border-radius-standard 0 0 $border-radius-standard;
 		padding: $spacer-0-25 $spacer-0-5;
 
@@ -118,7 +118,7 @@ export default defineComponent({
 
 		&--active {
 			@include font-emphasis;
-			margin: 0;
+			margin: 0 !important;
 		}
 	}
 
