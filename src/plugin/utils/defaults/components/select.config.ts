@@ -7,4 +7,5 @@ export default {
 	center: false,
 	hue: true,
 	theme: "auto",
+	indicator: true,
 } as select_config;

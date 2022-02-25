@@ -1,11 +1,16 @@
 <template lang="pug">
 .select
 	//- Label
-	VEcoLink.select__label(
-		@click="toggle",
-		:label="label",
-		:class="{ 'select__label--hue': settings.hue }"
-	)
+	.select__label(@click="toggle")
+		VEcoLink.select__label.select__label--text(
+			:label="label",
+			:class="{ 'select__label--hue': settings.hue }"
+		)
+		VEcoLink.select__label.select__label--text(
+			v-if="settings.indicator",
+			:label="open ? ':ri-arrow-up-s-line:' : ':ri-arrow-down-s-line:'",
+			:class="{ 'select__label--hue': settings.hue }"
+		)
 
 	//- Drop Area
 	.select__content(
@@ -83,7 +88,10 @@ export default defineComponent({
 		column-gap: $spacer-0-25;
 		@include hover-color;
 		width: fit-content;
-		color: $color-contrast;
+
+		&--text {
+			color: $color-contrast;
+		}
 
 		&--hue {
 			color: $color-hue;

@@ -5,6 +5,9 @@ export default {
 			"A modern lightweight design system, built on the principles of minimalism with inspirations from Scandinavian architecture, handcrafted for data intensive applications",
 		footer_mistake: "Caught a mistake or want to improve the content? ",
 		footer_edit: "Edit this page on GitHub :ri-arrow-right-up-line:",
+		coming_soon: "This feature will be implemented soon. Stay tuned!",
+		coming_soon_description:
+			"Thanks a lot for checking out this project! I'm really trying to work on the components and documentation, so if you have any suggestions or feedback, or if you'd like a feature or want to contribute, please feel free to reach out to me anytime.",
 	},
 	headers: {
 		guide: "Guide",
@@ -27,12 +30,14 @@ export default {
 		navbar: "Navbar",
 		sidebar: "Sidebar",
 		accessibility: "Accessibility",
+		coming_soon: "Coming Soon",
 	},
 	actions: {
 		learn: "Design Philosophy",
 		get_started: "Get Started :ri-arrow-right-line:",
 		select_option: "Select an option",
 		reset: "Reset",
+		select_language: "Select language",
 	},
 	keywords: {
 		default: "Default",
@@ -42,6 +47,7 @@ export default {
 		brand: "Brand",
 		themed: "Themed",
 		with_icon: "With Icon :ri-remixicon-line:",
+		custom_icon: "Custom Icon",
 		critical: "Critical",
 		success: "Success",
 		warning: "Warning",
@@ -50,5 +56,11 @@ export default {
 		variants: "Variants",
 		transparent: "Transparent",
 		disabled: "Disabled",
+		no_hue: "No Hue",
+		flow_left: "Flow Left",
+		contained: "Contained",
+		no_indicator: "No Indicator",
+		home: "Home",
+		documentation: "Documentation",
 	},
 };

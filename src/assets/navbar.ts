@@ -38,9 +38,15 @@ export default function (): unknown_nested_type {
 		},
 		{
 			type: "accessibility",
-			config: {
-				flow: "left",
-				outline: false,
+			attributes: {
+				config: {
+					flow: "left",
+					outline: false,
+					hue: false,
+					indicator: false,
+					theme: "auto",
+					resetLabel: `${this.$t("actions.reset")} :ri-restart-line:`,
+				},
 			},
 		},
 		{
@@ -64,16 +70,37 @@ export default function (): unknown_nested_type {
 							localStorage.setItem("locale", "zh");
 						},
 					},
+					{
+						label: "한글",
+						value: "ko",
+						action: (): void => {
+							this.$router.push("/coming-soon");
+						},
+					},
+					{
+						label: "Bokml",
+						value: "nb",
+						action: (): void => {
+							this.$router.push("/coming-soon");
+						},
+					},
+					{
+						label: "Nynorsk",
+						value: "nn",
+						action: (): void => {
+							this.$router.push("/coming-soon");
+						},
+					},
 				],
 				config: {
 					flow: "left",
 					center: true,
 					outline: false,
 					hue: false,
+					indicator: false,
 				},
 			},
 		},
-
 		{
 			type: "theme",
 		},

@@ -1,4 +1,5 @@
 // Import Component Types
+export * from "./types/accessibility.interface";
 export * from "./types/button.interface";
 export * from "./types/dropdown.interface";
 export * from "./types/menu.interface";

@@ -36,7 +36,7 @@ nav.navbar
 		)
 		VEcoAccessibility(
 			v-if="option.type === navbar_item_types.accessibility",
-			:config="option.config"
+			:config="option.attributes?.config"
 		)
 </template>
 
@@ -105,6 +105,10 @@ export default defineComponent({
 	align-items: center;
 	column-gap: $spacer-0-25;
 	background: $color-background-faded;
+
+	@include respond-below(sm) {
+		column-gap: $spacer-0-25;
+	}
 
 	&__logo {
 		height: $spacer-1;
