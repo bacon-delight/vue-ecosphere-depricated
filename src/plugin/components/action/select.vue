@@ -97,6 +97,7 @@ export default defineComponent({
 		padding: $spacer-0-25;
 		z-index: $z-index-dropdown;
 		white-space: nowrap;
+		@include animation-drop-down;
 
 		&--contain {
 			width: 100%;

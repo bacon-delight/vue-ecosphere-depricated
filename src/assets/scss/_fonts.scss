@@ -16,67 +16,65 @@ $font-weight-semi-bold: 600;
 
 /* Headers */
 @mixin header-attributes($element-base) {
-	letter-spacing: $base-rem * 0.03;
+	$element-base-rem: calc($element-base * $base-rem / $base-em);
 	font-size: $element-base;
-	line-height: $element-base * $base;
-	margin: calc($element-base / ($base / 2)) 0
-		calc($element-base / (3 * $base));
 	font-family: $font-family-work-sans;
 	font-weight: $font-weight-medium;
+	line-height: $element-base-rem * $base;
+	margin: calc($element-base-rem/1.2) 0 calc($element-base-rem/1.8);
 }
 
 @mixin header-1 {
-	$element-base: $spacer-2;
+	$element-base: $font-size-header-1;
 	@include header-attributes($element-base);
 }
 @mixin header-2 {
-	$element-base: $spacer-1-75;
+	$element-base: $font-size-header-2;
 	@include header-attributes($element-base);
 }
 @mixin header-3 {
-	$element-base: $spacer-1-5;
+	$element-base: $font-size-header-3;
 	@include header-attributes($element-base);
 }
 @mixin header-4 {
-	$element-base: $spacer-1-25;
+	$element-base: $font-size-header-4;
 	@include header-attributes($element-base);
 }
 @mixin header-5 {
-	$element-base: $spacer-1;
+	$element-base: $font-size-header-5;
 	@include header-attributes($element-base);
 }
 @mixin header-6 {
-	$element-base: $spacer-0-75;
+	$element-base: $font-size-header-6;
 	@include header-attributes($element-base);
 }
 
 /* Fonts */
 @mixin font-attributes($element-base) {
-	letter-spacing: $base-rem * 0.01;
+	$element-base-rem: calc($element-base * $base-rem / $base-em);
 	font-size: $element-base;
-	line-height: $element-base * $base * 1.1;
 	font-family: $font-family-work-sans;
-	margin: calc($element-base / (2 * $base)) 0
-		calc($element-base / (3 * $base));
+	line-height: $element-base-rem * 1.8;
+	margin: calc($element-base-rem/1.2) 0 calc($element-base-rem/1.8);
 }
 
 @mixin font-light {
-	$element-base: $base-rem;
+	$element-base: $font-size-regular;
 	@include font-attributes($element-base);
 	font-weight: $font-weight-light;
 }
 @mixin font-regular {
-	$element-base: $base-rem;
+	$element-base: $font-size-regular;
 	@include font-attributes($element-base);
 	font-weight: $font-weight-regular;
 }
 @mixin font-emphasis {
-	$element-base: $base-rem;
+	$element-base: $font-size-regular;
 	@include font-attributes($element-base);
 	font-weight: $font-weight-semi-bold;
 }
 @mixin font-italic {
-	$element-base: $base-rem;
+	$element-base: $font-size-regular;
 	@include font-attributes($element-base);
 	font-weight: $font-weight-light;
 	font-style: italic;
@@ -84,17 +82,17 @@ $font-weight-semi-bold: 600;
 
 /* Special Fonts */
 @mixin font-sidenote {
-	$element-base: $spacer-0-5;
+	$element-base: $font-size-small;
 	@include font-attributes($element-base);
 }
 @mixin font-serif {
-	$element-base: $spacer-0-75;
+	$element-base: $font-size-regular;
 	@include font-attributes($element-base);
 	font-family: $font-family-libre-baskerville;
 	font-style: italic;
 }
 @mixin font-code {
-	$element-base: $base-rem;
+	$element-base: $font-size-regular;
 	@include font-attributes($element-base);
 	font-family: $font-family-roboto-mono;
 	font-weight: $font-weight-light;

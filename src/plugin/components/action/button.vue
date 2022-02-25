@@ -46,6 +46,7 @@ export default defineComponent({
 	transition: all $transition-micro ease-in-out;
 	cursor: pointer;
 	@include font-regular;
+	margin: 0;
 	user-select: none;
 
 	&--disabled {
