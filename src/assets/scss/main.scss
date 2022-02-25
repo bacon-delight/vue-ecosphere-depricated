@@ -22,25 +22,6 @@ select:-webkit-autofill:focus {
 @import "./_mixins.scss";
 @import "./_variables.scss";
 
-// *,
-// *::before,
-// *::after {
-// 	box-sizing: border-box;
-// 	-webkit-box-sizing: border-box;
-// 	-moz-box-sizing: border-box;
-// 	-webkit-tap-highlight-color: transparent;
-// 	-webkit-backface-visibility: hidden;
-// 	backface-visibility: hidden;
-// }
-
-// html {
-// 	font-size: 62.5%;
-// }
-
-// body {
-// 	font-size: 1.6rem;
-// }
-
 *,
 *::before,
 *::after {
@@ -54,12 +35,11 @@ select:-webkit-autofill:focus {
 
 html {
 	margin: 0;
-	// font-size: 62.5%;
 	overflow: hidden;
+	font-size: 16px;
 }
 
 body {
 	margin: 0;
-	// font-size: 1.4rem;
 	@include font-light;
 }

@@ -103,17 +103,18 @@ export default defineComponent({
 	border-bottom: 1px solid rgba($color-helper-grey, 0.2);
 	display: flex;
 	align-items: center;
-	column-gap: $spacer-0-5;
+	column-gap: $spacer-0-25;
 	background: $color-background-faded;
 
 	&__logo {
 		height: $spacer-1;
+		cursor: pointer;
 	}
 
 	&__brand {
 		@include font-light;
 		margin: 0;
-		font-size: $spacer-1;
+		font-size: $spacer-0-75;
 	}
 
 	&__option {
@@ -136,6 +137,7 @@ export default defineComponent({
 		color: $color-contrast;
 		transform: translateY(calc($spacer-0-125/2));
 		display: none;
+		margin-right: $spacer-0-5;
 
 		@include respond-below(sm) {
 			display: block;
