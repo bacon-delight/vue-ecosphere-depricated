@@ -44,7 +44,7 @@
 			:config="{ indicator: false }"
 		)
 		v-eco-select(
-			:label="`${$t('keywords.no_indicator')} :ri-arrow-down-line:`",
+			:label="`${$t('keywords.custom_icon')} :ri-arrow-down-line:`",
 			:options="[ { label: ':ri-emotion-laugh-line: I like it!', value: 'yes' }, { label: ':ri-emotion-sad-line: Not so cool', value: 'no' }, ]",
 			:config="{ indicator: false }"
 		)
