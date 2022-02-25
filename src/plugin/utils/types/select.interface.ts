@@ -6,6 +6,7 @@ export interface select_config {
 	outline: boolean;
 	center: boolean;
 	hue: boolean;
+	indicator: boolean;
 	theme: "auto" | "light" | "dark" | "invert";
 }
 

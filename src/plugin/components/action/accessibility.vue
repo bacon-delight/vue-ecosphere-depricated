@@ -1,72 +1,82 @@
 <template lang="pug">
 .accessibility
 	//- Label
-	VEcoLink.accessibility__label(@click="toggle", label=":ri-service-line:")
+	.accessibility__label(@click="toggle")
+		VEcoLink.accessibility__label.accessibility__label--text(
+			:label="label",
+			:class="{ 'accessibility__label--hue': settings.hue }"
+		)
+		VEcoLink.accessibility__label.accessibility__label--text(
+			v-if="settings.indicator",
+			:label="open ? ':ri-arrow-up-s-line:' : ':ri-arrow-down-s-line:'",
+			:class="{ 'accessibility__label--hue': settings.hue }"
+		)
 
 	//- Drop Area
 	.accessibility__content(
 		v-if="open",
 		@mouseleave="toggle",
-		:class="[settings.contain ? 'accessibility__content--contain' : '', `accessibility__content--flow-${settings.flow}`, settings.outline ? 'accessibility__content--outline' : '', `accessibility__content--theme-${settings.theme}`]"
+		:class="[`accessibility__content--flow-${settings.flow}`, settings.outline ? 'accessibility__content--outline' : '', `accessibility__content--theme-${settings.theme}`]"
 	)
-		.accessibility__group
+		.accessibility__group(v-if="settings.size")
 			VEcoIcon.accessibility__group--icon(type="ri-font-size-2")
 			VEcoButton(
 				label=":ri-subtract-line:",
 				:disabled="size === 0",
-				:config="{ compact: true }",
+				:config="{ compact: true, theme: settings.theme }",
 				@click="toggleSize(accessibility_toggle.decrease)"
 			)
 			VEcoButton(
 				label=":ri-add-line:",
 				:disabled="size === 2",
-				:config="{ compact: true }",
+				:config="{ compact: true, theme: settings.theme }",
 				@click="toggleSize(accessibility_toggle.increase)"
 			)
-		.accessibility__group
+		.accessibility__group(v-if="settings.spacing")
 			VEcoIcon.accessibility__group--icon(type="ri-text-spacing")
 			VEcoButton(
 				label=":ri-subtract-line:",
 				:disabled="spacing === 0",
-				:config="{ compact: true }",
+				:config="{ compact: true, theme: settings.theme }",
 				@click="toggleSpacing(accessibility_toggle.decrease)"
 			)
 			VEcoButton(
 				label=":ri-add-line:",
 				:disabled="spacing === 2",
-				:config="{ compact: true }",
+				:config="{ compact: true, theme: settings.theme }",
 				@click="toggleSpacing(accessibility_toggle.increase)"
 			)
-		.accessibility__group
+		.accessibility__group(v-if="settings.height")
 			VEcoIcon.accessibility__group--icon(type="ri-line-height")
 			VEcoButton(
 				label=":ri-subtract-line:",
 				:disabled="height === 0",
-				:config="{ compact: true }",
+				:config="{ compact: true, theme: settings.theme }",
 				@click="toggleHeight(accessibility_toggle.decrease)"
 			)
 			VEcoButton(
 				label=":ri-add-line:",
 				:disabled="height === 2",
-				:config="{ compact: true }",
+				:config="{ compact: true, theme: settings.theme }",
 				@click="toggleHeight(accessibility_toggle.increase)"
 			)
-		.accessibility__group
+		.accessibility__group(v-if="settings.saturation")
 			VEcoIcon.accessibility__group--icon(type="ri-contrast-drop-2-line")
 			VEcoButton(
 				label=":ri-subtract-line:",
 				:disabled="saturation === 0",
-				:config="{ compact: true }",
+				:config="{ compact: true, theme: settings.theme }",
 				@click="toggleSaturation(accessibility_toggle.decrease)"
 			)
 			VEcoButton(
 				label=":ri-add-line:",
 				:disabled="saturation === 2",
-				:config="{ compact: true }",
+				:config="{ compact: true, theme: settings.theme }",
 				@click="toggleSaturation(accessibility_toggle.increase)"
 			)
 		VEcoButton(
-			label="Reset :ri-close-circle-line:",
+			v-if="settings.reset",
+			:label="settings.resetLabel",
 			:config="{ theme: 'critical' }",
 			@click="reset"
 		)
@@ -77,9 +87,9 @@ import { defineComponent, PropType } from "vue";
 import {
 	accessibility_toggles,
 	accessibility_toggle,
-	select_config,
+	accessibility_config,
 } from "@/plugin/utils/types.interface";
-import config from "@/plugin/utils/defaults/components/select.config";
+import config from "@/plugin/utils/defaults/components/accessibility.config";
 import VEcoLink from "@/plugin/components/action/link.vue";
 import VEcoButton from "@/plugin/components/action/button.vue";
 import VEcoIcon from "@/plugin/components/common/icon.vue";
@@ -87,8 +97,12 @@ import VEcoIcon from "@/plugin/components/common/icon.vue";
 export default defineComponent({
 	name: "Accessibility",
 	props: {
+		label: {
+			type: String as PropType<string>,
+			default: ":ri-service-line:",
+		},
 		config: {
-			type: Object as PropType<select_config>,
+			type: Object as PropType<accessibility_config>,
 			default: () => config,
 		},
 	},
@@ -98,7 +112,7 @@ export default defineComponent({
 		VEcoIcon,
 	},
 	computed: {
-		settings(): select_config {
+		settings(): accessibility_config {
 			return Object.assign({ ...config }, this.config);
 		},
 	},
@@ -176,11 +190,6 @@ export default defineComponent({
 		white-space: nowrap;
 		@include create-grid(1, column, $spacer-0-25);
 		animation: fade-in $transition-micro ease-in-out;
-
-		&--contain {
-			width: 100%;
-			overflow: hidden;
-		}
 
 		&--flow-right {
 			left: 0;

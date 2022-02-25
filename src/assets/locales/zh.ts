@@ -5,6 +5,9 @@ export default {
 			"现代轻量级设计语言，建立在极简主义的原则之上，从斯堪的纳维亚建筑中获得灵感，为数据密集型应用手工制作。",
 		footer_mistake: "发现了一个错误或想改进内容？",
 		footer_edit: "在GitHub上编辑此页面 :ri-arrow-right-up-line:",
+		coming_soon: "此功能将在以后实现，请耐心等待！",
+		coming_soon_description:
+			"非常感谢你检查这个项目! 我真的很想在组件和文档上下功夫，所以如果你有任何建议或反馈，或者你想要一个功能或想要做出贡献，请随时与我联系。",
 	},
 	headers: {
 		guide: "指导",
@@ -27,12 +30,14 @@ export default {
 		navbar: "导航栏",
 		sidebar: "侧边栏",
 		accessibility: "辅助功能",
+		coming_soon: "即将推出",
 	},
 	actions: {
 		learn: "设计理念",
 		get_started: "开始 :ri-arrow-right-line:",
 		select_option: "选择一个选项",
 		reset: "重置",
+		select_language: "选择语言",
 	},
 	keywords: {
 		default: "默认",
@@ -42,6 +47,7 @@ export default {
 		brand: "品牌",
 		themed: "主题",
 		with_icon: "带图标",
+		custom_icon: "自定义图标",
 		critical: "严重",
 		success: "成功",
 		warning: "警告",
@@ -50,5 +56,11 @@ export default {
 		variants: "变体",
 		transparent: "透明",
 		disabled: "禁用",
+		no_hue: "无色调",
+		flow_left: "左流",
+		contained: "包含",
+		no_indicator: "无指示器",
+		home: "主页",
+		documentation: "文档",
 	},
 };

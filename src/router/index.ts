@@ -56,6 +56,13 @@ const routes: Array<RouteRecordRaw> = [
 				component: () => import("../views/RouteInjection.vue"),
 				children: [
 					{
+						path: "accessibility",
+						component: () =>
+							import(
+								"../views/components/action/Accessibility.vue"
+							),
+					},
+					{
 						path: "button",
 						component: () =>
 							import("../views/components/action/Button.vue"),
@@ -110,6 +117,11 @@ const routes: Array<RouteRecordRaw> = [
 		path: "/test",
 		name: "Test",
 		component: () => import("../views/Test.vue"),
+	},
+	{
+		path: "/coming-soon",
+		name: "ComingSoon",
+		component: () => import("../views/ComingSoon.vue"),
 	},
 ];
 
