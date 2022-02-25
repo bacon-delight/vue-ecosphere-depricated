@@ -78,15 +78,8 @@ export default function (): unknown_nested_type {
 						},
 					},
 					{
-						label: "Bokml",
-						value: "nb",
-						action: (): void => {
-							this.$router.push("/coming-soon");
-						},
-					},
-					{
 						label: "Nynorsk",
-						value: "nn",
+						value: "no",
 						action: (): void => {
 							this.$router.push("/coming-soon");
 						},
