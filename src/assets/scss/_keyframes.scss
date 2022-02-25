@@ -1,4 +1,4 @@
-@keyframes fadein {
+@keyframes fade-in {
 	from {
 		opacity: 0;
 	}
@@ -10,14 +10,20 @@
 	}
 }
 
-@keyframes expand-vertically {
-	from {
-		transform: scaleY(0);
-	}
-}
 /* Needs the following to work properly */
 /*
 transform-origin: 50% 0%;
 -webkit-transform-origin: 50% 0%;
 -moz-transform-origin: 50% 0%;
 */
+@keyframes drop-down {
+	from {
+		transform: scaleY(0);
+	}
+}
+@mixin animation-drop-down {
+	transform-origin: 50% 0%;
+	-webkit-transform-origin: 50% 0%;
+	-moz-transform-origin: 50% 0%;
+	animation: drop-down $transition-micro ease-in-out;
+}

@@ -1,6 +1,7 @@
 /* base */
 $base: 1.618;
 $base-rem: 1rem;
+$base-em: 1em;
 
 /* Spacers */
 $spacer-0-125: 0.125rem * $base;
@@ -46,6 +47,16 @@ $spacer-9-25: 9.25rem * $base;
 $spacer-9-5: 9.5rem * $base;
 $spacer-9-75: 9.75rem * $base;
 $spacer-10: 10rem * $base;
+
+/* Font Sizes */
+$font-size-header-1: $base-em * $base * 2;
+$font-size-header-2: $base-em * $base * 1.75;
+$font-size-header-3: $base-em * $base * 1.5;
+$font-size-header-4: $base-em * $base * 1.25;
+$font-size-header-5: $base-em * $base * 1;
+$font-size-header-6: $base-em * $base * 0.75;
+$font-size-regular: $base-em * $base * 0.6;
+$font-size-small: $base-em * $base * 0.5;
 
 /* Transitions */
 $transition-micro: 0.3s;

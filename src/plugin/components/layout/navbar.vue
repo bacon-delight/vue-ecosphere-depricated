@@ -112,6 +112,7 @@ export default defineComponent({
 
 	&__brand {
 		@include font-light;
+		margin: 0;
 		font-size: $spacer-1;
 	}
 

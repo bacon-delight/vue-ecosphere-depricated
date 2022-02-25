@@ -39,7 +39,6 @@ body {
 	height: 100vh;
 	width: 100vw;
 	overflow: hidden;
-	font-size: 90%;
 }
 
 /* Markdown */
@@ -165,7 +164,7 @@ body {
 	display: flex;
 	flex-wrap: wrap;
 	column-gap: $spacer-0-5;
-	row-gap: $spacer-0-25;
+	row-gap: $spacer-0-5;
 
 	&--grid {
 		@include create-grid(2, column, $spacer-0-25);

@@ -9,20 +9,20 @@
 		@mouseleave="toggle",
 		:class="[settings.contain ? 'accessibility__content--contain' : '', `accessibility__content--flow-${settings.flow}`, settings.outline ? 'accessibility__content--outline' : '', `accessibility__content--theme-${settings.theme}`]"
 	)
-		//- .accessibility__group
-		//- 	VEcoIcon.accessibility__group--icon(type="ri-font-size-2")
-		//- 	VEcoButton(
-		//- 		label=":ri-subtract-line:",
-		//- 		:disabled="size === 0",
-		//- 		:config="{ compact: true }",
-		//- 		@click="toggleSize(accessibility_toggle.decrease)"
-		//- 	)
-		//- 	VEcoButton(
-		//- 		label=":ri-add-line:",
-		//- 		:disabled="size === 2",
-		//- 		:config="{ compact: true }",
-		//- 		@click="toggleSize(accessibility_toggle.increase)"
-		//- 	)
+		.accessibility__group
+			VEcoIcon.accessibility__group--icon(type="ri-font-size-2")
+			VEcoButton(
+				label=":ri-subtract-line:",
+				:disabled="size === 0",
+				:config="{ compact: true }",
+				@click="toggleSize(accessibility_toggle.decrease)"
+			)
+			VEcoButton(
+				label=":ri-add-line:",
+				:disabled="size === 2",
+				:config="{ compact: true }",
+				@click="toggleSize(accessibility_toggle.increase)"
+			)
 		.accessibility__group
 			VEcoIcon.accessibility__group--icon(type="ri-text-spacing")
 			VEcoButton(
@@ -171,10 +171,11 @@ export default defineComponent({
 		position: absolute;
 		margin-top: $spacer-0-25;
 		border-radius: $border-radius-standard;
-		padding: $spacer-0-25 $spacer-0-375;
+		padding: $spacer-0-375 $spacer-0-375;
 		z-index: $z-index-dropdown;
 		white-space: nowrap;
-		@include create-grid(1, column);
+		@include create-grid(1, column, $spacer-0-25);
+		animation: fade-in $transition-micro ease-in-out;
 
 		&--contain {
 			width: 100%;

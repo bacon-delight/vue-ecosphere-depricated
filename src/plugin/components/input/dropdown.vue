@@ -116,6 +116,7 @@ export default defineComponent({
 
 	&__label {
 		@include font-sidenote;
+		margin: 0;
 	}
 
 	&__container {
@@ -128,6 +129,7 @@ export default defineComponent({
 		cursor: pointer;
 		border: 1px solid $color-helper-transparent;
 		@include font-light;
+		margin: 0;
 		@include hover-outline;
 
 		&--placeholder {
@@ -171,12 +173,12 @@ export default defineComponent({
 
 	&__content {
 		position: absolute;
-		margin-top: $spacer-0-25;
 		border-radius: $border-radius-standard;
 		padding: $spacer-0-25;
 		z-index: $z-index-dropdown;
 		white-space: nowrap;
-		@include font-light;
+		margin-top: $spacer-0-25;
+		@include animation-drop-down;
 
 		&--contain {
 			width: 100%;

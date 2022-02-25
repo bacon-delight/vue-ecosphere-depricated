@@ -87,6 +87,7 @@ export default defineComponent({
 		align-items: center;
 		column-gap: $spacer-0-5;
 		@include font-light;
+		margin: 0;
 		border-radius: $border-radius-standard 0 0 $border-radius-standard;
 		padding: $spacer-0-25 $spacer-0-5;
 
@@ -123,10 +124,7 @@ export default defineComponent({
 
 	&__nested {
 		margin-left: $spacer-1-125;
-		transform-origin: 50% 0%;
-		-webkit-transform-origin: 50% 0%;
-		-moz-transform-origin: 50% 0%;
-		animation: expand-vertically $transition-micro;
+		@include animation-drop-down;
 	}
 
 	&__arrow {
