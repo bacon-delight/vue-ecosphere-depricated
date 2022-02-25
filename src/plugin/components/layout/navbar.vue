@@ -103,7 +103,7 @@ export default defineComponent({
 	border-bottom: 1px solid rgba($color-helper-grey, 0.2);
 	display: flex;
 	align-items: center;
-	column-gap: $spacer-0-25;
+	column-gap: $spacer-0-5;
 	background: $color-background-faded;
 
 	@include respond-below(sm) {

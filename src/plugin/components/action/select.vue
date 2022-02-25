@@ -1,16 +1,11 @@
 <template lang="pug">
 .select
 	//- Label
-	.select__label(@click="toggle")
-		VEcoLink.select__label.select__label--text(
-			:label="label",
-			:class="{ 'select__label--hue': settings.hue }"
-		)
-		VEcoLink.select__label.select__label--text(
-			v-if="settings.indicator",
-			:label="open ? ':ri-arrow-up-s-line:' : ':ri-arrow-down-s-line:'",
-			:class="{ 'select__label--hue': settings.hue }"
-		)
+	VEcoLink.select__label(
+		@click="toggle",
+		:label="generateLabel",
+		:class="{ 'select__label--hue': settings.hue }"
+	)
 
 	//- Drop Area
 	.select__content(
@@ -57,6 +52,17 @@ export default defineComponent({
 		settings(): select_config {
 			return Object.assign({ ...config }, this.config);
 		},
+		generateLabel() {
+			if (this.settings.indicator) {
+				return `${this.label} ${
+					this.open
+						? ":ri-arrow-up-s-line:"
+						: ":ri-arrow-down-s-line:"
+				}`;
+			} else {
+				return this.label;
+			}
+		},
 	},
 	data() {
 		return {
@@ -86,16 +92,8 @@ export default defineComponent({
 		display: flex;
 		align-items: center;
 		column-gap: $spacer-0-25;
-		@include hover-color;
 		width: fit-content;
-
-		&--text {
-			color: $color-contrast;
-		}
-
-		&--hue {
-			color: $color-hue;
-		}
+		color: $color-contrast;
 	}
 
 	&__content {
