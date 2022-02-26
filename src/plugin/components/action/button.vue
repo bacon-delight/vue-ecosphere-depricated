@@ -8,7 +8,7 @@ button.button(
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import VEcoText from "@/plugin/components/common/text.vue";
-import { button_config } from "@/plugin/utils/defaults/components/button.config";
+import config from "@/plugin/utils/defaults/components/button.config";
 import { button_theme } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
@@ -20,15 +20,15 @@ export default defineComponent({
 		},
 		outline: {
 			type: Boolean as PropType<boolean>,
-			default: button_config.outline,
+			default: config.outline,
 		},
 		compact: {
 			type: Boolean as PropType<boolean>,
-			default: button_config.compact,
+			default: config.compact,
 		},
 		theme: {
 			type: String as PropType<button_theme>,
-			default: button_config.theme,
+			default: config.theme,
 		},
 		disabled: {
 			type: Boolean as PropType<boolean>,

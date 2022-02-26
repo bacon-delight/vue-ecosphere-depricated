@@ -39,13 +39,13 @@ export default function (): unknown_nested_type {
 		{
 			type: "accessibility",
 			attributes: {
+				resetLabel: `${this.$t("actions.reset")} :ri-restart-line:`,
 				config: {
 					flow: "left",
 					outline: false,
 					hue: false,
 					indicator: false,
 					theme: "auto",
-					resetLabel: `${this.$t("actions.reset")} :ri-restart-line:`,
 				},
 			},
 		},

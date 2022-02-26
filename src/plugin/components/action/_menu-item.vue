@@ -30,7 +30,7 @@ import { defineComponent, PropType } from "vue";
 import VEcoLink from "@/plugin/components/action/link.vue";
 import VEcoDot from "@/plugin/components/common/dot.vue";
 import VEcoIcon from "@/plugin/components/common/icon.vue";
-import { menu_config } from "@/plugin/utils/defaults/components/menu.config";
+import config from "@/plugin/utils/defaults/components/menu.config";
 
 export default defineComponent({
 	name: "MenuItem",
@@ -41,7 +41,7 @@ export default defineComponent({
 		},
 		theme: {
 			type: String as PropType<menu_theme>,
-			default: menu_config.theme,
+			default: config.theme,
 		},
 	},
 	data() {

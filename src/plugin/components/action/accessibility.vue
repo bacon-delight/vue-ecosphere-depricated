@@ -84,7 +84,7 @@
 			)
 		VEcoButton(
 			v-if="settings.reset",
-			:label="settings.resetLabel",
+			:label="resetLabel",
 			theme="critical",
 			@click="reset"
 		)
@@ -108,6 +108,10 @@ export default defineComponent({
 		label: {
 			type: String as PropType<string>,
 			default: ":ri-service-line:",
+		},
+		resetLabel: {
+			type: String as PropType<string>,
+			default: config.resetLabel,
 		},
 		config: {
 			type: Object as PropType<accessibility_config>,
