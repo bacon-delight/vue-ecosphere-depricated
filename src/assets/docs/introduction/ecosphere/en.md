@@ -5,7 +5,7 @@ Ecosphere is a modern lightweight design system that is designed to be used in a
 ###### Quick Start
 
 - [Installation](/guide/installation)
-- [Themeing](/guide/themeing)
+- [Themeing](/guide/theme)
 
 ##### Design Principles
 

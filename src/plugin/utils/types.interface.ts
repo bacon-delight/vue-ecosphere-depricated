@@ -2,6 +2,7 @@
 export * from "./types/accessibility.interface";
 export * from "./types/button.interface";
 export * from "./types/dropdown.interface";
+export * from "./types/input.interface";
 export * from "./types/menu.interface";
 export * from "./types/navbar.interface";
 export * from "./types/select.interface";

@@ -49,6 +49,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .main {
 	height: 100vh;
+	margin: 0;
 }
 
 .container {
@@ -74,6 +75,7 @@ export default defineComponent({
 	&__buttons {
 		display: flex;
 		column-gap: $spacer-0-5;
+		margin-top: $spacer-0-75;
 	}
 }
 </style>

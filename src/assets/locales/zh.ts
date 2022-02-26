@@ -33,6 +33,7 @@ export default {
 		accessibility: "辅助功能",
 		coming_soon: "即将推出",
 		introduction: "介绍",
+		input: "输入",
 	},
 	actions: {
 		learn: "设计理念",
