@@ -25,7 +25,7 @@ nav.navbar
 		)
 		VEcoLink(
 			v-if="option.type === navbar_item_types.theme",
-			:label="theme === 'dark' ? ':ri-moon-line:' : ':ri-sun-line:'",
+			:label="theme === 'dark' ? ':ri-sun-line:' : ':ri-moon-line:'",
 			@click="switchTheme"
 		)
 		VEcoSelect(
