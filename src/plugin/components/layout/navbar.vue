@@ -36,6 +36,8 @@ nav.navbar
 		)
 		VEcoAccessibility(
 			v-if="option.type === navbar_item_types.accessibility",
+			:label="option.attributes?.label",
+			:resetLabel="option.attributes?.resetLabel",
 			:config="option.attributes?.config"
 		)
 </template>

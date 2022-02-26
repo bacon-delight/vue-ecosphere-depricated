@@ -7,7 +7,7 @@
 import { defineComponent, PropType } from "vue";
 import { menu_option, menu_theme } from "@/plugin/utils/types.interface";
 import VEcoMenuItem from "@/plugin/components/action/_menu-item.vue";
-import { menu_config } from "@/plugin/utils/defaults/components/menu.config";
+import config from "@/plugin/utils/defaults/components/menu.config";
 
 export default defineComponent({
 	name: "Menu",
@@ -18,14 +18,11 @@ export default defineComponent({
 		},
 		theme: {
 			type: String as PropType<menu_theme>,
-			default: menu_config.theme,
+			default: config.theme,
 		},
 	},
 	components: {
 		VEcoMenuItem,
-	},
-	mounted() {
-		console.log(this.theme);
 	},
 });
 </script>
