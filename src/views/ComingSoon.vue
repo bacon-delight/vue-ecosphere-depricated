@@ -18,11 +18,11 @@ v-eco-wrapper.main
 			v-eco-button(
 				:label="`${$t('keywords.documentation')} :ri-book-read-line:`",
 				theme="transparent",
-				@click="$router.push('/guide/installation')"
+				@click="$router.push('/introduction/ecosphere')"
 			)
 			v-eco-button(
 				:label="`${$t('keywords.home')} :ri-home-line:`",
-				theme="invert",
+				theme="hue",
 				@click="$router.push('/')"
 			)
 </template>

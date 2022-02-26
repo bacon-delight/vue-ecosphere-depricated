@@ -7,9 +7,10 @@ export default {
 		footer_edit: "Edit this page on GitHub :ri-arrow-right-up-line:",
 		coming_soon: "This feature will be implemented soon. Stay tuned!",
 		coming_soon_description:
-			"Thanks a lot for checking out this project! I'm really trying to work on the components and documentation, so if you have any suggestions or feedback, or if you'd like a feature or want to contribute, please feel free to reach out to me anytime.",
+			"Thanks a lot for checking out this project! I'm really trying to spend more time on the components and documentation, so if you have any suggestion or feedback, or if you'd like a feature or want to contribute, please feel free to reach out to me anytime.",
 	},
 	headers: {
+		ecosphere: "Ecosphere",
 		guide: "Guide",
 		installation: "Installation",
 		configuration: "Configuration",
@@ -31,6 +32,7 @@ export default {
 		sidebar: "Sidebar",
 		accessibility: "Accessibility",
 		coming_soon: "Coming Soon",
+		introduction: "Introduction",
 	},
 	actions: {
 		learn: "Design Philosophy",
