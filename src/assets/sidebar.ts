@@ -3,6 +3,16 @@ import { unknown_nested_type } from "@/plugin/utils/types.interface";
 export default function (): unknown_nested_type {
 	return [
 		{
+			label: this.$t("headers.introduction"),
+			value: "",
+			children: [
+				{
+					label: this.$t("headers.ecosphere"),
+					value: "/introduction/ecosphere",
+				},
+			],
+		},
+		{
 			label: this.$t("headers.guide"),
 			value: "",
 			children: [

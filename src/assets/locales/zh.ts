@@ -10,6 +10,7 @@ export default {
 			"非常感谢你检查这个项目! 我真的很想在组件和文档上下功夫，所以如果你有任何建议或反馈，或者你想要一个功能或想要做出贡献，请随时与我联系。",
 	},
 	headers: {
+		ecosphere: "Ecosphere",
 		guide: "指导",
 		installation: "安装",
 		configuration: "配置",
@@ -31,6 +32,7 @@ export default {
 		sidebar: "侧边栏",
 		accessibility: "辅助功能",
 		coming_soon: "即将推出",
+		introduction: "介绍",
 	},
 	actions: {
 		learn: "设计理念",
