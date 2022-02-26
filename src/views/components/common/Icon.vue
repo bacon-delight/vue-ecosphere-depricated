@@ -1,6 +1,6 @@
 <template lang="pug">
 .content
-	v-eco-header(:label="$t('headers.icon')", :type="2")
+	PageHeader(:label="$t('headers.icon')", :events="false")
 
 	v-eco-header(:label="$t('keywords.examples')", :type="6")
 	.showcase
@@ -23,6 +23,7 @@ import { defineComponent } from "vue";
 import locale from "@/locale";
 import content_en from "@/assets/docs/components/common/icon/en.md";
 import content_zh from "@/assets/docs/components/common/icon/zh.md";
+import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
 	name: "Icon",
@@ -38,6 +39,9 @@ export default defineComponent({
 				return content_en;
 			}
 		},
+	},
+	components: {
+		PageHeader,
 	},
 });
 </script>

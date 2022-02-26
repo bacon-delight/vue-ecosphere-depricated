@@ -1,4 +1,4 @@
-##### Usage
+#### Usage
 
 This component is meant to be used only for a sidebar navigation. Check out [Menu](/components/action/menu) for an alternative use cases.
 
@@ -8,14 +8,14 @@ This component is meant to be used only for a sidebar navigation. Check out [Men
 />
 ```
 
-##### API
+#### API
 
-| Name           | Type                                       | Default  | Description                        |
-| :------------- | :----------------------------------------- | :------- | :--------------------------------- |
-| `options`      | [`menu_option[]`](/guide/types)            | Required | The options to render in the array |
-| `config.theme` | `'auto'` , `'light'`, `'dark'`, `'invert'` | `'auto'` | Apply a specific theme to the menu |
+| Name      | Type                                       | Default  | Description                        |
+| :-------- | :----------------------------------------- | :------- | :--------------------------------- |
+| `options` | [`menu_option[]`](/guide/types)            | Required | The options to render in the array |
+| `theme`   | `'auto'` , `'light'`, `'dark'`, `'invert'` | `'auto'` | Apply a specific theme to the menu |
 
-##### Events
+#### Events
 
 | Name     | Payload | Description                                                                                                  |
 | :------- | :------ | :----------------------------------------------------------------------------------------------------------- |

@@ -1,10 +1,10 @@
-##### Usage
+#### Usage
 
 ```html
 <v-eco-accessibility />
 ```
 
-##### API
+#### API
 
 | Name                     | Type                                       | Default                   | Description                                               |
 | :----------------------- | :----------------------------------------- | :------------------------ | :-------------------------------------------------------- |
@@ -21,7 +21,7 @@
 | `config.reset`           | `boolean`                                  | `true`                    | Display the reset button                                  |
 | `config.reresetLabelset` | `string`                                   | `Reset :ri-restart-line:` | Replace the label in the reset button with a custom label |
 
-##### Events
+#### Events
 
 | Name     | Payload                               | Description                                          |
 | :------- | :------------------------------------ | :--------------------------------------------------- |

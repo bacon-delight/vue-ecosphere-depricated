@@ -1,4 +1,4 @@
-##### Usage
+#### Usage
 
 ```html
 <v-eco-select
@@ -8,7 +8,7 @@
 />
 ```
 
-##### API
+#### API
 
 | Name             | Type                                       | Default   | Description                                         |
 | :--------------- | :----------------------------------------- | :-------- | :-------------------------------------------------- |
@@ -21,7 +21,7 @@
 | `config.flow`    | `'left'` , `'right'`                       | `'right'` | Direction of flow of the drop area                  |
 | `config.center`  | `boolean`                                  | `false`   | Center align the contents of the drop area          |
 
-##### Events
+#### Events
 
 | Name     | Payload                               | Description                                          |
 | :------- | :------------------------------------ | :--------------------------------------------------- |

@@ -1,15 +1,15 @@
 <template lang="pug">
-h1.header--1(v-if="type === 1")
+h1.header--1(v-if="type === 1", :class="{ 'header--no-margin': !margin }")
 	VEcoText(:label="label")
-h2.header--2(v-if="type === 2")
+h2.header--2(v-if="type === 2", :class="{ 'header--no-margin': !margin }")
 	VEcoText(:label="label")
-h3.header--3(v-if="type === 3")
+h3.header--3(v-if="type === 3", :class="{ 'header--no-margin': !margin }")
 	VEcoText(:label="label")
-h4.header--4(v-if="type === 4")
+h4.header--4(v-if="type === 4", :class="{ 'header--no-margin': !margin }")
 	VEcoText(:label="label")
-h5.header--5(v-if="type === 5")
+h5.header--5(v-if="type === 5", :class="{ 'header--no-margin': !margin }")
 	VEcoText(:label="label")
-h6.header--6(v-if="type === 6")
+h6.header--6(v-if="type === 6", :class="{ 'header--no-margin': !margin }")
 	VEcoText(:label="label")
 </template>
 
@@ -27,6 +27,10 @@ export default defineComponent({
 		type: {
 			type: Number as PropType<number>,
 			required: true,
+		},
+		margin: {
+			type: Boolean as PropType<boolean>,
+			default: true,
 		},
 	},
 	components: {
@@ -54,6 +58,10 @@ export default defineComponent({
 	}
 	&--6 {
 		@include header-6;
+	}
+
+	&--no-margin {
+		margin: 0;
 	}
 }
 </style>

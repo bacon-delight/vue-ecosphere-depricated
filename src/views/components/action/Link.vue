@@ -1,13 +1,13 @@
 <template lang="pug">
 .content
-	v-eco-header(:label="$t('headers.link')", :type="2")
+	PageHeader(:label="$t('headers.link')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase--grid
 		v-eco-link(label="This is a link")
 		v-eco-link(label="This is a link with an icon :ri-arrow-right-up-line:")
 
-	v-eco-header(:label="$t('keywords.examples')", :type="6")
+	v-eco-header(:label="$t('keywords.examples')", :type="5")
 	.showcase--grid
 		v-eco-link(
 			label="View Ecosphere Configuration :ri-settings-line:",
@@ -26,6 +26,7 @@ import { defineComponent } from "vue";
 import locale from "@/locale";
 import content_en from "@/assets/docs/components/action/link/en.md";
 import content_zh from "@/assets/docs/components/action/link/zh.md";
+import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
 	name: "Link",
@@ -41,6 +42,9 @@ export default defineComponent({
 				return content_en;
 			}
 		},
+	},
+	components: {
+		PageHeader,
 	},
 });
 </script>

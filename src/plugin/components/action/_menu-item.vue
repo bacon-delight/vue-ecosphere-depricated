@@ -2,34 +2,35 @@
 .menu(v-for="(option, index) in options")
 	.menu__item(
 		@click="handleClick(option, index)",
-		:class="[{ 'menu__item--disabled': !option.value && !option.children }, `menu__item--theme-${settings.theme}`]"
+		:class="[{ 'menu__item--disabled': !option.value && !option.children }, `menu__item--theme-${theme}`]"
 	)
 		VEcoIcon.menu__arrow(
 			v-if="option.children",
 			:type="expanded[index] ? 'ri-subtract-line' : 'ri-add-line'"
 		)
-		VEcoLink(
-			:label="option.label",
-			:class="[{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }, `menu__item--theme-${settings.theme}`]"
-		)
-		VEcoDot(:type="isCurrentRoute(option.value) ? 'information' : ''")
+		.menu__option
+			VEcoLink.menu__label(
+				:label="option.label",
+				:class="[{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }, `menu__item--theme-${theme}`]"
+			)
+			VEcoDot(:type="isCurrentRoute(option.value) ? 'information' : ''")
 
 	.menu__nested(v-if="expanded[index]")
 		MenuItem(
 			v-if="option.children",
 			:options="option.children",
-			:config="settings",
+			:theme="theme",
 			@select="propagateSelectEvent"
 		)
 </template>
 
 <script lang="ts">
-import { menu_config, menu_option } from "@/plugin/utils/types.interface";
+import { menu_option, menu_theme } from "@/plugin/utils/types.interface";
 import { defineComponent, PropType } from "vue";
-import config from "@/plugin/utils/defaults/components/menu.config";
 import VEcoLink from "@/plugin/components/action/link.vue";
 import VEcoDot from "@/plugin/components/common/dot.vue";
 import VEcoIcon from "@/plugin/components/common/icon.vue";
+import { menu_config } from "@/plugin/utils/defaults/components/menu.config";
 
 export default defineComponent({
 	name: "MenuItem",
@@ -38,9 +39,9 @@ export default defineComponent({
 			type: Object as PropType<menu_option[]>,
 			required: true,
 		},
-		config: {
-			type: Object as PropType<menu_config>,
-			default: () => config,
+		theme: {
+			type: String as PropType<menu_theme>,
+			default: menu_config.theme,
 		},
 	},
 	data() {
@@ -67,11 +68,6 @@ export default defineComponent({
 			this.$emit("select", event);
 		},
 	},
-	computed: {
-		settings(): menu_config {
-			return Object.assign({ ...config }, this.config);
-		},
-	},
 	mounted() {
 		this.options.forEach((option: menu_option, index: number) => {
 			this.expanded[index] = true;
@@ -88,6 +84,7 @@ export default defineComponent({
 		column-gap: $spacer-0-5;
 		border-radius: $border-radius-standard 0 0 $border-radius-standard;
 		padding: $spacer-0-25 $spacer-0-5;
+		width: 100%;
 
 		&--theme-auto {
 			color: $color-contrast;
@@ -127,6 +124,22 @@ export default defineComponent({
 
 	&__arrow {
 		color: $color-helper-grey;
+	}
+
+	&__option {
+		display: grid;
+		grid-template-columns: 1fr min-content;
+		align-items: center;
+		column-gap: $spacer-0-5;
+		justify-content: start;
+		width: 100%;
+	}
+
+	&__label {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		min-width: 0;
 	}
 }
 </style>

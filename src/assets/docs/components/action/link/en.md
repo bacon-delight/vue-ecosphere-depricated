@@ -1,10 +1,10 @@
-##### Usage
+#### Usage
 
 ```html
 <v-eco-link label="Click here!" />
 ```
 
-###### Recommended
+##### Recommended
 
 For external or internal routing, use `$ecosphere` handlers as follows:
 
@@ -17,13 +17,13 @@ For external or internal routing, use `$ecosphere` handlers as follows:
 
 Learn more at the [Configuration](/guide/configuration) section.
 
-##### API
+#### API
 
 | Name    | Type     | Default  | Description                                        |
 | :------ | :------- | :------- | :------------------------------------------------- |
 | `label` | `string` | Required | The text to display in button, also supports icons |
 
-##### Events
+#### Events
 
 All events that works with a regular `a` element are supported through [Attribute Inheritence](https://vuejs.org/guide/components/attrs.html#attribute-inheritance). Directly use them on the component.
 

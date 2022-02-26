@@ -1,5 +1,3 @@
-import { menu_config } from "@/plugin/utils/types/menu.interface";
-
-export default {
+export const menu_config = {
 	theme: "auto",
-} as menu_config;
+};

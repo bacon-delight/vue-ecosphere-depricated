@@ -1,13 +1,10 @@
 <template lang="pug">
 .content
-	v-eco-header(:label="$t('headers.accessibility')", :type="2")
+	PageHeader(:label="$t('headers.accessibility')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.examples')", :type="5")
 	.showcase
-		v-eco-accessibility(
-			:label="$t('headers.accessibility')",
-			:config="{ flow: 'right', contain: false, outline: true, center: false, hue: true }"
-		)
+		v-eco-accessibility(:label="$t('headers.accessibility')")
 
 	vue3-markdown-it.markdown(:source="content")
 </template>
@@ -17,6 +14,7 @@ import { defineComponent } from "vue";
 import locale from "@/locale";
 import content_en from "@/assets/docs/components/action/accessibility/en.md";
 import content_zh from "@/assets/docs/components/action/accessibility/zh.md";
+import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
 	name: "Accessiblilty",
@@ -32,6 +30,9 @@ export default defineComponent({
 				return content_en;
 			}
 		},
+	},
+	components: {
+		PageHeader,
 	},
 });
 </script>

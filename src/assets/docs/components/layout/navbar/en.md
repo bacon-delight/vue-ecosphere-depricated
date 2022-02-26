@@ -1,4 +1,4 @@
-##### Usage
+#### Usage
 
 ```html
 <v-eco-navbar
@@ -10,7 +10,7 @@
 
 Check out the [Guided Example](#guided-example) below for an in-depth view at the usage.
 
-##### API
+#### API
 
 | Name      | Type                            | Default | Description                                                       |
 | :-------- | :------------------------------ | :------ | :---------------------------------------------------------------- |
@@ -19,13 +19,13 @@ Check out the [Guided Example](#guided-example) below for an in-depth view at th
 | `options` | [`navbar_option`](/guide/types) | `[]`    | Options to be displayed in the navbar                             |
 | `toggle`  | `boolean`                       | `false` | Show the sidebar toggle button for screens below `sm` breakpoints |
 
-##### Events
+#### Events
 
 | Name     | Payload | Description                                                                              |
 | :------- | :------ | :--------------------------------------------------------------------------------------- |
 | `toggle` |         | Emitted when the toggle button is clicked, `toggle` prop must be `true` for this to work |
 
-##### Guided Example
+#### Guided Example
 
 In the `attribute` of the `options`, pass the props of the component you want to render as a key-value pair. For example, if you want to render a [Select](/components/action/select) with the following properties:
 

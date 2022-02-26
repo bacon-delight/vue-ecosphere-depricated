@@ -1,12 +1,19 @@
 <template lang="pug">
 .content
-	v-eco-header(:label="$t('headers.dropdown')", :type="2")
+	PageHeader(:label="$t('headers.dropdown')")
 
+	v-eco-header(:label="$t('keywords.examples')", :type="4")
 	v-eco-header(:label="$t('keywords.default')", :type="6")
 	.showcase--grid
 		v-eco-dropdown(
 			label="Select language",
 			:options="[ { label: 'English', value: 'en' }, { label: '中文', value: 'zh' }, { label: '日本語', value: 'ja' }, { label: '한국어', value: 'ko' }, ]",
+			:placeholder="$t('actions.select_option')",
+			:config="{ flow: 'right', contain: true, outline: true, theme: 'auto' }"
+		)
+		v-eco-dropdown(
+			label=":ri-building-2-line: What's your favourite city?",
+			:options="[ { label: 'Bangalore', value: 'bangalore' }, { label: 'Beijing', value: 'beijing' }, { label: 'Chongqing', value: 'chongqing' }, { label: 'Harbin', value: 'harbin' }, { label: 'Helsinki', value: 'helsinki' }, { label: 'Oslo', value: 'oslo' }, ]",
 			:placeholder="$t('actions.select_option')",
 			:config="{ flow: 'right', contain: true, outline: true, theme: 'auto' }"
 		)
@@ -21,15 +28,6 @@
 			:defaultValue="theme",
 			@change="theme = $event"
 		)
-		v-eco-dropdown(
-			label=":ri-building-2-line: What's your favourite city?",
-			:options="[ { label: 'Bangalore', value: 'bangalore' }, { label: 'Beijing', value: 'beijing' }, { label: 'Chongqing', value: 'chongqing' }, { label: 'Harbin', value: 'harbin' }, { label: 'Helsinki', value: 'helsinki' }, { label: 'Oslo', value: 'oslo' }, ]",
-			:placeholder="$t('actions.select_option')",
-			:config="{ flow: 'right', contain: true, outline: true, theme: 'invert' }"
-		)
-
-	v-eco-header(:label="$t('keywords.examples')", :type="6")
-	.showcase--grid
 		v-eco-dropdown(
 			:label="$t('keywords.transparent')",
 			:options="[ { label: ':ri-emotion-laugh-line: I like it!', value: 'yes' }, { label: ':ri-emotion-sad-line: Not so cool', value: 'no' }, ]",
@@ -69,6 +67,7 @@ import { defineComponent } from "vue";
 import locale from "@/locale";
 import content_en from "@/assets/docs/components/input/dropdown/en.md";
 import content_zh from "@/assets/docs/components/input/dropdown/zh.md";
+import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
 	name: "Dropdown",
@@ -87,6 +86,9 @@ export default defineComponent({
 				return content_en;
 			}
 		},
+	},
+	components: {
+		PageHeader,
 	},
 });
 </script>

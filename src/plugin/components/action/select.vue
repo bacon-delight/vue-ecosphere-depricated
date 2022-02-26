@@ -94,6 +94,10 @@ export default defineComponent({
 		column-gap: $spacer-0-25;
 		width: fit-content;
 		color: $color-contrast;
+
+		&--hue {
+			color: $color-hue;
+		}
 	}
 
 	&__content {
