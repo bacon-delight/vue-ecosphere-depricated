@@ -14,7 +14,7 @@
 			//- )
 			v-eco-button(
 				:label="$t('actions.get_started')",
-				:config="{ theme: 'hue' }",
+				theme="hue",
 				@click="$router.push('/guide/installation')"
 			)
 </template>
