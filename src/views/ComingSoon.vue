@@ -17,12 +17,12 @@ v-eco-wrapper.main
 		.container__item.container__buttons
 			v-eco-button(
 				:label="`${$t('keywords.documentation')} :ri-book-read-line:`",
-				:config="{ theme: 'transparent' }",
+				theme="transparent",
 				@click="$router.push('/guide/installation')"
 			)
 			v-eco-button(
 				:label="`${$t('keywords.home')} :ri-home-line:`",
-				:config="{ theme: 'invert' }",
+				theme="invert",
 				@click="$router.push('/')"
 			)
 </template>
