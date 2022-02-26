@@ -5,26 +5,34 @@ export default function (): unknown_nested_type {
 		{
 			type: "select",
 			attributes: {
-				label: "Resources",
+				label: this.$t("headers.resources"),
 				options: [
 					{
-						label: ":ri-github-fill: GitHub",
+						label: `:ri-github-fill: ${this.$t("headers.github")}`,
 						value: "https://github.com/bacon-delight/vue-ecosphere",
 					},
 					{
-						label: ":ri-remixicon-line: Remix Icon",
+						label: `:ri-remixicon-line: ${this.$t(
+							"headers.remix_icon"
+						)}`,
 						value: "https://remixicon.com/",
 					},
 					{
-						label: ":ri-pencil-ruler-2-line: Figma Kit",
+						label: `:ri-pencil-ruler-2-line: ${this.$t(
+							"headers.figma_kit"
+						)}`,
 						value: "https://www.figma.com/community/file/1067444265295956708/Ecosphere-Design-System",
 					},
 					{
-						label: ":ri-npmjs-line: NPM Package",
+						label: `:ri-npmjs-line: ${this.$t(
+							"headers.npm_package"
+						)}`,
 						value: "https://www.npmjs.com/package/vue-ecosphere",
 					},
 					{
-						label: ":ri-gamepad-line: Sandbox",
+						label: `:ri-gamepad-line: ${this.$t(
+							"headers.sandbox"
+						)}`,
 						value: "https://codesandbox.io/s/vue-ecosphere-ooudb?file=/src/App.vue",
 					},
 				],

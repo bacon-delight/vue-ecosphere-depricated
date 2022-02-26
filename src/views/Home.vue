@@ -1,6 +1,9 @@
 <template lang="pug">
 .wrapper
-	v-eco-navbar.navbar(brand="Ecosphere", :options="navbarOptions")
+	v-eco-navbar.navbar(
+		:brand="$t('headers.ecosphere')",
+		:options="navbarOptions"
+	)
 	.content
 		img.logo(src="/img/logo.png")
 		h4.header {{ $t("site.title") }}

@@ -34,6 +34,12 @@ export default {
 		coming_soon: "即将推出",
 		introduction: "介绍",
 		input: "输入",
+		resources: "资源",
+		github: "GitHub",
+		remix_icon: "Remix 图标",
+		figma_kit: "Figma 装备",
+		npm_package: "NPM 包装",
+		sandbox: "沙盒",
 	},
 	actions: {
 		learn: "设计理念",
@@ -65,5 +71,12 @@ export default {
 		no_indicator: "无指示器",
 		home: "主页",
 		documentation: "文档",
+		email: "电子邮件",
+		password: "密码",
+	},
+	extras: {
+		what_is_your_favourite_book: "你喜欢的书是什么？",
+		name_of_the_book: "书名",
+		how_old_are_you: "你多大了？",
 	},
 };

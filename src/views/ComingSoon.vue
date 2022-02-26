@@ -2,7 +2,7 @@
 v-eco-wrapper.main
 	v-eco-navbar(
 		:options="navbarOptions",
-		brand="Ecosphere",
+		:brand="$t('headers.ecosphere')",
 		logo="/img/logo.png"
 	)
 	.container

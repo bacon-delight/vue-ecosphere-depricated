@@ -23,7 +23,7 @@
 	//- Footer
 	.input__footer
 		VEcoText.input__footer--password(
-			v-if="type === input_types.password && showPassword",
+			v-if="type === input_types.password && showPassword && value",
 			:label="value"
 		)
 		VEcoText.input__footer--invalid(v-if="invalid", :label="invalidWarning")

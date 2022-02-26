@@ -34,6 +34,12 @@ export default {
 		coming_soon: "Coming Soon",
 		introduction: "Introduction",
 		input: "Input",
+		resources: "Resources",
+		github: "GitHub",
+		remix_icon: "Remix Icon",
+		figma_kit: "Figma Kit",
+		npm_package: "NPM Package",
+		sandbox: "Sandbox",
 	},
 	actions: {
 		learn: "Design Philosophy",
@@ -65,5 +71,13 @@ export default {
 		no_indicator: "No Indicator",
 		home: "Home",
 		documentation: "Documentation",
+		email: "Email",
+		password: "Password",
+	},
+	extras: {
+		what_is_your_favourite_book: "What is your favourite book?",
+		name_of_the_book: "Name of the book",
+		how_old_are_you: "How old are you?",
+		enter_your_age: "Enter your age",
 	},
 };
