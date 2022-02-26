@@ -1,4 +1,4 @@
-##### Usage
+#### Usage
 
 ```html
 <v-eco-dropdown
@@ -9,7 +9,7 @@
 />
 ```
 
-##### API
+#### API
 
 | Name             | Type                                                       | Default   | Description                                                                                            |
 | :--------------- | :--------------------------------------------------------- | :-------- | :----------------------------------------------------------------------------------------------------- |
@@ -23,7 +23,7 @@
 | `defaultIndex`   | `number`                                                   | `null`    | Set the default value of the dropdown with this index, index must be less than the length of `options` |
 | `defaultValue`   | `string`, `number`                                         | `null`    | Set the default value of the dropdown, value must exist in one of the `options`                        |
 
-##### Events
+#### Events
 
 | Name     | Payload                               | Description                                          |
 | :------- | :------------------------------------ | :--------------------------------------------------- |

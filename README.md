@@ -8,7 +8,6 @@
 <p align="center">
 <img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability-percentage/bacon-delight/vue-ecosphere?label=Maintainability&style=flat-square">
 <img alt="Code Climate technical debt" src="https://img.shields.io/codeclimate/tech-debt/bacon-delight/vue-ecosphere?label=Technical%20Debt&style=flat-square">
-<img alt="Code Climate issues" src="https://img.shields.io/codeclimate/issues/bacon-delight/vue-ecosphere?label=Issues&style=flat-square">
 <img alt="Snyk Vulnerabilities for GitHub Repo" src="https://img.shields.io/snyk/vulnerabilities/github/bacon-delight/vue-ecosphere?label=Vulnerabilities&style=flat-square">
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/bacon-delight/vue-ecosphere?label=Languages&style=flat-square">
 </p>

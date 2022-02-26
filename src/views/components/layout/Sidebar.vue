@@ -1,14 +1,14 @@
 <template lang="pug">
 .content
-	v-eco-header(:label="$t('headers.sidebar')", :type="2")
+	PageHeader(:label="$t('headers.sidebar')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	v-eco-sidebar(
 		:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
 		:config="{ theme: 'auto' }"
 	)
 
-	v-eco-header(:label="$t('keywords.themed')", :type="6")
+	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase--grid
 		v-eco-sidebar(
 			:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
@@ -27,6 +27,7 @@ import { defineComponent } from "vue";
 import locale from "@/locale";
 import content_en from "@/assets/docs/components/layout/sidebar/en.md";
 import content_zh from "@/assets/docs/components/layout/sidebar/zh.md";
+import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
 	name: "Sidebar",
@@ -42,6 +43,9 @@ export default defineComponent({
 				return content_en;
 			}
 		},
+	},
+	components: {
+		PageHeader,
 	},
 });
 </script>

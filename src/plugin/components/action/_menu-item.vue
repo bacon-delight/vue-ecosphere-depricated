@@ -8,11 +8,12 @@
 			v-if="option.children",
 			:type="expanded[index] ? 'ri-subtract-line' : 'ri-add-line'"
 		)
-		VEcoLink(
-			:label="option.label",
-			:class="[{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }, `menu__item--theme-${settings.theme}`]"
-		)
-		VEcoDot(:type="isCurrentRoute(option.value) ? 'information' : ''")
+		.menu__option
+			VEcoLink.menu__label(
+				:label="option.label",
+				:class="[{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }, `menu__item--theme-${settings.theme}`]"
+			)
+			VEcoDot(:type="isCurrentRoute(option.value) ? 'information' : ''")
 
 	.menu__nested(v-if="expanded[index]")
 		MenuItem(
@@ -88,6 +89,7 @@ export default defineComponent({
 		column-gap: $spacer-0-5;
 		border-radius: $border-radius-standard 0 0 $border-radius-standard;
 		padding: $spacer-0-25 $spacer-0-5;
+		width: 100%;
 
 		&--theme-auto {
 			color: $color-contrast;
@@ -127,6 +129,22 @@ export default defineComponent({
 
 	&__arrow {
 		color: $color-helper-grey;
+	}
+
+	&__option {
+		display: grid;
+		grid-template-columns: 1fr min-content;
+		align-items: center;
+		column-gap: $spacer-0-5;
+		justify-content: start;
+		width: 100%;
+	}
+
+	&__label {
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		min-width: 0;
 	}
 }
 </style>

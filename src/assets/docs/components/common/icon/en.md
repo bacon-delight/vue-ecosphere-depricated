@@ -1,4 +1,4 @@
-##### Usage
+#### Usage
 
 [Remix Icon](https://remixicon.com/) is used in this component, please refer to the official website for more information. All icon names start with `ri-` format.
 
@@ -6,7 +6,7 @@
 <v-eco-icon :type="ri-heart-line" />
 ```
 
-##### API
+#### API
 
 | Name   | Type     | Default  | Description                                   |
 | :----- | :------- | :------- | :-------------------------------------------- |

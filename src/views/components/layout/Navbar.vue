@@ -1,8 +1,8 @@
 <template lang="pug">
 .content
-	v-eco-header(:label="$t('headers.navbar')", :type="2")
+	PageHeader(:label="$t('headers.navbar')")
 
-	v-eco-header(:label="$t('keywords.examples')", :type="6")
+	v-eco-header(:label="$t('keywords.examples')", :type="5")
 	v-eco-navbar(
 		logo="/img/logo.png",
 		brand="Ecosphere",
@@ -23,6 +23,7 @@ import { defineComponent } from "vue";
 import locale from "@/locale";
 import content_en from "@/assets/docs/components/layout/navbar/en.md";
 import content_zh from "@/assets/docs/components/layout/navbar/zh.md";
+import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
 	name: "Navbar",
@@ -38,6 +39,9 @@ export default defineComponent({
 				return content_en;
 			}
 		},
+	},
+	components: {
+		PageHeader,
 	},
 });
 </script>

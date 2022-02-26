@@ -1,8 +1,8 @@
 <template lang="pug">
 .content
-	v-eco-header(:label="$t('headers.select')", :type="2")
+	PageHeader(:label="$t('headers.select')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase
 		v-eco-select(
 			:label="$t('actions.select_language')",
@@ -11,7 +11,7 @@
 			@change="changeLocale"
 		)
 
-	v-eco-header(:label="$t('keywords.variants')", :type="6")
+	v-eco-header(:label="$t('keywords.variants')", :type="5")
 	.showcase
 		v-eco-select(
 			:label="$t('keywords.no_outline')",
@@ -57,6 +57,7 @@ import { defineComponent } from "vue";
 import locale from "@/locale";
 import content_en from "@/assets/docs/components/action/select/en.md";
 import content_zh from "@/assets/docs/components/action/select/zh.md";
+import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
 	name: "Select",
@@ -77,6 +78,9 @@ export default defineComponent({
 		changeLocale(locale: string): void {
 			this.$i18n.locale = locale;
 		},
+	},
+	components: {
+		PageHeader,
 	},
 });
 </script>

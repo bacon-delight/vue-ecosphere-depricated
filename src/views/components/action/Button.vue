@@ -1,13 +1,15 @@
 <template lang="pug">
 .content
-	v-eco-header(:label="$t('headers.button')", :type="2")
+	PageHeader(:label="$t('headers.button')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase
 		v-eco-button(:label="$t('keywords.default')")
 		v-eco-button(:label="$t('keywords.disabled')", :disabled="true")
+		v-eco-button(label="Start Playing :ri-play-line:")
+		v-eco-button(label=":ri-play-line:", :config="{ compact: true }")
 
-	v-eco-header(:label="$t('keywords.themed')", :type="6")
+	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase
 		v-eco-button(:label="$t('keywords.light')", :config="{ theme: 'light' }")
 		v-eco-button(:label="$t('keywords.dark')", :config="{ theme: 'dark' }")
@@ -24,7 +26,7 @@
 			:config="{ theme: 'transparent' }"
 		)
 
-	v-eco-header(:label="$t('keywords.no_outline')", :type="6")
+	v-eco-header(:label="$t('keywords.no_outline')", :type="5")
 	.showcase
 		v-eco-button(
 			:label="$t('keywords.light')",
@@ -35,7 +37,7 @@
 			:config="{ theme: 'dark', outline: false }"
 		)
 
-	v-eco-header(:label="$t('keywords.with_icon')", :type="6")
+	v-eco-header(:label="$t('keywords.with_icon')", :type="5")
 	.showcase
 		v-eco-button(
 			:label="`${$t('keywords.light')} :ri-sun-line:`",
@@ -70,17 +72,6 @@
 			:config="{ theme: 'transparent' }"
 		)
 
-	v-eco-header(:label="$t('keywords.examples')", :type="6")
-	.showcase
-		v-eco-button(
-			label="Click me!",
-			:config="{ theme: 'auto', outline: true }"
-		)
-		v-eco-button(label="Start Playing :ri-play-line:")
-		v-eco-button(label=":ri-arrow-left-line: Return")
-		v-eco-button(label=":ri-play-line:", :config="{ compact: true }")
-		v-eco-button(label=":ri-service-line:", :config="{ compact: true }")
-
 	vue3-markdown-it.markdown(:source="content")
 </template>
 
@@ -89,6 +80,7 @@ import { defineComponent } from "vue";
 import locale from "@/locale";
 import content_en from "@/assets/docs/components/action/button/en.md";
 import content_zh from "@/assets/docs/components/action/button/zh.md";
+import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
 	name: "Button",
@@ -104,6 +96,9 @@ export default defineComponent({
 				return content_en;
 			}
 		},
+	},
+	components: {
+		PageHeader,
 	},
 });
 </script>

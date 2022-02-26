@@ -1,4 +1,4 @@
-##### Usage
+#### Usage
 
 ```html
 <v-eco-button
@@ -25,7 +25,7 @@ You can also enable the `compact` attribute to render buttons with icons only.
 <v-eco-button label=":ri-service-line:" :config="{ compact: true }" />
 ```
 
-##### API
+#### API
 
 | Name             | Type                                                                                                        | Default  | Description                                                                       |
 | :--------------- | :---------------------------------------------------------------------------------------------------------- | :------- | :-------------------------------------------------------------------------------- |
@@ -35,7 +35,7 @@ You can also enable the `compact` attribute to render buttons with icons only.
 | `config.outline` | `boolean`                                                                                                   | `true`   | Apply a border outline to the button                                              |
 | `config.compact` | `boolean`                                                                                                   | `false`  | Reduce padding and increase font size, typically meant for buttons with only icon |
 
-##### Events
+#### Events
 
 All events that works with a regular `button` element are supported through [Attribute Inheritence](https://vuejs.org/guide/components/attrs.html#attribute-inheritance). Directly use them on the component.
 

@@ -1,4 +1,4 @@
-##### Usage
+#### Usage
 
 ```html
 <v-eco-menu
@@ -9,14 +9,14 @@
 
 The string passed in the `value` properties will be automatically matched with the current route, and the current route will be highlighted.
 
-##### API
+#### API
 
 | Name           | Type                                       | Default  | Description                        |
 | :------------- | :----------------------------------------- | :------- | :--------------------------------- |
 | `options`      | [`menu_option[]`](/guide/types)            | Required | The options to render in the array |
 | `config.theme` | `'auto'` , `'light'`, `'dark'`, `'invert'` | `'auto'` | Apply a specific theme to the menu |
 
-##### Events
+#### Events
 
 | Name     | Payload                               | Description                                     |
 | :------- | :------------------------------------ | :---------------------------------------------- |
