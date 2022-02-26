@@ -78,5 +78,6 @@ export default {
 		what_is_your_favourite_book: "你喜欢的书是什么？",
 		name_of_the_book: "书名",
 		how_old_are_you: "你多大了？",
+		enter_your_age: "输入你的年龄",
 	},
 };
