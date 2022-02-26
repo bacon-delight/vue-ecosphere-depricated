@@ -1,17 +1,13 @@
 <template lang="pug">
-.sidebar(:class="[`sidebar--theme-${settings.theme}`]")
-	VEcoMenuItem(
-		:options="options",
-		:config="settings",
-		@select="$emit('toggle')"
-	)
+.sidebar(:class="[`sidebar--theme-${theme}`]")
+	VEcoMenuItem(:options="options", @select="$emit('toggle')", :theme="theme")
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { menu_config, menu_option } from "@/plugin/utils/types.interface";
-import config from "@/plugin/utils/defaults/components/menu.config";
+import { menu_option, menu_theme } from "@/plugin/utils/types.interface";
 import VEcoMenuItem from "@/plugin/components/action/_menu-item.vue";
+import { menu_config } from "@/plugin/utils/defaults/components/menu.config";
 
 export default defineComponent({
 	name: "Sidebar",
@@ -20,25 +16,19 @@ export default defineComponent({
 			type: Object as PropType<menu_option[]>,
 			required: true,
 		},
-		config: {
-			type: Object as PropType<menu_config>,
-			default: () => config,
+		theme: {
+			type: String as PropType<menu_theme>,
+			default: menu_config.theme,
 		},
 	},
 	components: {
 		VEcoMenuItem,
-	},
-	computed: {
-		settings(): menu_config {
-			return Object.assign({ ...config }, this.config);
-		},
 	},
 });
 </script>
 
 <style lang="scss" scoped>
 .sidebar {
-	// background: $color-background;
 	width: $spacer-8;
 	overflow-y: auto;
 

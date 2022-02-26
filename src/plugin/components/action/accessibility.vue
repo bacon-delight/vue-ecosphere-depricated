@@ -23,13 +23,15 @@
 			VEcoButton(
 				label=":ri-subtract-line:",
 				:disabled="size === 0",
-				:config="{ compact: true, theme: settings.theme }",
+				:compact="true",
+				:theme="settings.theme",
 				@click="toggleSize(accessibility_toggle.decrease)"
 			)
 			VEcoButton(
 				label=":ri-add-line:",
 				:disabled="size === 2",
-				:config="{ compact: true, theme: settings.theme }",
+				:compact="true",
+				:theme="settings.theme",
 				@click="toggleSize(accessibility_toggle.increase)"
 			)
 		.accessibility__group(v-if="settings.spacing")
@@ -37,13 +39,15 @@
 			VEcoButton(
 				label=":ri-subtract-line:",
 				:disabled="spacing === 0",
-				:config="{ compact: true, theme: settings.theme }",
+				:compact="true",
+				:theme="settings.theme",
 				@click="toggleSpacing(accessibility_toggle.decrease)"
 			)
 			VEcoButton(
 				label=":ri-add-line:",
 				:disabled="spacing === 2",
-				:config="{ compact: true, theme: settings.theme }",
+				:compact="true",
+				:theme="settings.theme",
 				@click="toggleSpacing(accessibility_toggle.increase)"
 			)
 		.accessibility__group(v-if="settings.height")
@@ -51,13 +55,15 @@
 			VEcoButton(
 				label=":ri-subtract-line:",
 				:disabled="height === 0",
-				:config="{ compact: true, theme: settings.theme }",
+				:compact="true",
+				:theme="settings.theme",
 				@click="toggleHeight(accessibility_toggle.decrease)"
 			)
 			VEcoButton(
 				label=":ri-add-line:",
 				:disabled="height === 2",
-				:config="{ compact: true, theme: settings.theme }",
+				:compact="true",
+				:theme="settings.theme",
 				@click="toggleHeight(accessibility_toggle.increase)"
 			)
 		.accessibility__group(v-if="settings.saturation")
@@ -65,19 +71,21 @@
 			VEcoButton(
 				label=":ri-subtract-line:",
 				:disabled="saturation === 0",
-				:config="{ compact: true, theme: settings.theme }",
+				:compact="true",
+				:theme="settings.theme",
 				@click="toggleSaturation(accessibility_toggle.decrease)"
 			)
 			VEcoButton(
 				label=":ri-add-line:",
 				:disabled="saturation === 2",
-				:config="{ compact: true, theme: settings.theme }",
+				:compact="true",
+				:theme="settings.theme",
 				@click="toggleSaturation(accessibility_toggle.increase)"
 			)
 		VEcoButton(
 			v-if="settings.reset",
 			:label="settings.resetLabel",
-			:config="{ theme: 'critical' }",
+			theme="critical",
 			@click="reset"
 		)
 </template>

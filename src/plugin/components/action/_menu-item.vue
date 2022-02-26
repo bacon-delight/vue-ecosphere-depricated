@@ -2,7 +2,7 @@
 .menu(v-for="(option, index) in options")
 	.menu__item(
 		@click="handleClick(option, index)",
-		:class="[{ 'menu__item--disabled': !option.value && !option.children }, `menu__item--theme-${settings.theme}`]"
+		:class="[{ 'menu__item--disabled': !option.value && !option.children }, `menu__item--theme-${theme}`]"
 	)
 		VEcoIcon.menu__arrow(
 			v-if="option.children",
@@ -11,7 +11,7 @@
 		.menu__option
 			VEcoLink.menu__label(
 				:label="option.label",
-				:class="[{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }, `menu__item--theme-${settings.theme}`]"
+				:class="[{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }, `menu__item--theme-${theme}`]"
 			)
 			VEcoDot(:type="isCurrentRoute(option.value) ? 'information' : ''")
 
@@ -19,18 +19,18 @@
 		MenuItem(
 			v-if="option.children",
 			:options="option.children",
-			:config="settings",
+			:theme="theme",
 			@select="propagateSelectEvent"
 		)
 </template>
 
 <script lang="ts">
-import { menu_config, menu_option } from "@/plugin/utils/types.interface";
+import { menu_option, menu_theme } from "@/plugin/utils/types.interface";
 import { defineComponent, PropType } from "vue";
-import config from "@/plugin/utils/defaults/components/menu.config";
 import VEcoLink from "@/plugin/components/action/link.vue";
 import VEcoDot from "@/plugin/components/common/dot.vue";
 import VEcoIcon from "@/plugin/components/common/icon.vue";
+import { menu_config } from "@/plugin/utils/defaults/components/menu.config";
 
 export default defineComponent({
 	name: "MenuItem",
@@ -39,9 +39,9 @@ export default defineComponent({
 			type: Object as PropType<menu_option[]>,
 			required: true,
 		},
-		config: {
-			type: Object as PropType<menu_config>,
-			default: () => config,
+		theme: {
+			type: String as PropType<menu_theme>,
+			default: menu_config.theme,
 		},
 	},
 	data() {
@@ -66,11 +66,6 @@ export default defineComponent({
 		},
 		propagateSelectEvent(event: Event) {
 			this.$emit("select", event);
-		},
-	},
-	computed: {
-		settings(): menu_config {
-			return Object.assign({ ...config }, this.config);
 		},
 	},
 	mounted() {

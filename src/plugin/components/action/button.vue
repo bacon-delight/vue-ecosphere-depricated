@@ -1,6 +1,6 @@
 <template lang="pug">
 button.button(
-	:class="[{ 'button--outline': settings.outline && !disabled, 'button--compact': settings.compact }, disabled ? 'button--disabled' : `button--theme-${settings.theme}`]"
+	:class="[{ 'button--outline': outline && !disabled, 'button--compact': compact }, disabled ? 'button--disabled' : `button--theme-${theme}`]"
 )
 	VEcoText(:label="label")
 </template>
@@ -8,8 +8,8 @@ button.button(
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import VEcoText from "@/plugin/components/common/text.vue";
-import config from "@/plugin/utils/defaults/components/button.config";
-import { button_config } from "@/plugin/utils/types.interface";
+import { button_config } from "@/plugin/utils/defaults/components/button.config";
+import { button_theme } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Button",
@@ -18,9 +18,17 @@ export default defineComponent({
 			type: String as PropType<string>,
 			required: true,
 		},
-		config: {
-			type: Object as PropType<button_config>,
-			default: () => config,
+		outline: {
+			type: Boolean as PropType<boolean>,
+			default: button_config.outline,
+		},
+		compact: {
+			type: Boolean as PropType<boolean>,
+			default: button_config.compact,
+		},
+		theme: {
+			type: String as PropType<button_theme>,
+			default: button_config.theme,
 		},
 		disabled: {
 			type: Boolean as PropType<boolean>,
@@ -29,11 +37,6 @@ export default defineComponent({
 	},
 	components: {
 		VEcoText,
-	},
-	computed: {
-		settings(): button_config {
-			return Object.assign({ ...config }, this.config);
-		},
 	},
 });
 </script>

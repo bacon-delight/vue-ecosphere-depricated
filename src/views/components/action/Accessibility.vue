@@ -4,10 +4,7 @@
 
 	v-eco-header(:label="$t('keywords.examples')", :type="5")
 	.showcase
-		v-eco-accessibility(
-			:label="$t('headers.accessibility')",
-			:config="{ flow: 'right', contain: false, outline: true, center: false, hue: true }"
-		)
+		v-eco-accessibility(:label="$t('headers.accessibility')")
 
 	vue3-markdown-it.markdown(:source="content")
 </template>

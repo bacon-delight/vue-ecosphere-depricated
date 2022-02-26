@@ -4,19 +4,18 @@
 
 	v-eco-header(:label="$t('keywords.default')", :type="5")
 	v-eco-sidebar(
-		:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
-		:config="{ theme: 'auto' }"
+		:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]"
 	)
 
 	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase--grid
 		v-eco-sidebar(
 			:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
-			:config="{ theme: 'invert' }"
+			theme="invert"
 		)
 		v-eco-sidebar(
 			:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
-			:config="{ theme: 'dark' }"
+			theme="dark"
 		)
 
 	vue3-markdown-it.markdown(:source="content")

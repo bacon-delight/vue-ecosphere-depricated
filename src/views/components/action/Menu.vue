@@ -5,19 +5,18 @@
 	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase__menu
 		v-eco-menu(
-			:options="[ { label: 'Home', value: '/' }, { label: 'Installation', value: '/guide/installation' }, { label: 'Components', children: [{ label: 'Disabled' }] }, { label: 'Active', value: '/components/action/menu' }, ]",
-			:config="{ theme: 'invert' }"
+			:options="[ { label: 'Home', value: '/' }, { label: 'Installation', value: '/guide/installation' }, { label: 'Components', children: [{ label: 'Disabled' }] }, { label: 'Active', value: '/components/action/menu' }, ]"
 		)
 
 	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase--grid
 		v-eco-menu(
 			:options="[{ label: 'Theme', children: [{ label: 'Automatic' }, { label: 'Light' }, { label: 'Dark' }, { label: 'Inverted', value: '/components/action/menu' }] }]",
-			:config="{ theme: 'invert' }"
+			theme="invert"
 		)
 		v-eco-menu(
 			:options="[{ label: 'Theme', children: [{ label: 'Automatic' }, { label: 'Light' }, { label: 'Dark', value: '/components/action/menu' }, { label: 'Inverted' }] }]",
-			:config="{ theme: 'dark' }"
+			theme="dark"
 		)
 
 	vue3-markdown-it.markdown(:source="content")

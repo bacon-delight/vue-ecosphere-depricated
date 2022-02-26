@@ -1,7 +1,5 @@
-import { button_config } from "@/plugin/utils/types.interface";
-
-export default {
+export const button_config = {
 	theme: "auto",
 	outline: true,
 	compact: false,
-} as button_config;
+};
