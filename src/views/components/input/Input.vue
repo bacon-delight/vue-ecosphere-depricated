@@ -5,27 +5,26 @@
 	v-eco-header(:label="$t('keywords.default')", :type="6")
 	.showcase--grid
 		v-eco-input(
-			label="What's your favourite book?",
-			placeholder="Name of the book"
+			:label="$t('extras.what_is_your_favourite_book')",
+			:placeholder="$t('extras.name_of_the_book')"
 		)
 		v-eco-input(
-			label="How old are you?",
-			placeholder="Age",
+			:label="$t('extras.how_old_are_you')",
+			:placeholder="$t('extras.enter_your_age')",
 			type="number",
-			:config="{ theme: 'invert' }",
-			:defaultValue="12"
+			:config="{ theme: 'invert' }"
 		)
 		v-eco-input(
-			label="Email ID",
-			placeholder="Email",
+			:label="$t('keywords.email')",
+			:placeholder="$t('keywords.email')",
 			type="email",
 			:regex="$ecosphere.validators.email",
 			:config="{ theme: 'transparent' }",
 			:required="true"
 		)
 		v-eco-input(
-			label="Password",
-			placeholder="Password",
+			:label="$t('keywords.password')",
+			:placeholder="$t('keywords.password')",
 			type="password",
 			:config="{ outline: false }"
 		)

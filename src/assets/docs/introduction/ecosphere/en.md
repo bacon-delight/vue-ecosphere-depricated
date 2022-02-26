@@ -20,7 +20,7 @@ Ecosphere is a modern lightweight design system that is designed to be used in a
 - **TypeScript**: Components are built with TypeScript. This means that every component is written in TypeScript and can be used in TypeScript applications as well.
 - **Vue 3**: Can be used in Vue 3 applications, including Nuxt 3.
 - **Router Support**: Supports Vue Router out of the box, can detect and highlight active routes.
-- **Moderen Browsers**: Supports all modern browsers like Chrome, Firefox, Edge, Safari, Opera, IE11 and more.
+- **Modern Browsers**: Supports all modern browsers like Chrome, Firefox, Edge, Safari, Opera, IE11 and more.
 - **CSS Variables**: CSS variables are used to create a more dynamic design system. These variables are also customisable and can be used in the themeing system.
 - **Electron**: Supports Electron applications.
 

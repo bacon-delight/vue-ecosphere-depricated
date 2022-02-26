@@ -1,6 +1,6 @@
 <template lang="pug">
 v-eco-layout.layout(
-	brand="Ecosphere",
+	:brand="$t('headers.ecosphere')",
 	logo="/img/logo.png",
 	:navbarOptions="navbarOptions",
 	:sidebarOptions="sidebarOptions"
