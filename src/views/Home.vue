@@ -4,7 +4,7 @@
 	.content
 		img.logo(src="/img/logo.png")
 		h4.header {{ $t("site.title") }}
-		//- h6.subheader Data is messy, representation doesn't have to be
+		//- h6.subheader Data can be beautiful
 		p.description {{ $t("site.description") }}
 
 		.actions
@@ -15,7 +15,7 @@
 			v-eco-button(
 				:label="$t('actions.get_started')",
 				theme="hue",
-				@click="$router.push('/guide/installation')"
+				@click="$router.push('/introduction/ecosphere')"
 			)
 </template>
 
