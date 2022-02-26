@@ -57,6 +57,7 @@
 	}
 }
 
+/* Themeing */
 @mixin apply-theme($theme: auto) {
 	@if $theme == auto {
 		background: $color-background;

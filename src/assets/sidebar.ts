@@ -100,6 +100,10 @@ export default function (): unknown_nested_type {
 							label: this.$t("headers.dropdown"),
 							value: "/components/input/dropdown",
 						},
+						{
+							label: this.$t("headers.input"),
+							value: "/components/input/input",
+						},
 					],
 				},
 			],

@@ -6,7 +6,7 @@ import {
 	accessibility_class,
 } from "@/plugin/utils/types.interface";
 
-export default class Handlers {
+export default class Accessibility {
 	private static size: accessibility_states = 0;
 	private static spacing: accessibility_states = 0;
 	private static height: accessibility_states = 0;

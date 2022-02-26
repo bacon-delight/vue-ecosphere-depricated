@@ -33,6 +33,7 @@ export default {
 		accessibility: "Accessibility",
 		coming_soon: "Coming Soon",
 		introduction: "Introduction",
+		input: "Input",
 	},
 	actions: {
 		learn: "Design Philosophy",
