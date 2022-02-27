@@ -36,12 +36,12 @@
 		v-eco-select(
 			:label="$t('keywords.inverted')",
 			:options="[ { label: ':ri-emotion-laugh-line: I like it!', value: 'yes' }, { label: ':ri-emotion-sad-line: Not so cool', value: 'no' }, ]",
-			:config="{ flow: 'left', contain: true, outline: true, center: false, hue: true, theme: 'invert' }"
+			:config="{ flow: 'left', contain: false, outline: true, center: false, hue: true, theme: 'invert' }"
 		)
 		v-eco-select(
 			:label="$t('keywords.no_indicator')",
 			:options="[ { label: ':ri-emotion-laugh-line: I like it!', value: 'yes' }, { label: ':ri-emotion-sad-line: Not so cool', value: 'no' }, ]",
-			:config="{ indicator: false }"
+			:config="{ indicator: false, flow: 'left' }"
 		)
 		v-eco-select(
 			:label="`${$t('keywords.custom_icon')} :ri-arrow-down-line:`",

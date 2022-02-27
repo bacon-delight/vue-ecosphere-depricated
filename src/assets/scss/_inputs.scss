@@ -58,3 +58,63 @@
 		border: 1px solid $color-helper-error;
 	}
 }
+
+@mixin dropdown-content-area {
+	position: absolute;
+	border-radius: $border-radius-standard;
+	padding: $spacer-0-25;
+	z-index: $z-index-dropdown;
+	white-space: nowrap;
+	margin-top: $spacer-0-25;
+	@include animation-drop-down;
+
+	&--contain {
+		width: 100%;
+		overflow: hidden;
+	}
+
+	&--flow-right {
+		left: 0;
+	}
+
+	&--flow-left {
+		right: 0;
+	}
+
+	&--outline {
+		border: 1px solid $color-helper-grey;
+	}
+
+	&--theme-auto {
+		@include apply-theme(auto);
+	}
+
+	&--theme-invert {
+		@include apply-theme(invert);
+	}
+
+	&--theme-light {
+		@include apply-theme(light);
+	}
+
+	&--theme-dark {
+		@include apply-theme(dark);
+	}
+
+	&--theme-transparent {
+		@include apply-theme(auto);
+	}
+}
+
+@mixin select-label {
+	display: flex;
+	align-items: center;
+	column-gap: $spacer-0-25;
+	@include hover-color;
+	width: fit-content;
+	color: $color-contrast;
+
+	&--hue {
+		color: $color-hue;
+	}
+}

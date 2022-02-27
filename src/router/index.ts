@@ -109,6 +109,11 @@ const routes: Array<RouteRecordRaw> = [
 						component: () =>
 							import("../views/components/common/Icon.vue"),
 					},
+					{
+						path: "tag",
+						component: () =>
+							import("../views/components/common/Tag.vue"),
+					},
 				],
 			},
 			{

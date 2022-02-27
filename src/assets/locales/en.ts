@@ -40,6 +40,7 @@ export default {
 		figma_kit: "Figma Kit",
 		npm_package: "NPM Package",
 		sandbox: "Sandbox",
+		tag: "Tag",
 	},
 	actions: {
 		learn: "Design Philosophy",

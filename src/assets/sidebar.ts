@@ -90,6 +90,10 @@ export default function (): unknown_nested_type {
 							label: this.$t("headers.icon"),
 							value: "/components/common/icon",
 						},
+						{
+							label: this.$t("headers.tag"),
+							value: "/components/common/tag",
+						},
 					],
 				},
 				{

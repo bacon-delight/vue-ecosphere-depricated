@@ -40,6 +40,7 @@ export default {
 		figma_kit: "Figma 装备",
 		npm_package: "NPM 包装",
 		sandbox: "沙盒",
+		tag: "标签",
 	},
 	actions: {
 		learn: "设计理念",

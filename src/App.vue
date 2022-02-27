@@ -161,9 +161,9 @@ body {
 	margin: 0 auto;
 	overflow: hidden;
 
-	// &:first-child h2 {
-	// 	margin-top: $spacer-0-25;
-	// }
+	&:first-child h2 {
+		margin-top: $spacer-0-25;
+	}
 }
 
 .showcase {

@@ -3,7 +3,7 @@
 
 <p align="center"><img src="public/img/logo.png" width="128" /></p>
 <h3 align="center">Ecosphere Design System | 生态圈设计系统</h3>
-<p  align="center">Ecosphere is a modern and minimal design system built for better clarity and insights from data. A lot of the inspirations in this system comes from the natural world.</p>
+<p  align="center">A modern lightweight design system, built on the principles of minimalism with inspirations from Scandinavian architecture, handcrafted for data intensive applications.</p>
 
 <p align="center">
 <img alt="Code Climate maintainability" src="https://img.shields.io/codeclimate/maintainability-percentage/bacon-delight/vue-ecosphere?label=Maintainability&style=flat-square">

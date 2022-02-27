@@ -60,7 +60,7 @@ export default function (): unknown_nested_type {
 		{
 			type: "select",
 			attributes: {
-				label: ":ri-translate:",
+				label: ":ri-translate-2:",
 				options: [
 					{
 						label: "EN",

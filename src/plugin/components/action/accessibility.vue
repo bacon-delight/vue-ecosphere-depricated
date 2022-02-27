@@ -181,55 +181,12 @@ export default defineComponent({
 	position: relative;
 
 	&__label {
-		display: flex;
-		align-items: center;
-		column-gap: $spacer-0-25;
-		@include hover-color;
-		width: fit-content;
-		color: $color-contrast;
-
-		&--hue {
-			color: $color-hue;
-		}
+		@include select-label;
 	}
 
 	&__content {
-		position: absolute;
-		margin-top: $spacer-0-25;
-		border-radius: $border-radius-standard;
-		padding: $spacer-0-375 $spacer-0-375;
-		z-index: $z-index-dropdown;
-		white-space: nowrap;
+		@include dropdown-content-area;
 		@include create-grid(1, column, $spacer-0-25);
-		animation: fade-in $transition-micro ease-in-out;
-
-		&--flow-right {
-			left: 0;
-		}
-
-		&--flow-left {
-			right: 0;
-		}
-
-		&--outline {
-			border: 1px solid $color-helper-grey;
-		}
-
-		&--theme-auto {
-			@include apply-theme(auto);
-		}
-
-		&--theme-light {
-			@include apply-theme(light);
-		}
-
-		&--theme-dark {
-			@include apply-theme(dark);
-		}
-
-		&--theme-invert {
-			@include apply-theme(invert);
-		}
 	}
 
 	&__group {
