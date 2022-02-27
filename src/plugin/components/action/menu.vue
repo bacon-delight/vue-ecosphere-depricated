@@ -32,21 +32,6 @@ export default defineComponent({
 	width: $spacer-8;
 	border-radius: $border-radius-standard;
 	padding: $spacer-0-25 0 $spacer-0-25 $spacer-0-5;
-
-	&--theme-auto {
-		@include apply-theme(auto);
-	}
-
-	&--theme-invert {
-		@include apply-theme(invert);
-	}
-
-	&--theme-light {
-		@include apply-theme(light);
-	}
-
-	&--theme-dark {
-		@include apply-theme(dark);
-	}
+	@include use-theme;
 }
 </style>

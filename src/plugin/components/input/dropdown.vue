@@ -120,101 +120,11 @@ export default defineComponent({
 	}
 
 	&__container {
-		padding: $spacer-0-25 $spacer-0-5;
-		border-radius: $border-radius-standard;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
-		column-gap: $spacer-0-5;
-		cursor: pointer;
-		border: 1px solid $color-helper-transparent;
-		@include font-light;
-		margin: 0;
-		@include hover-outline;
-
-		&--placeholder {
-			color: $color-helper-grey;
-		}
-
-		&--text {
-			@include font-regular;
-			margin: 0;
-		}
-
-		&--active {
-			transition: all $transition-micro ease-in-out;
-			border: 1px solid $color-hue !important;
-		}
-
-		&--outline {
-			border: 1px solid $color-helper-grey;
-		}
-
-		&--theme-auto {
-			@include apply-theme(auto);
-		}
-
-		&--theme-invert {
-			@include apply-theme(invert);
-		}
-
-		&--theme-light {
-			@include apply-theme(light);
-		}
-
-		&--theme-dark {
-			@include apply-theme(dark);
-		}
-
-		&--theme-transparent {
-			@include apply-theme(transparent);
-		}
+		@include input-container;
 	}
 
 	&__content {
-		position: absolute;
-		border-radius: $border-radius-standard;
-		padding: $spacer-0-25;
-		z-index: $z-index-dropdown;
-		white-space: nowrap;
-		margin-top: $spacer-0-25;
-		@include animation-drop-down;
-
-		&--contain {
-			width: 100%;
-		}
-
-		&--flow-right {
-			left: 0;
-		}
-
-		&--flow-left {
-			right: 0;
-		}
-
-		&--outline {
-			border: 1px solid $color-helper-grey;
-		}
-
-		&--theme-auto {
-			@include apply-theme(auto);
-		}
-
-		&--theme-invert {
-			@include apply-theme(invert);
-		}
-
-		&--theme-light {
-			@include apply-theme(light);
-		}
-
-		&--theme-dark {
-			@include apply-theme(dark);
-		}
-
-		&--theme-transparent {
-			@include apply-theme(auto);
-		}
+		@include dropdown-content-area;
 	}
 
 	&__option {
@@ -223,23 +133,7 @@ export default defineComponent({
 		display: flex;
 		align-items: center;
 		column-gap: $spacer-0-5;
-
-		&--theme-auto,
-		&--theme-transparent {
-			@include hover-background;
-		}
-
-		&--theme-light {
-			@include hover-background($color-light-faded, $color-dark);
-		}
-
-		&--theme-dark {
-			@include hover-background($color-dark-faded, $color-light);
-		}
-
-		&--theme-invert {
-			@include hover-background($color-contrast-faded, $color-background);
-		}
+		@include use-theme;
 
 		&--active {
 			font-weight: $font-weight-medium;

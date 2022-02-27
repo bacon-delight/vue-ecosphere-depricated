@@ -51,6 +51,8 @@ export default defineComponent({
 	@include font-regular;
 	margin: 0 !important;
 	user-select: none;
+	@include use-theme;
+	@include use-theme-hover;
 
 	&--disabled {
 		background: $color-indicator-offline;
@@ -70,51 +72,6 @@ export default defineComponent({
 
 	&--outline {
 		border: 1px solid $color-helper-grey;
-	}
-
-	&--theme-auto {
-		@include apply-theme(auto);
-		@include apply-theme-hover(auto);
-	}
-
-	&--theme-light {
-		@include apply-theme(light);
-		@include apply-theme-hover(light);
-	}
-
-	&--theme-dark {
-		@include apply-theme(dark);
-		@include apply-theme-hover(dark);
-	}
-
-	&--theme-invert {
-		@include apply-theme(invert);
-		@include apply-theme-hover(invert);
-	}
-
-	&--theme-hue {
-		@include apply-theme(hue);
-		@include apply-theme-hover(hue);
-	}
-
-	&--theme-critical {
-		@include apply-theme(critical);
-		@include apply-theme-hover(critical);
-	}
-
-	&--theme-warning {
-		@include apply-theme(warning);
-		@include apply-theme-hover(warning);
-	}
-
-	&--theme-success {
-		@include apply-theme(success);
-		@include apply-theme-hover(success);
-	}
-
-	&--theme-transparent {
-		@include apply-theme(transparent);
-		@include apply-theme-hover(transparent);
 	}
 }
 </style>

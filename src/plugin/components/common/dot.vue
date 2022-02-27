@@ -1,5 +1,5 @@
 <template lang="pug">
-.dot(:class="`dot--${type}`")
+.dot(:class="`dot--theme-${type}`")
 </template>
 
 <script lang="ts">
@@ -23,7 +23,7 @@ export default defineComponent({
 	border-radius: 50%;
 	background: transparent;
 
-	&--information {
+	&--theme-information {
 		background: $color-indicator-information;
 	}
 }

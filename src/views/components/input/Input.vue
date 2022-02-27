@@ -18,9 +18,7 @@
 			:label="$t('keywords.email')",
 			:placeholder="$t('keywords.email')",
 			type="email",
-			:regex="$ecosphere.validators.email",
-			:config="{ theme: 'transparent' }",
-			:required="true"
+			:config="{ theme: 'transparent' }"
 		)
 		v-eco-input(
 			:label="$t('keywords.password')",

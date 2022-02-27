@@ -26,7 +26,10 @@
 			v-if="type === input_types.password && showPassword && value",
 			:label="value"
 		)
-		VEcoText.input__footer--invalid(v-if="invalid", :label="invalidWarning")
+		VEcoText.input__footer--invalid(
+			v-if="invalid",
+			:label="settings.invalidWarning"
+		)
 </template>
 
 <script lang="ts">
@@ -54,14 +57,6 @@ export default defineComponent({
 		required: {
 			type: Boolean as PropType<boolean>,
 			default: false,
-		},
-		invalidWarning: {
-			type: String as PropType<string>,
-			default: "This field is required or is invalid",
-		},
-		regex: {
-			type: RegExp as PropType<RegExp>,
-			default: null,
 		},
 		defaultValue: {
 			type: [String, Number] as PropType<string | number>,
@@ -92,15 +87,18 @@ export default defineComponent({
 	},
 	methods: {
 		validate(): void {
+			// Required Checks
 			if (this.required && !this.value) {
 				this.invalid = true;
 			}
-			if (this.regex) {
+			// Custom Validation
+			if (this.settings.regex) {
 				this.invalid = !this.$ecosphere.validators.validate(
-					this.regex,
+					this.settings.regex,
 					this.value
 				);
 			}
+			// Email Validation
 			if (this.type === this.input_types.email) {
 				this.invalid = !this.$ecosphere.validators.validate(
 					this.$ecosphere.validators.email,
