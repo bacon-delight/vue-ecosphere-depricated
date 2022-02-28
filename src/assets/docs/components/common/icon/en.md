@@ -8,6 +8,6 @@
 
 #### API
 
-| Name   | Type     | Default  | Description                                   |
-| :----- | :------- | :------- | :-------------------------------------------- |
-| `type` | `string` | Required | The type of icon to render, starts with `ri-` |
+| Name   | Type     | Default  | Description                                     |
+| :----- | :------- | :------- | :---------------------------------------------- |
+| `type` | `string` | Required | The type of icon to render, refer to Remix Icon |
