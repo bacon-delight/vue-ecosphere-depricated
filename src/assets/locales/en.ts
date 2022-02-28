@@ -3,6 +3,8 @@ export default {
 		title: "Ecosphere Design System",
 		description:
 			"A modern lightweight design system, built on the principles of minimalism with inspirations from Scandinavian architecture, handcrafted for data intensive applications",
+		details:
+			"Ecosphere is a modern lightweight design system that is designed to be used in a wide range of applications. It is built with inspirations from Scandinavian design and architecture and is handcrafted for data intensive applications.",
 		footer_mistake: "Caught a mistake or want to improve the content? ",
 		footer_edit: "Edit this page on GitHub :ri-arrow-right-up-line:",
 		coming_soon: "This feature will be implemented soon. Stay tuned!",

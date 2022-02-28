@@ -3,6 +3,8 @@ export default {
 		title: "Ecosphere 设计语言",
 		description:
 			"现代轻量级设计语言，建立在极简主义的原则之上，从斯堪的纳维亚建筑中获得灵感，为数据密集型应用手工制作。",
+		details:
+			"Ecosphere 是一个现代的轻量级设计系统，被设计用于广泛的应用中。它是在斯堪的纳维亚设计和建筑的启发下建立的，是为数据密集型应用手工制作的。",
 		footer_mistake: "发现了一个错误或想改进内容？",
 		footer_edit: "在GitHub上编辑此页面 :ri-arrow-right-up-line:",
 		coming_soon: "此功能将在以后实现，请耐心等待！",
