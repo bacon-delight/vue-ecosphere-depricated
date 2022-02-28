@@ -2,7 +2,7 @@
 <p align="center">This plugin is under development and is not ready for use yet. Please do not download/install the plugin in your project at the moment. A working release can be expected sometime during Q3 2022 and this message will be removed when it's ready for use.</p>
 
 <p align="center"><img src="public/img/logo.png" width="128" /></p>
-<h3 align="center">Ecosphere Design System | 生态圈设计系统</h3>
+<h3 align="center">Ecosphere Design System | Ecosphere 设计系统</h3>
 <p  align="center">A modern lightweight design system, built on the principles of minimalism with inspirations from Scandinavian architecture, handcrafted for data intensive applications.</p>
 
 <p align="center">
@@ -20,7 +20,6 @@ Translations:
 
 - [Figma Kit](https://www.figma.com/community/file/1067444265295956708/Ecosphere-Design-System)
 - [Homepage](https://ecosphere.dev/)
-- [Documentation](https://docs.ecosphere.dev/)
 - [Sandbox](https://codesandbox.io/s/vue-ecosphere-ooudb)
 
 <br/>

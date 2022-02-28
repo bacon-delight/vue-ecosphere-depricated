@@ -1,7 +1,3 @@
-## Ecosphere Design System
-
-Ecosphere is a modern lightweight design system that is designed to be used in a wide range of applications. It is built with inspirations from Scandinavian design and architecture and is handcrafted for data intensive applications.
-
 ###### Quick Start
 
 - [Installation](/guide/installation)

@@ -8,6 +8,6 @@ describe("VEcoDot", () => {
 			props: { type },
 		});
 		expect(wrapper.find(".dot").exists()).toBe(true);
-		expect(wrapper.find(`.dot--${type}`).exists()).toBe(true);
+		expect(wrapper.find(`.dot--theme-${type}`).exists()).toBe(true);
 	});
 });
