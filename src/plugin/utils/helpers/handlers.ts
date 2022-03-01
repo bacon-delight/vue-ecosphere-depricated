@@ -7,7 +7,7 @@ export default class Handlers {
 			window.open(link, "_blank");
 		} catch {
 			if (link[0] === "/") {
-				router.replace(link);
+				router.push(link);
 			}
 		}
 	}
