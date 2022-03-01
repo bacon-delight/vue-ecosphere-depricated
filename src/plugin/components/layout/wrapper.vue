@@ -17,6 +17,6 @@ export default defineComponent({
 	background: $color-background-faded;
 	color: $color-contrast;
 	@include font-light;
-	margin: 0;
+	margin: 0 !important;
 }
 </style>
