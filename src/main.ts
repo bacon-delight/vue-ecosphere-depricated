@@ -36,8 +36,10 @@ app.use(i18n);
 
 // Splitbee
 import splitbee from "@splitbee/web";
-splitbee.init({
-	token: process.env.VUE_APP_SPLITBEE_TOKEN,
-});
+if (process.env.NODE_ENV === "production") {
+	splitbee.init({
+		token: process.env.VUE_APP_SPLITBEE_TOKEN,
+	});
+}
 
 app.mount("#app");
