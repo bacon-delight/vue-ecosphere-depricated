@@ -34,4 +34,10 @@ const i18n = createI18n({
 });
 app.use(i18n);
 
+// Splitbee
+import splitbee from "@splitbee/web";
+splitbee.init({
+	token: process.env.VUE_APP_SPLITBEE_TOKEN,
+});
+
 app.mount("#app");
