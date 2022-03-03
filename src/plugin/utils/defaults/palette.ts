@@ -18,6 +18,10 @@ export const defaultLightPalette: color_palette = {
 	"--color-secondary": "#90e0ef",
 	"--color-secondary-faded": "#e0fbfc",
 	"--color-secondary-contrast": "#1D242B",
+
+	// Selection
+	"--color-selection-background": "#f29559",
+	"--color-selection-contrast": "#fdfdfd",
 };
 
 export const defaultDarkPalette: color_palette = {
