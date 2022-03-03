@@ -7,7 +7,9 @@ export type button_theme =
 	| "success"
 	| "warning"
 	| "critical"
-	| "transparent";
+	| "transparent"
+	| "primary"
+	| "secondary";
 
 export interface button_config {
 	theme: button_theme;

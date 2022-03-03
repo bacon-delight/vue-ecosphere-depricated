@@ -27,6 +27,12 @@
 	} @else if $theme == hue {
 		background: $color-hue;
 		color: $color-hue-contrast;
+	} @else if $theme == primary {
+		background: $color-primary;
+		color: $color-primary-contrast;
+	} @else if $theme == secondary {
+		background: $color-secondary;
+		color: $color-secondary-contrast;
 	}
 }
 
@@ -57,6 +63,12 @@
 		} @else if $theme == hue {
 			background: $color-hue-faded;
 			border: 1px solid $color-hue;
+		} @else if $theme == primary {
+			background: $color-primary-faded;
+			border: 1px solid $color-primary;
+		} @else if $theme == secondary {
+			background: $color-secondary-faded;
+			border: 1px solid $color-secondary;
 		}
 	}
 }
@@ -80,6 +92,14 @@
 
 	&--theme-hue {
 		@include apply-theme(hue);
+	}
+
+	&--theme-primary {
+		@include apply-theme(primary);
+	}
+
+	&--theme-secondary {
+		@include apply-theme(secondary);
 	}
 
 	&--theme-critical {
@@ -118,6 +138,14 @@
 
 	&--theme-hue {
 		@include apply-theme-hover(hue);
+	}
+
+	&--theme-primary {
+		@include apply-theme-hover(primary);
+	}
+
+	&--theme-secondary {
+		@include apply-theme-hover(secondary);
 	}
 
 	&--theme-critical {

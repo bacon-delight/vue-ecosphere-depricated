@@ -187,6 +187,7 @@ export default defineComponent({
 	&__content {
 		@include dropdown-content-area;
 		@include create-grid(1, column, $spacer-0-25);
+		animation: fade-in $transition-micro ease-in-out;
 	}
 
 	&__group {

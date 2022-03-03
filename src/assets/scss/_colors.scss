@@ -1,6 +1,4 @@
 /* Elementary */
-// $color-dark: #191919;
-// $color-dark-faded: #232323;
 $color-dark: #1d242b;
 $color-dark-faded: #303841;
 $color-light: #fdfdfd;
@@ -24,6 +22,16 @@ $color-background: var(--color-background);
 $color-background-faded: var(--color-background-faded);
 $color-contrast: var(--color-contrast);
 $color-contrast-faded: var(--color-contrast-faded);
+
+/* Brand */
 $color-hue: var(--color-hue);
 $color-hue-faded: var(--color-hue-faded);
 $color-hue-contrast: var(--color-hue-contrast);
+
+/* Brand Extended */
+$color-primary: var(--color-primary);
+$color-primary-faded: var(--color-primary-faded);
+$color-primary-contrast: var(--color-primary-contrast);
+$color-secondary: var(--color-secondary);
+$color-secondary-faded: var(--color-secondary-faded);
+$color-secondary-contrast: var(--color-secondary-contrast);
