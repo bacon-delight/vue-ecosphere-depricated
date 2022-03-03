@@ -22,6 +22,11 @@ $font-weight-semi-bold: 600;
 	font-weight: $font-weight-medium;
 	line-height: $element-base-rem * $base;
 	margin: calc($element-base-rem/1.2) 0 calc($element-base-rem/2.5);
+
+	::selection {
+		color: $color-selection-contrast;
+		background: $color-selection-background;
+	}
 }
 
 @mixin header-1 {
@@ -56,6 +61,11 @@ $font-weight-semi-bold: 600;
 	font-family: $font-family-work-sans;
 	line-height: $element-base-rem * 1.8;
 	margin: calc($element-base-rem/1.2) 0 calc($element-base-rem/1.8);
+
+	::selection {
+		color: $color-selection-contrast;
+		background: $color-selection-background;
+	}
 }
 
 @mixin font-light {
