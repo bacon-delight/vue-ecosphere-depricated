@@ -21,9 +21,18 @@
 	} @else if $theme == warning {
 		background: $color-indicator-warning;
 		color: $color-dark;
+	} @else if $theme == information {
+		background: $color-helper-link;
+		color: $color-light;
 	} @else if $theme == critical {
 		background: $color-indicator-critical;
 		color: $color-light;
+	} @else if $theme == offline {
+		background: $color-indicator-offline;
+		color: $color-dark;
+	} @else if $theme == grey {
+		background: $color-helper-grey;
+		color: $color-dark;
 	} @else if $theme == hue {
 		background: $color-hue;
 		color: $color-hue-contrast;
@@ -60,6 +69,12 @@
 			background: rgba($color-indicator-warning, 0.7);
 		} @else if $theme == critical {
 			background: rgba($color-indicator-critical, 0.7);
+		} @else if $theme == information {
+			background: rgba($color-indicator-information, 0.7);
+		} @else if $theme == offline {
+			background: rgba($color-indicator-offline, 0.7);
+		} @else if $theme == grey {
+			background: rgba($color-helper-grey, 0.7);
 		} @else if $theme == hue {
 			background: $color-hue-faded;
 			border: 1px solid $color-hue;
@@ -102,6 +117,10 @@
 		@include apply-theme(secondary);
 	}
 
+	&--theme-information {
+		@include apply-theme(information);
+	}
+
 	&--theme-critical {
 		@include apply-theme(critical);
 	}
@@ -116,6 +135,14 @@
 
 	&--theme-transparent {
 		@include apply-theme(transparent);
+	}
+
+	&--theme-offline {
+		@include apply-theme(offline);
+	}
+
+	&--theme-grey {
+		@include apply-theme(grey);
 	}
 }
 
@@ -148,6 +175,10 @@
 		@include apply-theme-hover(secondary);
 	}
 
+	&--theme-information {
+		@include apply-theme-hover(information);
+	}
+
 	&--theme-critical {
 		@include apply-theme-hover(critical);
 	}
@@ -162,5 +193,13 @@
 
 	&--theme-transparent {
 		@include apply-theme-hover(transparent);
+	}
+
+	&--theme-offline {
+		@include apply-theme-hover(offline);
+	}
+
+	&--theme-grey {
+		@include apply-theme-hover(grey);
 	}
 }

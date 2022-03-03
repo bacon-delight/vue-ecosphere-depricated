@@ -43,6 +43,7 @@ export default {
 		npm_package: "NPM Package",
 		sandbox: "Sandbox",
 		tag: "Tag",
+		switch: "Switch",
 	},
 	actions: {
 		learn: "Design Philosophy",
@@ -85,5 +86,6 @@ export default {
 		name_of_the_book: "Name of the book",
 		how_old_are_you: "How old are you?",
 		enter_your_age: "Enter your age",
+		i_love_ecosphere: "I love Ecosphere",
 	},
 };

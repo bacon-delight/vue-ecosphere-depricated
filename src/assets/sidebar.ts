@@ -108,6 +108,10 @@ export default function (): unknown_nested_type {
 							label: this.$t("headers.input"),
 							value: "/components/input/input",
 						},
+						{
+							label: this.$t("headers.switch"),
+							value: "/components/input/switch",
+						},
 					],
 				},
 			],
