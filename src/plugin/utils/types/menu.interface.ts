@@ -11,7 +11,8 @@ export type menu_hue =
 	| "secondary"
 	| "warning"
 	| "success"
-	| "critical";
+	| "critical"
+	| "information";
 
 export interface menu_config {
 	theme: menu_theme;

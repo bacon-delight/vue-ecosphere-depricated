@@ -43,6 +43,7 @@ export default {
 		npm_package: "NPM 包装",
 		sandbox: "沙盒",
 		tag: "标签",
+		switch: "开关",
 	},
 	actions: {
 		learn: "设计理念",
@@ -85,5 +86,6 @@ export default {
 		name_of_the_book: "书名",
 		how_old_are_you: "你多大了？",
 		enter_your_age: "输入你的年龄",
+		i_love_ecosphere: "我喜欢 Ecosphere",
 	},
 };

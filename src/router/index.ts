@@ -130,6 +130,11 @@ const routes: Array<RouteRecordRaw> = [
 						component: () =>
 							import("../views/components/input/Input.vue"),
 					},
+					{
+						path: "switch",
+						component: () =>
+							import("../views/components/input/Switch.vue"),
+					},
 				],
 			},
 		],
