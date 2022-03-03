@@ -13,19 +13,24 @@
 				:label="option.label",
 				:class="[{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }, `menu__item--theme-${theme}`]"
 			)
-			VEcoDot(:type="isCurrentRoute(option.value) ? 'information' : ''")
+			VEcoDot(:type="isCurrentRoute(option.value) ? hue : ''")
 
 	.menu__nested(v-if="expanded[index]")
 		MenuItem(
 			v-if="option.children",
 			:options="option.children",
 			:theme="theme",
+			:hue="hue",
 			@select="propagateSelectEvent"
 		)
 </template>
 
 <script lang="ts">
-import { menu_option, menu_theme } from "@/plugin/utils/types.interface";
+import {
+	menu_hue,
+	menu_option,
+	menu_theme,
+} from "@/plugin/utils/types.interface";
 import { defineComponent, PropType } from "vue";
 import VEcoLink from "@/plugin/components/action/link.vue";
 import VEcoDot from "@/plugin/components/common/dot.vue";
@@ -42,6 +47,10 @@ export default defineComponent({
 		theme: {
 			type: String as PropType<menu_theme>,
 			default: config.theme,
+		},
+		hue: {
+			type: String as PropType<menu_hue>,
+			default: config.hue,
 		},
 	},
 	data() {

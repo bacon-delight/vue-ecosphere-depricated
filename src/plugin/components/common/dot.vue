@@ -10,7 +10,7 @@ export default defineComponent({
 	props: {
 		type: {
 			type: String as PropType<string>,
-			default: "",
+			default: "hue",
 		},
 	},
 });
@@ -22,9 +22,6 @@ export default defineComponent({
 	width: $spacer-0-375;
 	border-radius: 50%;
 	background: transparent;
-
-	&--theme-information {
-		background: $color-indicator-information;
-	}
+	@include use-theme;
 }
 </style>

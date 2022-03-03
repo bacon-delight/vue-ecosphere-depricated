@@ -27,13 +27,13 @@ You can also enable the `compact` attribute to render buttons with icons only.
 
 #### API
 
-| Name       | Type                                                                                                        | Default  | Description                                                                       |
-| :--------- | :---------------------------------------------------------------------------------------------------------- | :------- | :-------------------------------------------------------------------------------- |
-| `label`    | `string`                                                                                                    | Required | The text to display in button, also supports icons                                |
-| `disabled` | `boolean`                                                                                                   | `false`  | Disables the button                                                               |
-| `theme`    | `'auto'`, `'light'`, `'dark'`, `'invert'`, `'hue'`, `'success'`, `'warning'`, `'critical'`, `'transparent'` | `'auto'` | Apply a specific theme to the button                                              |
-| `outline`  | `boolean`                                                                                                   | `true`   | Apply a border outline to the button                                              |
-| `compact`  | `boolean`                                                                                                   | `false`  | Reduce padding and increase font size, typically meant for buttons with only icon |
+| Name       | Type                                                                                                                                    | Default  | Description                                                                       |
+| :--------- | :-------------------------------------------------------------------------------------------------------------------------------------- | :------- | :-------------------------------------------------------------------------------- |
+| `label`    | `string`                                                                                                                                | Required | The text to display in button, also supports icons                                |
+| `disabled` | `boolean`                                                                                                                               | `false`  | Disables the button                                                               |
+| `theme`    | `'auto'`, `'light'`, `'dark'`, `'invert'`, `'hue'`, `'primary'`, `'secondary'`, `'success'`, `'warning'`, `'critical'`, `'transparent'` | `'auto'` | Apply a specific theme to the button                                              |
+| `outline`  | `boolean`                                                                                                                               | `true`   | Apply a border outline to the button                                              |
+| `compact`  | `boolean`                                                                                                                               | `false`  | Reduce padding and increase font size, typically meant for buttons with only icon |
 
 #### Events
 

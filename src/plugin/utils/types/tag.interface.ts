@@ -1,1 +1,8 @@
-export type tag_theme = "light" | "dark" | "auto" | "invert" | "hue";
+export type tag_theme =
+	| "light"
+	| "dark"
+	| "auto"
+	| "invert"
+	| "hue"
+	| "primary"
+	| "secondary";
