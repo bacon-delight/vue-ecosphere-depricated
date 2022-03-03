@@ -121,6 +121,11 @@ const routes: Array<RouteRecordRaw> = [
 				component: () => import("../views/RouteInjection.vue"),
 				children: [
 					{
+						path: "checkbox",
+						component: () =>
+							import("../views/components/input/Checkbox.vue"),
+					},
+					{
 						path: "dropdown",
 						component: () =>
 							import("../views/components/input/Dropdown.vue"),
