@@ -45,6 +45,7 @@ export default {
 		tag: "标签",
 		switch: "开关",
 		checkbox: "复选框",
+		radio: "单选框",
 	},
 	actions: {
 		learn: "设计理念",

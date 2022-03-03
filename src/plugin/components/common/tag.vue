@@ -35,6 +35,7 @@ export default defineComponent({
 	border-radius: $border-radius-standard;
 	padding: 0 $spacer-0-375;
 	cursor: default;
+	user-select: none;
 	@include use-theme;
 
 	&--size-small {
