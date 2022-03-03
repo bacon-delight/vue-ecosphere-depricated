@@ -1,20 +1,20 @@
 <template lang="pug">
-.switch(@click="toggle")
-	.switch__toggle
-		VEcoDot(
-			:type="state ? hue : 'offline'",
-			:class="[state ? 'switch__toggle--active' : 'switch__toggle--inactive']"
+.checkbox(@click="toggle")
+	.checkbox__toggle
+		VEcoIcon(
+			:type="state ? 'ri-checkbox-fill' : 'ri-checkbox-blank-line'",
+			:class="[state ? `checkbox__toggle--color-${hue}` : '']"
 		)
-	.switch__label(v-if="label") {{ label }}
+	.checkbox__label(v-if="label") {{ label }}
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import VEcoDot from "@/plugin/components/common/dot.vue";
+import VEcoIcon from "@/plugin/components/common/icon.vue";
 import { menu_hue } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
-	name: "Switch",
+	name: "Checkbox",
 	emits: ["toggle"],
 	props: {
 		hue: {
@@ -49,33 +49,22 @@ export default defineComponent({
 			this.state = value;
 		},
 	},
-	components: { VEcoDot },
+	components: { VEcoIcon },
 });
 </script>
 
 <style lang="scss" scoped>
-.switch {
+.checkbox {
 	display: flex;
 	align-items: center;
 	column-gap: $spacer-0-5;
-	cursor: pointer;
 	width: fit-content;
+	cursor: pointer;
 
 	&__toggle {
-		position: relative;
-		border: 1px solid rgba($color-helper-grey, 1);
-		padding: $spacer-0-125;
-		border-radius: $border-radius-standard;
-		width: $spacer-1-25;
-
-		&--active,
-		&--inactive {
-			transition: all $transition-micro ease-in-out;
-		}
-
-		&--active {
-			margin-left: 60%;
-		}
+		font-size: $spacer-0-75;
+		transform: translateY(1px);
+		@include use-color;
 	}
 
 	&__label {

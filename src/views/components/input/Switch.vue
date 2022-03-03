@@ -8,10 +8,10 @@
 
 	v-eco-header(:label="$t('keywords.hue')", :type="6")
 	.showcase--grid
-		v-eco-switch(label="Critical", hue="critical", :default="true")
+		v-eco-switch(label="Critical", hue="critical", :defaultValue="true")
 		v-eco-switch(label="Warning", hue="warning")
-		v-eco-switch(label="Primary", hue="primary", :default="true")
-		v-eco-switch(label="Secondary", hue="secondary", :default="true")
+		v-eco-switch(label="Primary", hue="primary", :defaultValue="true")
+		v-eco-switch(label="Secondary", hue="secondary", :defaultValue="true")
 		v-eco-switch(label="Success", hue="success")
 		v-eco-switch(label="Information", hue="information")
 

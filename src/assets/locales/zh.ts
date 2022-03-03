@@ -44,6 +44,7 @@ export default {
 		sandbox: "沙盒",
 		tag: "标签",
 		switch: "开关",
+		checkbox: "复选框",
 	},
 	actions: {
 		learn: "设计理念",

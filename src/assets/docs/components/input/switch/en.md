@@ -6,11 +6,11 @@
 
 #### API
 
-| Name      | Type                                                                                         | Default  | Description                              |
-| :-------- | :------------------------------------------------------------------------------------------- | :------- | :--------------------------------------- |
-| `label`   | `string`                                                                                     | `null`   | Label for the switch                     |
-| `hue`     | `'hue'`, `'primary'`, `'secondary'`, `'success'`, `'warning'`, `'critical'`, `'information'` | `'auto'` | Apply a specific hue to the active state |
-| `default` | `boolean`                                                                                    | `false`  | Default state of the switch              |
+| Name           | Type                                                                                         | Default  | Description                              |
+| :------------- | :------------------------------------------------------------------------------------------- | :------- | :--------------------------------------- |
+| `label`        | `string`                                                                                     | `null`   | Label for the switch                     |
+| `hue`          | `'hue'`, `'primary'`, `'secondary'`, `'success'`, `'warning'`, `'critical'`, `'information'` | `'auto'` | Apply a specific hue to the active state |
+| `defaultValue` | `boolean`                                                                                    | `false`  | Default state of the switch              |
 
 #### Events
 

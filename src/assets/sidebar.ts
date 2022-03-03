@@ -101,6 +101,10 @@ export default function (): unknown_nested_type {
 					value: "",
 					children: [
 						{
+							label: this.$t("headers.checkbox"),
+							value: "/components/input/checkbox",
+						},
+						{
 							label: this.$t("headers.dropdown"),
 							value: "/components/input/dropdown",
 						},

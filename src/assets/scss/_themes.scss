@@ -88,6 +88,24 @@
 	}
 }
 
+@mixin apply-color($color: hue) {
+	@if $color == hue {
+		color: $color-hue;
+	} @else if $color == critical {
+		color: $color-indicator-critical;
+	} @else if $color == success {
+		color: $color-indicator-success;
+	} @else if $color == warning {
+		color: $color-indicator-warning;
+	} @else if $color == information {
+		color: $color-indicator-information;
+	} @else if $color == primary {
+		color: $color-primary;
+	} @else if $color == secondary {
+		color: $color-secondary;
+	}
+}
+
 @mixin use-theme {
 	&--theme-auto {
 		@include apply-theme(auto);
@@ -201,5 +219,35 @@
 
 	&--theme-grey {
 		@include apply-theme-hover(grey);
+	}
+}
+
+@mixin use-color {
+	&--color-hue {
+		@include apply-color(hue);
+	}
+
+	&--color-primary {
+		@include apply-color(primary);
+	}
+
+	&--color-secondary {
+		@include apply-color(secondary);
+	}
+
+	&--color-information {
+		@include apply-color(information);
+	}
+
+	&--color-critical {
+		@include apply-color(critical);
+	}
+
+	&--color-warning {
+		@include apply-color(warning);
+	}
+
+	&--color-success {
+		@include apply-color(success);
 	}
 }

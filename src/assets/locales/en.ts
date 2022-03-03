@@ -44,6 +44,7 @@ export default {
 		sandbox: "Sandbox",
 		tag: "Tag",
 		switch: "Switch",
+		checkbox: "Checkbox",
 	},
 	actions: {
 		learn: "Design Philosophy",
