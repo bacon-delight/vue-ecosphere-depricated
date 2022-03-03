@@ -76,6 +76,9 @@ export default {
 		documentation: "Documentation",
 		email: "Email",
 		password: "Password",
+		primary: "Primary",
+		secondary: "Secondary",
+		hue: "Hue",
 	},
 	extras: {
 		what_is_your_favourite_book: "What is your favourite book?",

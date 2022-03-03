@@ -10,10 +10,11 @@ The string passed in the `value` properties will be automatically matched with t
 
 #### API
 
-| Name      | Type                                       | Default  | Description                        |
-| :-------- | :----------------------------------------- | :------- | :--------------------------------- |
-| `options` | [`menu_option[]`](/guide/types)            | Required | The options to render in the array |
-| `theme`   | `'auto'` , `'light'`, `'dark'`, `'invert'` | `'auto'` | Apply a specific theme to the menu |
+| Name      | Type                                                                        | Default  | Description                                  |
+| :-------- | :-------------------------------------------------------------------------- | :------- | :------------------------------------------- |
+| `options` | [`menu_option[]`](/guide/types)                                             | Required | The options to render in the array           |
+| `theme`   | `'auto'` , `'light'`, `'dark'`, `'invert'`                                  | `'auto'` | Apply a specific theme to the menu           |
+| `hue`     | `'hue'`, `'primary'`, `'secondary'`, `'success'`, `'warning'`, `'critical'` | `'auto'` | Apply a specific hue to the active menu item |
 
 #### Events
 

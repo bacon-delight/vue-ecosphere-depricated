@@ -5,7 +5,15 @@ export interface menu_option extends choice_option {
 }
 
 export type menu_theme = "auto" | "light" | "dark" | "invert";
+export type menu_hue =
+	| "hue"
+	| "primary"
+	| "secondary"
+	| "warning"
+	| "success"
+	| "critical";
 
 export interface menu_config {
 	theme: menu_theme;
+	hue: menu_hue;
 }

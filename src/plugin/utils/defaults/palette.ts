@@ -5,9 +5,19 @@ export const defaultLightPalette: color_palette = {
 	"--color-background-faded": "#f5f5f5",
 	"--color-contrast": "#1D242B",
 	"--color-contrast-faded": "#303841",
+
+	// Brand
 	"--color-hue": "#5ba5ef",
 	"--color-hue-faded": "#8dc6ff",
 	"--color-hue-contrast": "#fdfdfd",
+
+	// Brand Extended
+	"--color-primary": "#ac46a1",
+	"--color-primary-faded": "#ea698b",
+	"--color-primary-contrast": "#fdfdfd",
+	"--color-secondary": "#90e0ef",
+	"--color-secondary-faded": "#e0fbfc",
+	"--color-secondary-contrast": "#1D242B",
 };
 
 export const defaultDarkPalette: color_palette = {

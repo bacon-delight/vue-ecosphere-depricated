@@ -15,7 +15,8 @@
 		)
 		v-eco-sidebar(
 			:options="[ { label: 'Home', value: '/' }, { label: 'Components', children: [{ label: 'Sidebar', value: '/components/layout/sidebar' }] }, ]",
-			theme="dark"
+			theme="dark",
+			hue="warning"
 		)
 
 	vue3-markdown-it.markdown(:source="content")

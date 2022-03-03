@@ -76,6 +76,9 @@ export default {
 		documentation: "文档",
 		email: "电子邮件",
 		password: "密码",
+		primary: "主要",
+		secondary: "次要",
+		hue: "色调",
 	},
 	extras: {
 		what_is_your_favourite_book: "你喜欢的书是什么？",

@@ -12,7 +12,8 @@
 	.showcase--grid
 		v-eco-menu(
 			:options="[{ label: 'Theme', children: [{ label: 'Automatic' }, { label: 'Light' }, { label: 'Dark' }, { label: 'Inverted', value: '/components/action/menu' }] }]",
-			theme="invert"
+			theme="invert",
+			hue="critical"
 		)
 		v-eco-menu(
 			:options="[{ label: 'Theme', children: [{ label: 'Automatic' }, { label: 'Light' }, { label: 'Dark', value: '/components/action/menu' }, { label: 'Inverted' }] }]",
