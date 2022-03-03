@@ -15,7 +15,7 @@ import { menu_hue } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Switch",
-	emits: ["toggle"],
+	emits: ["change"],
 	props: {
 		hue: {
 			type: String as PropType<menu_hue>,
@@ -38,7 +38,7 @@ export default defineComponent({
 	methods: {
 		toggle() {
 			this.state = !this.state;
-			this.$emit("toggle", this.state);
+			this.$emit("change", this.state);
 		},
 	},
 	mounted() {

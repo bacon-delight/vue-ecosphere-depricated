@@ -1,11 +1,11 @@
 <template lang="pug">
-.checkbox(@click="toggle")
-	.checkbox__toggle
+.radio(@click="toggle")
+	.radio__toggle
 		VEcoIcon(
-			:type="state ? 'ri-checkbox-fill' : 'ri-checkbox-blank-line checkbox__toggle--inactive'",
-			:class="[state ? `checkbox__toggle--color-${hue}` : '']"
+			:type="state ? 'ri-radio-button-line' : 'ri-checkbox-blank-circle-line radio__toggle--inactive'",
+			:class="[state ? `radio__toggle--color-${hue}` : '']"
 		)
-	.checkbox__label(v-if="label") {{ label }}
+	.radio__label(v-if="label") {{ label }}
 </template>
 
 <script lang="ts">
@@ -14,8 +14,8 @@ import VEcoIcon from "@/plugin/components/common/icon.vue";
 import { menu_hue } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
-	name: "Checkbox",
-	emits: ["change"],
+	name: "Radio",
+	emits: ["select"],
 	props: {
 		hue: {
 			type: String as PropType<menu_hue>,
@@ -37,8 +37,10 @@ export default defineComponent({
 	},
 	methods: {
 		toggle() {
-			this.state = !this.state;
-			this.$emit("change", this.state);
+			if (!this.state) {
+				this.state = true;
+				this.$emit("select");
+			}
 		},
 	},
 	mounted() {
@@ -54,7 +56,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.checkbox {
+.radio {
 	display: flex;
 	align-items: center;
 	column-gap: $spacer-0-5;

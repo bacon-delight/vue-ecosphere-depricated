@@ -14,6 +14,6 @@
 
 #### Events
 
-| Name     | Payload   | Description                                                             |
-| :------- | :-------- | :---------------------------------------------------------------------- |
-| `toggle` | `boolean` | Emitted when the switch is toggled, emits the new state of the checkbox |
+| Name     | Payload   | Description                                                                               |
+| :------- | :-------- | :---------------------------------------------------------------------------------------- |
+| `change` | `boolean` | Emitted when the checkbox is selected or un-selected, emits the new state of the checkbox |

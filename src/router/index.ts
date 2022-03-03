@@ -136,6 +136,11 @@ const routes: Array<RouteRecordRaw> = [
 							import("../views/components/input/Input.vue"),
 					},
 					{
+						path: "radio",
+						component: () =>
+							import("../views/components/input/Radio.vue"),
+					},
+					{
 						path: "switch",
 						component: () =>
 							import("../views/components/input/Switch.vue"),
