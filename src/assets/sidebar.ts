@@ -113,6 +113,10 @@ export default function (): unknown_nested_type {
 							value: "/components/input/input",
 						},
 						{
+							label: this.$t("headers.radio"),
+							value: "/components/input/radio",
+						},
+						{
 							label: this.$t("headers.switch"),
 							value: "/components/input/switch",
 						},

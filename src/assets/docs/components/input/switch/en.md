@@ -16,4 +16,4 @@
 
 | Name     | Payload   | Description                                                           |
 | :------- | :-------- | :-------------------------------------------------------------------- |
-| `toggle` | `boolean` | Emitted when the switch is toggled, emits the new state of the switch |
+| `change` | `boolean` | Emitted when the switch is toggled, emits the new state of the switch |

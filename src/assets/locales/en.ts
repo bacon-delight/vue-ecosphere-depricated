@@ -45,6 +45,7 @@ export default {
 		tag: "Tag",
 		switch: "Switch",
 		checkbox: "Checkbox",
+		radio: "Radio",
 	},
 	actions: {
 		learn: "Design Philosophy",
