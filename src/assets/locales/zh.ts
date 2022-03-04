@@ -32,7 +32,7 @@ export default {
 		header: "标题",
 		navbar: "导航栏",
 		sidebar: "侧边栏",
-		accessibility: "辅助功能",
+		accessibility: "易访问性",
 		coming_soon: "即将推出",
 		introduction: "介绍",
 		input: "输入",
@@ -46,6 +46,7 @@ export default {
 		switch: "开关",
 		checkbox: "复选框",
 		radio: "单选框",
+		phone: "手机",
 	},
 	actions: {
 		learn: "设计理念",
@@ -89,5 +90,6 @@ export default {
 		how_old_are_you: "你多大了？",
 		enter_your_age: "输入你的年龄",
 		i_love_ecosphere: "我喜欢 Ecosphere",
+		enter_your_phone_number: "输入你的电话号码",
 	},
 };

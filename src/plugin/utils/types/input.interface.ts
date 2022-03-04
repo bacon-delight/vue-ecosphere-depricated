@@ -5,11 +5,20 @@ export interface input_config {
 	regex: RegExp | null;
 }
 
-export type input_type = "text" | "number" | "password" | "email";
+export type input_type = "text" | "number" | "password" | "email" | "phone";
 
 export enum input_types {
 	text = "text",
 	number = "number",
 	password = "password",
 	email = "email",
+	phone = "phone",
+}
+
+export enum input_types_to_html_types {
+	text = "text",
+	number = "number",
+	password = "password",
+	email = "text",
+	phone = "number",
 }
