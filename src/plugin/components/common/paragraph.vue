@@ -6,13 +6,13 @@ p.font(:class="[`font--${type}`, { 'font--no-margin': !margin }]")
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import VEcoText from "@/plugin/components/common/text.vue";
-import { font_type } from "@/plugin/utils/types.interface";
+import { paragraph_type } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
-	name: "Font",
+	name: "Paragraph",
 	props: {
 		label: {
-			type: String as PropType<font_type>,
+			type: String as PropType<paragraph_type>,
 			required: true,
 		},
 		type: {

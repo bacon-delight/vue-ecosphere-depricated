@@ -52,6 +52,8 @@ export default {
 		colours: "Colours",
 		font: "Font",
 		fonts: "Fonts",
+		paragraph: "Paragraph",
+		avatar: "Avatar",
 	},
 	actions: {
 		learn: "Design Philosophy",
@@ -89,6 +91,7 @@ export default {
 		secondary: "Secondary",
 		hue: "Hue",
 		phone: "Phone",
+		invalid: "Invalid",
 	},
 	extras: {
 		what_is_your_favourite_book: "What is your favourite book?",
@@ -97,5 +100,9 @@ export default {
 		enter_your_age: "Enter your age",
 		i_love_ecosphere: "I love Ecosphere",
 		enter_your_phone_number: "Enter your phone number",
+		i_like_to_travel: "I like to travel",
+		chinese_food_is_delicious: "Chinese food is delicious",
+		i_can_speak_chinese: "I can speak Chinese",
+		wholeheartedly: "Wholeheartedly",
 	},
 };

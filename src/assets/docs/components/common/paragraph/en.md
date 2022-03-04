@@ -1,7 +1,7 @@
 #### Usage
 
 ```html
-<v-eco-font label="Hello!" :type="3" />
+<v-eco-paragraph label="Hello!" />
 ```
 
 #### API

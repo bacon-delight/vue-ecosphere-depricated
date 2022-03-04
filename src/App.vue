@@ -184,6 +184,7 @@ body {
 	flex-wrap: wrap;
 	column-gap: $spacer-0-5;
 	row-gap: $spacer-0-5;
+	margin: $spacer-0-5 0;
 
 	&--grid {
 		@include create-grid(2, column, $spacer-0-25);

@@ -1,4 +1,4 @@
-export type font_type =
+export type paragraph_type =
 	| "light"
 	| "regular"
 	| "emphasis"

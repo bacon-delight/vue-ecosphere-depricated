@@ -17,6 +17,10 @@ export default function (): unknown_nested_type {
 			value: "",
 			children: [
 				{
+					label: this.$t("headers.colours"),
+					value: "/design/colours",
+				},
+				{
 					label: this.$t("headers.typography"),
 					value: "/design/typography",
 				},
@@ -93,8 +97,8 @@ export default function (): unknown_nested_type {
 					value: "",
 					children: [
 						{
-							label: this.$t("headers.font"),
-							value: "/components/common/font",
+							label: this.$t("headers.avatar"),
+							value: "/components/common/avatar",
 						},
 						{
 							label: this.$t("headers.header"),
@@ -103,6 +107,10 @@ export default function (): unknown_nested_type {
 						{
 							label: this.$t("headers.icon"),
 							value: "/components/common/icon",
+						},
+						{
+							label: this.$t("headers.paragraph"),
+							value: "/components/common/paragraph",
 						},
 						{
 							label: this.$t("headers.tag"),

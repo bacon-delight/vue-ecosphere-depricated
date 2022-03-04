@@ -13,6 +13,7 @@
 		v-eco-tag(label="JavaScript", theme="auto")
 		v-eco-tag(label="Ecosphere", theme="invert")
 		v-eco-tag(label="Python", theme="success")
+		v-eco-tag(label="Information", theme="information")
 
 	v-eco-header(:label="$t('keywords.variants')", :type="5")
 	.showcase

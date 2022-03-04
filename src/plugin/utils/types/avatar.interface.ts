@@ -1,4 +1,6 @@
-export type tag_theme =
+export type avatar_size = "tiny" | "small" | "medium" | "large";
+
+export type avatar_hue =
 	| "light"
 	| "dark"
 	| "auto"
