@@ -2,11 +2,11 @@
 .content
 	PageHeader(:label="$t('headers.switch')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase--grid
 		v-eco-switch(:label="$t('extras.i_love_ecosphere')", hue="hue")
 
-	v-eco-header(:label="$t('keywords.hue')", :type="6")
+	v-eco-header(:label="$t('keywords.hue')", :type="5")
 	.showcase--grid
 		v-eco-switch(label="Critical", hue="critical", :defaultValue="true")
 		v-eco-switch(label="Warning", hue="warning")

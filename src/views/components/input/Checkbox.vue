@@ -2,11 +2,11 @@
 .content
 	PageHeader(:label="$t('headers.checkbox')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase--grid
 		v-eco-checkbox(:label="$t('extras.i_love_ecosphere')")
 
-	v-eco-header(:label="$t('keywords.themed')", :type="6")
+	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase--grid
 		v-eco-checkbox(label="Critical", hue="critical")
 		v-eco-checkbox(label="Warning", hue="warning", :defaultValue="true")

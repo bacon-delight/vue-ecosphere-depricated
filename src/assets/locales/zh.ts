@@ -30,6 +30,7 @@ export default {
 		icon: "图标",
 		common: "共同",
 		header: "标题",
+		headers: "标题",
 		navbar: "导航栏",
 		sidebar: "侧边栏",
 		accessibility: "易访问性",
@@ -47,6 +48,10 @@ export default {
 		checkbox: "复选框",
 		radio: "单选框",
 		phone: "手机",
+		typography: "排版",
+		design: "设计",
+		colours: "颜色",
+		fonts: "字体",
 	},
 	actions: {
 		learn: "设计理念",

@@ -147,6 +147,18 @@ body {
 			margin: 0;
 		}
 	}
+
+	em {
+		@include font-italic;
+
+		strong {
+			@include font-serif;
+		}
+	}
+
+	strong {
+		@include font-emphasis;
+	}
 }
 
 .wrapper {

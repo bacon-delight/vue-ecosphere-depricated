@@ -2,11 +2,11 @@
 .content
 	PageHeader(:label="$t('headers.radio')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase--grid
 		v-eco-radio(:label="$t('extras.i_love_ecosphere')")
 
-	v-eco-header(:label="$t('keywords.themed')", :type="6")
+	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase--grid
 		v-eco-radio(label="Critical", hue="critical")
 		v-eco-radio(label="Warning", hue="warning", :defaultValue="true")

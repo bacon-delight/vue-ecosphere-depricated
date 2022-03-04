@@ -2,12 +2,15 @@
 .content
 	PageHeader(:label="$t('headers.input')")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase--grid
 		v-eco-input(
 			:label="$t('extras.what_is_your_favourite_book')",
 			:placeholder="$t('extras.name_of_the_book')"
 		)
+
+	v-eco-header(:label="$t('keywords.variants')", :type="5")
+	.showcase--grid
 		v-eco-input(
 			:label="$t('extras.how_old_are_you')",
 			:placeholder="$t('extras.enter_your_age')",
