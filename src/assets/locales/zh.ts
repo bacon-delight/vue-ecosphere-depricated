@@ -51,6 +51,7 @@ export default {
 		typography: "排版",
 		design: "设计",
 		colours: "颜色",
+		font: "字体",
 		fonts: "字体",
 	},
 	actions: {

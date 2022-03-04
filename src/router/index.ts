@@ -111,6 +111,11 @@ const routes: Array<RouteRecordRaw> = [
 				component: () => import("../views/RouteInjection.vue"),
 				children: [
 					{
+						path: "font",
+						component: () =>
+							import("../views/components/common/Font.vue"),
+					},
+					{
 						path: "header",
 						component: () =>
 							import("../views/components/common/Header.vue"),

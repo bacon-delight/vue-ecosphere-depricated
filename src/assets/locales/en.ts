@@ -50,6 +50,7 @@ export default {
 		typography: "Typography",
 		design: "Design",
 		colours: "Colours",
+		font: "Font",
 		fonts: "Fonts",
 	},
 	actions: {

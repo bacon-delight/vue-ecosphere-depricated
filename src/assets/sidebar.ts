@@ -93,6 +93,10 @@ export default function (): unknown_nested_type {
 					value: "",
 					children: [
 						{
+							label: this.$t("headers.font"),
+							value: "/components/common/font",
+						},
+						{
 							label: this.$t("headers.header"),
 							value: "/components/common/header",
 						},
