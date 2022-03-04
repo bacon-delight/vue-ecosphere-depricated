@@ -159,7 +159,8 @@ body {
 	max-width: 94%;
 	min-height: fit-content;
 	margin: 0 auto;
-	overflow: hidden;
+	// overflow-x: hi;
+	overflow-y: visible;
 
 	&:first-child h2 {
 		margin-top: $spacer-0-25;

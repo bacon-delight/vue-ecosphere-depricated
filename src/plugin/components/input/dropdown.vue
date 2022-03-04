@@ -133,7 +133,27 @@ export default defineComponent({
 		display: flex;
 		align-items: center;
 		column-gap: $spacer-0-5;
-		@include use-theme;
+
+		&--theme-auto,
+		&--theme-transparent {
+			color: $color-contrast;
+			@include hover-background;
+		}
+
+		&--theme-invert {
+			color: $color-background;
+			@include hover-background($color-contrast-faded);
+		}
+
+		&--theme-light {
+			color: $color-dark;
+			@include hover-background($color-light-faded);
+		}
+
+		&--theme-dark {
+			color: $color-light;
+			@include hover-background($color-dark-faded);
+		}
 
 		&--active {
 			font-weight: $font-weight-medium;
