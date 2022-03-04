@@ -2,7 +2,7 @@
 .content
 	PageHeader(:label="$t('headers.icon')", :events="false")
 
-	v-eco-header(:label="$t('keywords.examples')", :type="6")
+	v-eco-header(:label="$t('keywords.examples')", :type="5")
 	.showcase
 		v-eco-icon(type="ri-sun-line")
 		v-eco-icon(type="ri-moon-line")

@@ -30,6 +30,7 @@ export default {
 		icon: "Icon",
 		common: "Common",
 		header: "Header",
+		headers: "Headers",
 		navbar: "Navbar",
 		sidebar: "Sidebar",
 		accessibility: "Accessibility",
@@ -46,6 +47,10 @@ export default {
 		switch: "Switch",
 		checkbox: "Checkbox",
 		radio: "Radio",
+		typography: "Typography",
+		design: "Design",
+		colours: "Colours",
+		fonts: "Fonts",
 	},
 	actions: {
 		learn: "Design Philosophy",

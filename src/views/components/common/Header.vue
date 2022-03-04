@@ -2,7 +2,7 @@
 .content
 	PageHeader(:label="$t('headers.header')", :events="false")
 
-	v-eco-header(:label="$t('keywords.examples')", :type="6")
+	v-eco-header(:label="$t('keywords.examples')", :type="5")
 	v-eco-header(label=":ri-h-3: - Ecosphere :ri-heart-2-line:", :type="3")
 	v-eco-header(label=":ri-h-4: - Ecosphere :ri-heart-2-line:", :type="4")
 

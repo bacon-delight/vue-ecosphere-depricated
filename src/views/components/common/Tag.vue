@@ -2,11 +2,11 @@
 .content
 	PageHeader(:label="$t('headers.tag')", :events="false")
 
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase
 		v-eco-tag(label="Ecosphere :ri-heart-2-line:")
 
-	v-eco-header(:label="$t('keywords.themed')", :type="6")
+	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase
 		v-eco-tag(label="WIP", theme="warning")
 		v-eco-tag(label="Error :ri-error-warning-line:", theme="critical")
@@ -14,7 +14,7 @@
 		v-eco-tag(label="Ecosphere", theme="invert")
 		v-eco-tag(label="Python", theme="success")
 
-	v-eco-header(:label="$t('keywords.variants')", :type="6")
+	v-eco-header(:label="$t('keywords.variants')", :type="5")
 	.showcase
 		v-eco-tag(label="Hue", theme="hue", size="regular")
 		v-eco-tag(label="Primary", theme="primary", size="regular")

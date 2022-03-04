@@ -3,7 +3,7 @@
 	PageHeader(:label="$t('headers.dropdown')")
 
 	v-eco-header(:label="$t('keywords.examples')", :type="4")
-	v-eco-header(:label="$t('keywords.default')", :type="6")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase--grid
 		v-eco-dropdown(
 			label="Select language",
@@ -18,7 +18,7 @@
 			:config="{ flow: 'right', contain: true, outline: true, theme: 'auto' }"
 		)
 
-	v-eco-header(:label="$t('keywords.themed')", :type="6")
+	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase--grid
 		v-eco-dropdown(
 			label="Select a theme to see the difference",

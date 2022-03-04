@@ -19,6 +19,17 @@ const routes: Array<RouteRecordRaw> = [
 		],
 	},
 	{
+		path: "/design",
+		name: "Design",
+		component: () => import("../views/Docs.vue"),
+		children: [
+			{
+				path: "typography",
+				component: () => import("../views/design/Typography.vue"),
+			},
+		],
+	},
+	{
 		path: "/guide",
 		name: "Guide",
 		component: () => import("../views/Docs.vue"),
