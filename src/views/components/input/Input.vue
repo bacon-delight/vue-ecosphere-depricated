@@ -26,6 +26,12 @@
 			type="password",
 			:config="{ outline: false }"
 		)
+		v-eco-input(
+			:label="$t('keywords.phone')",
+			:placeholder="$t('extras.enter_your_phone_number')",
+			type="phone",
+			:config="{ theme: 'invert' }"
+		)
 
 	vue3-markdown-it.markdown(:source="content")
 </template>

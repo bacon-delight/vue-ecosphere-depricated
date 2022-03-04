@@ -82,6 +82,7 @@ export default {
 		primary: "Primary",
 		secondary: "Secondary",
 		hue: "Hue",
+		phone: "Phone",
 	},
 	extras: {
 		what_is_your_favourite_book: "What is your favourite book?",
@@ -89,5 +90,6 @@ export default {
 		how_old_are_you: "How old are you?",
 		enter_your_age: "Enter your age",
 		i_love_ecosphere: "I love Ecosphere",
+		enter_your_phone_number: "Enter your phone number",
 	},
 };

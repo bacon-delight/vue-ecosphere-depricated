@@ -6,7 +6,7 @@
 	//- Input Field
 	.input__field
 		input.input__container.input__container--input(
-			:type="type",
+			:type="input_types_to_html_types[type]",
 			:placeholder="placeholder",
 			:class="[{ 'input__container--outline': settings.outline, 'input__container--invalid': invalid }, `input__container--theme-${settings.theme}`]",
 			v-model="value",
@@ -34,7 +34,11 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { input_type, input_types } from "@/plugin/utils/types.interface";
+import {
+	input_type,
+	input_types,
+	input_types_to_html_types,
+} from "@/plugin/utils/types.interface";
 import config from "@/plugin/utils/defaults/components/input.config";
 import VEcoText from "@/plugin/components/common/text.vue";
 import VEcoIcon from "@/plugin/components/common/icon.vue";
@@ -80,6 +84,7 @@ export default defineComponent({
 	data() {
 		return {
 			input_types,
+			input_types_to_html_types,
 			value: null as string | number | null,
 			invalid: false,
 			showPassword: false,
@@ -102,6 +107,13 @@ export default defineComponent({
 			if (this.type === this.input_types.email) {
 				this.invalid = !this.$ecosphere.validators.validate(
 					this.$ecosphere.validators.email,
+					this.value
+				);
+			}
+			// Phone Validation
+			if (this.type === this.input_types.phone) {
+				this.invalid = !this.$ecosphere.validators.validate(
+					this.$ecosphere.validators.phone,
 					this.value
 				);
 			}

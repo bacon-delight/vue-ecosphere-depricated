@@ -15,7 +15,7 @@
 	)
 		VEcoText.select__option(
 			v-for="(option, index) in options",
-			:class="[settings.center ? 'select__option--centered' : '']",
+			:class="[settings.center ? 'select__option--centered' : '', `select__option--theme-${settings.theme}`]",
 			@click="handleSelection(index)",
 			:label="option.label"
 		)
@@ -100,10 +100,31 @@ export default defineComponent({
 		@include font-light;
 		margin: 0;
 		padding: $spacer-0-125 $spacer-0-25;
-		@include hover-background;
+		// @include hover-background;
 		border-radius: $border-radius-standard;
 		display: flex;
 		align-items: center;
+
+		&--theme-auto,
+		&--theme-transparent {
+			color: $color-contrast;
+			@include hover-background;
+		}
+
+		&--theme-invert {
+			color: $color-background;
+			@include hover-background($color-contrast-faded);
+		}
+
+		&--theme-light {
+			color: $color-dark;
+			@include hover-background($color-light-faded);
+		}
+
+		&--theme-dark {
+			color: $color-light;
+			@include hover-background($color-dark-faded);
+		}
 
 		&--centered {
 			justify-content: center;
