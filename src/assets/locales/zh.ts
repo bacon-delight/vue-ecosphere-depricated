@@ -51,7 +51,10 @@ export default {
 		typography: "排版",
 		design: "设计",
 		colours: "颜色",
+		font: "字体",
 		fonts: "字体",
+		paragraph: "段落",
+		avatar: "头像",
 	},
 	actions: {
 		learn: "设计理念",
@@ -88,6 +91,7 @@ export default {
 		primary: "主要",
 		secondary: "次要",
 		hue: "色调",
+		invalid: "无效",
 	},
 	extras: {
 		what_is_your_favourite_book: "你喜欢的书是什么？",
@@ -96,5 +100,9 @@ export default {
 		enter_your_age: "输入你的年龄",
 		i_love_ecosphere: "我喜欢 Ecosphere",
 		enter_your_phone_number: "输入你的电话号码",
+		i_like_to_travel: "我喜欢旅游",
+		chinese_food_is_delicious: "中国菜很好吃",
+		i_can_speak_chinese: "我会说汉语",
+		wholeheartedly: "一心一意",
 	},
 };

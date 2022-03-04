@@ -24,6 +24,10 @@ const routes: Array<RouteRecordRaw> = [
 		component: () => import("../views/Docs.vue"),
 		children: [
 			{
+				path: "colours",
+				component: () => import("../views/design/Colours.vue"),
+			},
+			{
 				path: "typography",
 				component: () => import("../views/design/Typography.vue"),
 			},
@@ -111,6 +115,11 @@ const routes: Array<RouteRecordRaw> = [
 				component: () => import("../views/RouteInjection.vue"),
 				children: [
 					{
+						path: "avatar",
+						component: () =>
+							import("../views/components/common/Avatar.vue"),
+					},
+					{
 						path: "header",
 						component: () =>
 							import("../views/components/common/Header.vue"),
@@ -119,6 +128,11 @@ const routes: Array<RouteRecordRaw> = [
 						path: "icon",
 						component: () =>
 							import("../views/components/common/Icon.vue"),
+					},
+					{
+						path: "paragraph",
+						component: () =>
+							import("../views/components/common/Paragraph.vue"),
 					},
 					{
 						path: "tag",
