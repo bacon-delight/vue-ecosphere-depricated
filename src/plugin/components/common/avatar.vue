@@ -1,26 +1,41 @@
 <template lang="pug">
-img.avatar.avatar__image(
-	v-if="isURL",
-	:src="!invalidURL ? source : '/img/transparent.png'",
-	alt="",
-	:class="[`avatar--${size}`, `avatar--theme-${hue}`, { 'avatar--circular': circular }]",
-	:onerror="handleError"
-)
-.avatar.avatar__initials(
-	v-else,
-	:class="[`avatar--${size}`, `avatar--theme-${hue}`, { 'avatar--circular': circular }]"
-) {{ initials }}
+.avatar(:class="[`avatar--${size}`]")
+	img.avatar__image(
+		v-if="isURL",
+		:src="!invalidURL ? source : '/img/transparent.png'",
+		alt="",
+		:class="[`avatar--${size}`, `avatar--theme-${hue}`, { 'avatar--circular': circular }]",
+		:onerror="handleError"
+	)
+	.avatar__initials(
+		v-else,
+		:class="[`avatar--${size}`, `avatar--theme-${hue}`, { 'avatar--circular': circular }]"
+	) {{ initials }}
+
+	VEcoDot.avatar__status(
+		v-if="status",
+		:size="size",
+		:class="[`avatar__status--${size}`]",
+		:hue="avatar_status_mapper[status]"
+	)
 </template>
 
 <script lang="ts">
-import { avatar_hue, avatar_size } from "@/plugin/utils/types.interface";
+import {
+	avatar_hue,
+	avatar_size,
+	avatar_status,
+	avatar_status_mapper,
+} from "@/plugin/utils/types.interface";
 import { defineComponent, PropType } from "vue";
+import VEcoDot from "@/plugin/components/common/dot.vue";
 
 export default defineComponent({
 	name: "Avatar",
 	data() {
 		return {
 			invalidURL: false,
+			avatar_status_mapper,
 		};
 	},
 	props: {
@@ -34,11 +49,15 @@ export default defineComponent({
 		},
 		circular: {
 			type: Boolean as PropType<boolean>,
-			default: false,
+			default: true,
 		},
 		hue: {
 			type: String as PropType<avatar_hue>,
 			default: "auto",
+		},
+		status: {
+			type: [String, Boolean] as PropType<avatar_status | boolean>,
+			default: false,
 		},
 	},
 	computed: {
@@ -62,17 +81,19 @@ export default defineComponent({
 			this.invalidURL = true;
 		},
 	},
+	components: { VEcoDot },
 });
 </script>
 
 <style lang="scss" scoped>
 .avatar {
-	display: inline-block;
-	border-radius: $border-radius-standard;
+	position: relative;
+	height: fit-content;
 	@include use-theme;
 
 	&__image {
 		object-fit: cover;
+		border-radius: $border-radius-standard;
 	}
 
 	&__initials {
@@ -81,6 +102,25 @@ export default defineComponent({
 		justify-content: center;
 		@include font-emphasis;
 		margin: 0;
+		user-select: none;
+		border-radius: $border-radius-standard;
+	}
+
+	&__status {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		&--tiny {
+			border: 1px solid $color-contrast-faded;
+		}
+		&--small {
+			border: 2px solid $color-contrast-faded;
+		}
+		&--medium,
+		&--large {
+			border: 3px solid $color-contrast-faded;
+		}
 	}
 
 	&--circular {

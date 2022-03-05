@@ -3,11 +3,11 @@ import VEcoDot from "@/plugin/components/common/dot.vue";
 
 describe("VEcoDot", () => {
 	it("renders status with appropriate class", () => {
-		const type = "information";
+		const hue = "information";
 		const wrapper = shallowMount(VEcoDot, {
-			props: { type },
+			props: { hue },
 		});
 		expect(wrapper.find(".dot").exists()).toBe(true);
-		expect(wrapper.find(`.dot--theme-${type}`).exists()).toBe(true);
+		expect(wrapper.find(`.dot--theme-${hue}`).exists()).toBe(true);
 	});
 });

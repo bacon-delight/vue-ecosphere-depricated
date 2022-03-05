@@ -92,6 +92,7 @@ export default {
 		secondary: "次要",
 		hue: "色调",
 		invalid: "无效",
+		with_status: "带状态",
 	},
 	extras: {
 		what_is_your_favourite_book: "你喜欢的书是什么？",
