@@ -32,7 +32,7 @@
 				:class="[{ 'dropdown__option--active': index === selected }]",
 				:label="option.label"
 			)
-			VEcoDot.dropdown__option--dot(type="information", v-if="index === selected")
+			VEcoDot.dropdown__option--dot(hue="information", v-if="index === selected")
 </template>
 
 <script lang="ts">

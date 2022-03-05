@@ -12,3 +12,12 @@ export type avatar_hue =
 	| "information"
 	| "warning"
 	| "critical";
+
+export type avatar_status = "online" | "offline" | "away" | "busy" | false;
+
+export enum avatar_status_mapper {
+	online = "success",
+	offline = "offline",
+	away = "warning",
+	busy = "critical",
+}

@@ -11,22 +11,22 @@
 
 	v-eco-header(:label="$t('keywords.variants')", :type="5")
 	.showcase
-		v-eco-avatar(:source="users[4]", size="tiny", :circular="true")
-		v-eco-avatar(:source="users[3]", size="small", :circular="true")
-		v-eco-avatar(:source="users[0]", size="medium", :circular="true")
-		v-eco-avatar(:source="users[1]", size="large", :circular="true")
+		v-eco-avatar(:source="users[4]", size="tiny", :circular="false")
+		v-eco-avatar(:source="users[3]", size="small", :circular="false")
+		v-eco-avatar(:source="users[0]", size="medium", :circular="false")
+		v-eco-avatar(:source="users[1]", size="large", :circular="false")
 
 	v-eco-header(:label="$t('keywords.themed')", :type="5")
 	.showcase
 		v-eco-avatar(
 			source="Kevin Bacon",
 			size="tiny",
-			:circular="true",
+			:circular="false",
 			hue="warning"
 		)
-		v-eco-avatar(source="Julia", size="small", :circular="true", hue="hue")
-		v-eco-avatar(source="开心", size="medium", :circular="true", hue="critical")
-		v-eco-avatar(source="D", size="large", :circular="true", hue="primary")
+		v-eco-avatar(source="Julia", size="small", :circular="false", hue="hue")
+		v-eco-avatar(source="开心", size="medium", :circular="false", hue="critical")
+		v-eco-avatar(source="D", size="large", :circular="false", hue="primary")
 	.showcase
 		v-eco-avatar(source="安納", size="tiny", hue="secondary")
 		v-eco-avatar(source="宝, 苞", size="small", hue="auto")
@@ -36,6 +36,34 @@
 	v-eco-header(:label="$t('keywords.invalid')", :type="5")
 	.showcase
 		v-eco-avatar(source="https://images", size="small")
+
+	v-eco-header(:label="$t('keywords.with_status')", :type="5")
+	.showcase
+		v-eco-avatar(
+			:source="users[0]",
+			size="tiny",
+			:circular="false",
+			status="online"
+		)
+		v-eco-avatar(
+			:source="users[1]",
+			size="small",
+			:circular="true",
+			status="offline"
+		)
+		v-eco-avatar(
+			source="开心",
+			size="medium",
+			hue="invert",
+			:circular="false",
+			status="away"
+		)
+		v-eco-avatar(
+			:source="users[2]",
+			size="large",
+			:circular="true",
+			status="busy"
+		)
 
 	vue3-markdown-it.markdown(:source="content")
 </template>

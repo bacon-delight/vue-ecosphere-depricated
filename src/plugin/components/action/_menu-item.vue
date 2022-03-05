@@ -13,7 +13,7 @@
 				:label="option.label",
 				:class="[{ 'menu__item--active': isCurrentRoute(option.value), 'menu__item--disabled': !option.value }, `menu__item--theme-${theme}`]"
 			)
-			VEcoDot(:type="isCurrentRoute(option.value) ? hue : ''")
+			VEcoDot(:hue="isCurrentRoute(option.value) ? hue : ''")
 
 	.menu__nested(v-if="expanded[index]")
 		MenuItem(

@@ -2,7 +2,7 @@
 .switch(@click="toggle")
 	.switch__toggle
 		VEcoDot(
-			:type="state ? hue : 'offline'",
+			:hue="state ? hue : 'offline'",
 			:class="[state ? 'switch__toggle--active' : 'switch__toggle--inactive']"
 		)
 	.switch__label(v-if="label") {{ label }}
