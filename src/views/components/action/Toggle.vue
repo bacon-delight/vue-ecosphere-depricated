@@ -2,13 +2,27 @@
 .content
 	PageHeader(:label="$t('headers.toggle')", :events="false")
 
-	v-eco-header(:label="$t('keywords.examples')", :type="5")
+	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase
 		v-eco-toggle(
-			:options="[ { label: 'Today', value: 'today' }, { label: 'Yesterday', value: 'yesterday' }, { label: 'Last week', value: 'last-week' }, ]",
-			theme="invert",
+			:options="[ { label: 'Yesterday', value: 'yesterday' }, { label: 'Today', value: 'today' }, { label: 'Tomorrow', value: 'tomorrow' }, ]",
+			theme="auto",
 			hue="hue",
+			:defaultIndex="1"
+		)
+
+	v-eco-header(:label="$t('keywords.themed')", :type="5")
+	.showcase
+		v-eco-toggle(
+			:options="[ { label: 'Home :ri-home-line:', value: 'none' }, { label: 'Settings :ri-settings-line:', value: 'settings' }, ]",
+			theme="auto",
+			hue="critical",
 			:defaultIndex="0"
+		)
+		v-eco-toggle(
+			:options="[ { label: 'Option 1', value: '1' }, { label: 'Option 2', value: '2' }, { label: 'Option 3', value: '3' }, ]",
+			theme="invert",
+			hue="success"
 		)
 
 	vue3-markdown-it.markdown(:source="content")

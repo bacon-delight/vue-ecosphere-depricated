@@ -1,278 +1,236 @@
 /* Themeing */
-@mixin apply-theme($theme: auto) {
-	@if $theme == auto {
+@mixin use-theme($border: 0) {
+	&--theme-auto {
 		background: $color-background;
 		color: $color-contrast;
-	} @else if $theme == light {
+		border: $border solid $color-hue-faded;
+	}
+
+	&--theme-light {
 		background: $color-light;
 		color: $color-dark;
-	} @else if $theme == dark {
+	}
+
+	&--theme-dark {
 		background: $color-dark;
 		color: $color-light;
-	} @else if $theme == invert {
+	}
+
+	&--theme-invert {
 		background: $color-contrast;
 		color: $color-background;
-	} @else if $theme == transparent {
-		background: $color-helper-transparent;
-		color: $color-contrast;
-	} @else if $theme == success {
-		background: $color-indicator-success;
-		color: $color-dark;
-	} @else if $theme == warning {
-		background: $color-indicator-warning;
-		color: $color-dark;
-	} @else if $theme == information {
-		background: $color-helper-link;
-		color: $color-light;
-	} @else if $theme == critical {
-		background: $color-indicator-critical;
-		color: $color-light;
-	} @else if $theme == offline {
-		background: $color-indicator-offline;
-		color: $color-dark;
-	} @else if $theme == grey {
-		background: $color-helper-grey;
-		color: $color-dark;
-	} @else if $theme == hue {
+	}
+
+	&--theme-hue {
 		background: $color-hue;
 		color: $color-hue-contrast;
-	} @else if $theme == primary {
+	}
+
+	&--theme-primary {
 		background: $color-primary;
 		color: $color-primary-contrast;
-	} @else if $theme == secondary {
+	}
+
+	&--theme-secondary {
 		background: $color-secondary;
 		color: $color-secondary-contrast;
 	}
+
+	&--theme-information {
+		background: $color-helper-link;
+		color: $color-light;
+	}
+
+	&--theme-critical {
+		background: $color-indicator-critical;
+		color: $color-light;
+	}
+
+	&--theme-warning {
+		background: $color-indicator-warning;
+		color: $color-dark;
+	}
+
+	&--theme-success {
+		background: $color-indicator-success;
+		color: $color-dark;
+	}
+
+	&--theme-transparent {
+		background: $color-helper-transparent;
+		color: $color-contrast;
+		border: $border solid $color-helper-grey;
+	}
+
+	&--theme-offline {
+		background: $color-indicator-offline;
+		color: $color-dark;
+	}
+
+	&--theme-grey {
+		background: $color-helper-grey;
+		color: $color-dark;
+	}
 }
 
-@mixin apply-theme-hover($theme: auto) {
-	&:hover {
-		@if $theme == auto {
-			background: rgba($color-background-faded, 0.2);
-			border: 1px solid $color-hue-faded;
-		} @else if $theme == light {
-			background: rgba($color-light-faded, 0.8);
-			border: 1px solid $color-hue-faded;
-		} @else if $theme == dark {
-			background: rgba($color-dark-faded, 0.8);
-			border: 1px solid $color-hue-faded;
-		} @else if $theme == invert {
-			background: $color-contrast-faded;
-			color: $color-background;
-			border: 1px solid $color-hue-faded;
-		} @else if $theme == transparent {
-			color: $color-background;
-			background: $color-contrast-faded;
-		} @else if $theme == success {
-			background: rgba($color-indicator-success, 0.7);
-		} @else if $theme == warning {
-			background: rgba($color-indicator-warning, 0.7);
-		} @else if $theme == critical {
-			background: rgba($color-indicator-critical, 0.7);
-		} @else if $theme == information {
-			background: rgba($color-indicator-information, 0.7);
-		} @else if $theme == offline {
-			background: rgba($color-indicator-offline, 0.7);
-		} @else if $theme == grey {
-			background: rgba($color-helper-grey, 0.7);
-		} @else if $theme == hue {
-			background: $color-hue-faded;
-			border: 1px solid $color-hue;
-		} @else if $theme == primary {
-			background: $color-primary-faded;
-			border: 1px solid $color-primary;
-		} @else if $theme == secondary {
-			background: $color-secondary-faded;
-			border: 1px solid $color-secondary;
+@mixin use-theme-hover($border: 0) {
+	&--theme-auto {
+		&:hover {
+			@include hover-background($color-background-faded, $color-contrast);
+			border: $border solid $color-hue-faded;
 		}
 	}
-}
-
-@mixin apply-color($color: hue) {
-	@if $color == hue {
-		color: $color-hue;
-	} @else if $color == critical {
-		color: $color-indicator-critical;
-	} @else if $color == success {
-		color: $color-indicator-success;
-	} @else if $color == warning {
-		color: $color-indicator-warning;
-	} @else if $color == information {
-		color: $color-indicator-information;
-	} @else if $color == primary {
-		color: $color-primary;
-	} @else if $color == secondary {
-		color: $color-secondary;
-	}
-}
-
-@mixin use-theme {
-	&--theme-auto {
-		@include apply-theme(auto);
-	}
 
 	&--theme-light {
-		@include apply-theme(light);
+		&:hover {
+			@include hover-background($color-light-faded, $color-dark);
+			border: $border solid $color-hue-faded;
+		}
 	}
 
 	&--theme-dark {
-		@include apply-theme(dark);
+		&:hover {
+			@include hover-background($color-dark-faded, $color-light);
+			border: $border solid $color-hue-faded;
+		}
 	}
 
 	&--theme-invert {
-		@include apply-theme(invert);
+		&:hover {
+			@include hover-background($color-contrast-faded, $color-background);
+			border: $border solid $color-hue-faded;
+		}
 	}
 
 	&--theme-hue {
-		@include apply-theme(hue);
+		&:hover {
+			@include hover-background($color-hue-faded, $color-hue-contrast);
+			border: $border solid $color-hue;
+		}
 	}
 
 	&--theme-primary {
-		@include apply-theme(primary);
+		&:hover {
+			@include hover-background(
+				$color-primary-faded,
+				$color-primary-contrast
+			);
+			border: $border solid $color-primary;
+		}
 	}
 
 	&--theme-secondary {
-		@include apply-theme(secondary);
+		&:hover {
+			@include hover-background(
+				$color-secondary-faded,
+				$color-secondary-contrast
+			);
+			border: $border solid $color-secondary;
+		}
 	}
 
 	&--theme-information {
-		@include apply-theme(information);
+		&:hover {
+			@include hover-background(
+				rgba($color-indicator-information, 0.7),
+				$color-light
+			);
+			border: $border solid $color-indicator-information;
+		}
 	}
 
 	&--theme-critical {
-		@include apply-theme(critical);
+		&:hover {
+			@include hover-background(
+				rgba($color-indicator-critical, 0.7),
+				$color-light
+			);
+			border: $border solid $color-indicator-critical;
+		}
 	}
 
 	&--theme-warning {
-		@include apply-theme(warning);
+		&:hover {
+			@include hover-background(
+				rgba($color-indicator-warning, 0.7),
+				$color-dark
+			);
+			border: $border solid $color-indicator-warning;
+		}
 	}
 
 	&--theme-success {
-		@include apply-theme(success);
+		&:hover {
+			@include hover-background(
+				rgba($color-indicator-success, 0.7),
+				$color-dark
+			);
+			border: $border solid $color-indicator-success;
+		}
 	}
 
 	&--theme-transparent {
-		@include apply-theme(transparent);
+		&:hover {
+			@include hover-background($color-contrast-faded, $color-background);
+			border: $border solid $color-hue-faded;
+		}
 	}
 
 	&--theme-offline {
-		@include apply-theme(offline);
+		&:hover {
+			@include hover-background(
+				rgba($color-indicator-offline, 0.7),
+				$color-dark
+			);
+			border: $border solid $color-indicator-offline;
+		}
 	}
 
 	&--theme-grey {
-		@include apply-theme(grey);
-	}
-}
-
-@mixin use-theme-hover {
-	&--theme-auto {
-		@include apply-theme-hover(auto);
-	}
-
-	&--theme-light {
-		@include apply-theme-hover(light);
-	}
-
-	&--theme-dark {
-		@include apply-theme-hover(dark);
-	}
-
-	&--theme-invert {
-		@include apply-theme-hover(invert);
-	}
-
-	&--theme-hue {
-		@include apply-theme-hover(hue);
-	}
-
-	&--theme-primary {
-		@include apply-theme-hover(primary);
-	}
-
-	&--theme-secondary {
-		@include apply-theme-hover(secondary);
-	}
-
-	&--theme-information {
-		@include apply-theme-hover(information);
-	}
-
-	&--theme-critical {
-		@include apply-theme-hover(critical);
-	}
-
-	&--theme-warning {
-		@include apply-theme-hover(warning);
-	}
-
-	&--theme-success {
-		@include apply-theme-hover(success);
-	}
-
-	&--theme-transparent {
-		@include apply-theme-hover(transparent);
-	}
-
-	&--theme-offline {
-		@include apply-theme-hover(offline);
-	}
-
-	&--theme-grey {
-		@include apply-theme-hover(grey);
-	}
-}
-
-@mixin use-theme-hover-option {
-	&--theme-auto,
-	&--theme-transparent {
-		color: $color-contrast;
-		@include hover-background;
-	}
-
-	&--theme-invert {
-		color: $color-background;
-		@include hover-background($color-contrast-faded);
-	}
-
-	&--theme-light {
-		color: $color-dark;
-		@include hover-background($color-light-faded);
-	}
-
-	&--theme-dark {
-		color: $color-light;
-		@include hover-background($color-dark-faded);
+		&:hover {
+			@include hover-background(
+				rgba($color-helper-grey, 0.7),
+				$color-dark
+			);
+			border: $border solid $color-helper-grey;
+		}
 	}
 }
 
 @mixin use-color {
 	&--color-hue {
-		@include apply-color(hue);
+		color: $color-hue;
 	}
 
 	&--color-primary {
-		@include apply-color(primary);
+		color: $color-primary;
 	}
 
 	&--color-secondary {
-		@include apply-color(secondary);
+		color: $color-secondary;
 	}
 
 	&--color-information {
-		@include apply-color(information);
+		color: $color-indicator-information;
 	}
 
 	&--color-critical {
-		@include apply-color(critical);
+		color: $color-indicator-critical;
 	}
 
 	&--color-warning {
-		@include apply-color(warning);
+		color: $color-indicator-warning;
 	}
 
 	&--color-success {
-		@include apply-color(success);
+		color: $color-indicator-success;
+	}
+
+	&--color-grey {
+		color: $color-helper-grey;
+	}
+
+	&--color-link {
+		color: $color-helper-link;
 	}
 }
-
-/* Themeing */

@@ -5,7 +5,10 @@
 		:class="[`toggle__option--theme-${theme}`, { 'toggle__option--active': index === selected }]",
 		@click="handleSelection(index)"
 	)
-		span(:class="[index === selected ? `toggle__option--color-${hue}` : '']") {{ option.label }}
+		VEcoText(
+			:class="[index === selected ? `toggle__option--color-${hue}` : '']",
+			:label="option.label"
+		)
 </template>
 
 <script lang="ts">
@@ -15,6 +18,7 @@ import {
 	toggle_theme,
 } from "@/plugin/utils/types.interface";
 import { defineComponent, PropType } from "vue";
+import VEcoText from "@/plugin/components/common/text.vue";
 
 export default defineComponent({
 	name: "Toggle",
@@ -59,6 +63,9 @@ export default defineComponent({
 			this.$emit("select", this.options[index].value);
 		},
 	},
+	components: {
+		VEcoText,
+	},
 });
 </script>
 
@@ -77,7 +84,7 @@ export default defineComponent({
 		align-items: center;
 		column-gap: $spacer-0-25;
 		@include use-color;
-		@include use-theme-hover-option;
+		@include use-theme-hover;
 
 		&--active {
 			@include font-emphasis;

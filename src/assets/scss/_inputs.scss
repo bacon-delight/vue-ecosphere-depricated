@@ -10,6 +10,7 @@
 	justify-content: space-between;
 	column-gap: $spacer-0-5;
 	@include hover-outline;
+	@include use-theme;
 
 	&--input {
 		cursor: text;
@@ -34,26 +35,6 @@
 		border: 1px solid $color-helper-grey;
 	}
 
-	&--theme-auto {
-		@include apply-theme(auto);
-	}
-
-	&--theme-invert {
-		@include apply-theme(invert);
-	}
-
-	&--theme-light {
-		@include apply-theme(light);
-	}
-
-	&--theme-dark {
-		@include apply-theme(dark);
-	}
-
-	&--theme-transparent {
-		@include apply-theme(transparent);
-	}
-
 	&--invalid {
 		border: 1px solid $color-helper-error;
 	}
@@ -67,6 +48,10 @@
 	white-space: nowrap;
 	margin-top: $spacer-0-25;
 	@include animation-drop-down;
+	@include use-theme; // Handle Transparent Theme Backgrounds
+	&--theme-transparent {
+		background: $color-background;
+	}
 
 	&--contain {
 		width: 100%;
@@ -83,26 +68,6 @@
 
 	&--outline {
 		border: 1px solid $color-helper-grey;
-	}
-
-	&--theme-auto {
-		@include apply-theme(auto);
-	}
-
-	&--theme-invert {
-		@include apply-theme(invert);
-	}
-
-	&--theme-light {
-		@include apply-theme(light);
-	}
-
-	&--theme-dark {
-		@include apply-theme(dark);
-	}
-
-	&--theme-transparent {
-		@include apply-theme(auto);
 	}
 }
 
