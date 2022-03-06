@@ -76,6 +76,7 @@ export default defineComponent({
 	@include use-theme;
 	border-radius: $border-radius-standard;
 	padding: $spacer-0-25;
+	overflow-x: auto;
 
 	&__option {
 		padding: $spacer-0-125 $spacer-0-5;
@@ -83,6 +84,7 @@ export default defineComponent({
 		display: flex;
 		align-items: center;
 		column-gap: $spacer-0-25;
+		white-space: nowrap;
 		@include use-color;
 		@include use-theme-hover;
 
