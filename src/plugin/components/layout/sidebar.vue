@@ -44,21 +44,6 @@ export default defineComponent({
 .sidebar {
 	width: $spacer-8;
 	overflow-y: auto;
-
-	&--theme-auto {
-		@include apply-theme(auto);
-	}
-
-	&--theme-invert {
-		@include apply-theme(invert);
-	}
-
-	&--theme-light {
-		@include apply-theme(light);
-	}
-
-	&--theme-dark {
-		@include apply-theme(dark);
-	}
+	@include use-theme;
 }
 </style>

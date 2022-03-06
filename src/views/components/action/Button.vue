@@ -20,6 +20,7 @@
 		v-eco-button(:label="$t('keywords.critical')", theme="critical")
 		v-eco-button(:label="$t('keywords.warning')", theme="warning")
 		v-eco-button(:label="$t('keywords.success')", theme="success")
+		v-eco-button(:label="$t('keywords.information')", theme="information")
 		v-eco-button(:label="$t('keywords.transparent')", theme="transparent")
 
 	v-eco-header(:label="$t('keywords.no_outline')", :type="5")

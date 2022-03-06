@@ -55,6 +55,7 @@ export default {
 		fonts: "字体",
 		paragraph: "段落",
 		avatar: "头像",
+		toggle: "切换",
 	},
 	actions: {
 		learn: "设计理念",
@@ -93,6 +94,7 @@ export default {
 		hue: "色调",
 		invalid: "无效",
 		with_status: "带状态",
+		information: "信息",
 	},
 	extras: {
 		what_is_your_favourite_book: "你喜欢的书是什么？",

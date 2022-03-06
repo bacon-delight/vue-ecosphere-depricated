@@ -54,6 +54,7 @@ export default {
 		fonts: "Fonts",
 		paragraph: "Paragraph",
 		avatar: "Avatar",
+		toggle: "Toggle",
 	},
 	actions: {
 		learn: "Design Philosophy",
@@ -93,6 +94,7 @@ export default {
 		phone: "Phone",
 		invalid: "Invalid",
 		with_status: "With Status",
+		information: "Information",
 	},
 	extras: {
 		what_is_your_favourite_book: "What is your favourite book?",

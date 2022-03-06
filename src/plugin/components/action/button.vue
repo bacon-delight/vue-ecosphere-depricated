@@ -52,7 +52,7 @@ export default defineComponent({
 	margin: 0 !important;
 	user-select: none;
 	@include use-theme;
-	@include use-theme-hover;
+	@include use-theme-hover(1px);
 
 	&--disabled {
 		background: $color-indicator-offline;
