@@ -108,6 +108,11 @@ const routes: Array<RouteRecordRaw> = [
 						component: () =>
 							import("../views/components/action/Select.vue"),
 					},
+					{
+						path: "toggle",
+						component: () =>
+							import("../views/components/action/Toggle.vue"),
+					},
 				],
 			},
 			{

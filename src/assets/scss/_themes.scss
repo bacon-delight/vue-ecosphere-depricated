@@ -222,6 +222,29 @@
 	}
 }
 
+@mixin use-theme-hover-option {
+	&--theme-auto,
+	&--theme-transparent {
+		color: $color-contrast;
+		@include hover-background;
+	}
+
+	&--theme-invert {
+		color: $color-background;
+		@include hover-background($color-contrast-faded);
+	}
+
+	&--theme-light {
+		color: $color-dark;
+		@include hover-background($color-light-faded);
+	}
+
+	&--theme-dark {
+		color: $color-light;
+		@include hover-background($color-dark-faded);
+	}
+}
+
 @mixin use-color {
 	&--color-hue {
 		@include apply-color(hue);
@@ -251,3 +274,5 @@
 		@include apply-color(success);
 	}
 }
+
+/* Themeing */

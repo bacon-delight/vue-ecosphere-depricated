@@ -130,6 +130,7 @@ export default defineComponent({
 	&--tiny {
 		height: $spacer-1-5;
 		width: $spacer-1-5;
+		font-size: $spacer-0-5;
 	}
 
 	&--small {

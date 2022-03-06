@@ -54,6 +54,7 @@ export default {
 		fonts: "Fonts",
 		paragraph: "Paragraph",
 		avatar: "Avatar",
+		toggle: "Toggle",
 	},
 	actions: {
 		learn: "Design Philosophy",

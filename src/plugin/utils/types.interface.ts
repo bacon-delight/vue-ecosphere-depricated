@@ -9,6 +9,7 @@ export * from "./types/input.interface";
 export * from "./types/menu.interface";
 export * from "./types/navbar.interface";
 export * from "./types/select.interface";
+export * from "./types/toggle.interface";
 
 // Plugin Configuration & Helper Types
 export type themes = "light" | "dark" | "auto";

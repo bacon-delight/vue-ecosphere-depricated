@@ -55,6 +55,7 @@ export default {
 		fonts: "字体",
 		paragraph: "段落",
 		avatar: "头像",
+		toggle: "切换",
 	},
 	actions: {
 		learn: "设计理念",

@@ -90,6 +90,10 @@ export default function (): unknown_nested_type {
 							label: this.$t("headers.select"),
 							value: "/components/action/select",
 						},
+						{
+							label: this.$t("headers.toggle"),
+							value: "/components/action/toggle",
+						},
 					],
 				},
 				{
