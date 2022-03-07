@@ -101,8 +101,8 @@ export default defineComponent({
 		&--links {
 			display: flex;
 			column-gap: $spacer-0-5;
-			font-size: 1.5rem;
-			margin-top: $spacer-0-25;
+			font-size: 1.2rem;
+			margin-top: $spacer-0-125;
 		}
 
 		&--flex {
