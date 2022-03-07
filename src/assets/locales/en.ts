@@ -113,6 +113,8 @@ export default {
 		contrast_faded: "Contrast Faded",
 		background: "Background",
 		background_faded: "Background Faded",
+		contributors: "Contributors",
+		plugin: "Plugin",
 	},
 	extras: {
 		what_is_your_favourite_book: "What is your favourite book?",
