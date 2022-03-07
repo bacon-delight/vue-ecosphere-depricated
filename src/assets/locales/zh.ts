@@ -10,6 +10,10 @@ export default {
 		coming_soon: "此功能将在以后实现，请耐心等待！",
 		coming_soon_description:
 			"非常感谢你检查这个项目! 我真的很想在组件和文档上下功夫，所以如果你有任何建议或反馈，或者你想要一个功能或想要做出贡献，请随时与我联系。",
+		footer_copyright_license_pre: "在",
+		footer_copyright_license_post: "许可证下发布",
+		copyright: "版权所有",
+		team: "团队",
 	},
 	headers: {
 		ecosphere: "Ecosphere",
@@ -59,6 +63,7 @@ export default {
 		elementary: "初级",
 		helpers: "助手",
 		brand: "品牌",
+		team: "团队",
 	},
 	actions: {
 		learn: "设计理念",

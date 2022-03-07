@@ -18,7 +18,7 @@ import content_zh from "@/assets/docs/introduction/ecosphere/zh.md";
 import PageHeader from "@/components/common/PageHeader.vue";
 
 export default defineComponent({
-	name: "Types",
+	name: "Ecosphere",
 	data() {
 		return { locale };
 	},

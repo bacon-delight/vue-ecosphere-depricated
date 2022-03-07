@@ -16,6 +16,10 @@ const routes: Array<RouteRecordRaw> = [
 				path: "ecosphere",
 				component: () => import("../views/introduction/Ecosphere.vue"),
 			},
+			{
+				path: "team",
+				component: () => import("../views/introduction/Team.vue"),
+			},
 		],
 	},
 	{

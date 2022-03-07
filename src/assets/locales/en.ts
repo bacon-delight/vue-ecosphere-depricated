@@ -10,6 +10,10 @@ export default {
 		coming_soon: "This feature will be implemented soon. Stay tuned!",
 		coming_soon_description:
 			"Thanks a lot for checking out this project! I'm really trying to spend more time on the components and documentation, so if you have any suggestion or feedback, or if you'd like a feature or want to contribute, please feel free to reach out to me anytime.",
+		footer_copyright_license_pre: "Released under the",
+		footer_copyright_license_post: "License",
+		copyright: "Copyright",
+		team: "Team",
 	},
 	headers: {
 		ecosphere: "Ecosphere",
@@ -58,6 +62,7 @@ export default {
 		elementary: "Elementary",
 		helpers: "Helpers",
 		brand: "Brand",
+		team: "Team",
 	},
 	actions: {
 		learn: "Design Philosophy",
