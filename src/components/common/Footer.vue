@@ -1,6 +1,7 @@
 <template lang="pug">
 .footer
 	img.footer__contrib(
+		v-if="showContrib",
 		src="https://contrib.rocks/image?repo=bacon-delight/vue-ecosphere",
 		@click="$ecosphere.handlers.navigate('https://github.com/bacon-delight/vue-ecosphere/graphs/contributors')"
 	)
@@ -45,6 +46,12 @@ export default defineComponent({
 			this.$ecosphere.handlers.navigate(
 				`https://github.com/bacon-delight/vue-ecosphere/edit/main/src/assets/docs${this.$route.fullPath}/${locale}`
 			);
+		},
+	},
+	computed: {
+		showContrib(): boolean {
+			const blacklists = ["/introduction/team"];
+			return !blacklists.includes(this.$route.path);
 		},
 	},
 });
