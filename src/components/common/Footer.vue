@@ -9,21 +9,25 @@
 		span {{ $t("site.footer_mistake") }}
 		v-eco-link(:label="$t('site.footer_edit')", @click="redirectToMarkdown")
 
-	.footer__copyright
-		span &copy; {{ new Date().getFullYear() }} |&nbsp;
-		v-eco-link(
-			:label="'MIT Licensed'",
-			@click="$ecosphere.handlers.navigate('https://opensource.org/licenses/mit-license.php')"
-		)
-		span &nbsp;|&nbsp;
-		v-eco-link(
-			:label="'Dipanjan De'",
-			@click="$ecosphere.handlers.navigate('https://dipanjande.com')"
-		)
 	img.footer__logo(
 		src="/img/logo.png",
 		@click="$ecosphere.handlers.navigate('/')"
 	)
+
+	.footer__copyright
+		span {{ $t("site.footer_copyright_license_pre") }}&nbsp;
+		v-eco-link(
+			label="MIT",
+			@click="$ecosphere.handlers.navigate('https://opensource.org/licenses/mit-license.php')"
+		)
+		span &nbsp;{{ $t("site.footer_copyright_license_post") }}
+
+	.footer__copyright
+		span {{ $t("site.copyright") }} &copy; 2021 - {{ new Date().getFullYear() }}&nbsp;
+		v-eco-link(
+			label="Dipanjan De",
+			@click="$ecosphere.handlers.navigate('https://dipanjande.com')"
+		)
 </template>
 
 <script lang="ts">

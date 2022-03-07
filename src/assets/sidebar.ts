@@ -10,6 +10,10 @@ export default function (): unknown_nested_type {
 					label: this.$t("headers.ecosphere"),
 					value: "/introduction/ecosphere",
 				},
+				{
+					label: this.$t("headers.team"),
+					value: "/introduction/team",
+				},
 			],
 		},
 		{

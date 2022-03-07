@@ -1,0 +1,1 @@
+Ecosphere is an [Open Source](https://opensource.com/resources/what-open-source) and [MIT Licensed](https://opensource.org/licenses/mit-license.php) project that aims to provide a framework for developers to create awesome tools and applications.
