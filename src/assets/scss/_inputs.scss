@@ -25,6 +25,12 @@
 		margin: 0;
 	}
 
+	&--type-color {
+		height: $spacer-1-5;
+		padding: $spacer-0-125 $spacer-0-25;
+		cursor: pointer;
+	}
+
 	&--active,
 	&:focus {
 		transition: all $transition-micro ease-in-out;

@@ -21,4 +21,5 @@ export enum input_types_to_html_types {
 	password = "password",
 	email = "text",
 	phone = "number",
+	color = "color",
 }

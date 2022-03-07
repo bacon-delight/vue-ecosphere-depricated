@@ -187,6 +187,9 @@ body {
 	margin: $spacer-0-5 0;
 
 	&--grid {
+		&-3 {
+			@include create-grid(3, column, $spacer-0-25);
+		}
 		@include create-grid(2, column, $spacer-0-25);
 
 		@include respond-below(sm) {

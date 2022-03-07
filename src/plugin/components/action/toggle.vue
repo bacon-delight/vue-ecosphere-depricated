@@ -66,6 +66,13 @@ export default defineComponent({
 	components: {
 		VEcoText,
 	},
+	watch: {
+		defaultValue() {
+			this.selected = this.options.findIndex(
+				(option: choice_option) => option.value === this.defaultValue
+			);
+		},
+	},
 });
 </script>
 

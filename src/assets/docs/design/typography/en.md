@@ -1,7 +1,7 @@
 Components of the typography system:
 
 - [Header](/components/common/header)
-- [Font](/components/common/font)
+- [Paragraph](/components/common/paragraph)
 
 ---
 

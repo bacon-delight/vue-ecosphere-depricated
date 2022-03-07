@@ -8,7 +8,7 @@
 		input.input__container.input__container--input(
 			:type="input_types_to_html_types[type]",
 			:placeholder="placeholder",
-			:class="[{ 'input__container--outline': settings.outline, 'input__container--invalid': invalid }, `input__container--theme-${settings.theme}`]",
+			:class="[{ 'input__container--outline': settings.outline, 'input__container--invalid': invalid }, `input__container--theme-${settings.theme}`, `input__container--type-${input_types_to_html_types[type]}`]",
 			v-model="value",
 			@blur="validate",
 			@focus="invalid = false",
