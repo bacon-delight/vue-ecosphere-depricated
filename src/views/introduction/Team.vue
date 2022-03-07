@@ -49,13 +49,13 @@
 						:margin="false"
 					)
 				.team__description--flex
-					v-eco-tag(label="Components")
-					v-eco-tag(label="Designs")
-					v-eco-tag(label="Plugin")
-					v-eco-tag(label="Documentation")
-					v-eco-tag(label="Typography")
-					v-eco-tag(label="Colours")
-					v-eco-tag(label="Figma")
+					v-eco-tag(label="Components", theme="invert")
+					v-eco-tag(label="Designs", theme="invert")
+					v-eco-tag(label="Plugin", theme="invert")
+					v-eco-tag(label="Documentation", theme="invert")
+					v-eco-tag(label="Typography", theme="invert")
+					v-eco-tag(label="Colours", theme="invert")
+					v-eco-tag(label="Figma", theme="invert")
 </template>
 
 <script lang="ts">
@@ -110,6 +110,7 @@ export default defineComponent({
 			column-gap: $spacer-0-25;
 			row-gap: $spacer-0-25;
 			flex-wrap: wrap;
+			margin-top: $spacer-0-125;
 		}
 	}
 }
