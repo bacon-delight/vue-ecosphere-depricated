@@ -49,13 +49,23 @@
 						:margin="false"
 					)
 				.team__description--flex
-					v-eco-tag(label="Components", theme="invert")
-					v-eco-tag(label="Designs", theme="invert")
-					v-eco-tag(label="Plugin", theme="invert")
-					v-eco-tag(label="Documentation", theme="invert")
-					v-eco-tag(label="Typography", theme="invert")
-					v-eco-tag(label="Colours", theme="invert")
+					v-eco-tag(:label="$t('headers.components')", theme="invert")
+					v-eco-tag(:label="$t('headers.design')", theme="invert")
+					v-eco-tag(:label="$t('keywords.plugin')", theme="invert")
+					v-eco-tag(:label="$t('keywords.documentation')", theme="invert")
+					v-eco-tag(:label="$t('headers.typography')", theme="invert")
+					v-eco-tag(:label="$t('headers.colours')", theme="invert")
 					v-eco-tag(label="Figma", theme="invert")
+
+		.team__section
+			v-eco-header(
+				:label="`:ri-github-fill: ${$t('keywords.contributors')}`",
+				:type="5"
+			)
+			img.team__contrib(
+				src="https://contrib.rocks/image?repo=bacon-delight/vue-ecosphere",
+				@click="$ecosphere.handlers.navigate('https://github.com/bacon-delight/vue-ecosphere/graphs/contributors')"
+			)
 </template>
 
 <script lang="ts">
@@ -112,6 +122,15 @@ export default defineComponent({
 			flex-wrap: wrap;
 			margin-top: $spacer-0-125;
 		}
+	}
+
+	&__section {
+		margin-top: $spacer-1-5;
+	}
+
+	&__contrib {
+		cursor: pointer;
+		max-width: 100%;
 	}
 }
 </style>
