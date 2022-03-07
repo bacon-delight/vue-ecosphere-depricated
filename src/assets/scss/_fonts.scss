@@ -107,3 +107,33 @@ $font-weight-semi-bold: 600;
 	font-family: $font-family-roboto-mono;
 	font-weight: $font-weight-light;
 }
+
+@mixin use-fonts {
+	&--font-light {
+		@include font-light;
+	}
+
+	&--font-emphasis {
+		@include font-emphasis;
+	}
+
+	&--font-italic {
+		@include font-italic;
+	}
+
+	&--font-serif {
+		@include font-serif;
+	}
+
+	&--font-regular {
+		@include font-regular;
+	}
+
+	&--font-sidenote {
+		@include font-sidenote;
+	}
+
+	&--font-code {
+		@include font-code;
+	}
+}

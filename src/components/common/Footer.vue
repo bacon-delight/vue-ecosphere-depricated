@@ -10,7 +10,12 @@
 		v-eco-link(:label="$t('site.footer_edit')", @click="redirectToMarkdown")
 
 	.footer__copyright
-		span &copy; {{ new Date().getFullYear() }} | MIT Licensed | &nbsp;
+		span &copy; {{ new Date().getFullYear() }} |&nbsp;
+		v-eco-link(
+			:label="'MIT Licensed'",
+			@click="$ecosphere.handlers.navigate('https://opensource.org/licenses/mit-license.php')"
+		)
+		span &nbsp;|&nbsp;
 		v-eco-link(
 			:label="'Dipanjan De'",
 			@click="$ecosphere.handlers.navigate('https://dipanjande.com')"

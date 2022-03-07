@@ -1,5 +1,7 @@
 <template lang="pug">
-p.font(:class="[`font--${type}`, { 'font--no-margin': !margin }]")
+p.paragraph(
+	:class="[`paragraph--font-${type}`, { 'paragraph--no-margin': !margin }]"
+)
 	VEcoText(:label="label")
 </template>
 
@@ -31,34 +33,35 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-.font {
-	&--light {
-		@include font-light;
-	}
+.paragraph {
+	@include use-fonts;
+	// &--light {
+	// 	@include font-light;
+	// }
 
-	&--emphasis {
-		@include font-emphasis;
-	}
+	// &--emphasis {
+	// 	@include font-emphasis;
+	// }
 
-	&--italic {
-		@include font-italic;
-	}
+	// &--italic {
+	// 	@include font-italic;
+	// }
 
-	&--serif {
-		@include font-serif;
-	}
+	// &--serif {
+	// 	@include font-serif;
+	// }
 
-	&--regular {
-		@include font-regular;
-	}
+	// &--regular {
+	// 	@include font-regular;
+	// }
 
-	&--sidenote {
-		@include font-sidenote;
-	}
+	// &--sidenote {
+	// 	@include font-sidenote;
+	// }
 
-	&--code {
-		@include font-code;
-	}
+	// &--code {
+	// 	@include font-code;
+	// }
 
 	&--no-margin {
 		margin: 0;
