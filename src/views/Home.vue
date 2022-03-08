@@ -1,5 +1,7 @@
 <template lang="pug">
 .wrapper
+	HomeBackground.wrapper__background--1
+	.wrapper__background--2
 	v-eco-navbar.navbar(
 		:brand="$t('headers.ecosphere')",
 		:options="navbarOptions",
@@ -27,6 +29,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import navbar from "@/assets/navbar";
+import HomeBackground from "@/components/HomeBackground.vue";
 
 export default defineComponent({
 	name: "Home",
@@ -40,20 +43,45 @@ export default defineComponent({
 			return this.navbar();
 		},
 	},
+	components: {
+		HomeBackground,
+	},
 });
 </script>
 
 <style lang="scss" scoped>
 .wrapper {
 	@include occupy-full-viewport;
-	background: $color-background-faded;
+	// background: $color-background-faded;
+	background: transparent;
+	opacity: 0.9;
 	display: grid;
 	grid-template-rows: min-content 1fr;
 	padding: 0;
+
+	&__background {
+		&--1 {
+			position: absolute;
+			height: 100vh;
+			width: 100vw;
+			z-index: -2;
+			opacity: 1;
+		}
+
+		&--2 {
+			position: absolute;
+			height: 100vh;
+			width: 100vw;
+			background: $color-background;
+			z-index: -1;
+			opacity: 0.7;
+		}
+	}
 }
 
 .navbar {
 	border: 0 !important;
+	background: transparent !important;
 }
 
 .content {
