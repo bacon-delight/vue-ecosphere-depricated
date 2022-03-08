@@ -12,8 +12,8 @@ export const defaultLightPalette: color_palette = {
 	"--color-hue-contrast": "#fdfdfd",
 
 	// Brand Extended
-	"--color-primary": "#ac46a1",
-	"--color-primary-faded": "#ea698b",
+	"--color-primary": "#03045e",
+	"--color-primary-faded": "#11468f",
 	"--color-primary-contrast": "#fdfdfd",
 	"--color-secondary": "#90e0ef",
 	"--color-secondary-faded": "#e0fbfc",
