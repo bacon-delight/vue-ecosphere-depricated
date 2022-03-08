@@ -222,6 +222,7 @@
 
 <style lang="scss" scoped>
 svg {
-	height: 100%;
+	min-height: 100%;
+	min-width: 100%;
 }
 </style>
