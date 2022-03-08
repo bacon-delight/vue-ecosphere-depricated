@@ -19,7 +19,3 @@
 - **现代浏览器**: 支持所有现代浏览器，如 Chrome, Firefox, Edge, Safari, Opera, IE11 等。
 - **CSS 变量**: CSS 变量被用来创建一个更加动态的设计系统。这些变量也是可定制的，可以在主题系统中使用。
 - **Electron**: 支持 Electron 应用。
-
-##### Remix 图标
-
-Ecosphere 在设计系统中使用 [Remix 图标](https://remixicon.com/)。他们有一个美丽的简单、优雅和实用的图标集，正好适合设计系统。

@@ -11,6 +11,10 @@ export default function (): unknown_nested_type {
 					value: "/introduction/ecosphere",
 				},
 				{
+					label: this.$t("site.expo"),
+					value: "/introduction/expo",
+				},
+				{
 					label: this.$t("headers.team"),
 					value: "/introduction/team",
 				},
@@ -27,6 +31,10 @@ export default function (): unknown_nested_type {
 				{
 					label: this.$t("headers.typography"),
 					value: "/design/typography",
+				},
+				{
+					label: this.$t("headers.remix_icon"),
+					value: "https://remixicon.com/",
 				},
 			],
 		},
