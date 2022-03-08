@@ -57,6 +57,29 @@
 					v-eco-tag(:label="$t('headers.colours')", theme="invert")
 					v-eco-tag(label="Figma", theme="invert")
 
+		.team__item
+			v-eco-avatar(source="https://bacon-delight.sirv.com/Users/Bubble.jpeg")
+			.team__description
+				.team__description--item
+					v-eco-header(label="Bubble L.", :type="6", :margin="false")
+				.team__description--item.team__description--links
+					v-eco-link(label=":ri-mail-send-fill:", href="mailto:342008717@qq.com")
+				.team__description--item
+					v-eco-paragraph(
+						label=":ri-briefcase-line: Translator, TCSL teacher",
+						:margin="false"
+					)
+				.team__description--item
+					v-eco-paragraph(
+						label=":ri-map-pin-line: Chongqing, China",
+						:margin="false"
+					)
+				.team__description--flex
+					v-eco-tag(:label="$t('keywords.translations')", theme="invert")
+					v-eco-tag(:label="$t('keywords.documentation')", theme="invert")
+					v-eco-tag(:label="$t('headers.typography')", theme="invert")
+					v-eco-tag(:label="$t('headers.design')", theme="invert")
+
 		.team__section
 			v-eco-header(
 				:label="`:ri-github-fill: ${$t('keywords.contributors')}`",

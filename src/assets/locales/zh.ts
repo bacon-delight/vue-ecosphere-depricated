@@ -115,6 +115,7 @@ export default {
 		background_faded: "背景淡",
 		contributors: "贡献者",
 		plugin: "插件",
+		translations: "翻译",
 	},
 	extras: {
 		what_is_your_favourite_book: "你喜欢的书是什么？",
