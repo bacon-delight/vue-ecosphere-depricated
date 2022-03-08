@@ -2,7 +2,8 @@
 .wrapper
 	v-eco-navbar.navbar(
 		:brand="$t('headers.ecosphere')",
-		:options="navbarOptions"
+		:options="navbarOptions",
+		hideBrand="xs"
 	)
 	.content
 		img.logo(src="/img/logo.png")
@@ -11,10 +12,11 @@
 		p.description {{ $t("site.description") }}
 
 		.actions
-			//- v-eco-button(
-			//- 	:label="$t('actions.learn')",
-			//- 	@click="$router.push('/guide/installation')"
-			//- )
+			v-eco-button(
+				:label="`${$t('site.expo')} :ri-earth-line:`",
+				@click="$router.push('/introduction/expo')",
+				theme="invert"
+			)
 			v-eco-button(
 				:label="$t('actions.get_started')",
 				theme="hue",
@@ -86,7 +88,7 @@ export default defineComponent({
 .actions {
 	margin: $spacer-1 0;
 	display: flex;
-	column-gap: $spacer-1;
+	column-gap: $spacer-0-5;
 	justify-content: center;
 }
 </style>

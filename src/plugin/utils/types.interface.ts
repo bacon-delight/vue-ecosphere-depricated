@@ -23,6 +23,7 @@ export interface choice_option {
 	label: string;
 	value: string | number;
 }
+export type breakpoints = "xs" | "sm" | "md" | "lg";
 
 // Unknowns
 export interface unknown_nested_type {

@@ -8,20 +8,31 @@ nav.navbar
 	)
 
 	//- Logo & Branding
-	img.navbar__logo(v-if="logo", :src="logo", @click="$router.push('/')")
+	img.navbar__logo(
+		v-if="logo",
+		:src="logo",
+		@click="$router.push('/')",
+		:class="[`navbar__hide--${hideLogo}`]"
+	)
 	VEcoLink.navbar__brand(
 		v-if="brand",
 		:label="brand",
-		@click="$router.push('/')"
+		@click="$router.push('/')",
+		:class="[`navbar__hide--${hideBrand}`]"
 	)
 
+	.navbar__divider &nbsp;
+
 	//- Options
-	.navbar__option(v-for="option in options")
+	.navbar__option(
+		v-for="option in options",
+		:class="[`navbar__hide--${option.hide}`]"
+	)
 		VEcoLink(
 			v-if="option.type === navbar_item_types.link",
 			:label="option.attributes?.label",
 			:config="option.attributes?.config || {}",
-			@click="$ecosphere.handlers.navigate(option.attributes?.value)"
+			@click="$ecosphere.handlers.navigate(option.attributes?.href)"
 		)
 		VEcoLink(
 			v-if="option.type === navbar_item_types.theme",
@@ -48,6 +59,7 @@ import VEcoLink from "@/plugin/components/action/link.vue";
 import VEcoSelect from "@/plugin/components/action/select.vue";
 import VEcoAccessibility from "@/plugin/components/action/accessibility.vue";
 import {
+	navbar_hide,
 	navbar_item_types,
 	navbar_option,
 	themes,
@@ -71,6 +83,14 @@ export default defineComponent({
 		options: {
 			type: Array as PropType<navbar_option[]>,
 			default: () => [],
+		},
+		hideLogo: {
+			type: [Boolean, String] as PropType<navbar_hide>,
+			default: false,
+		},
+		hideBrand: {
+			type: [Boolean, String] as PropType<navbar_hide>,
+			default: false,
 		},
 	},
 	data() {
@@ -123,10 +143,8 @@ export default defineComponent({
 		font-size: $spacer-0-75;
 	}
 
-	&__option {
-		&:first-of-type {
-			margin-left: auto;
-		}
+	&__divider {
+		margin-left: auto;
 	}
 
 	&__option,
@@ -147,6 +165,26 @@ export default defineComponent({
 
 		@include respond-below(sm) {
 			display: block;
+		}
+	}
+
+	&__hide {
+		&--xs {
+			@include respond-below(xs) {
+				display: none;
+			}
+		}
+
+		&--sm {
+			@include respond-below(sm) {
+				display: none;
+			}
+		}
+
+		&--md {
+			@include respond-below(md) {
+				display: none;
+			}
 		}
 	}
 }
