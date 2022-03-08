@@ -19,7 +19,3 @@
 - **Modern Browsers**: Supports all modern browsers like Chrome, Firefox, Edge, Safari, Opera, IE11 and more.
 - **CSS Variables**: CSS variables are used to create a more dynamic design system. These variables are also customisable and can be used in the themeing system.
 - **Electron**: Supports Electron applications.
-
-##### Remix Icon
-
-Ecosphere uses [Remix Icon](https://remixicon.com/) in the design system. They have a beautiful collection of simple, elegant and practical icons that fits right into the design system.

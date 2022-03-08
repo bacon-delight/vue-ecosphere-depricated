@@ -159,6 +159,10 @@ body {
 	strong {
 		@include font-emphasis;
 	}
+
+	img {
+		max-width: 100%;
+	}
 }
 
 .wrapper {

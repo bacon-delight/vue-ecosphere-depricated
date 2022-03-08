@@ -15,6 +15,7 @@ export default {
 		copyright: "版权所有",
 		team: "团队",
 		team_ecosphere: "Ecosphere 团队",
+		expo: "展览",
 	},
 	headers: {
 		ecosphere: "Ecosphere",

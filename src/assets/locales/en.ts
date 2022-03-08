@@ -15,6 +15,7 @@ export default {
 		copyright: "Copyright",
 		team: "Team",
 		team_ecosphere: "Team Ecosphere",
+		expo: "Expo",
 	},
 	headers: {
 		ecosphere: "Ecosphere",
