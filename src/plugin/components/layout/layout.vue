@@ -11,6 +11,8 @@
 			:brand="brand",
 			:logo="logo",
 			:options="navbarOptions",
+			:hideLogo="hideLogo",
+			:hideBrand="hideBrand",
 			toggle,
 			@toggle="sidebar = true"
 		)
@@ -24,7 +26,7 @@
 import { defineComponent, PropType } from "vue";
 import Navbar from "@/plugin/components/layout/navbar.vue";
 import Sidebar from "@/plugin/components/layout/sidebar.vue";
-import { navbar_option } from "@/plugin/utils/types.interface";
+import { navbar_option, navbar_hide } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Layout",
@@ -48,6 +50,14 @@ export default defineComponent({
 		sidebarOptions: {
 			type: Object,
 			required: true,
+		},
+		hideLogo: {
+			type: [Boolean, String] as PropType<navbar_hide>,
+			default: false,
+		},
+		hideBrand: {
+			type: [Boolean, String] as PropType<navbar_hide>,
+			default: false,
 		},
 	},
 	data() {

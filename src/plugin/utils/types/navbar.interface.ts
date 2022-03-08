@@ -1,4 +1,7 @@
-import { unknown_nested_type } from "@/plugin/utils/types.interface";
+import {
+	unknown_nested_type,
+	breakpoints,
+} from "@/plugin/utils/types.interface";
 
 export type navbar_item_type =
 	| "link"
@@ -17,7 +20,10 @@ export enum navbar_item_types {
 	"accessibility" = "accessibility",
 }
 
+export type navbar_hide = false | breakpoints;
+
 export interface navbar_option {
 	type: navbar_item_type;
+	hide: navbar_hide;
 	attributes: unknown_nested_type;
 }

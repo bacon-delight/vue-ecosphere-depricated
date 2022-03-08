@@ -3,6 +3,22 @@ import { unknown_nested_type } from "@/plugin/utils/types.interface";
 export default function (): unknown_nested_type {
 	return [
 		{
+			type: "link",
+			// hide: "xs",
+			attributes: {
+				label: this.$t("site.expo"),
+				href: "/introduction/expo",
+			},
+		},
+		{
+			type: "link",
+			// hide: "xs",
+			attributes: {
+				label: this.$t("site.team"),
+				href: "/introduction/team",
+			},
+		},
+		{
 			type: "select",
 			attributes: {
 				label: this.$t("headers.resources"),

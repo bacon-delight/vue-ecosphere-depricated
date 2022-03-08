@@ -3,7 +3,8 @@ v-eco-layout.layout(
 	:brand="$t('headers.ecosphere')",
 	logo="/img/logo.png",
 	:navbarOptions="navbarOptions",
-	:sidebarOptions="sidebarOptions"
+	:sidebarOptions="sidebarOptions",
+	hideBrand="xs"
 )
 	Footer
 </template>
