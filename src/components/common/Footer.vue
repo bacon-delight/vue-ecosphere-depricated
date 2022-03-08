@@ -6,7 +6,7 @@
 		@click="$ecosphere.handlers.navigate('https://github.com/bacon-delight/vue-ecosphere/graphs/contributors')"
 	)
 
-	.footer__edit
+	.footer__edit(v-if="showContrib")
 		span {{ $t("site.footer_mistake") }}
 		v-eco-link(:label="$t('site.footer_edit')", @click="redirectToMarkdown")
 
@@ -23,12 +23,13 @@
 		)
 		span &nbsp;{{ $t("site.footer_copyright_license_post") }}
 
-	.footer__copyright
+	.footer__copyright.footer--last
 		span {{ $t("site.copyright") }} &copy; 2021 - {{ new Date().getFullYear() }}&nbsp;
 		v-eco-link(
-			label="Dipanjan De",
-			@click="$ecosphere.handlers.navigate('https://dipanjande.com')"
+			:label="$t('site.team_ecosphere')",
+			@click="$ecosphere.handlers.navigate('/introduction/team')"
 		)
+		//- https://api.github.com/repos/bacon-delight/vue-ecosphere
 </template>
 
 <script lang="ts">
@@ -84,6 +85,10 @@ export default defineComponent({
 			opacity: 0.5;
 			filter: grayscale(100%);
 		}
+	}
+
+	&--last {
+		margin-bottom: $spacer-2;
 	}
 }
 </style>
