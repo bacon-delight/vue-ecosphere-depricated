@@ -14,6 +14,7 @@ export default {
 		footer_copyright_license_post: "许可证下发布",
 		copyright: "版权所有",
 		team: "团队",
+		team_ecosphere: "Ecosphere 团队",
 	},
 	headers: {
 		ecosphere: "Ecosphere",

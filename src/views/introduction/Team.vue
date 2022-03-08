@@ -66,7 +66,7 @@
 					v-eco-link(label=":ri-mail-send-fill:", href="mailto:342008717@qq.com")
 				.team__description--item
 					v-eco-paragraph(
-						label=":ri-briefcase-line: Translator, TCSL teacher",
+						label=":ri-briefcase-line: Translator, TCSL Teacher",
 						:margin="false"
 					)
 				.team__description--item
