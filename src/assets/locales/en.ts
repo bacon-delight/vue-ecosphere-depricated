@@ -14,6 +14,7 @@ export default {
 		footer_copyright_license_post: "License",
 		copyright: "Copyright",
 		team: "Team",
+		team_ecosphere: "Team Ecosphere",
 	},
 	headers: {
 		ecosphere: "Ecosphere",
