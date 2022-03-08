@@ -21,7 +21,7 @@ nav.navbar
 		:class="[`navbar__hide--${hideBrand}`]"
 	)
 
-	.navbar__divider &nbsp;
+	.navbar__divider
 
 	//- Options
 	.navbar__option(
@@ -125,11 +125,11 @@ export default defineComponent({
 	border-bottom: 1px solid rgba($color-helper-grey, 0.2);
 	display: flex;
 	align-items: center;
-	column-gap: $spacer-0-5;
+	column-gap: $spacer-0-625;
 	background: $color-background-faded;
 
 	@include respond-below(sm) {
-		column-gap: $spacer-0-25;
+		column-gap: $spacer-0-5;
 	}
 
 	&__logo {
@@ -161,7 +161,7 @@ export default defineComponent({
 		color: $color-contrast;
 		transform: translateY(calc($spacer-0-125/2));
 		display: none;
-		margin-right: $spacer-0-5;
+		// margin-right: $spacer-0-5;
 
 		@include respond-below(sm) {
 			display: block;
