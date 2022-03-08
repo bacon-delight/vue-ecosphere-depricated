@@ -115,6 +115,7 @@ export default {
 		background_faded: "Background Faded",
 		contributors: "Contributors",
 		plugin: "Plugin",
+		translations: "Translations",
 	},
 	extras: {
 		what_is_your_favourite_book: "What is your favourite book?",
