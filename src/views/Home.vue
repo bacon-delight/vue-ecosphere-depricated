@@ -66,6 +66,7 @@ export default defineComponent({
 			width: 100vw;
 			z-index: -2;
 			opacity: 1;
+			overflow: hidden;
 		}
 
 		&--2 {
