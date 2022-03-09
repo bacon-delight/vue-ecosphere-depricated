@@ -20,9 +20,9 @@ $ecosphere.theme
 $ecosphere.handlers
 ```
 
-| Name       | Type     | Default | Description                                                                        |
-| :--------- | :------- | :------ | :--------------------------------------------------------------------------------- |
-| `navigate` | `string` | `void`  | Handle click on links - `$router.push` for internal and `window.open` for external |
+| Name       | Type     | Default | Description                                                                              |
+| :--------- | :------- | :------ | :--------------------------------------------------------------------------------------- |
+| `navigate` | `string` | `void`  | Handle click on links - `$router.push` for internal and `window.open` for external links |
 
 #### Accessibility
 
