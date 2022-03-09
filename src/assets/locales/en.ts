@@ -16,6 +16,10 @@ export default {
 		team: "Team",
 		team_ecosphere: "Team Ecosphere",
 		expo: "Expo",
+		install_description:
+			"Get started by installing the Ecosphere Design System in your project. Follow the installation steps to quickly set up the plugin.",
+		theme_description:
+			"Customise the design system and theme using the provided helper functions. Change colours, handle accessibility, and more.",
 	},
 	headers: {
 		ecosphere: "Ecosphere",
@@ -65,6 +69,7 @@ export default {
 		helpers: "Helpers",
 		brand: "Brand",
 		team: "Team",
+		explore: "Explore",
 	},
 	actions: {
 		learn: "Design Philosophy",

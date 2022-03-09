@@ -5,12 +5,13 @@
 			:type="state ? 'ri-radio-button-line' : 'ri-checkbox-blank-circle-line radio__toggle--inactive'",
 			:class="[state ? `radio__toggle--color-${hue}` : '']"
 		)
-	.radio__label(v-if="label") {{ label }}
+	VEcoText.radio__label(v-if="label", :label="label")
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import VEcoIcon from "@/plugin/components/common/icon.vue";
+import VEcoText from "@/plugin/components/common/text.vue";
 import { menu_hue } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
@@ -51,7 +52,7 @@ export default defineComponent({
 			this.state = value;
 		},
 	},
-	components: { VEcoIcon },
+	components: { VEcoIcon, VEcoText },
 });
 </script>
 
@@ -74,7 +75,6 @@ export default defineComponent({
 	}
 
 	&__label {
-		display: inline-block;
 		user-select: none;
 	}
 }

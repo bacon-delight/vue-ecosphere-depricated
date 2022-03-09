@@ -16,6 +16,10 @@ export default {
 		team: "团队",
 		team_ecosphere: "Ecosphere 团队",
 		expo: "展览",
+		install_description:
+			"通过在你的项目中安装Ecosphere设计系统开始吧。按照安装步骤，快速设置该插件。",
+		theme_description:
+			"使用所提供的辅助函数定制设计系统和主题。改变颜色，处理可访问性，以及更多。",
 	},
 	headers: {
 		ecosphere: "Ecosphere",
@@ -66,6 +70,7 @@ export default {
 		helpers: "助手",
 		brand: "品牌",
 		team: "团队",
+		explore: "探索",
 	},
 	actions: {
 		learn: "设计理念",

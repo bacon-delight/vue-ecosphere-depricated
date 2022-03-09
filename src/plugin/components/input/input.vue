@@ -1,7 +1,7 @@
 <template lang="pug">
 .input(@change.prevent)
 	//- Label
-	VEcoText.input__label(:label="label")
+	VEcoText.input__label(v-if="label", :label="label")
 
 	//- Input Field
 	.input__field
