@@ -130,5 +130,6 @@ export default {
 		chinese_food_is_delicious: "中国菜很好吃",
 		i_can_speak_chinese: "我会说汉语",
 		wholeheartedly: "一心一意",
+		learn_chinese: "学汉语",
 	},
 };

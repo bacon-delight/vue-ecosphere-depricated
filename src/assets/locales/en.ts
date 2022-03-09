@@ -130,5 +130,6 @@ export default {
 		chinese_food_is_delicious: "Chinese food is delicious",
 		i_can_speak_chinese: "I can speak Chinese",
 		wholeheartedly: "Wholeheartedly",
+		learn_chinese: "Learn Chinese",
 	},
 };
