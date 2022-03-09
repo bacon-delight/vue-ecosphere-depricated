@@ -1,8 +1,3 @@
-###### Quick Start
-
-- [Installation](/guide/installation)
-- [Themeing](/guide/theme)
-
 ##### Design Principles
 
 - **Accessibile**: Accessibility is a core principle of Ecosphere. Components are designed to be accessible and easy to use, even for challenged individuals. The design system is built with accessibility in mind.

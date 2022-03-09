@@ -1,7 +1,7 @@
 <template lang="pug">
 .dropdown
 	//- Label
-	VEcoText.dropdown__label(:label="label")
+	VEcoText.dropdown__label(v-if="label", :label="label")
 
 	//- Input Field
 	.dropdown__container(

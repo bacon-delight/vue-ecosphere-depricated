@@ -5,12 +5,13 @@
 			:hue="state ? hue : 'offline'",
 			:class="[state ? 'switch__toggle--active' : 'switch__toggle--inactive']"
 		)
-	.switch__label(v-if="label") {{ label }}
+	VEcoText.switch__label(v-if="label", :label="label")
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import VEcoDot from "@/plugin/components/common/dot.vue";
+import VEcoText from "@/plugin/components/common/text.vue";
 import { menu_hue } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
@@ -49,7 +50,7 @@ export default defineComponent({
 			this.state = value;
 		},
 	},
-	components: { VEcoDot },
+	components: { VEcoDot, VEcoText },
 });
 </script>
 
@@ -79,7 +80,6 @@ export default defineComponent({
 	}
 
 	&__label {
-		display: inline-block;
 		user-select: none;
 	}
 }
