@@ -63,12 +63,21 @@
 				.team__description--item
 					v-eco-header(label="Bubble L.", :type="6", :margin="false")
 				.team__description--item.team__description--links
-					v-eco-link(label=":ri-mail-send-fill:", href="mailto:342008717@qq.com")
+					v-eco-link(
+						label=":ri-mail-send-fill:",
+						href="mailto:342008717@qq.com,lilanBubble@outlook.com"
+					)
+				.team__description--item
+					v-eco-link(
+						:label="`${$t('extras.learn_chinese')} :ri-arrow-right-up-line:`",
+						@click="$ecosphere.handlers.navigate('https://preply.com/en/tutor/1899829')"
+					)
 				.team__description--item
 					v-eco-paragraph(
 						label=":ri-briefcase-line: Translator, TCSL Teacher",
 						:margin="false"
 					)
+
 				.team__description--item
 					v-eco-paragraph(
 						label=":ri-map-pin-line: Chongqing, China",
