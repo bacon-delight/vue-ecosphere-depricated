@@ -24,6 +24,12 @@ export interface menu_option extends choice_option {
 }
 ```
 
+```js
+export interface breadcrumb_option extends choice_option {
+  children?: choice_option[];
+}
+```
+
 ### Layout
 
 ```ts

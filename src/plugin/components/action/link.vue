@@ -1,11 +1,12 @@
 <template lang="pug">
-a.link
+a.link(:class="[`link--color-${hue}`]")
 	VEcoText(:label="label")
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import VEcoText from "@/plugin/components/common/text.vue";
+import { hues } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Link",
@@ -14,6 +15,10 @@ export default defineComponent({
 			type: String as PropType<string>,
 			default: "",
 			required: true,
+		},
+		hue: {
+			type: String as PropType<hues>,
+			default: "hue",
 		},
 	},
 	components: {
@@ -24,8 +29,10 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .link {
+	width: fit-content;
 	text-decoration: none;
-	color: $color-hue;
+	cursor: pointer;
+	@include use-color;
 	@include hover-color;
 }
 </style>

@@ -33,6 +33,16 @@ v-eco-header(:label="$t('headers.explore')", :type="5")
 			v-eco-link(label="Visit :ri-arrow-right-up-line:")
 		.components__description {{ $t("headers.link") }}
 
+	//- Breadcrumb
+	.components__item(
+		@click="$ecosphere.handlers.navigate('/components/action/breadcrumb')"
+	)
+		.components__showcase
+			v-eco-breadcrumb(
+				:options="[ { label: 'Home', value: '/' }, { label: 'Current', value: '/current' }, ]"
+			)
+		.components__description {{ $t("headers.breadcrumb") }}
+
 	//- Header
 	.components__item(@click="$ecosphere.handlers.navigate('/design/typography')")
 		.components__showcase
@@ -117,7 +127,7 @@ v-eco-header(:label="$t('headers.explore')", :type="5")
 	)
 		.components__showcase.components__showcase--flex
 			v-eco-switch(label="", hue="secondary", :defaultValue="true")
-			v-eco-switch(label="", hue="invert", :defaultValue="true")
+			v-eco-switch(label="", hue="invert", :defaultValue="false")
 			v-eco-switch(label="", hue="critical", :defaultValue="true")
 		.components__description {{ $t("headers.switch") }}
 
@@ -189,6 +199,7 @@ export default defineComponent({
 		overflow: hidden;
 		cursor: pointer;
 		transition: all $transition-micro ease-in-out;
+		user-select: none;
 
 		&:hover {
 			border-color: $color-helper-transparent;
