@@ -87,6 +87,10 @@ export default function (): unknown_nested_type {
 							value: "/components/action/accessibility",
 						},
 						{
+							label: this.$t("headers.breadcrumb"),
+							value: "/components/action/breadcrumb",
+						},
+						{
 							label: this.$t("headers.button"),
 							value: "/components/action/button",
 						},

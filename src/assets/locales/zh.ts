@@ -71,6 +71,7 @@ export default {
 		brand: "品牌",
 		team: "团队",
 		explore: "探索",
+		breadcrumb: "Breadcrumb 面包屑",
 	},
 	actions: {
 		learn: "设计理念",

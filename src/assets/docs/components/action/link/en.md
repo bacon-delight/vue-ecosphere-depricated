@@ -19,9 +19,10 @@ Learn more at the [Configuration](/guide/configuration) section.
 
 #### API
 
-| Name    | Type     | Default  | Description                                        |
-| :------ | :------- | :------- | :------------------------------------------------- |
-| `label` | `string` | Required | The text to display in button, also supports icons |
+| Name    | Type     | Default                                                                               | Description                                        |
+| :------ | :------- | :------------------------------------------------------------------------------------ | :------------------------------------------------- |
+| `label` | `string` | Required                                                                              | The text to display in button, also supports icons |
+| `hue`   | `string` | `'hue'`, `'primary'`, `'secondary'`, `'success'`, `'warning'`, `'critical'`, `'grey'` | The hue for the link                               |
 
 #### Events
 

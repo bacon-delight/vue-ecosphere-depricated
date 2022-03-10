@@ -70,6 +70,7 @@ export default {
 		brand: "Brand",
 		team: "Team",
 		explore: "Explore",
+		breadcrumb: "Breadcrumb",
 	},
 	actions: {
 		learn: "Design Philosophy",

@@ -97,6 +97,11 @@ const routes: Array<RouteRecordRaw> = [
 							),
 					},
 					{
+						path: "breadcrumb",
+						component: () =>
+							import("../views/components/action/Breadcrumb.vue"),
+					},
+					{
 						path: "button",
 						component: () =>
 							import("../views/components/action/Button.vue"),

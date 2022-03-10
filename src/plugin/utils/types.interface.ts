@@ -1,6 +1,7 @@
 // Import Component Types
 export * from "./types/accessibility.interface";
 export * from "./types/avatar.interface";
+export * from "./types/breadcrumb.interface";
 export * from "./types/button.interface";
 export * from "./types/dot.interface";
 export * from "./types/dropdown.interface";
@@ -32,3 +33,13 @@ export interface unknown_nested_type {
 }
 // eslint-disable-next-line
 export type unknown_type = any;
+
+export type hues =
+	| "hue"
+	| "primary"
+	| "secondary"
+	| "success"
+	| "information"
+	| "warning"
+	| "critical"
+	| "grey";

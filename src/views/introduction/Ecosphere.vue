@@ -80,6 +80,7 @@ export default defineComponent({
 		column-gap: $spacer-0-5;
 		cursor: pointer;
 		transition: all $transition-micro ease-in-out;
+		user-select: none;
 
 		&:hover {
 			border-color: $color-helper-transparent;
