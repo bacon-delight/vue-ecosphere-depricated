@@ -1,5 +1,8 @@
 <template lang="pug">
 .page-header
+	.page-header__status(v-if="status")
+		v-eco-tag(:label="status", theme="critical", size="regular")
+
 	.page-header__header
 		v-eco-header(:label="label", :type="2", :margin="false")
 
@@ -31,6 +34,10 @@ export default defineComponent({
 			type: Boolean as PropType<boolean>,
 			default: true,
 		},
+		status: {
+			type: String as PropType<string>,
+			default: "",
+		},
 	},
 });
 </script>
@@ -53,6 +60,10 @@ export default defineComponent({
 				}
 			}
 		}
+	}
+
+	&__status {
+		margin-top: $spacer-0-5;
 	}
 }
 </style>

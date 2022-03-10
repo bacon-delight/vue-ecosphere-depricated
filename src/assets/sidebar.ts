@@ -133,6 +133,10 @@ export default function (): unknown_nested_type {
 							value: "/components/common/paragraph",
 						},
 						{
+							label: this.$t("headers.table"),
+							value: "/components/common/table",
+						},
+						{
 							label: this.$t("headers.tag"),
 							value: "/components/common/tag",
 						},

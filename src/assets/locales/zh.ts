@@ -72,6 +72,7 @@ export default {
 		team: "团队",
 		explore: "探索",
 		breadcrumb: "Breadcrumb 面包屑",
+		table: "表格",
 	},
 	actions: {
 		learn: "设计理念",

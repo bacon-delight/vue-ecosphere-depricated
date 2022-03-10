@@ -153,6 +153,11 @@ const routes: Array<RouteRecordRaw> = [
 							import("../views/components/common/Paragraph.vue"),
 					},
 					{
+						path: "table",
+						component: () =>
+							import("../views/components/common/Table.vue"),
+					},
+					{
 						path: "tag",
 						component: () =>
 							import("../views/components/common/Tag.vue"),
