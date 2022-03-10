@@ -71,6 +71,7 @@ export default {
 		team: "Team",
 		explore: "Explore",
 		breadcrumb: "Breadcrumb",
+		table: "Table",
 	},
 	actions: {
 		learn: "Design Philosophy",
