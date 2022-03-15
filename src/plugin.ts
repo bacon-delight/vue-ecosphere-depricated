@@ -30,14 +30,8 @@ export default {
 	install: (app: any, options: any): void => {
 		initialize();
 		app.config.globalProperties.$ecosphere = ecosphere;
-	},
-};
 
-// Import & Register Modules
-/* eslint-disable-next-line */
-export const EcoComponents = {
-	/* eslint-disable-next-line */
-	install: (app: any, options: any): void => {
+		// Import & Register Modules
 		modules.forEach((module) => {
 			module.keys().forEach((component) => {
 				app.component(
@@ -48,6 +42,22 @@ export const EcoComponents = {
 		});
 	},
 };
+
+// Import & Register Modules
+/* eslint-disable-next-line */
+// export const EcoComponents = {
+// 	/* eslint-disable-next-line */
+// 	install: (app: any, options: any): void => {
+// 		modules.forEach((module) => {
+// 			module.keys().forEach((component) => {
+// 				app.component(
+// 					`${modulePrefix}-${component.slice(2, -4)}`,
+// 					module(component).default
+// 				);
+// 			});
+// 		});
+// 	},
+// };
 
 // Tree Shakable Components
 /* eslint-disable-next-line */
