@@ -35,33 +35,6 @@ export default defineComponent({
 <style lang="scss" scoped>
 .paragraph {
 	@include use-fonts;
-	// &--light {
-	// 	@include font-light;
-	// }
-
-	// &--emphasis {
-	// 	@include font-emphasis;
-	// }
-
-	// &--italic {
-	// 	@include font-italic;
-	// }
-
-	// &--serif {
-	// 	@include font-serif;
-	// }
-
-	// &--regular {
-	// 	@include font-regular;
-	// }
-
-	// &--sidenote {
-	// 	@include font-sidenote;
-	// }
-
-	// &--code {
-	// 	@include font-code;
-	// }
 
 	&--no-margin {
 		margin: 0;

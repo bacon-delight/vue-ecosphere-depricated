@@ -2,23 +2,24 @@
 .select
 	//- Label
 	VEcoLink.select__label(
-		@click="toggle",
+		@click="toggle(!open)",
 		:label="generateLabel",
 		:class="{ 'select__label--hue': settings.hue }"
 	)
 
 	//- Drop Area
-	.select__content(
-		v-if="open && options.length",
-		@mouseleave="toggle",
-		:class="[settings.contain ? 'select__content--contain' : '', `select__content--flow-${settings.flow}`, settings.outline ? 'select__content--outline' : '', `select__content--theme-${settings.theme}`]"
-	)
-		VEcoText.select__option(
-			v-for="(option, index) in options",
-			:class="[settings.center ? 'select__option--centered' : '', `select__option--theme-${settings.theme}`]",
-			@click="handleSelection(index)",
-			:label="option.label"
+	Transition(name="nested")
+		.select__content(
+			v-if="open && options.length",
+			@mouseleave="toggle(false)",
+			:class="[settings.contain ? 'select__content--contain' : '', `select__content--flow-${settings.flow}`, settings.outline ? 'select__content--outline' : '', `select__content--theme-${settings.theme}`]"
 		)
+			VEcoText.select__option(
+				v-for="(option, index) in options",
+				:class="[settings.center ? 'select__option--centered' : '', `select__option--theme-${settings.theme}`]",
+				@click="handleSelection(index)",
+				:label="option.label"
+			)
 </template>
 
 <script lang="ts">
@@ -70,11 +71,11 @@ export default defineComponent({
 		};
 	},
 	methods: {
-		toggle(): void {
-			this.open = !this.open;
+		toggle(state: boolean): void {
+			this.open = state;
 		},
 		handleSelection(index: number): void {
-			this.toggle();
+			this.toggle(false);
 			this.$ecosphere.handlers.navigate(this.options[index].value);
 			this.$ecosphere.handlers.runAction(this.options[index].action);
 			this.$emit("change", this.options[index].value);

@@ -1,15 +1,33 @@
 <template lang="pug">
-h1.header--1(v-if="type === 1", :class="{ 'header--no-margin': !margin }")
+h1.header.header--1(
+	v-if="type === 1",
+	:class="{ 'header--no-margin': !margin }"
+)
 	VEcoText(:label="label")
-h2.header--2(v-if="type === 2", :class="{ 'header--no-margin': !margin }")
+h2.header.header--2(
+	v-if="type === 2",
+	:class="{ 'header--no-margin': !margin }"
+)
 	VEcoText(:label="label")
-h3.header--3(v-if="type === 3", :class="{ 'header--no-margin': !margin }")
+h3.header.header--3(
+	v-if="type === 3",
+	:class="{ 'header--no-margin': !margin }"
+)
 	VEcoText(:label="label")
-h4.header--4(v-if="type === 4", :class="{ 'header--no-margin': !margin }")
+h4.header.header--4(
+	v-if="type === 4",
+	:class="{ 'header--no-margin': !margin }"
+)
 	VEcoText(:label="label")
-h5.header--5(v-if="type === 5", :class="{ 'header--no-margin': !margin }")
+h5.header.header--5(
+	v-if="type === 5",
+	:class="{ 'header--no-margin': !margin }"
+)
 	VEcoText(:label="label")
-h6.header--6(v-if="type === 6", :class="{ 'header--no-margin': !margin }")
+h6.header.header--6(
+	v-if="type === 6",
+	:class="{ 'header--no-margin': !margin }"
+)
 	VEcoText(:label="label")
 </template>
 
@@ -63,5 +81,13 @@ export default defineComponent({
 	&--no-margin {
 		margin: 0;
 	}
+}
+
+.text {
+	width: 100%;
+}
+
+span {
+	width: 100%;
 }
 </style>
