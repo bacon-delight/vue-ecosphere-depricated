@@ -32,7 +32,7 @@ nav.navbar
 			v-if="option.type === navbar_item_types.link",
 			:label="option.attributes?.label",
 			:config="option.attributes?.config || {}",
-			@click="$ecosphere.handlers.navigate(option.attributes?.href)"
+			@click="handleSelection(option.attributes?.href, option.attributes?.action)"
 		)
 		VEcoLink(
 			v-if="option.type === navbar_item_types.theme",
@@ -111,6 +111,10 @@ export default defineComponent({
 				this.$ecosphere.theme.setTheme("dark");
 			}
 			this.getCurrentTheme();
+		},
+		handleSelection(href: string, action: () => void): void {
+			this.$ecosphere.handlers.navigate(href);
+			this.$ecosphere.handlers.runAction(action);
 		},
 	},
 	mounted() {

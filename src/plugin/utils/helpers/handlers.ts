@@ -1,13 +1,15 @@
-import router from "@/router";
-
 export default class Handlers {
 	public static navigate(link: string): void {
+		if (!link || !link[0]) {
+			return;
+		}
 		try {
+			console.log("try");
 			new URL(link);
 			window.open(link, "_blank");
 		} catch {
 			if (link[0] === "/") {
-				router.push(link);
+				window.location.assign(link);
 			}
 		}
 	}

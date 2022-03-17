@@ -7,7 +7,9 @@ export default function (): unknown_nested_type {
 			// hide: "xs",
 			attributes: {
 				label: this.$t("site.expo"),
-				href: "/introduction/expo",
+				action: (): void => {
+					this.$router.push("/introduction/expo");
+				},
 			},
 		},
 		{
@@ -15,7 +17,9 @@ export default function (): unknown_nested_type {
 			// hide: "xs",
 			attributes: {
 				label: this.$t("site.team"),
-				href: "/introduction/team",
+				action: (): void => {
+					this.$router.push("/introduction/team");
+				},
 			},
 		},
 		{
