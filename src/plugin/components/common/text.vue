@@ -1,8 +1,8 @@
 <template lang="pug">
 .text
 	template(v-for="element in elements")
+		span.text__text(v-if="element.type === 'text'") {{ element.value }}
 		VEcoIcon.text__icon(v-if="element.type === 'icon'", :type="element.value")
-		span.text__text(v-else) {{ element.value }}
 </template>
 
 <script lang="ts">
