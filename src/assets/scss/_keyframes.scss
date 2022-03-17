@@ -27,3 +27,14 @@ transform-origin: 50% 0%;
 	-moz-transform-origin: 50% 0%;
 	animation: drop-down $transition-micro ease-in-out;
 }
+
+/* Transitions */
+.nested-enter-active,
+.nested-leave-active {
+	transition: all $transition-micro ease;
+}
+.nested-enter-from,
+.nested-leave-to {
+	transform: translateY(-50%) scale(0);
+	opacity: 0;
+}
