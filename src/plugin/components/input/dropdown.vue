@@ -5,7 +5,7 @@
 
 	//- Input Field
 	.dropdown__container(
-		@click="toggle",
+		@click="toggle(!open)",
 		:class="[{ 'dropdown__container--outline': settings.outline, 'dropdown__container--active': open }, `dropdown__container--theme-${settings.theme}`]"
 	)
 		VEcoText.dropdown__container--placeholder(
@@ -18,21 +18,22 @@
 		)
 
 	//- Drop Area
-	.dropdown__content(
-		v-if="open && options.length",
-		@mouseleave="toggle",
-		:class="[settings.contain ? 'dropdown__content--contain' : '', `dropdown__content--flow-${settings.flow}`, settings.outline ? 'dropdown__content--outline' : '', `dropdown__content--theme-${settings.theme}`]"
-	)
-		.dropdown__option(
-			v-for="(option, index) in options",
-			@click="handleSelection(index)",
-			:class="[`dropdown__option--theme-${settings.theme}`]"
+	Transition(name="nested")
+		.dropdown__content(
+			v-if="open && options.length",
+			@mouseleave="toggle(false)",
+			:class="[settings.contain ? 'dropdown__content--contain' : '', `dropdown__content--flow-${settings.flow}`, settings.outline ? 'dropdown__content--outline' : '', `dropdown__content--theme-${settings.theme}`]"
 		)
-			VEcoText.dropdown__option--text(
-				:class="[{ 'dropdown__option--active': index === selected }]",
-				:label="option.label"
+			.dropdown__option(
+				v-for="(option, index) in options",
+				@click="handleSelection(index)",
+				:class="[`dropdown__option--theme-${settings.theme}`]"
 			)
-			VEcoDot.dropdown__option--dot(hue="information", v-if="index === selected")
+				VEcoText.dropdown__option--text(
+					:class="[{ 'dropdown__option--active': index === selected }]",
+					:label="option.label"
+				)
+				VEcoDot.dropdown__option--dot(hue="information", v-if="index === selected")
 </template>
 
 <script lang="ts">
@@ -88,12 +89,12 @@ export default defineComponent({
 		};
 	},
 	methods: {
-		toggle(): void {
-			this.open = !this.open;
+		toggle(state: boolean): void {
+			this.open = state;
 		},
 		handleSelection(index: number): void {
 			this.selected = index;
-			this.toggle();
+			this.toggle(false);
 			this.$emit("change", this.options[index].value);
 		},
 	},

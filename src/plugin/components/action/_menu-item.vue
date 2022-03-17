@@ -15,14 +15,15 @@
 			)
 			VEcoDot(:hue="isCurrentRoute(option.value) ? hue : ''")
 
-	.menu__nested(v-if="expanded[index]")
-		MenuItem(
-			v-if="option.children",
-			:options="option.children",
-			:theme="theme",
-			:hue="hue",
-			@select="propagateSelectEvent"
-		)
+	Transition(name="nested")
+		.menu__nested(v-if="expanded[index]")
+			MenuItem(
+				v-if="option.children",
+				:options="option.children",
+				:theme="theme",
+				:hue="hue",
+				@select="propagateSelectEvent"
+			)
 </template>
 
 <script lang="ts">
@@ -128,7 +129,7 @@ export default defineComponent({
 
 	&__nested {
 		margin-left: $spacer-1-125;
-		@include animation-drop-down;
+		// @include animation-drop-down;
 	}
 
 	&__arrow {

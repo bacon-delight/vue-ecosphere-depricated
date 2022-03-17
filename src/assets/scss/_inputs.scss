@@ -53,7 +53,7 @@
 	z-index: $z-index-dropdown;
 	white-space: nowrap;
 	margin-top: $spacer-0-25;
-	@include animation-drop-down;
+	// @include animation-drop-down;
 	@include use-theme; // Handle Transparent Theme Backgrounds
 	&--theme-transparent {
 		background: $color-background;
