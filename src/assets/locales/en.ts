@@ -138,5 +138,6 @@ export default {
 		i_can_speak_chinese: "I can speak Chinese",
 		wholeheartedly: "Wholeheartedly",
 		learn_chinese: "Learn Chinese",
+		get_mentored: "Get Mentored",
 	},
 };

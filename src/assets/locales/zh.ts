@@ -138,5 +138,6 @@ export default {
 		i_can_speak_chinese: "我会说汉语",
 		wholeheartedly: "一心一意",
 		learn_chinese: "学汉语",
+		get_mentored: "获得指导",
 	},
 };
