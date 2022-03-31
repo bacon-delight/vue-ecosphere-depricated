@@ -34,6 +34,11 @@
 						@click="$ecosphere.handlers.navigate('https://twitter.com/bacon_delight')"
 					)
 				.team__description--item
+					v-eco-link(
+						:label="`${$t('extras.get_mentored')} :ri-arrow-right-up-line:`",
+						@click="$ecosphere.handlers.navigate('https://adplist.org/mentors/dipanjan-de')"
+					)
+				.team__description--item
 					v-eco-paragraph(
 						label=":ri-briefcase-line: Product Data Scientist",
 						:margin="false"
