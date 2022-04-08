@@ -112,14 +112,14 @@ export default defineComponent({
 		bottom: 0;
 
 		&--tiny {
-			border: 1px solid $color-contrast-faded;
+			border: 1px solid $color-helper-transparent;
 		}
 		&--small {
-			border: 2px solid $color-contrast-faded;
+			border: 2px solid $color-helper-transparent;
 		}
 		&--medium,
 		&--large {
-			border: 3px solid $color-contrast-faded;
+			border: 3px solid $color-helper-transparent;
 		}
 	}
 
@@ -142,7 +142,7 @@ export default defineComponent({
 	&--medium {
 		height: $spacer-3;
 		width: $spacer-3;
-		font-size: $spacer-1-25;
+		font-size: $spacer-1;
 	}
 
 	&--large {

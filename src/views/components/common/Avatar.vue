@@ -51,13 +51,7 @@
 			:circular="true",
 			status="offline"
 		)
-		v-eco-avatar(
-			source="开心",
-			size="medium",
-			hue="invert",
-			:circular="false",
-			status="away"
-		)
+		v-eco-avatar(source="开心", size="medium", :circular="false", status="away")
 		v-eco-avatar(
 			:source="users[2]",
 			size="large",
