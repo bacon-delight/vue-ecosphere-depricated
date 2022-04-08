@@ -1,6 +1,5 @@
 <template lang="pug">
-v-eco-wrapper.main
-	v-eco-navbar(:options="navbarOptions", brand="Eco", logo="/img/logo.png")
+v-eco-wrapper.main Test
 </template>
 
 <script>

@@ -1,9 +1,9 @@
 /* Themeing */
-@mixin use-theme($border: 0) {
+@mixin use-theme {
 	&--theme-auto {
 		background: $color-background;
 		color: $color-contrast;
-		border: $border solid $color-hue-faded;
+		// border: $border solid $color-hue-faded;
 	}
 
 	&--theme-light {
@@ -59,7 +59,7 @@
 	&--theme-transparent {
 		background: $color-helper-transparent;
 		color: $color-contrast;
-		border: $border solid $color-helper-grey;
+		// border: $border solid $color-helper-grey;
 	}
 
 	&--theme-offline {

@@ -61,7 +61,7 @@ export default defineComponent({
 	}
 
 	&--compact {
-		padding: $spacer-0-75 $spacer-0-5;
+		padding: $spacer-0-625 $spacer-0-25;
 		font-size: $spacer-1;
 		line-height: 0 !important;
 
