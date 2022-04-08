@@ -92,7 +92,6 @@
 					v-eco-tag(:label="$t('keywords.translations')", theme="invert")
 					v-eco-tag(:label="$t('keywords.documentation')", theme="invert")
 					v-eco-tag(:label="$t('headers.typography')", theme="invert")
-					v-eco-tag(:label="$t('headers.design')", theme="invert")
 
 		.team__section
 			v-eco-header(

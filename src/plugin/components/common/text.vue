@@ -1,9 +1,9 @@
 <template lang="pug">
 .text
-	template(v-for="element in elements")
+	template(v-for="(element, index) in elements")
 		span.text__text(v-if="element.type === 'text'") {{ element.value }}
 		VEcoIcon.text__icon(v-if="element.type === 'icon'", :type="element.value")
-		span.text__text &nbsp;
+		span.text__text(v-if="index !== elements.length - 1") &nbsp;
 </template>
 
 <script lang="ts">

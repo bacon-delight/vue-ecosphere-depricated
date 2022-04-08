@@ -1,8 +1,5 @@
 <template lang="pug">
-v-eco-wrapper.main
-	v-eco-text(
-		label="test :ri-home-4-line: Remix Icon is a set of open-source neutral-style system symbols elaborately crafted for designers and developers"
-	)
+v-eco-wrapper.main Test
 </template>
 
 <script>
