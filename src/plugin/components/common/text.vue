@@ -3,6 +3,7 @@
 	template(v-for="element in elements")
 		span.text__text(v-if="element.type === 'text'") {{ element.value }}
 		VEcoIcon.text__icon(v-if="element.type === 'icon'", :type="element.value")
+		span.text__text &nbsp;
 </template>
 
 <script lang="ts">
@@ -29,25 +30,27 @@ export default defineComponent({
 	},
 	methods: {
 		renderElements(): void {
-			// this.content = "";
 			this.elements = [];
 			this.stack = this.label.split(/(:ri-[^:]*:)/g);
 			this.stack.forEach((element: string) => {
 				if (element && element[0] === ":") {
-					// this.content = `${this.content}<i class="${element.slice(
-					// 	1,
-					// 	-1
-					// )} icon"></i>`;
 					this.elements.push({
 						type: "icon",
 						value: element.slice(1, -1),
 					});
 				} else if (element) {
-					// this.content = `${this.content}<span class="text--font">${element}</span>`;
-					this.elements.push({
-						type: "text",
-						value: element,
+					element.split(" ").forEach((word: string) => {
+						if (word) {
+							this.elements.push({
+								type: "text",
+								value: word,
+							});
+						}
 					});
+					// this.elements.push({
+					// 	type: "text",
+					// 	value: element,
+					// });
 				}
 			});
 		},
@@ -66,8 +69,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 .text {
 	display: inline-flex;
+	flex-wrap: wrap;
 	align-items: center;
-	column-gap: $spacer-0-125;
 
 	&__text {
 		overflow: hidden;

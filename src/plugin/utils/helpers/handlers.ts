@@ -4,7 +4,6 @@ export default class Handlers {
 			return;
 		}
 		try {
-			console.log("try");
 			new URL(link);
 			window.open(link, "_blank");
 		} catch {

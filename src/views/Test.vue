@@ -1,6 +1,8 @@
 <template lang="pug">
 v-eco-wrapper.main
-	v-eco-navbar(:options="navbarOptions", brand="Eco", logo="/img/logo.png")
+	v-eco-text(
+		label="test :ri-home-4-line: Remix Icon is a set of open-source neutral-style system symbols elaborately crafted for designers and developers"
+	)
 </template>
 
 <script>
