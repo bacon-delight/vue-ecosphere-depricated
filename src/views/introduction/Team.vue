@@ -15,7 +15,7 @@
 			)
 			.team__description
 				.team__description--item
-					v-eco-header(label="Dipanjan De", :type="6", :margin="false")
+					v-eco-header(label="Dipanjan De 🇮🇳", :type="6", :margin="false")
 				.team__description--item.team__description--links
 					v-eco-link(
 						label=":ri-global-fill:",
@@ -66,7 +66,7 @@
 			v-eco-avatar(source="https://bacon-delight.sirv.com/Users/Bubble.jpeg")
 			.team__description
 				.team__description--item
-					v-eco-header(label="Bubble L.", :type="6", :margin="false")
+					v-eco-header(label="Bubble L. 🇨🇳", :type="6", :margin="false")
 				.team__description--item.team__description--links
 					v-eco-link(
 						label=":ri-mail-send-fill:",
