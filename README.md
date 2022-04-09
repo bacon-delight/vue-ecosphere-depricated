@@ -12,6 +12,12 @@
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/bacon-delight/vue-ecosphere?label=Languages&style=flat-square">
 </p>
 
+<p align="center">
+  <a href="https://www.npmjs.com/package/vue-ecosphere">
+    <img alt="NPM" src="https://nodei.co/npm/vue-ecosphere.png?downloads=true">
+  </a>
+</p>
+
 Translations:
 
 - [中文版](#中文版)
