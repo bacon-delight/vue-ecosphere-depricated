@@ -2,7 +2,7 @@
 button.button(
 	:class="[{ 'button--outline': outline && !disabled, 'button--compact': compact }, disabled ? 'button--disabled' : `button--theme-${theme}`]"
 )
-	VEcoText(:label="label")
+	VEcoText(:label="label", :wrap="false")
 </template>
 
 <script lang="ts">

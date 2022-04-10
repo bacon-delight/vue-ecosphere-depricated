@@ -31,7 +31,8 @@
 			)
 				VEcoText.dropdown__option--text(
 					:class="[{ 'dropdown__option--active': index === selected }]",
-					:label="option.label"
+					:label="option.label",
+					:wrap="false"
 				)
 				VEcoDot.dropdown__option--dot(hue="information", v-if="index === selected")
 </template>
