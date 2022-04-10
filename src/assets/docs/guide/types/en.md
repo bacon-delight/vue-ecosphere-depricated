@@ -45,3 +45,18 @@ export interface navbar_option {
   attributes: any; // Attributes of `link` | `dropdown` | `select` | `text`
 }
 ```
+
+### Table
+
+```ts
+export type table_column_type = "string" | "email" | "phone" | "link";
+
+export interface table_column {
+  label: string;
+  key: string;
+  css?: {
+    [key: string]: any;
+  };
+  type?: table_column_type;
+}
+```

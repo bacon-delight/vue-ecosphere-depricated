@@ -1,12 +1,12 @@
 <template lang="pug">
 .table
 	//- Headers
-	.table__row.table__row--header(:class="{ 'table__row--divider': dividers }")
+	.table__row.table__row--header
 		.table__cell(
 			v-for="cell in columns",
 			:style="{ ...defaultCSS, ...cell.css }"
 		)
-			span.table__header(v-if="!cell.hidden") {{ cell.label }}
+			span.table__header {{ cell.label }}
 
 	//- Body
 	.table__row(
@@ -17,7 +17,23 @@
 			v-for="cell in columns",
 			:style="{ ...defaultCSS, ...cell.css }"
 		)
-			span(v-if="!cell.hidden") {{ observation[cell.key] }}
+			VEcoLink(
+				v-if="cell.type === 'email'",
+				:label="observation[cell.key]",
+				:href="`mailto:${observation[cell.key]}`"
+			)
+			VEcoLink(
+				v-else-if="cell.type === 'link'",
+				:label="observation[cell.key]",
+				:href="observation[cell.key]",
+				target="_blank"
+			)
+			VEcoLink(
+				v-else-if="cell.type === 'phone'",
+				:label="observation[cell.key]",
+				:href="`tel:${observation[cell.key]}`"
+			)
+			span(v-else) {{ observation[cell.key] }}
 </template>
 
 <script lang="ts">
@@ -26,6 +42,7 @@ import {
 	table_column,
 } from "@/plugin/utils/types.interface";
 import { defineComponent, PropType } from "vue";
+import VEcoLink from "@/plugin/components/action/link.vue";
 
 export default defineComponent({
 	name: "Table",
@@ -35,7 +52,7 @@ export default defineComponent({
 			required: true,
 		},
 		headers: {
-			type: Array,
+			type: Array as PropType<table_column[]>,
 			default: () => [],
 		},
 		dividers: {
@@ -84,6 +101,9 @@ export default defineComponent({
 			});
 		},
 	},
+	components: {
+		VEcoLink,
+	},
 });
 </script>
 
@@ -92,6 +112,7 @@ export default defineComponent({
 	display: block;
 	width: 100%;
 	overflow-x: auto;
+	@include horizontal-scroll;
 
 	&__row {
 		min-width: 100%;
@@ -103,10 +124,11 @@ export default defineComponent({
 
 		&--header {
 			background: $color-background;
+			border-radius: $border-radius-standard;
 		}
 
 		&--divider {
-			border-bottom: 1px solid $color-helper-grey;
+			border-bottom: 1px solid rgba($color-helper-grey, 0.5);
 		}
 
 		&:hover {
