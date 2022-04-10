@@ -56,3 +56,31 @@
 		border: 1px solid $color-hue;
 	}
 }
+
+@mixin horizontal-scroll() {
+	&::-webkit-scrollbar {
+		height: $spacer-0-25;
+		width: $spacer-0-25;
+		background: $color-background;
+	}
+
+	/* Track */
+	&::-webkit-scrollbar-track {
+		background: $color-background;
+	}
+
+	/* Handle */
+	&::-webkit-scrollbar-thumb {
+		background: $color-helper-grey;
+	}
+
+	/* Handle on hover */
+	&::-webkit-scrollbar-thumb:hover {
+		background: $color-contrast;
+	}
+
+	&::-webkit-scrollbar-thumb:horizontal {
+		// background: $color-contrast;
+		border-radius: $border-radius-standard;
+	}
+}

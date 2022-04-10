@@ -1,10 +1,14 @@
 <template lang="pug">
 .content
-	PageHeader(:label="$t('headers.table')", :events="false", status="WIP")
+	PageHeader(:label="$t('headers.table')", :events="false")
 
 	v-eco-header(:label="$t('keywords.default')", :type="5")
 	.showcase
-		v-eco-table(:observations="tableData", :headers="columns")
+		v-eco-table(
+			:observations="tableData",
+			:headers="columns",
+			:dividers="false"
+		)
 
 	vue3-markdown-it.markdown(:source="content")
 </template>
@@ -39,17 +43,11 @@ export default defineComponent({
 				{
 					label: "Email",
 					key: "email",
+					type: "email",
 					css: {
 						width: "200px",
 					},
 				},
-				// {
-				// 	label: "Comment",
-				// 	key: "body",
-				// 	css: {
-				// 		width: "500px",
-				// 	},
-				// },
 			],
 			tableData: [
 				{
@@ -57,7 +55,7 @@ export default defineComponent({
 					id: 1,
 					name: "id labore ex et quam laborum",
 					email: "Eliseo@gardner.biz",
-					body: "laudantium enim quasi est quidem magnam voluptate ipsam eos\ntempora quo necessitatibus\ndolor quam autem quasi\nreiciendis et nam sapiente accusantium",
+					body: "+91-8013758776",
 				},
 				{
 					postId: 1,
