@@ -1,7 +1,11 @@
 <template lang="pug">
 .breadcrumb
 	.breadcrumb__item(v-for="(option, index) in options")
-		VEcoText.breadcrumb__divider(v-if="index > 0", :label="divider") 
+		VEcoText.breadcrumb__divider(
+			v-if="index > 0",
+			:label="divider",
+			:wrap="false"
+		) 
 		VEcoSelect(
 			v-if="option.children",
 			:options="option.children",

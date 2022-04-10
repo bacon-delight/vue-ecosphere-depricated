@@ -1,6 +1,6 @@
 <template lang="pug">
 .tag(:class="[`tag--theme-${theme}`, `tag--size-${size}`]")
-	VEcoText(:label="label")
+	VEcoText(:label="label", :wrap="false")
 </template>
 
 <script lang="ts">

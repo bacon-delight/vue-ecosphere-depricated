@@ -18,7 +18,8 @@
 				v-for="(option, index) in options",
 				:class="[settings.center ? 'select__option--centered' : '', `select__option--theme-${settings.theme}`]",
 				@click="handleSelection(index)",
-				:label="option.label"
+				:label="option.label",
+				:wrap="false"
 			)
 </template>
 

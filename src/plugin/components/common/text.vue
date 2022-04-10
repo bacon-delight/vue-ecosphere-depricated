@@ -1,5 +1,5 @@
 <template lang="pug">
-.text
+.text(:class="{ 'text--wrap': wrap }")
 	template(v-for="(element, index) in elements")
 		span.text__text(v-if="element.type === 'text'") {{ element.value }}
 		VEcoIcon.text__icon(v-if="element.type === 'icon'", :type="element.value")
@@ -17,11 +17,14 @@ export default defineComponent({
 			type: String as PropType<string>,
 			required: true,
 		},
+		wrap: {
+			type: Boolean as PropType<boolean>,
+			default: true,
+		},
 	},
 	data() {
 		return {
 			stack: [],
-			// content: "",
 			elements: [],
 		};
 	},
@@ -47,10 +50,6 @@ export default defineComponent({
 							});
 						}
 					});
-					// this.elements.push({
-					// 	type: "text",
-					// 	value: element,
-					// });
 				}
 			});
 		},
@@ -69,8 +68,11 @@ export default defineComponent({
 <style lang="scss" scoped>
 .text {
 	display: inline-flex;
-	flex-wrap: wrap;
 	align-items: center;
+
+	&--wrap {
+		flex-wrap: wrap;
+	}
 
 	&__text {
 		overflow: hidden;
