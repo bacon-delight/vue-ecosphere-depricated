@@ -60,7 +60,7 @@ $font-weight-semi-bold: 600;
 	$element-base-rem: calc($element-base * $base-rem / $base-em);
 	font-size: $element-base;
 	font-family: $font-family-work-sans;
-	line-height: $element-base-rem * 1.8;
+	line-height: $element-base-rem * 1.6;
 	margin: calc($element-base-rem/1.2) 0 calc($element-base-rem/1.8);
 
 	::selection {
