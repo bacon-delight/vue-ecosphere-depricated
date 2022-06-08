@@ -12,6 +12,7 @@ export * from "./types/navbar.interface";
 export * from "./types/select.interface";
 export * from "./types/table.interface";
 export * from "./types/tag.interface";
+export * from "./types/text.interface";
 export * from "./types/toggle.interface";
 
 // Plugin Configuration & Helper Types

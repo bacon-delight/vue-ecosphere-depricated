@@ -45,6 +45,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 .page-header {
 	display: block;
+	margin-bottom: 0.5rem;
 
 	&__links {
 		display: flex;
