@@ -3,12 +3,13 @@
 	template(v-for="(element, index) in elements")
 		span.text__text(v-if="element.type === 'text'") {{ element.value }}
 		VEcoIcon.text__icon(v-if="element.type === 'icon'", :type="element.value")
-		span.text__text(v-if="index !== elements.length - 1") &nbsp;
+		//- span.text__text(v-if="index !== elements.length - 1") &nbsp;
 </template>
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
 import VEcoIcon from "@/plugin/components/common/icon.vue";
+import { text_type } from "@/plugin/utils/types.interface";
 
 export default defineComponent({
 	name: "Text",
@@ -25,7 +26,7 @@ export default defineComponent({
 	data() {
 		return {
 			stack: [],
-			elements: [],
+			elements: [] as text_type[],
 		};
 	},
 	mounted() {
@@ -69,6 +70,7 @@ export default defineComponent({
 .text {
 	display: inline-flex;
 	align-items: center;
+	column-gap: 0.35em;
 
 	&--wrap {
 		flex-wrap: wrap;
