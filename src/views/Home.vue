@@ -9,7 +9,7 @@
 	)
 	.content
 		img.logo(src="/img/logo.png")
-		h4.header {{ $t("site.title") }}
+		h4.header {{ $t("site.title") }} Test
 		//- h6.subheader Data can be beautiful
 		p.description {{ $t("site.description") }}
 
