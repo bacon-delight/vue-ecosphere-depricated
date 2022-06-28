@@ -37,6 +37,7 @@ import { defineComponent, PropType } from "vue";
 import {
 	input_type,
 	input_types,
+	input_config,
 	input_types_to_html_types,
 } from "@/plugin/utils/types.interface";
 import config from "@/plugin/utils/defaults/components/input.config";
@@ -55,7 +56,7 @@ export default defineComponent({
 			default: "",
 		},
 		type: {
-			type: String as PropType<string>,
+			type: String as PropType<input_type>,
 			default: "text",
 		},
 		required: {
@@ -73,7 +74,7 @@ export default defineComponent({
 	},
 	emits: ["change", "valid"],
 	computed: {
-		settings(): input_type {
+		settings(): input_config {
 			return Object.assign({ ...config }, this.config);
 		},
 	},
@@ -157,7 +158,7 @@ export default defineComponent({
 
 		&--invalid {
 			color: $color-helper-error;
-			display: block;
+			// display: block;
 		}
 	}
 

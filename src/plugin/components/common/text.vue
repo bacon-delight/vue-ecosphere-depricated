@@ -1,9 +1,8 @@
 <template lang="pug">
 .text(:class="{ 'text--wrap': wrap }")
-	template(v-for="(element, index) in elements")
+	template(v-for="element in elements")
 		span.text__text(v-if="element.type === 'text'") {{ element.value }}
 		VEcoIcon.text__icon(v-if="element.type === 'icon'", :type="element.value")
-		//- span.text__text(v-if="index !== elements.length - 1") &nbsp;
 </template>
 
 <script lang="ts">
@@ -15,7 +14,7 @@ export default defineComponent({
 	name: "Text",
 	props: {
 		label: {
-			type: String as PropType<string>,
+			type: String as PropType<string | number>,
 			required: true,
 		},
 		wrap: {
