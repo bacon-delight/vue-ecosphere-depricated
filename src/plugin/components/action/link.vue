@@ -29,6 +29,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .link {
+	@include font-light;
+	margin: 0;
 	width: fit-content;
 	text-decoration: none;
 	cursor: pointer;

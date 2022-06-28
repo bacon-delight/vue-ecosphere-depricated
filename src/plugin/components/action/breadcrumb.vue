@@ -5,7 +5,7 @@
 			v-if="index > 0",
 			:label="divider",
 			:wrap="false"
-		) 
+		)
 		VEcoSelect(
 			v-if="option.children",
 			:options="option.children",
